@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-11T12:28:45.273Z</updated>
+  <updated>2016-06-11T12:13:23.598Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,22 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hexo博客</title>
-    <link href="http://dongxi520.com/2016/06/11/Hexo%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://dongxi520.com/2016/06/11/Hexo博客/</id>
-    <published>2016-06-11T12:28:45.000Z</published>
-    <updated>2016-06-11T12:28:45.273Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
