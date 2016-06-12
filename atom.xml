@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-12T08:44:46.969Z</updated>
+  <updated>2016-06-12T08:48:20.160Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-12T08:44:46.969Z</updated>
+    <updated>2016-06-12T08:48:20.160Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -54,6 +54,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;添加阅读全文按钮&quot;&gt;&lt;a href=&quot;#添加阅读全文按钮&quot; class=&quot;headerlink&quot; title=&quot;添加阅读全文按钮&quot;&gt;&lt;/a&gt;添加阅读全文按钮&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;用&lt;code&gt;markdown&lt;/code&gt;编辑的时候在适当的位置加入&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Hexo-NexT主题首标题的优化&quot;&gt;&lt;a href=&quot;#Hexo-NexT主题首标题的优化&quot; class=&quot;headerlink&quot; title=&quot;Hexo NexT主题首标题的优化&quot;&gt;&lt;/a&gt;&lt;code&gt;Hexo NexT&lt;/code&gt;主题首标题的优化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;更改&lt;code&gt;index.swig&lt;/code&gt;文件，文件路径是&lt;code&gt;your-hexo-site\themes\next\layout&lt;/code&gt;将下面代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;  &lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
