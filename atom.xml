@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-12T08:56:18.677Z</updated>
+  <updated>2016-06-12T09:01:21.739Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-12T08:56:18.677Z</updated>
+    <updated>2016-06-12T09:01:21.739Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -57,6 +57,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;Hexo-NexT主题首标题的优化&quot;&gt;&lt;a href=&quot;#Hexo-NexT主题首标题的优化&quot; class=&quot;headerlink&quot; title=&quot;Hexo NexT主题首标题的优化&quot;&gt;&lt;/a&gt;&lt;code&gt;Hexo NexT&lt;/code&gt;主题首标题的优化&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;更改&lt;code&gt;index.swig&lt;/code&gt;文件，文件路径是&lt;code&gt;your-hexo-site\themes\next\layout&lt;/code&gt;将下面代码&lt;/li&gt;
+&lt;li&gt;不知道什么原因，我只要将下面的代码除去&lt;code&gt;&lt;/code&gt;就部署不上去…所以大家就找到下面的除去&lt;code&gt;&lt;/code&gt;的代码段，然后改成如下即可。&lt;/li&gt;
 &lt;li&gt;改成&lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;   &lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
