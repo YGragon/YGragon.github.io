@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-11T15:09:40.298Z</updated>
+  <updated>2016-06-12T01:46:35.465Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,18 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo博客个性化</title>
-    <link href="http://dongxi520.com/2016/06/11/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
-    <id>http://dongxi520.com/2016/06/11/Hexo博客个性化/</id>
-    <published>2016-06-11T15:09:40.000Z</published>
-    <updated>2016-06-11T15:09:40.298Z</updated>
+    <title>Hexo博客个性化搭建</title>
+    <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
+    <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
+    <published>2016-06-12T01:45:02.000Z</published>
+    <updated>2016-06-12T01:46:35.465Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;h2 id=&quot;感谢以下作者&quot;&gt;&lt;a href=&quot;#感谢以下作者&quot; class=&quot;headerlink&quot; title=&quot;感谢以下作者&quot;&gt;&lt;/a&gt;感谢以下作者&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/poem_of_sunshine/article/details/29369785/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何搭建博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://lijianchang.xyz/2016/03/16/%E5%B0%8F%E7%99%BD%E7%8B%AC%E7%AB%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-Github-Pages%E5%92%8CHexo%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小白手把手搭建博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.arao.me/2015/hexo-next-theme-optimize-base/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;动动手指，NexT主题与Hexo更搭哦（基础篇） &lt;/a&gt;&lt;/p&gt;
+&lt;iframe name=&quot;iframe_canvas&quot; src=&quot;http://douban.fm/partner/baidu/doubanradio&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;</content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;感谢以下作者&quot;&gt;&lt;a href=&quot;#感谢以下作者&quot; class=&quot;headerlink&quot; title=&quot;感谢以下作者&quot;&gt;&lt;/a&gt;感谢以下作者&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/poem_of_sunshine/article
+    
     </summary>
     
+    
+      <category term="Hexo" scheme="http://dongxi520.com/tags/Hexo/"/>
     
   </entry>
   
@@ -36,7 +43,7 @@
     <link href="http://dongxi520.com/2016/06/11/hello-world/"/>
     <id>http://dongxi520.com/2016/06/11/hello-world/</id>
     <published>2016-06-11T07:22:27.932Z</published>
-    <updated>2016-06-11T15:06:05.217Z</updated>
+    <updated>2016-06-11T15:17:21.781Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -48,7 +55,7 @@
 &lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28947001&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;</content>
+&lt;center&gt; &lt;iframe name=&quot;iframe_canvas&quot; src=&quot;http://douban.fm/partner/baidu/doubanradio&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;</content>
     
     <summary type="html">
     
