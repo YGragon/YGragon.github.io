@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-12T09:01:21.739Z</updated>
+  <updated>2016-06-13T13:02:41.925Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,193 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GooglePlay(1)</title>
+    <link href="http://dongxi520.com/2016/06/13/GooglePlay-1/"/>
+    <id>http://dongxi520.com/2016/06/13/GooglePlay-1/</id>
+    <published>2016-06-13T12:59:17.000Z</published>
+    <updated>2016-06-13T13:02:41.925Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;ActionBar&quot;&gt;&lt;a href=&quot;#ActionBar&quot; class=&quot;headerlink&quot; title=&quot;ActionBar&quot;&gt;&lt;/a&gt;ActionBar&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;从 Android3.0 开始谷歌推荐使用&lt;/li&gt;
+&lt;li&gt;这里暂时不讨论低版本兼容问题&lt;/li&gt;
+&lt;li&gt;Eclipse&lt;ol&gt;
+&lt;li&gt;引用v7-appcompat&lt;/li&gt;
+&lt;li&gt;Activity继承ActionBarActivity&lt;/li&gt;
+&lt;li&gt;android:theme=”@style/Theme.AppCompat.Light” &amp;gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;AS&lt;ol&gt;
+&lt;li&gt;AS中的SDK是最新的，默认是继承了ActionBarAtivity，所以不用引入v7库&lt;/li&gt;
+&lt;li&gt;Activity继承ActionBarActivity&lt;/li&gt;
+&lt;li&gt;android:theme=”@style/Theme.AppCompat.Light” &lt;h1 id=&quot;ActionBar中的搜索按钮&quot;&gt;&lt;a href=&quot;#ActionBar中的搜索按钮&quot; class=&quot;headerlink&quot; title=&quot;ActionBar中的搜索按钮&quot;&gt;&lt;/a&gt;ActionBar中的搜索按钮&lt;/h1&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Eclipse&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在menu目录下添加如下代码&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;menu xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+xmlns:dongxi=&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot;&amp;gt;
+&amp;lt;!-- Search, should appear as action button --&amp;gt;
+&amp;lt;item android:id=&amp;quot;@+id/action_search&amp;quot;
+android:icon=&amp;quot;@drawable/ic_action_search&amp;quot;
+android:title=&amp;quot;@string/action_search&amp;quot;
+dongxi:showAsAction=&amp;quot;ifRoom&amp;quot;
+dongxi:actionViewClass=&amp;quot;android.support.v7.widget.SearchView&amp;quot;
+/&amp;gt;
+&amp;lt;/menu&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;在继承ActionBar的类中实现以下方法&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;/** 处理actionBar菜单条目的点击事件 */
+public boolean onOptionsItemSelected(MenuItem item) {
+if (item.getItemId() == R.id.action_search) {
+Toast.makeText(getApplicationContext(), &amp;quot;搜索&amp;quot;, Toast.LENGTH_SHORT).show();
+}
+return drawerToggle.onOptionsItemSelected(item)|super.onOptionsItemSelected(item);
+}
+
+// 当搜索提交的时候
+@Override
+public boolean onQueryTextSubmit(String query) {
+Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
+return true;
+}
+// 当搜索的文本发生变化
+@Override
+public boolean onQueryTextChange(String newText) {
+return true;
+}      
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;AS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于AS中没有menu目录，所以需要在res下创建一个menu目录&lt;/li&gt;
+&lt;li&gt;实现步骤同Eclipse，这里就不重复写了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;a href=&quot;#ActionBar中返回按钮的处理（AS）&quot; class=&quot;headerlink&quot; title=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;/a&gt;ActionBar中返回按钮的处理（AS）&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在activity中处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加如下代码&lt;/li&gt;
+&lt;li&gt;  ActionBar actionBar = getSupportActionBar();//可以向下兼容&lt;br&gt;  actionBar.setDisplayHomeAsUpEnabled(true);//设置图片显示&lt;br&gt;  actionBar.setHomeButtonEnabled(true);//设置图片可以点击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在AndroidManifest文件中处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;  &lt;activity android:name=&quot;.DetailActivity&quot; android:label=&quot;@string/app_detail&quot; android:parentactivityname=&quot;.MainActivity&quot; 返回的上一个activity=&quot;&quot;&gt;&lt;br&gt;  &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot; android:value=&quot;.MainActivity&quot;&gt;&lt;br&gt;  &lt;/meta-data&gt;&lt;/activity&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;ActionBar-Tab标签的实现&quot;&gt;&lt;a href=&quot;#ActionBar-Tab标签的实现&quot; class=&quot;headerlink&quot; title=&quot;ActionBar Tab标签的实现&quot;&gt;&lt;/a&gt;ActionBar Tab标签的实现&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;在drawable目录下新建一个标签的状态选择器&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;  &amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
+  &lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 标签没被选中的样式 --&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- Non focused states --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_unselected&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_selected&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- Focused states (such as when focused with a d-pad or mouse hover) --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_unselected_focused&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_selected_focused&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 标签被选中的样式 --&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 非聚焦状态 --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_unselected_pressed&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_selected_pressed&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 聚焦状态 (例如当用方向键或鼠标悬停于) --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_unselected_pressed&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_selected_pressed&quot;&gt;&lt;br&gt;  &lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/selector&gt;&lt;/li&gt;
+&lt;li&gt;实现自定义主题&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;  &amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
+  &lt;resources&gt;&lt;br&gt;       &lt;!-- the theme applied to the application or activity --&gt;&lt;br&gt;      &lt;style name=&quot;CustomActionBarTheme&quot; 自定义主题名=&quot;&quot; parent=&quot;@style/Theme.AppCompat.Light&quot;&gt; //继承的ActionBar背景&lt;br&gt;      &lt;item name=&quot;android:actionBarTabStyle&quot;&gt;@style/MyActionBarTabs&lt;/item&gt;&lt;br&gt;&lt;br&gt;          &lt;!-- Support library compatibility --&gt;&lt;br&gt;          &lt;item name=&quot;actionBarTabStyle&quot;&gt;@style/MyActionBarTabs&lt;/item&gt;&lt;br&gt;      &lt;/style&gt;&lt;br&gt;&lt;br&gt;      &lt;!-- ActionBar 标签样式 --&gt;&lt;br&gt;      &lt;style name=&quot;MyActionBarTabs&quot; parent=&quot;@style/Widget.AppCompat.ActionBar.TabView&quot;&gt;&lt;br&gt;          &lt;!-- tab indicator --&gt;&lt;br&gt;          &lt;item name=&quot;android:background&quot;&gt;@drawable/actionbar_tab_indicator&lt;/item&gt;//状态选择器&lt;br&gt;&lt;br&gt;          &lt;!-- Support library compatibility --&gt;&lt;br&gt;          &lt;item name=&quot;background&quot;&gt;@drawable/actionbar_tab_indicator&lt;/item&gt;&lt;br&gt;      &lt;/style&gt;&lt;br&gt;  &lt;/resources&gt;&lt;/li&gt;
+&lt;li&gt;在代码里添加标签&lt;/li&gt;
+&lt;li&gt; ActionBar actionBar = getSupportActionBar();&lt;br&gt; actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);&lt;br&gt; Tab tab1=actionBar.newTab().setText(“标签一”).setTabListener(new MyTabListener());&lt;br&gt; actionBar.addTab(tab1);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;a href=&quot;#DrawerLayout和SlidingMenu的对比&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;/a&gt;DrawerLayout和SlidingMenu的对比&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;抽屉菜单（DrawerLayout）优点&lt;ul&gt;
+&lt;li&gt;DrawerLayout稳定可靠，使用起来更简单一点；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;抽屉菜单（DrawerLayout）缺点&lt;ul&gt;
+&lt;li&gt;个人见解不一定完全正确，欢迎指导&lt;/li&gt;
+&lt;li&gt;抽屉的大小不好控制（据说可用ListView实现抽屉，可以参考官方文档）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;侧滑菜单的优点，缺点&lt;ul&gt;
+&lt;li&gt;正好和DrawerLayout相反&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;总结：&lt;ul&gt;
+&lt;li&gt;根据不同情况使用不同的控件&lt;/li&gt;
+&lt;li&gt;SlidingMenu因为很容易实现的，而且好控制&lt;/li&gt;
+&lt;li&gt;DrawerLayout使用方便，代码实现较SlidingMenu简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;DrawerLayout-抽屉菜单的实现&quot;&gt;&lt;a href=&quot;#DrawerLayout-抽屉菜单的实现&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout 抽屉菜单的实现&quot;&gt;&lt;/a&gt;DrawerLayout 抽屉菜单的实现&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;保证V4包下有这个类&lt;/li&gt;
+&lt;li&gt;  &lt;android.support.v4.widget.drawerlayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; tools:context=&quot;.MainActivity&quot; android:id=&quot;@+id/dl&quot;&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;LinearLayout
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;
+    android:layout_centerHorizontal=&amp;quot;true&amp;quot;
+    android:layout_centerVertical=&amp;quot;true&amp;quot;
+   /&amp;gt;
+
+&amp;lt;FrameLayout android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;
+    android:background=&amp;quot;@drawable/bg_tab&amp;quot;
+    android:layout_gravity=&amp;quot;left&amp;quot;&amp;gt;
+
+&amp;lt;/FrameLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  &lt;/p&gt;&lt;/android.support.v4.widget.drawerlayout&gt;&lt;p&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;ActionBarDrawerToggle-抽屉菜单的开关&quot;&gt;&lt;a href=&quot;#ActionBarDrawerToggle-抽屉菜单的开关&quot; class=&quot;headerlink&quot; title=&quot;ActionBarDrawerToggle 抽屉菜单的开关&quot;&gt;&lt;/a&gt;ActionBarDrawerToggle 抽屉菜单的开关&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;控制抽屉的开关，在actionbar的上面&lt;/li&gt;
+&lt;li&gt;&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();
+actionBar.setDisplayHomeAsUpEnabled(true);
+actionBar.setHomeButtonEnabled(true);
+
+/*
+ *    参数1）显示Navigation Drawer的 Activity 对象
+    参数2） DrawerLayout 对象
+    参数3）一个用来指示Navigation Drawer的 drawable资源
+    参数4）一个用来描述打开Navigation Drawer的文本 (用于支持可访问性)。
+    参数5）一个用来描述关闭Navigation Drawer的文本(用于支持可访问性).
+ */
+drawerToggle = new ActionBarDrawerToggle(this,
+        mDrawerLayout, R.drawable.ic_drawer_am, R.string.open_drawer,
+        R.string.close_drawer);
+mDrawerLayout.setDrawerListener(drawerToggle);
+
+//  让开关和actionbar建立关系 
+drawerToggle.syncState();
+
+/** 处理actionBar菜单条目的点击事件 */
+public boolean onOptionsItemSelected(MenuItem item) {
+    if (item.getItemId() == R.id.action_search) {
+        Toast.makeText(getApplicationContext(), &amp;quot;搜索&amp;quot;, 0).show();
+    }
+
+    return drawerToggle.onOptionsItemSelected(item)|super.onOptionsItemSelected(item);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;BaseApplication-extendes-Application&quot;&gt;&lt;a href=&quot;#BaseApplication-extendes-Application&quot; class=&quot;headerlink&quot; title=&quot;BaseApplication extendes Application&quot;&gt;&lt;/a&gt;BaseApplication extendes Application&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;需要在AndroidManifest中配置&lt;/li&gt;
+&lt;li&gt;android:name=”BaseApplication”&lt;/li&gt;
+&lt;li&gt;  &lt;application android:allowbackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsrtl=&quot;true&quot; android:theme=&quot;@style/CustomActionBarTheme&quot; android:name=&quot;BaseApplication&quot;&gt;//添加name属性  &lt;activity android:name=&quot;.MainActivity&quot;&gt;&lt;br&gt;  &lt;intent-filter&gt;&lt;br&gt;  &lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;&lt;br&gt;  &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;&lt;br&gt;  &lt;/category&gt;&lt;/action&gt;&lt;/intent-filter&gt;&lt;br&gt;  &lt;/activity&gt;
+
+&lt;/application&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;synchronized-必须是-static-否则不起作用&quot;&gt;&lt;a href=&quot;#synchronized-必须是-static-否则不起作用&quot; class=&quot;headerlink&quot; title=&quot;synchronized 必须是 static 否则不起作用&quot;&gt;&lt;/a&gt;synchronized 必须是 static 否则不起作用&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="GooglePlay项目笔记" scheme="http://dongxi520.com/tags/GooglePlay%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客个性化搭建</title>
