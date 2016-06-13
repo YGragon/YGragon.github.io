@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-13T13:04:31.770Z</updated>
+  <updated>2016-06-13T13:27:29.032Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/06/13/GooglePlay-1/"/>
     <id>http://dongxi520.com/2016/06/13/GooglePlay-1/</id>
     <published>2016-06-13T12:59:17.000Z</published>
-    <updated>2016-06-13T13:04:31.770Z</updated>
+    <updated>2016-06-13T13:27:29.032Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
@@ -86,28 +86,94 @@ return true;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;a href=&quot;#ActionBar中返回按钮的处理（AS）&quot; class=&quot;headerlink&quot; title=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;/a&gt;ActionBar中返回按钮的处理（AS）&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在activity中处理&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;在activity中处理&lt;ul&gt;
 &lt;li&gt;添加如下代码&lt;/li&gt;
-&lt;li&gt;  ActionBar actionBar = getSupportActionBar();//可以向下兼容&lt;br&gt;  actionBar.setDisplayHomeAsUpEnabled(true);//设置图片显示&lt;br&gt;  actionBar.setHomeButtonEnabled(true);//设置图片可以点击&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();//可以向下兼容
+actionBar.setDisplayHomeAsUpEnabled(true);//设置图片显示
+actionBar.setHomeButtonEnabled(true);//设置图片可以点击
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;在AndroidManifest文件中处理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;  &lt;activity android:name=&quot;.DetailActivity&quot; android:label=&quot;@string/app_detail&quot; android:parentactivityname=&quot;.MainActivity&quot; 返回的上一个activity=&quot;&quot;&gt;&lt;br&gt;  &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot; android:value=&quot;.MainActivity&quot;&gt;&lt;br&gt;  &lt;/meta-data&gt;&lt;/activity&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;activity android:name=&amp;quot;.DetailActivity&amp;quot;
+    android:label=&amp;quot;@string/app_detail&amp;quot;
+    android:parentActivityName=&amp;quot;.MainActivity&amp;quot;&amp;gt; //返回的上一个Activity
 
-&lt;/li&gt;
+&amp;lt;meta-data
+    android:name=&amp;quot;android.support.PARENT_ACTIVITY&amp;quot;
+    android:value=&amp;quot;.MainActivity&amp;quot;
+    /&amp;gt;
+&amp;lt;/activity&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;ActionBar-Tab标签的实现&quot;&gt;&lt;a href=&quot;#ActionBar-Tab标签的实现&quot; class=&quot;headerlink&quot; title=&quot;ActionBar Tab标签的实现&quot;&gt;&lt;/a&gt;ActionBar Tab标签的实现&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;在drawable目录下新建一个标签的状态选择器&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;  &amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
-  &lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 标签没被选中的样式 --&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- Non focused states --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_unselected&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_selected&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- Focused states (such as when focused with a d-pad or mouse hover) --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_unselected_focused&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/tab_selected_focused&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 标签被选中的样式 --&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 非聚焦状态 --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_unselected_pressed&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;false&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_selected_pressed&quot;&gt;&lt;br&gt;&lt;br&gt;  &lt;!-- 聚焦状态 (例如当用方向键或鼠标悬停于) --&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;false&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_unselected_pressed&quot;&gt;&lt;br&gt;  &lt;item android:state_focused=&quot;true&quot; android:state_selected=&quot;true&quot; android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/tab_selected_pressed&quot;&gt;&lt;br&gt;  &lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/item&gt;&lt;/selector&gt;&lt;/li&gt;
-&lt;li&gt;实现自定义主题&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;  &amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
-  &lt;resources&gt;&lt;br&gt;       &lt;!-- the theme applied to the application or activity --&gt;&lt;br&gt;      &lt;style name=&quot;CustomActionBarTheme&quot; 自定义主题名=&quot;&quot; parent=&quot;@style/Theme.AppCompat.Light&quot;&gt; //继承的ActionBar背景&lt;br&gt;      &lt;item name=&quot;android:actionBarTabStyle&quot;&gt;@style/MyActionBarTabs&lt;/item&gt;&lt;br&gt;&lt;br&gt;          &lt;!-- Support library compatibility --&gt;&lt;br&gt;          &lt;item name=&quot;actionBarTabStyle&quot;&gt;@style/MyActionBarTabs&lt;/item&gt;&lt;br&gt;      &lt;/style&gt;&lt;br&gt;&lt;br&gt;      &lt;!-- ActionBar 标签样式 --&gt;&lt;br&gt;      &lt;style name=&quot;MyActionBarTabs&quot; parent=&quot;@style/Widget.AppCompat.ActionBar.TabView&quot;&gt;&lt;br&gt;          &lt;!-- tab indicator --&gt;&lt;br&gt;          &lt;item name=&quot;android:background&quot;&gt;@drawable/actionbar_tab_indicator&lt;/item&gt;//状态选择器&lt;br&gt;&lt;br&gt;          &lt;!-- Support library compatibility --&gt;&lt;br&gt;          &lt;item name=&quot;background&quot;&gt;@drawable/actionbar_tab_indicator&lt;/item&gt;&lt;br&gt;      &lt;/style&gt;&lt;br&gt;  &lt;/resources&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在drawable目录下新建一个标签的状态选择器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 标签没被选中的样式 --&amp;gt;
+
+&amp;lt;!-- Non focused states --&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
+      android:state_pressed=&amp;quot;false&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_unselected&amp;quot; /&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
+      android:state_pressed=&amp;quot;false&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_selected&amp;quot; /&amp;gt;
+
+&amp;lt;!-- Focused states (such as when focused with a d-pad or mouse hover) --&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
+      android:state_pressed=&amp;quot;false&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_unselected_focused&amp;quot; /&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
+      android:state_pressed=&amp;quot;false&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_selected_focused&amp;quot; /&amp;gt;
+
+&amp;lt;!-- 标签被选中的样式 --&amp;gt;
+
+&amp;lt;!-- 非聚焦状态 --&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
+      android:state_pressed=&amp;quot;true&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
+    android:state_pressed=&amp;quot;true&amp;quot;
+    android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;
+
+&amp;lt;!-- 聚焦状态 (例如当用方向键或鼠标悬停于) --&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
+      android:state_pressed=&amp;quot;true&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;
+&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
+      android:state_pressed=&amp;quot;true&amp;quot;
+      android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;
+&amp;lt;/selector&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实现自定义主题 &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;resources&amp;gt;
+&amp;lt;style name=&amp;quot;CustomActionBarTheme&amp;quot; //自定义主题名
+      parent=&amp;quot;@style/Theme.AppCompat.Light&amp;quot;&amp;gt;//继承的ActionBar背景
+   &amp;lt;item name=&amp;quot;android:actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;
+
+   &amp;lt;item name=&amp;quot;actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;
+&amp;lt;/style&amp;gt;
+&amp;lt;style name=&amp;quot;MyActionBarTabs&amp;quot;
+   parent=&amp;quot;@style/Widget.AppCompat.ActionBar.TabView&amp;quot;&amp;gt;
+   &amp;lt;item name=&amp;quot;android:background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;//状态选择器
+   &amp;lt;item name=&amp;quot;background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;
+&amp;lt;/style&amp;gt;
+&amp;lt;/resources&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;在代码里添加标签&lt;/li&gt;
 &lt;li&gt; ActionBar actionBar = getSupportActionBar();&lt;br&gt; actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);&lt;br&gt; Tab tab1=actionBar.newTab().setText(“标签一”).setTabListener(new MyTabListener());&lt;br&gt; actionBar.addTab(tab1);&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;h1 id=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;a href=&quot;#DrawerLayout和SlidingMenu的对比&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;/a&gt;DrawerLayout和SlidingMenu的对比&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;抽屉菜单（DrawerLayout）优点&lt;ul&gt;
 &lt;li&gt;DrawerLayout稳定可靠，使用起来更简单一点；&lt;/li&gt;
@@ -182,12 +248,13 @@ public boolean onOptionsItemSelected(MenuItem item) {
 &lt;/ul&gt;
 &lt;h1 id=&quot;BaseApplication-extendes-Application&quot;&gt;&lt;a href=&quot;#BaseApplication-extendes-Application&quot; class=&quot;headerlink&quot; title=&quot;BaseApplication extendes Application&quot;&gt;&lt;/a&gt;BaseApplication extendes Application&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;需要在AndroidManifest中配置&lt;/li&gt;
-&lt;li&gt;android:name=”BaseApplication”&lt;/li&gt;
-&lt;li&gt;  &lt;application android:allowbackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsrtl=&quot;true&quot; android:theme=&quot;@style/CustomActionBarTheme&quot; android:name=&quot;BaseApplication&quot;&gt;//添加name属性  &lt;activity android:name=&quot;.MainActivity&quot;&gt;&lt;br&gt;  &lt;intent-filter&gt;&lt;br&gt;  &lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;&lt;br&gt;  &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;&lt;br&gt;  &lt;/category&gt;&lt;/action&gt;&lt;/intent-filter&gt;&lt;br&gt;  &lt;/activity&gt;
-
-&lt;/application&gt;&lt;/li&gt;
+&lt;li&gt;添加这个属性 android:name=”BaseApplication”&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;synchronized-必须是-static-否则不起作用&quot;&gt;&lt;a href=&quot;#synchronized-必须是-static-否则不起作用&quot; class=&quot;headerlink&quot; title=&quot;synchronized 必须是 static 否则不起作用&quot;&gt;&lt;/a&gt;synchronized 必须是 static 否则不起作用&lt;/h1&gt;</content>
+&lt;blockquote&gt;
+&lt;p&gt;&lt;application android:allowbackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsrtl=&quot;true&quot; android:theme=&quot;@style/CustomActionBarTheme&quot; android:name=&quot;BaseApplication&quot;&gt;//添加&lt;/application&gt;&lt;/p&gt;
+&lt;activity android:name=&quot;.MainActivity&quot;&gt;&lt;br&gt;&lt;intent-filter&gt;&lt;br&gt;&lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;&lt;br&gt;&lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;&lt;br&gt;&lt;/category&gt;&lt;/action&gt;&lt;/intent-filter&gt;&lt;br&gt;&lt;/activity&gt;
+&lt;/blockquote&gt;
+</content>
     
     <summary type="html">
     
