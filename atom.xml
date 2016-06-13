@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-13T13:27:29.032Z</updated>
+  <updated>2016-06-13T13:32:04.317Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/06/13/GooglePlay-1/"/>
     <id>http://dongxi520.com/2016/06/13/GooglePlay-1/</id>
     <published>2016-06-13T12:59:17.000Z</published>
-    <updated>2016-06-13T13:27:29.032Z</updated>
+    <updated>2016-06-13T13:32:04.317Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
@@ -169,11 +169,15 @@ actionBar.setHomeButtonEnabled(true);//设置图片可以点击
    &amp;lt;item name=&amp;quot;background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;
 &amp;lt;/style&amp;gt;
 &amp;lt;/resources&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;在代码里添加标签&lt;/li&gt;
-&lt;li&gt; ActionBar actionBar = getSupportActionBar();&lt;br&gt; actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);&lt;br&gt; Tab tab1=actionBar.newTab().setText(“标签一”).setTabListener(new MyTabListener());&lt;br&gt; actionBar.addTab(tab1);&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在代码里添加标签&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();
+actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+Tab tab1=actionBar.newTab().setText(&amp;quot;标签一&amp;quot;).setTabListener(new MyTabListener());
+actionBar.addTab(tab1);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
 &lt;h1 id=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;a href=&quot;#DrawerLayout和SlidingMenu的对比&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;/a&gt;DrawerLayout和SlidingMenu的对比&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;抽屉菜单（DrawerLayout）优点&lt;ul&gt;
 &lt;li&gt;DrawerLayout稳定可靠，使用起来更简单一点；&lt;/li&gt;
@@ -248,12 +252,21 @@ public boolean onOptionsItemSelected(MenuItem item) {
 &lt;/ul&gt;
 &lt;h1 id=&quot;BaseApplication-extendes-Application&quot;&gt;&lt;a href=&quot;#BaseApplication-extendes-Application&quot; class=&quot;headerlink&quot; title=&quot;BaseApplication extendes Application&quot;&gt;&lt;/a&gt;BaseApplication extendes Application&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;需要在AndroidManifest中配置&lt;/li&gt;
-&lt;li&gt;添加这个属性 android:name=”BaseApplication”&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加这个属性 android:name=”BaseApplication”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;application
+    android:allowBackup=&amp;quot;true&amp;quot;
+    android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;
+    android:label=&amp;quot;@string/app_name&amp;quot;
+    android:supportsRtl=&amp;quot;true&amp;quot;
+    android:theme=&amp;quot;@style/CustomActionBarTheme&amp;quot; android:name=&amp;quot;BaseApplication&amp;quot;&amp;gt;//添加
+&amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;
+&amp;lt;intent-filter&amp;gt;
+&amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;
+&amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;
+&amp;lt;/intent-filter&amp;gt;
+&amp;lt;/activity&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;application android:allowbackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsrtl=&quot;true&quot; android:theme=&quot;@style/CustomActionBarTheme&quot; android:name=&quot;BaseApplication&quot;&gt;//添加&lt;/application&gt;&lt;/p&gt;
-&lt;activity android:name=&quot;.MainActivity&quot;&gt;&lt;br&gt;&lt;intent-filter&gt;&lt;br&gt;&lt;action android:name=&quot;android.intent.action.MAIN&quot;&gt;&lt;br&gt;&lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;&gt;&lt;br&gt;&lt;/category&gt;&lt;/action&gt;&lt;/intent-filter&gt;&lt;br&gt;&lt;/activity&gt;
-&lt;/blockquote&gt;
 </content>
     
     <summary type="html">

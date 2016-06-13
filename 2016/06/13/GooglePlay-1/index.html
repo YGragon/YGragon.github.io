@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://dongxi520.com/2016/06/13/GooglePlay-1/index.html">
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description" content="GooglePlay项目第一天笔记">
-<meta property="og:updated_time" content="2016-06-13T13:27:29.032Z">
+<meta property="og:updated_time" content="2016-06-13T13:32:04.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GooglePlay项目第一天笔记">
 <meta name="twitter:description" content="GooglePlay项目第一天笔记">
@@ -491,11 +491,15 @@ actionBar.setHomeButtonEnabled(true);//设置图片可以点击
    &lt;item name=&quot;background&quot;&gt;@drawable/actionbar_tab_indicator&lt;/item&gt;
 &lt;/style&gt;
 &lt;/resources&gt;
-</code></pre><ul>
-<li>在代码里添加标签</li>
-<li> ActionBar actionBar = getSupportActionBar();<br> actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);<br> Tab tab1=actionBar.newTab().setText(“标签一”).setTabListener(new MyTabListener());<br> actionBar.addTab(tab1);</li>
+</code></pre></blockquote>
+<ul>
+<li><p>在代码里添加标签</p>
+<pre><code>ActionBar actionBar = getSupportActionBar();
+actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+Tab tab1=actionBar.newTab().setText(&quot;标签一&quot;).setTabListener(new MyTabListener());
+actionBar.addTab(tab1);
+</code></pre></li>
 </ul>
-</blockquote>
 <h1 id="DrawerLayout和SlidingMenu的对比"><a href="#DrawerLayout和SlidingMenu的对比" class="headerlink" title="DrawerLayout和SlidingMenu的对比"></a>DrawerLayout和SlidingMenu的对比</h1><ul>
 <li>抽屉菜单（DrawerLayout）优点<ul>
 <li>DrawerLayout稳定可靠，使用起来更简单一点；</li>
@@ -570,12 +574,21 @@ public boolean onOptionsItemSelected(MenuItem item) {
 </ul>
 <h1 id="BaseApplication-extendes-Application"><a href="#BaseApplication-extendes-Application" class="headerlink" title="BaseApplication extendes Application"></a>BaseApplication extendes Application</h1><ul>
 <li>需要在AndroidManifest中配置</li>
-<li>添加这个属性 android:name=”BaseApplication”</li>
+<li><p>添加这个属性 android:name=”BaseApplication”</p>
+<pre><code>&lt;application
+    android:allowBackup=&quot;true&quot;
+    android:icon=&quot;@mipmap/ic_launcher&quot;
+    android:label=&quot;@string/app_name&quot;
+    android:supportsRtl=&quot;true&quot;
+    android:theme=&quot;@style/CustomActionBarTheme&quot; android:name=&quot;BaseApplication&quot;&gt;//添加
+&lt;activity android:name=&quot;.MainActivity&quot;&gt;
+&lt;intent-filter&gt;
+&lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+&lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+&lt;/intent-filter&gt;
+&lt;/activity&gt;
+</code></pre></li>
 </ul>
-<blockquote>
-<p><application android:allowbackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsrtl="true" android:theme="@style/CustomActionBarTheme" android:name="BaseApplication">//添加</application></p>
-<activity android:name=".MainActivity"><br><intent-filter><br><action android:name="android.intent.action.MAIN"><br><category android:name="android.intent.category.LAUNCHER"><br></category></action></intent-filter><br></activity>
-</blockquote>
 
       
     </div>
