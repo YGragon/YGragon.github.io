@@ -287,7 +287,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-14T09:07:16.543Z</updated>
+    <updated>2016-06-14T09:11:46.467Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -332,10 +332,18 @@ public boolean onOptionsItemSelected(MenuItem item) {
 &lt;/ul&gt;
 &lt;h2 id=&quot;添加最近访客&quot;&gt;&lt;a href=&quot;#添加最近访客&quot; class=&quot;headerlink&quot; title=&quot;添加最近访客&quot;&gt;&lt;/a&gt;添加最近访客&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;首先需要开通多说的评论功能，可以参考&lt;a href=&quot;http://www.arao.me/2015/hexo-next-theme-optimize-base/#NexT%E4%B8%BB%E9%A2%98%E5%88%9B%E5%BB%BA_%E2%80%9C%E7%95%99%E8%A8%80%E2%80%9D_%E9%A1%B5%E9%9D%A2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;接着添加如下代码到文章底部(你喜欢在哪添加都行，一般在底部显示)&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;class=&quot;blockquote-center&quot;&gt;来了就打个招呼呗！&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;最近访客&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;ds-recent-visitors&amp;quot; data-num-items=&amp;quot;28&amp;quot; data-avatar-size=&amp;quot;42&amp;quot; id=&amp;quot;ds-recent-visitors&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;li&gt;接着添加如下代码到文章底部(你喜欢在哪添加都行，一般在底部显示)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;blockquote class=&amp;quot;blockquote-center&amp;quot;&amp;gt;来了就打个招呼呗！&amp;lt;/blockquote&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;最近访客&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;ds-recent-visitors&amp;quot; data-num-items=&amp;quot;28&amp;quot; data-avatar-size=&amp;quot;42&amp;quot; id=&amp;quot;ds-recent-visitors&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;参数解释&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class=“ds-recent-visitors”    //指定显示最近访客容器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-num-items=“28”    //显示最近访客的数量&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-avatar-size=“42”    //显示最近访客头像尺寸大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;id=“ds-recent-visitors”    //为了调节最近访客样式加的&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
+&lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;来了就打个招呼呗！&lt;/blockquote&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最近访客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;28&quot; data-avatar-size=&quot;42&quot; id=&quot;ds-recent-visitors&quot;&gt;&lt;/div&gt;</content>
     
     <summary type="html">
     
