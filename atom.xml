@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-13T13:32:04.317Z</updated>
+  <updated>2016-06-15T04:29:45.273Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://dongxi520.com/2016/06/13/GooglePlay-1/"/>
     <id>http://dongxi520.com/2016/06/13/GooglePlay-1/</id>
     <published>2016-06-13T12:59:17.000Z</published>
-    <updated>2016-06-13T13:32:04.317Z</updated>
+    <updated>2016-06-15T04:29:45.273Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
+&lt;p&gt;GooglePlay项目第一天笔记，主要介绍了ActionBar的使用，以及DrawerLayout 抽屉菜单的实现等。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;ActionBar&quot;&gt;&lt;a href=&quot;#ActionBar&quot; class=&quot;headerlink&quot; title=&quot;ActionBar&quot;&gt;&lt;/a&gt;ActionBar&lt;/h1&gt;&lt;ul&gt;
@@ -56,8 +56,8 @@ dongxi:actionViewClass=&amp;quot;android.support.v7.widget.SearchView&amp;quot;
 &amp;lt;/menu&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;在继承ActionBar的类中实现以下方法&lt;/li&gt;
-&lt;li&gt;&lt;pre&gt;&lt;code&gt;/** 处理actionBar菜单条目的点击事件 */
-public boolean onOptionsItemSelected(MenuItem item) {
+&lt;li&gt;&lt;p&gt; /&lt;em&gt;* 处理actionBar菜单条目的点击事件 &lt;/em&gt;/&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public boolean onOptionsItemSelected(MenuItem item) {
 if (item.getItemId() == R.id.action_search) {
 Toast.makeText(getApplicationContext(), &amp;quot;搜索&amp;quot;, Toast.LENGTH_SHORT).show();
 }
@@ -86,97 +86,26 @@ return true;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;a href=&quot;#ActionBar中返回按钮的处理（AS）&quot; class=&quot;headerlink&quot; title=&quot;ActionBar中返回按钮的处理（AS）&quot;&gt;&lt;/a&gt;ActionBar中返回按钮的处理（AS）&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;在activity中处理&lt;ul&gt;
-&lt;li&gt;添加如下代码&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;在activity中处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加如下代码&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;actionBar = getSupportActionBar();//可以向下兼容&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;actionBar.setDisplayHomeAsUpEnabled(true);//设置图片显示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;actionBar.setHomeButtonEnabled(true);//设置图片可以点击&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();//可以向下兼容
-actionBar.setDisplayHomeAsUpEnabled(true);//设置图片显示
-actionBar.setHomeButtonEnabled(true);//设置图片可以点击
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;在AndroidManifest文件中处理&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;activity android:name=&amp;quot;.DetailActivity&amp;quot;
-    android:label=&amp;quot;@string/app_detail&amp;quot;
-    android:parentActivityName=&amp;quot;.MainActivity&amp;quot;&amp;gt; //返回的上一个Activity
-
-&amp;lt;meta-data
-    android:name=&amp;quot;android.support.PARENT_ACTIVITY&amp;quot;
-    android:value=&amp;quot;.MainActivity&amp;quot;
-    /&amp;gt;
-&amp;lt;/activity&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;android:name=&quot;.DetailActivity&quot;&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;	android:label=&amp;quot;@string/app_detail&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:parentActivityName=&amp;quot;.MainActivity&amp;quot;&amp;gt; //返回的上一个Activity&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;meta-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:name=&amp;quot;android.support.PARENT_ACTIVITY&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:value=&amp;quot;.MainActivity&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;ActionBar-Tab标签的实现&quot;&gt;&lt;a href=&quot;#ActionBar-Tab标签的实现&quot; class=&quot;headerlink&quot; title=&quot;ActionBar Tab标签的实现&quot;&gt;&lt;/a&gt;ActionBar Tab标签的实现&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;在drawable目录下新建一个标签的状态选择器&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 标签没被选中的样式 --&amp;gt;
-
-&amp;lt;!-- Non focused states --&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
-      android:state_pressed=&amp;quot;false&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_unselected&amp;quot; /&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
-      android:state_pressed=&amp;quot;false&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_selected&amp;quot; /&amp;gt;
-
-&amp;lt;!-- Focused states (such as when focused with a d-pad or mouse hover) --&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
-      android:state_pressed=&amp;quot;false&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_unselected_focused&amp;quot; /&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
-      android:state_pressed=&amp;quot;false&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_selected_focused&amp;quot; /&amp;gt;
-
-&amp;lt;!-- 标签被选中的样式 --&amp;gt;
-
-&amp;lt;!-- 非聚焦状态 --&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
-      android:state_pressed=&amp;quot;true&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
-    android:state_pressed=&amp;quot;true&amp;quot;
-    android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;
-
-&amp;lt;!-- 聚焦状态 (例如当用方向键或鼠标悬停于) --&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;
-      android:state_pressed=&amp;quot;true&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;
-&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;
-      android:state_pressed=&amp;quot;true&amp;quot;
-      android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;
-&amp;lt;/selector&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;实现自定义主题 &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- 标签没被选中的样式 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- Non focused states --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_unselected&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_selected&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- Focused states (such as when focused with a d-pad or mouse hover) --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_unselected_focused&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_selected_focused&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- 标签被选中的样式 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- 非聚焦状态 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;false&amp;quot; android:state_selected=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    android:state_pressed=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;!-- 聚焦状态 (例如当用方向键或鼠标悬停于) --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_unselected_pressed&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;item android:state_focused=&amp;quot;true&amp;quot; android:state_selected=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:state_pressed=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      android:drawable=&amp;quot;@drawable/tab_selected_pressed&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;/selector&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;resources&amp;gt;
-&amp;lt;style name=&amp;quot;CustomActionBarTheme&amp;quot; //自定义主题名
-      parent=&amp;quot;@style/Theme.AppCompat.Light&amp;quot;&amp;gt;//继承的ActionBar背景
-   &amp;lt;item name=&amp;quot;android:actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;
-
-   &amp;lt;item name=&amp;quot;actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;
-&amp;lt;/style&amp;gt;
-&amp;lt;style name=&amp;quot;MyActionBarTabs&amp;quot;
-   parent=&amp;quot;@style/Widget.AppCompat.ActionBar.TabView&amp;quot;&amp;gt;
-   &amp;lt;item name=&amp;quot;android:background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;//状态选择器
-   &amp;lt;item name=&amp;quot;background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;
-&amp;lt;/style&amp;gt;
-&amp;lt;/resources&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;实现自定义主题 &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;style name=&amp;quot;CustomActionBarTheme&amp;quot; //自定义主题名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         parent=&amp;quot;@style/Theme.AppCompat.Light&amp;quot;&amp;gt;//继承的ActionBar背景&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	&amp;lt;item name=&amp;quot;android:actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;item name=&amp;quot;actionBarTabStyle&amp;quot;&amp;gt;@style/MyActionBarTabs&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;style name=&amp;quot;MyActionBarTabs&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      parent=&amp;quot;@style/Widget.AppCompat.ActionBar.TabView&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;item name=&amp;quot;android:background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt;//状态选择器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;item name=&amp;quot;background&amp;quot;&amp;gt;@drawable/actionbar_tab_indicator&amp;lt;/item&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/resources&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;在代码里添加标签&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();
-actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-Tab tab1=actionBar.newTab().setText(&amp;quot;标签一&amp;quot;).setTabListener(new MyTabListener());
-actionBar.addTab(tab1);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ActionBar actionBar = getSupportActionBar();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Tab tab1=actionBar.newTab().setText(&amp;quot;标签一&amp;quot;).setTabListener(new MyTabListener());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;actionBar.addTab(tab1);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;a href=&quot;#DrawerLayout和SlidingMenu的对比&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout和SlidingMenu的对比&quot;&gt;&lt;/a&gt;DrawerLayout和SlidingMenu的对比&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;抽屉菜单（DrawerLayout）优点&lt;ul&gt;
@@ -200,79 +129,23 @@ actionBar.addTab(tab1);
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;DrawerLayout-抽屉菜单的实现&quot;&gt;&lt;a href=&quot;#DrawerLayout-抽屉菜单的实现&quot; class=&quot;headerlink&quot; title=&quot;DrawerLayout 抽屉菜单的实现&quot;&gt;&lt;/a&gt;DrawerLayout 抽屉菜单的实现&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;保证V4包下有这个类&lt;/li&gt;
-&lt;li&gt;  &lt;android.support.v4.widget.drawerlayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; tools:context=&quot;.MainActivity&quot; android:id=&quot;@+id/dl&quot;&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;LinearLayout
-    android:layout_width=&amp;quot;match_parent&amp;quot;
-    android:layout_height=&amp;quot;match_parent&amp;quot;
-    android:layout_centerHorizontal=&amp;quot;true&amp;quot;
-    android:layout_centerVertical=&amp;quot;true&amp;quot;
-   /&amp;gt;
-
-&amp;lt;FrameLayout android:layout_width=&amp;quot;match_parent&amp;quot;
-    android:layout_height=&amp;quot;match_parent&amp;quot;
-    android:background=&amp;quot;@drawable/bg_tab&amp;quot;
-    android:layout_gravity=&amp;quot;left&amp;quot;&amp;gt;
-
-&amp;lt;/FrameLayout&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  &lt;/p&gt;&lt;/android.support.v4.widget.drawerlayout&gt;&lt;p&gt;&lt;/p&gt;
+&lt;li&gt;保证V4包下有这个类&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;android.support.v4.widget.DrawerLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    tools:context=&amp;quot;.MainActivity&amp;quot; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:id=&amp;quot;@+id/dl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;LinearLayout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_centerHorizontal=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_centerVertical=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;FrameLayout android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:background=&amp;quot;@drawable/bg_tab&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_gravity=&amp;quot;left&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/FrameLayout&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/android.support.v4.widget.DrawerLayout&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;ActionBarDrawerToggle-抽屉菜单的开关&quot;&gt;&lt;a href=&quot;#ActionBarDrawerToggle-抽屉菜单的开关&quot; class=&quot;headerlink&quot; title=&quot;ActionBarDrawerToggle 抽屉菜单的开关&quot;&gt;&lt;/a&gt;ActionBarDrawerToggle 抽屉菜单的开关&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;控制抽屉的开关，在actionbar的上面&lt;/li&gt;
-&lt;li&gt;&lt;pre&gt;&lt;code&gt;ActionBar actionBar = getSupportActionBar();
-actionBar.setDisplayHomeAsUpEnabled(true);
-actionBar.setHomeButtonEnabled(true);
-
-/*
- *    参数1）显示Navigation Drawer的 Activity 对象
-    参数2） DrawerLayout 对象
-    参数3）一个用来指示Navigation Drawer的 drawable资源
-    参数4）一个用来描述打开Navigation Drawer的文本 (用于支持可访问性)。
-    参数5）一个用来描述关闭Navigation Drawer的文本(用于支持可访问性).
- */
-drawerToggle = new ActionBarDrawerToggle(this,
-        mDrawerLayout, R.drawable.ic_drawer_am, R.string.open_drawer,
-        R.string.close_drawer);
-mDrawerLayout.setDrawerListener(drawerToggle);
-
-//  让开关和actionbar建立关系 
-drawerToggle.syncState();
-
-/** 处理actionBar菜单条目的点击事件 */
-public boolean onOptionsItemSelected(MenuItem item) {
-    if (item.getItemId() == R.id.action_search) {
-        Toast.makeText(getApplicationContext(), &amp;quot;搜索&amp;quot;, 0).show();
-    }
-
-    return drawerToggle.onOptionsItemSelected(item)|super.onOptionsItemSelected(item);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;控制抽屉的开关，在actionbar的上面&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ActionBar actionBar = getSupportActionBar();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;actionBar.setDisplayHomeAsUpEnabled(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;actionBar.setHomeButtonEnabled(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *	参数1）显示Navigation Drawer的 Activity 对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	参数2） DrawerLayout 对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	参数3）一个用来指示Navigation Drawer的 drawable资源&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	参数4）一个用来描述打开Navigation Drawer的文本 (用于支持可访问性)。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	参数5）一个用来描述关闭Navigation Drawer的文本(用于支持可访问性).&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drawerToggle = new ActionBarDrawerToggle(this,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		mDrawerLayout, R.drawable.ic_drawer_am, R.string.open_drawer,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		R.string.close_drawer);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mDrawerLayout.setDrawerListener(drawerToggle);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//  让开关和actionbar建立关系 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drawerToggle.syncState();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/** 处理actionBar菜单条目的点击事件 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public boolean onOptionsItemSelected(MenuItem item) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	if (item.getItemId() == R.id.action_search) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Toast.makeText(getApplicationContext(), &amp;quot;搜索&amp;quot;, 0).show();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	return drawerToggle.onOptionsItemSelected(item)|super.onOptionsItemSelected(item);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;BaseApplication-extendes-Application&quot;&gt;&lt;a href=&quot;#BaseApplication-extendes-Application&quot; class=&quot;headerlink&quot; title=&quot;BaseApplication extendes Application&quot;&gt;&lt;/a&gt;BaseApplication extendes Application&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;需要在AndroidManifest中配置&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加这个属性 android:name=”BaseApplication”&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;application
-    android:allowBackup=&amp;quot;true&amp;quot;
-    android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;
-    android:label=&amp;quot;@string/app_name&amp;quot;
-    android:supportsRtl=&amp;quot;true&amp;quot;
-    android:theme=&amp;quot;@style/CustomActionBarTheme&amp;quot; android:name=&amp;quot;BaseApplication&amp;quot;&amp;gt;//添加
-&amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;
-&amp;lt;intent-filter&amp;gt;
-&amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;
-&amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;
-&amp;lt;/intent-filter&amp;gt;
-&amp;lt;/activity&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;添加这个属性 android:name=”BaseApplication”&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;application&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:allowBackup=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:label=&amp;quot;@string/app_name&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:supportsRtl=&amp;quot;true&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	android:theme=&amp;quot;@style/CustomActionBarTheme&amp;quot; android:name=&amp;quot;BaseApplication&amp;quot;&amp;gt;//添加&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;GooglePlay项目第一天笔记&lt;/p&gt;
+&lt;p&gt;GooglePlay项目第一天笔记，主要介绍了ActionBar的使用，以及DrawerLayout 抽屉菜单的实现等。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -287,7 +160,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-14T09:26:22.241Z</updated>
+    <updated>2016-06-15T04:29:47.797Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -317,6 +190,14 @@ public boolean onOptionsItemSelected(MenuItem item) {
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;嵌入不自动播放只需要把以上代码中的auto改为=0即可，样子是这样的&lt;br&gt;类似方法还可以嵌入虾米播播&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;添加视频&quot;&gt;&lt;a href=&quot;#添加视频&quot; class=&quot;headerlink&quot; title=&quot;添加视频&quot;&gt;&lt;/a&gt;添加视频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;另外，markdown完全兼容html，你可以用html插入这些东西，例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;iframe height=498 width=510 src=&amp;quot;http://player.youku.com/embed/XMjI2MjU3MDMy&amp;quot; frameborder=0 allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;参数解释&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;src=&amp;quot;&amp;quot;: 视频路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;frameborder：设置或返回是否显示框架周围的边框&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;allowfullscreen: 允许全屏=true。也就是允许全屏,=false时表示不允许全屏&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;添加阅读全文按钮&quot;&gt;&lt;a href=&quot;#添加阅读全文按钮&quot; class=&quot;headerlink&quot; title=&quot;添加阅读全文按钮&quot;&gt;&lt;/a&gt;添加阅读全文按钮&lt;/h2&gt;&lt;ul&gt;
