@@ -160,7 +160,7 @@ return true;
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-15T04:29:47.797Z</updated>
+    <updated>2016-06-15T04:38:17.896Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -217,7 +217,20 @@ return true;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;blockquote class=&amp;quot;blockquote-center&amp;quot;&amp;gt;来了就打个招呼呗！&amp;lt;/blockquote&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;最近访客&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;ds-recent-visitors&amp;quot; data-num-items=&amp;quot;28&amp;quot; data-avatar-size=&amp;quot;42&amp;quot; id=&amp;quot;ds-recent-visitors&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
-&lt;li&gt;参数解释&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class=“ds-recent-visitors”    //指定显示最近访客容器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-num-items=“28”    //显示最近访客的数量&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-avatar-size=“42”    //显示最近访客头像尺寸大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;id=“ds-recent-visitors”    //为了调节最近访客样式加的&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;参数解释&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class=“ds-recent-visitors”    //指定显示最近访客容器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-num-items=“28”    //显示最近访客的数量&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-avatar-size=“42”    //显示最近访客头像尺寸大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;id=“ds-recent-visitors”    //为了调节最近访客样式加的&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Git-push-Hexo-g-d-时重复输入用户名密码的问题&quot;&gt;&lt;a href=&quot;#Git-push-Hexo-g-d-时重复输入用户名密码的问题&quot; class=&quot;headerlink&quot; title=&quot;Git push(Hexo g -d)时重复输入用户名密码的问题&quot;&gt;&lt;/a&gt;Git push(Hexo g -d)时重复输入用户名密码的问题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先添加环境变量。在用户变量中新建如下内容&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;变量名：HOME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;变量值：%USERPROFILE%&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在用户文件夹如C:\Users\用户名下新建一个名为_netrc的文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编辑该文件：内容如下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;machine github.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;login GitHub的用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;password GitHub的密码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;保存。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     

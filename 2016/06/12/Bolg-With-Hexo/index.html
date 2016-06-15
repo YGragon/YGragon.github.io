@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description" content="Hexo博客个性化搭建
 原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。">
-<meta property="og:updated_time" content="2016-06-15T04:29:47.797Z">
+<meta property="og:updated_time" content="2016-06-15T04:38:17.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客个性化搭建">
 <meta name="twitter:description" content="Hexo博客个性化搭建
@@ -412,7 +412,20 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;来了就打个招呼呗！&lt;/blockquote&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line">&gt;最近访客</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;28&quot; data-avatar-size=&quot;42&quot; id=&quot;ds-recent-visitors&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>参数解释<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class=“ds-recent-visitors”    //指定显示最近访客容器</span><br><span class="line">data-num-items=“28”    //显示最近访客的数量</span><br><span class="line">data-avatar-size=“42”    //显示最近访客头像尺寸大小</span><br><span class="line">id=“ds-recent-visitors”    //为了调节最近访客样式加的</span><br></pre></td></tr></table></figure></li>
+<li>参数解释<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class=“ds-recent-visitors”    //指定显示最近访客容器</span><br><span class="line">data-num-items=“28”    //显示最近访客的数量</span><br><span class="line">data-avatar-size=“42”    //显示最近访客头像尺寸大小</span><br><span class="line">id=“ds-recent-visitors”    //为了调节最近访客样式加的</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Git-push-Hexo-g-d-时重复输入用户名密码的问题"><a href="#Git-push-Hexo-g-d-时重复输入用户名密码的问题" class="headerlink" title="Git push(Hexo g -d)时重复输入用户名密码的问题"></a>Git push(Hexo g -d)时重复输入用户名密码的问题</h2><ul>
+<li><p>首先添加环境变量。在用户变量中新建如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">变量名：HOME</span><br><span class="line">变量值：%USERPROFILE%</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在用户文件夹如C:\Users\用户名下新建一个名为_netrc的文件。</p>
+</li>
+<li><p>编辑该文件：内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine github.com</span><br><span class="line">login GitHub的用户名</span><br><span class="line">password GitHub的密码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存。</p>
+</li>
 </ul>
 
       
@@ -627,7 +640,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo博客个性化搭建"><span class="nav-number">1.</span> <span class="nav-text">Hexo博客个性化搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢以下作者"><span class="nav-number">2.</span> <span class="nav-text">感谢以下作者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">3.</span> <span class="nav-text">添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加视频"><span class="nav-number">4.</span> <span class="nav-text">添加视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">5.</span> <span class="nav-text">添加阅读全文按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-NexT主题首标题的优化"><span class="nav-number">6.</span> <span class="nav-text">Hexo NexT主题首标题的优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加最近访客"><span class="nav-number">7.</span> <span class="nav-text">添加最近访客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo博客个性化搭建"><span class="nav-number">1.</span> <span class="nav-text">Hexo博客个性化搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢以下作者"><span class="nav-number">2.</span> <span class="nav-text">感谢以下作者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">3.</span> <span class="nav-text">添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加视频"><span class="nav-number">4.</span> <span class="nav-text">添加视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">5.</span> <span class="nav-text">添加阅读全文按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-NexT主题首标题的优化"><span class="nav-number">6.</span> <span class="nav-text">Hexo NexT主题首标题的优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加最近访客"><span class="nav-number">7.</span> <span class="nav-text">添加最近访客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-push-Hexo-g-d-时重复输入用户名密码的问题"><span class="nav-number">8.</span> <span class="nav-text">Git push(Hexo g -d)时重复输入用户名密码的问题</span></a></li></ol></div>
             
           </div>
         </section>
