@@ -160,13 +160,12 @@ return true;
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-15T04:38:17.896Z</updated>
+    <updated>2016-06-15T09:07:47.508Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;感谢以下作者&quot;&gt;&lt;a href=&quot;#感谢以下作者&quot; class=&quot;headerlink&quot; title=&quot;感谢以下作者&quot;&gt;&lt;/a&gt;感谢以下作者&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/poem_of_sunshine/article/details/29369785/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何搭建博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;感谢以下作者&quot;&gt;&lt;a href=&quot;#感谢以下作者&quot; class=&quot;headerlink&quot; title=&quot;感谢以下作者&quot;&gt;&lt;/a&gt;感谢以下作者&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/poem_of_sunshine/article/details/29369785/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何搭建博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://lijianchang.xyz/2016/03/16/%E5%B0%8F%E7%99%BD%E7%8B%AC%E7%AB%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-Github-Pages%E5%92%8CHexo%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小白手把手搭建博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.arao.me/2015/hexo-next-theme-optimize-base/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;动动手指，NexT主题与Hexo更搭哦（基础篇） &lt;/a&gt;&lt;/p&gt;
 &lt;iframe name=&quot;iframe_canvas&quot; src=&quot;http://douban.fm/partner/baidu/doubanradio&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;
@@ -237,8 +236,7 @@ return true;
     <summary type="html">
     
       &lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;br&gt;
     
     </summary>
     
