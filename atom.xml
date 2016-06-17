@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-17T13:42:59.988Z</updated>
+  <updated>2016-06-17T13:48:56.083Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,14 +20,16 @@
     <link href="http://dongxi520.com/2016/06/17/git%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
     <id>http://dongxi520.com/2016/06/17/git命令记录/</id>
     <published>2016-06-17T13:37:36.000Z</published>
-    <updated>2016-06-17T13:42:59.988Z</updated>
+    <updated>2016-06-17T13:48:56.083Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;查看日志的炫酷命令&quot;&gt;&lt;a href=&quot;#查看日志的炫酷命令&quot; class=&quot;headerlink&quot; title=&quot;查看日志的炫酷命令&quot;&gt;&lt;/a&gt;查看日志的炫酷命令&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;原来的日志&lt;br&gt;&lt;img src=&quot;/images/postImage/gitImage/oldLog.png&quot; alt=&quot;git&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;查看日志的炫酷命令&quot;&gt;&lt;a href=&quot;#查看日志的炫酷命令&quot; class=&quot;headerlink&quot; title=&quot;查看日志的炫酷命令&quot;&gt;&lt;/a&gt;查看日志的炫酷命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原来的日志输入&lt;code&gt;git log&lt;/code&gt;，如果日志太多可以输入&lt;code&gt;q&lt;/code&gt;或者&lt;code&gt;qw&lt;/code&gt;或者&lt;code&gt;ctrl+c&lt;/code&gt;，我也记不住了，就是这几个命令就可以关闭日志输出了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/images/postImage/gitImage/oldLog.png&quot; alt=&quot;git&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git log --graph --pretty=format:&amp;apos;%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr)%C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;apos; --abbrev-commit --date=relative&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;炫酷的效果&lt;br&gt;&lt;img src=&quot;/images/postImage/gitImage/newLog.png&quot; alt=&quot;git&quot;&gt;&lt;/li&gt;
@@ -83,7 +85,8 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;br&gt;
+&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
