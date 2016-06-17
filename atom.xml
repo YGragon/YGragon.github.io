@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-15T04:29:45.273Z</updated>
+  <updated>2016-06-17T13:42:59.988Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git命令记录</title>
+    <link href="http://dongxi520.com/2016/06/17/git%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
+    <id>http://dongxi520.com/2016/06/17/git命令记录/</id>
+    <published>2016-06-17T13:37:36.000Z</published>
+    <updated>2016-06-17T13:42:59.988Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;查看日志的炫酷命令&quot;&gt;&lt;a href=&quot;#查看日志的炫酷命令&quot; class=&quot;headerlink&quot; title=&quot;查看日志的炫酷命令&quot;&gt;&lt;/a&gt;查看日志的炫酷命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原来的日志&lt;br&gt;&lt;img src=&quot;/images/postImage/gitImage/oldLog.png&quot; alt=&quot;git&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git log --graph --pretty=format:&amp;apos;%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr)%C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;apos; --abbrev-commit --date=relative&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;炫酷的效果&lt;br&gt;&lt;img src=&quot;/images/postImage/gitImage/newLog.png&quot; alt=&quot;git&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;开启git输出着色&quot;&gt;&lt;a href=&quot;#开启git输出着色&quot; class=&quot;headerlink&quot; title=&quot;开启git输出着色&quot;&gt;&lt;/a&gt;开启git输出着色&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global color.ui true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;设置显示中文文件名&quot;&gt;&lt;a href=&quot;#设置显示中文文件名&quot; class=&quot;headerlink&quot; title=&quot;设置显示中文文件名&quot;&gt;&lt;/a&gt;设置显示中文文件名&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global core.quotepath false&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;修改git的编辑器&quot;&gt;&lt;a href=&quot;#修改git的编辑器&quot; class=&quot;headerlink&quot; title=&quot;修改git的编辑器&quot;&gt;&lt;/a&gt;修改git的编辑器&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;git默认的编辑器是vi，可以用下面代码修改编辑器为Vim，前提是本机有安装Vim&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global core.editor &amp;quot;vim&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;diff&quot;&gt;&lt;a href=&quot;#diff&quot; class=&quot;headerlink&quot; title=&quot;diff&quot;&gt;&lt;/a&gt;diff&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;查看代码的改动&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff &amp;lt;$id1&amp;gt;&amp;lt;$id2&amp;gt;#比较两次提交的差异&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git diff &amp;lt;branch1&amp;gt;..&amp;lt;branch2&amp;gt;#比较两个分支的差异&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git diff --staged#比较暂缓区与版本库的差异&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;checkout&quot;&gt;&lt;a href=&quot;#checkout&quot; class=&quot;headerlink&quot; title=&quot;checkout&quot;&gt;&lt;/a&gt;checkout&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;切换分支的作用&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git checkout develop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;撤销的作用(把原文件还原)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git checkout a.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;注：checkout命令只能撤销还没add进缓存区的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;stash&quot;&gt;&lt;a href=&quot;#stash&quot; class=&quot;headerlink&quot; title=&quot;stash&quot;&gt;&lt;/a&gt;stash&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用情景：当开发新功能时，突然有个紧急的Bug需要解决，但是还未commit，因为每一次commit我们都要有明确的意义，这时我们可以用如下办法：&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;把当前分支所有没有commit的代码先暂缓起来&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git stash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;此时输入&lt;code&gt;git status&lt;/code&gt;你会发现当前分支很干净，因为暂时缓存起来了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git status list&lt;/code&gt;你会发现暂缓区有一天记录&lt;/li&gt;
+&lt;li&gt;还原之前的代码&lt;code&gt;git stash apply&lt;/code&gt;,你会发现之前的代码都还原回来了，紧接着你最好需要把缓存区的这次stash记录删除&lt;/li&gt;
+&lt;li&gt;执行&lt;code&gt;git stash drop&lt;/code&gt;即可删除最近的一条记录&lt;/li&gt;
+&lt;li&gt;其实还有更方便的方法把&lt;code&gt;git stash apply&lt;/code&gt;和&lt;code&gt;git stash drop&lt;/code&gt;一起执行了那就是&lt;code&gt;git stash pop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;清空缓存区的记录&lt;code&gt;git stash clear&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;分支合并merge-amp-rebase&quot;&gt;&lt;a href=&quot;#分支合并merge-amp-rebase&quot; class=&quot;headerlink&quot; title=&quot;分支合并merge&amp;amp;rebase&quot;&gt;&lt;/a&gt;分支合并merge&amp;amp;rebase&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;将a分支合并到master分支&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git checkout master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git merge a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;merge和rebase的区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;merge比较暴力，内容不会重新排序，但是可以知道内容来源与哪个分支&lt;/li&gt;
+&lt;li&gt;rebase合并起来会重新排序，但是不知道内容来源与哪个分支&lt;/li&gt;
+&lt;li&gt;各有好处，按使用习惯选择&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://stormzhang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android精神领袖——张哥&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;粗略记录一下git命令，后期使用过程中会逐渐完善这些命令&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Git命令" scheme="http://dongxi520.com/tags/Git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>GooglePlay项目第一天笔记</title>

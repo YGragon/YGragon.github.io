@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Git命令," />
 
 
 
@@ -86,15 +86,19 @@
 
 
 
-<meta name="description" content="聊点技术，说点故事，想点人生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dongxi346">
-<meta property="og:url" content="http://dongxi520.com/archives/index.html">
+<meta name="description" content="粗略记录一下git命令，后期使用过程中会逐渐完善这些命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git命令记录">
+<meta property="og:url" content="http://dongxi520.com/2016/06/17/git命令记录/index.html">
 <meta property="og:site_name" content="dongxi346">
-<meta property="og:description" content="聊点技术，说点故事，想点人生">
+<meta property="og:description" content="粗略记录一下git命令，后期使用过程中会逐渐完善这些命令">
+<meta property="og:image" content="http://dongxi520.com/images/postImage/gitImage/oldLog.png">
+<meta property="og:image" content="http://dongxi520.com/images/postImage/gitImage/newLog.png">
+<meta property="og:updated_time" content="2016-06-17T13:42:59.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dongxi346">
-<meta name="twitter:description" content="聊点技术，说点故事，想点人生">
+<meta name="twitter:title" content="git命令记录">
+<meta name="twitter:description" content="粗略记录一下git命令，后期使用过程中会逐渐完善这些命令">
+<meta name="twitter:image" content="http://dongxi520.com/images/postImage/gitImage/oldLog.png">
 
 
 
@@ -115,9 +119,9 @@
 
 
 
-  <link rel="canonical" href="http://dongxi520.com/archives/"/>
+  <link rel="canonical" href="http://dongxi520.com/2016/06/17/git命令记录/"/>
 
-  <title> 归档 | dongxi346 </title>
+  <title> git命令记录 | dongxi346 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,7 +152,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,177 +280,218 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                git命令记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-17T21:37:36+08:00" content="2016-06-17">
+              2016-06-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/17/git命令记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/17/git命令记录/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/17/git命令记录/" class="leancloud_visitors" data-flag-title="git命令记录">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <blockquote>
+<p>粗略记录一下git命令，后期使用过程中会逐渐完善这些命令<br><a id="more"></a></p>
+<h2 id="查看日志的炫酷命令"><a href="#查看日志的炫酷命令" class="headerlink" title="查看日志的炫酷命令"></a>查看日志的炫酷命令</h2><ul>
+<li>原来的日志<br><img src="/images/postImage/gitImage/oldLog.png" alt="git"></li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr)%C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit --date=relative</span><br></pre></td></tr></table></figure>
+<ul>
+<li>炫酷的效果<br><img src="/images/postImage/gitImage/newLog.png" alt="git"></li>
+</ul>
+<h2 id="开启git输出着色"><a href="#开启git输出着色" class="headerlink" title="开启git输出着色"></a>开启git输出着色</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global color.ui true</span><br></pre></td></tr></table></figure>
+<h2 id="设置显示中文文件名"><a href="#设置显示中文文件名" class="headerlink" title="设置显示中文文件名"></a>设置显示中文文件名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.quotepath false</span><br></pre></td></tr></table></figure>
+<h2 id="修改git的编辑器"><a href="#修改git的编辑器" class="headerlink" title="修改git的编辑器"></a>修改git的编辑器</h2><ul>
+<li>git默认的编辑器是vi，可以用下面代码修改编辑器为Vim，前提是本机有安装Vim<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor &quot;vim&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><ul>
+<li>查看代码的改动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;$id1&gt;&lt;$id2&gt;#比较两次提交的差异</span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;#比较两个分支的差异</span><br><span class="line">git diff --staged#比较暂缓区与版本库的差异</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><ul>
+<li><p>切换分支的作用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout develop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>撤销的作用(把原文件还原)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout a.md</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注：checkout命令只能撤销还没add进缓存区的文件</p>
+</li>
+</ul>
+<h2 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h2><ul>
+<li>使用情景：当开发新功能时，突然有个紧急的Bug需要解决，但是还未commit，因为每一次commit我们都要有明确的意义，这时我们可以用如下办法：</li>
+<li><p>把当前分支所有没有commit的代码先暂缓起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时输入<code>git status</code>你会发现当前分支很干净，因为暂时缓存起来了</p>
+</li>
+<li><code>git status list</code>你会发现暂缓区有一天记录</li>
+<li>还原之前的代码<code>git stash apply</code>,你会发现之前的代码都还原回来了，紧接着你最好需要把缓存区的这次stash记录删除</li>
+<li>执行<code>git stash drop</code>即可删除最近的一条记录</li>
+<li>其实还有更方便的方法把<code>git stash apply</code>和<code>git stash drop</code>一起执行了那就是<code>git stash pop</code></li>
+<li>清空缓存区的记录<code>git stash clear</code></li>
+</ul>
+<h2 id="分支合并merge-amp-rebase"><a href="#分支合并merge-amp-rebase" class="headerlink" title="分支合并merge&amp;rebase"></a>分支合并merge&amp;rebase</h2><ul>
+<li><p>将a分支合并到master分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>merge和rebase的区别</p>
+<ul>
+<li>merge比较暴力，内容不会重新排序，但是可以知道内容来源与哪个分支</li>
+<li>rebase合并起来会重新排序，但是不知道内容来源与哪个分支</li>
+<li>各有好处，按使用习惯选择</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://stormzhang.com/" target="_blank" rel="external">Android精神领袖——张哥</a></p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weixin.png" alt="dongxi346 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/weixin.png" alt="dongxi346 WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/aplay.png" alt="dongxi346 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git命令/" rel="tag">#Git命令</a>
+          
+        </div>
+      
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/17/git命令记录/" itemprop="url">
-              
-                <span itemprop="name">git命令记录</span>
-              
-            </a>
-        
-      </h1>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/13/GooglePlay-1/" rel="next" title="GooglePlay项目第一天笔记">
+                <i class="fa fa-chevron-left"></i> GooglePlay项目第一天笔记
+              </a>
+            
+          </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-17T21:37:36+08:00"
-              content="2016-06-17" >
-          06-17
-        </time>
-      </div>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/13/GooglePlay-1/" itemprop="url">
-              
-                <span itemprop="name">GooglePlay项目第一天笔记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-13T20:59:17+08:00"
-              content="2016-06-13" >
-          06-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/12/Bolg-With-Hexo/" itemprop="url">
-              
-                <span itemprop="name">Hexo博客个性化搭建</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-12T09:45:02+08:00"
-              content="2016-06-12" >
-          06-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/11/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-11T15:22:27+08:00"
-              content="2016-06-11" >
-          06-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-
+    </div>
+  </div>
 
 
           </div>
@@ -454,6 +499,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/17/git命令记录/"
+           data-title="git命令记录" data-url="http://dongxi520.com/2016/06/17/git命令记录/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -473,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/answer.png"
@@ -553,6 +615,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看日志的炫酷命令"><span class="nav-number">1.</span> <span class="nav-text">查看日志的炫酷命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启git输出着色"><span class="nav-number">2.</span> <span class="nav-text">开启git输出着色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置显示中文文件名"><span class="nav-number">3.</span> <span class="nav-text">设置显示中文文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改git的编辑器"><span class="nav-number">4.</span> <span class="nav-text">修改git的编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diff"><span class="nav-number">5.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#checkout"><span class="nav-number">6.</span> <span class="nav-text">checkout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stash"><span class="nav-number">7.</span> <span class="nav-text">stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支合并merge-amp-rebase"><span class="nav-number">8.</span> <span class="nav-text">分支合并merge&rebase</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -649,11 +722,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
