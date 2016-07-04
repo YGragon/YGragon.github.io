@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-06-21T11:21:13.175Z</updated>
+  <updated>2016-07-04T06:38:22.528Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android基础学习资源</title>
+    <link href="http://dongxi520.com/2016/07/04/Android%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
+    <id>http://dongxi520.com/2016/07/04/Android基础学习资源/</id>
+    <published>2016-07-04T06:21:56.000Z</published>
+    <updated>2016-07-04T06:38:22.528Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Android这么火你还不学？怎么学？从哪里开始学？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本篇文章本着开源与奉献的精神,收集了如下的Android学习资源，希望能帮助到各位的同时，自己也有所进步。&lt;br&gt;&lt;img src=&quot;/images/postImage/Android.png&quot; alt=&quot;Android&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;在Windows下搭建Android开发环境&quot;&gt;&lt;a href=&quot;#在Windows下搭建Android开发环境&quot; class=&quot;headerlink&quot; title=&quot;在Windows下搭建Android开发环境&quot;&gt;&lt;/a&gt;在Windows下搭建Android开发环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;开发工具Eclipse + ADT + JDK，推荐教程如下：&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/bea41d437a41b6b4c51be6c1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搭建Android开发环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/zoupeiyang/p/4034517.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;五步搞定Android开发环境部署&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;由于Google推出了新的开发工具，因此心在开发Android大部分都采用AndroidStudio(简称AS)开发，Eclipse用的也不少，但是以后肯定是AS的天下，所以现在就可i啊是用AS开发Android吧！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=1&amp;amp;tn=monline_3_dg&amp;amp;wd=androidstudio%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA&amp;amp;oq=android%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA&amp;amp;rsv_pq=d9f3795b000885ed&amp;amp;rsv_t=670d%2BrE%2FAKspmOVDNEk0LvUJ%2ByBsDSY%2FiaXnHVxKGpyml6gZNU8BAQhXmbShLPgjnZyd&amp;amp;rqlang=cn&amp;amp;rsv_enter=1&amp;amp;rsv_sug3=7&amp;amp;rsv_sug1=1&amp;amp;rsv_sug7=100&amp;amp;rsv_sug2=0&amp;amp;inputT=34&amp;amp;rsv_sug4=3144&amp;amp;rsv_sug=1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AS的搭建&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xdp-gacl/p/4329469.html?utm_source=tuicool&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Android Studio搭建Android集成开发环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/zhanghefu/article/details/9286123&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;andriod studio 安装与环境搭建&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;科学上网（翻墙软件）&quot;&gt;&lt;a href=&quot;#科学上网（翻墙软件）&quot; class=&quot;headerlink&quot; title=&quot;科学上网（翻墙软件）&quot;&gt;&lt;/a&gt;科学上网（翻墙软件）&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;由于大天朝对Google的极力支持，所以我们只能顺应大天朝的做法。AndroidSDK可能就需要翻墙才能下载，也有别人下载好的压缩包，自己选择吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载地址&lt;a href=&quot;http://lanterncn.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;蓝灯&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;极速模拟器Genymotion&quot;&gt;&lt;a href=&quot;#极速模拟器Genymotion&quot; class=&quot;headerlink&quot; title=&quot;极速模拟器Genymotion&quot;&gt;&lt;/a&gt;极速模拟器Genymotion&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Eclipse的模拟器简直就是渣渣，启动速度超级慢，而且很卡，如果你不能忍受就选择Genymotion模拟器吧！&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.genymotion.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/1114250779boke/p/3657996.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到Eclipse中&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/915fc414ea858e51394b209d.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到AS中&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/primarykeyone/article/details/51297917&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到AS中出现的问题汇总&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Android学习资源&quot;&gt;&lt;a href=&quot;#Android学习资源&quot; class=&quot;headerlink&quot; title=&quot;Android学习资源&quot;&gt;&lt;/a&gt;Android学习资源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;developer.android.com/&quot;&gt;Android官网(需要科学上网)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wear.techbrood.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文版Android官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.apkbus.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;安卓巴士&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.apkbus.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;eoe安卓社区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ke.jikexueyuan.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;极客学院&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Android这么火你还不学？怎么学？从哪里开始学？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本篇文章本着开源与奉献的精神,收集了如下的Android学习资源，希望能帮助到各位的同时，自己也有所进步。&lt;br&gt;&lt;img src=&quot;/images/postImage/Android.png&quot; alt=&quot;Android&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android资源" scheme="http://dongxi520.com/tags/Android%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaWeb笔记</title>
