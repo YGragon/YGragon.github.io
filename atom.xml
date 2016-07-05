@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-05T01:46:39.943Z</updated>
+  <updated>2016-07-05T01:56:34.825Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android布局你未知的属性</title>
+    <link href="http://dongxi520.com/2016/07/05/Android%E5%B8%83%E5%B1%80%E4%BD%A0%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
+    <id>http://dongxi520.com/2016/07/05/Android布局你未知的属性/</id>
+    <published>2016-07-05T01:49:13.000Z</published>
+    <updated>2016-07-05T01:56:34.825Z</updated>
+    
+    <content type="html">&lt;p&gt;本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/layout.jpg&quot; alt=&quot;layout&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;TextView中的ellipsize属性&quot;&gt;&lt;a href=&quot;#TextView中的ellipsize属性&quot; class=&quot;headerlink&quot; title=&quot;TextView中的ellipsize属性&quot;&gt;&lt;/a&gt;TextView中的ellipsize属性&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;一般与android:singleLine=”true”使用&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;android:ellipsize=”start”—–省略号显示在开头 &amp;quot;...pedia&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:ellipsize=”end”——省略号显示在结尾  &amp;quot;encyc...&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:ellipsize=”middle”—-省略号显示在中间 &amp;quot;en...dia&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:ellipsize=”marquee”–以横向滚动方式显示(需获得当前焦点时)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;RatingBar的使用&quot;&gt;&lt;a href=&quot;#RatingBar的使用&quot; class=&quot;headerlink&quot; title=&quot;RatingBar的使用&quot;&gt;&lt;/a&gt;RatingBar的使用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这个属性是必须的&lt;code&gt;android:progressDrawable=&amp;quot;@drawable/process_ratingbar&amp;quot;&lt;/code&gt; 查看源码可知，源码地址为SDK–platforms–任意android版本–data–res–drawble–ratingbar_full.xml&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;process_ratingbar.xml 内容如下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;layer-list xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item android:id=&amp;quot;@+android:id/background&amp;quot; android:drawable=&amp;quot;@drawable/rating_small_empty&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item android:id=&amp;quot;@+android:id/secondaryProgress&amp;quot; android:drawable=&amp;quot;@drawable/rating_small_half&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item android:id=&amp;quot;@+android:id/progress&amp;quot; android:drawable=&amp;quot;@drawable/rating_small_full&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/layer-list&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在&lt;code&gt;&amp;lt;item android:id=&amp;quot;@+android:id/background&amp;quot; android:drawable=&amp;quot;@drawable/rating_small_empty&amp;quot; /&amp;gt;&lt;/code&gt;中系统可能会识别不了，需要选择Disable&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;selector-的属性&quot;&gt;&lt;a href=&quot;#selector-的属性&quot; class=&quot;headerlink&quot; title=&quot;selector 的属性&quot;&gt;&lt;/a&gt;selector 的属性&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;android:enterFadeDuration/android:exitFadeDuration (Drawables)此属性在Drawable具有多种状态的时候，可以定义它展示前的淡入淡出效果。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;  android:enterFadeDuration=&amp;quot;200&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item  android:state_pressed=&amp;quot;true&amp;quot; android:drawable=&amp;quot;@drawable/list_item_bg_pressed&amp;quot;&amp;gt;&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item  android:drawable=&amp;quot;@drawable/list_item_bg_normal&amp;quot;&amp;gt;&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/selector&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/layout.jpg&quot; alt=&quot;layout&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AndroidLayout" scheme="http://dongxi520.com/tags/AndroidLayout/"/>
+    
+  </entry>
   
   <entry>
     <title>Android基础学习资源</title>

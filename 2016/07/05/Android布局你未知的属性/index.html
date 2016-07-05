@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="AndroidLayout," />
 
 
 
@@ -86,22 +86,18 @@
 
 
 
-<meta name="description" content="打个招呼，熟悉一下呗！
-
-最近访客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="guestbook">
-<meta property="og:url" content="http://dongxi520.com/guestbook/index.html">
+<meta name="description" content="本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android布局你未知的属性">
+<meta property="og:url" content="http://dongxi520.com/2016/07/05/Android布局你未知的属性/index.html">
 <meta property="og:site_name" content="dongxi346">
-<meta property="og:description" content="打个招呼，熟悉一下呗！
-
-最近访客">
-<meta property="og:updated_time" content="2016-06-14T09:29:33.170Z">
+<meta property="og:description" content="本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。">
+<meta property="og:image" content="http://dongxi520.com/images/postImage/layout.jpg">
+<meta property="og:updated_time" content="2016-07-05T01:56:34.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guestbook">
-<meta name="twitter:description" content="打个招呼，熟悉一下呗！
-
-最近访客">
+<meta name="twitter:title" content="Android布局你未知的属性">
+<meta name="twitter:description" content="本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。">
+<meta name="twitter:image" content="http://dongxi520.com/images/postImage/layout.jpg">
 
 
 
@@ -122,15 +118,9 @@
 
 
 
-  <link rel="canonical" href="http://dongxi520.com/guestbook/"/>
+  <link rel="canonical" href="http://dongxi520.com/2016/07/05/Android布局你未知的属性/"/>
 
-  <title>
-  
-
-  
-    guestbook | dongxi346
-  
-</title>
+  <title> Android布局你未知的属性 | dongxi346 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,13 +281,177 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <p><blockquote class="blockquote-center">打个招呼，熟悉一下呗！</blockquote><br><br></p>
-<blockquote>
-<p>最近访客</p>
-</blockquote>
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android布局你未知的属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-05T09:49:13+08:00" content="2016-07-05">
+              2016-07-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/05/Android布局你未知的属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/05/Android布局你未知的属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/05/Android布局你未知的属性/" class="leancloud_visitors" data-flag-title="Android布局你未知的属性">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。<br><img src="/images/postImage/layout.jpg" alt="layout"></p>
+<a id="more"></a>
+<h2 id="TextView中的ellipsize属性"><a href="#TextView中的ellipsize属性" class="headerlink" title="TextView中的ellipsize属性"></a>TextView中的ellipsize属性</h2><ul>
+<li>一般与android:singleLine=”true”使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:ellipsize=”start”—–省略号显示在开头 &quot;...pedia&quot;</span><br><span class="line">android:ellipsize=”end”——省略号显示在结尾  &quot;encyc...&quot;</span><br><span class="line">android:ellipsize=”middle”—-省略号显示在中间 &quot;en...dia&quot;</span><br><span class="line">android:ellipsize=”marquee”–以横向滚动方式显示(需获得当前焦点时)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="RatingBar的使用"><a href="#RatingBar的使用" class="headerlink" title="RatingBar的使用"></a>RatingBar的使用</h2><ul>
+<li>这个属性是必须的<code>android:progressDrawable=&quot;@drawable/process_ratingbar&quot;</code> 查看源码可知，源码地址为SDK–platforms–任意android版本–data–res–drawble–ratingbar_full.xml</li>
+<li><p>process_ratingbar.xml 内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</span><br><span class="line">    &lt;item android:id=&quot;@+android:id/background&quot; android:drawable=&quot;@drawable/rating_small_empty&quot; /&gt;</span><br><span class="line">    &lt;item android:id=&quot;@+android:id/secondaryProgress&quot; android:drawable=&quot;@drawable/rating_small_half&quot; /&gt;</span><br><span class="line">    &lt;item android:id=&quot;@+android:id/progress&quot; android:drawable=&quot;@drawable/rating_small_full&quot; /&gt;</span><br><span class="line">&lt;/layer-list&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>&lt;item android:id=&quot;@+android:id/background&quot; android:drawable=&quot;@drawable/rating_small_empty&quot; /&gt;</code>中系统可能会识别不了，需要选择Disable</p>
+</li>
+</ul>
+<h2 id="selector-的属性"><a href="#selector-的属性" class="headerlink" title="selector 的属性"></a>selector 的属性</h2><ul>
+<li>android:enterFadeDuration/android:exitFadeDuration (Drawables)此属性在Drawable具有多种状态的时候，可以定义它展示前的淡入淡出效果。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;  android:enterFadeDuration=&quot;200&quot;&gt;</span><br><span class="line">    &lt;item  android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/list_item_bg_pressed&quot;&gt;&lt;/item&gt;</span><br><span class="line">    &lt;item  android:drawable=&quot;@drawable/list_item_bg_normal&quot;&gt;&lt;/item&gt;</span><br><span class="line">&lt;/selector&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weixin.png" alt="dongxi346 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/weixin.png" alt="dongxi346 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/aplay.png" alt="dongxi346 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AndroidLayout/" rel="tag">#AndroidLayout</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/04/Android基础学习资源/" rel="next" title="Android基础学习资源">
+                <i class="fa fa-chevron-left"></i> Android基础学习资源
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -308,8 +462,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="guestbook/index.html"
-           data-title="guestbook" data-url="http://dongxi520.com/guestbook/index.html">
+      <div class="ds-thread" data-thread-key="2016/07/05/Android布局你未知的属性/"
+           data-title="Android布局你未知的属性" data-url="http://dongxi520.com/2016/07/05/Android布局你未知的属性/">
       </div>
     
   </div>
@@ -333,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/answer.png"
@@ -413,6 +576,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TextView中的ellipsize属性"><span class="nav-number">1.</span> <span class="nav-text">TextView中的ellipsize属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RatingBar的使用"><span class="nav-number">2.</span> <span class="nav-text">RatingBar的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selector-的属性"><span class="nav-number">3.</span> <span class="nav-text">selector 的属性</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -509,6 +683,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
