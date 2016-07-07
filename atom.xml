@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-05T01:56:34.825Z</updated>
+  <updated>2016-07-07T12:36:46.162Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaWeb笔记-2</title>
+    <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
+    <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
+    <published>2016-07-07T11:05:10.000Z</published>
+    <updated>2016-07-07T12:36:46.162Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明&lt;br&gt;out对象主要是向浏览器输出数据，也可以通过out对象对缓冲区操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常用方法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public abstract void print(),显示各种类型的数据，该方法需要一个参数。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public abstract void println(),分行显示各种类型的数据&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public abstract void close(),关闭输出流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public abstract void clear(),清空缓冲区的内容,不将数据发送至客户端&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public abstract void clearBuffer(),清空缓冲区的内容,并将缓冲区中的数据发送至客户端&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public int getBufferSize(),获取缓冲区的大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public int getRemaining(),返回缓冲区剩余空间的大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public abstract void flush(),输出缓冲区的数据&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public boolean isAutoFlush(),获取AutoFlush布尔类型的值&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;request对象&quot;&gt;&lt;a href=&quot;#request对象&quot; class=&quot;headerlink&quot; title=&quot;request对象&quot;&gt;&lt;/a&gt;request对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明&lt;br&gt;request对象是从客户端向服务器端发出请求，包括用户提交的信息以及客户端的一些信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常用方法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;String getParameter(String name),获取客户端的参数值，并以字符串形式返回指定参数值，如果参数不存在则返回空值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String[] getParameterValues(String name),获取单个参数的所有值，主要用于获取复选框的值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setCharacterEncoding(String encoding),设置字符串编码格式，用来解决中文乱码问题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String getHeader(String name),获取name的头&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;long getDateHeader(String name),获取日期类型的name标头&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;response对象&quot;&gt;&lt;a href=&quot;#response对象&quot; class=&quot;headerlink&quot; title=&quot;response对象&quot;&gt;&lt;/a&gt;response对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明&lt;br&gt;response对象与request对象相对应，用于服务器端封装JSP处理请求后产生的结果，并将其结果响应给客户端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;主要方法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;void addDateHeader(String name,long date),新增long类型，名称为name的标头&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void addHeader(String name,String value),新增String类型，名称为name的标头&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setIntHeader(String name,String value),常用于设置页面的自动刷新时间间隔&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setHeader(String name,String value),常用于设置页面的自动刷新时间间隔与设置浏览器有无缓冲&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void addCookie(Cookie cookie),在响应中增加一个指定的cookie。可通过多次调用该方法来定义多个cookie&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String encodeURL(String url),当需要在会话中存数数据而浏览器不支持cookie时，使用该方法会将回话ID附加到URL后&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void sendRedirect(String url),将页面重定向到指定的URL地址上&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void sendRedirectURL(String url),对指定的页面地址进行编码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setContentType(String contentType),动态指定数据内容的类型及字符编码方式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setContentTypeLength(int contentLength),设置数据内容的长度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void sendError(int sc),传送状态码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void setStatus(int sc),设置状态码，408/409表示网站忙，200表示响应成功，404找不到页面，500内部服务器错误&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;注意&lt;br&gt;使用response对象的sendRedict(url)方法实现浏览器重定向功能与行为元素&lt;code&gt;&amp;lt;jsp:forward&amp;gt;&lt;/code&gt;直接在服务端重定向不同，该方法需要先返回浏览器，然后由浏览器发送重定向的URL请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;session对象&quot;&gt;&lt;a href=&quot;#session对象&quot; class=&quot;headerlink&quot; title=&quot;session对象&quot;&gt;&lt;/a&gt;session对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;说明&lt;br&gt;session 用于在回话范围内，记录每个客户端的访问状态，在会话中存储的信息，在浏览器发出后续请求时可以获取这些回话的有效数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;session对象可以保存用户的登录信息，实现购物车功能等。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;session工作原理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端首次访问服务器的一个页面时，服务器就会为该客户分配一个session对象&lt;br&gt;并为session对象指定唯一ID，将该ID发送到客户端写入到Cookie中，让客户端与服务器端的session建议一一对应关系&lt;/li&gt;
+&lt;li&gt;当客户继续访问服务器上的其他资源时，服务器不再为该客户分配新的session对象，直到浏览器关闭、链接超时等&lt;/li&gt;
+&lt;li&gt;当用户重打开浏览器访问服务器网站时，服务器会重新为客户分一个session对象，并重新分配sessionID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常用方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaWeb基础笔记" scheme="http://dongxi520.com/tags/JavaWeb%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Android布局你未知的属性</title>
