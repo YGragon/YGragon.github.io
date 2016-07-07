@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-07T12:36:46.162Z</updated>
+  <updated>2016-07-07T14:50:09.551Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-07T12:36:46.162Z</updated>
+    <updated>2016-07-07T14:50:09.551Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -59,7 +59,55 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;常用方法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public void setAttibute(String name,Object value),指定名字属性的值，并将它添加到session会话范围内&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public Object getAttribute(String value),在会话范围内获取指定名字的属性的值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void removeAttribute(String name),删除指定名字的session属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void invalidate(),使session会话失效&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public String getId(),获取当前会话的ID&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void setMaxInactiveInterval(int interval),设置会话的最大持续时间，单位是秒，负数表示会话在当前浏览器永远不会失效，0表示立即删除该Cookie&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void getMaxInactiveInterval(int interval),获取会话的最大持续时间&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Cookie对象&quot;&gt;&lt;a href=&quot;#Cookie对象&quot; class=&quot;headerlink&quot; title=&quot;Cookie对象&quot;&gt;&lt;/a&gt;Cookie对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明&lt;br&gt;Cookie对象通常用于在浏览器端保存会话过程中的一些参数，如用户名和ID等。&lt;strong&gt;Cookie对象不属于JSP内置对象&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以让站点跟踪特定访问者访问的次数，最后访问的时间以及访问者进入站点的路径&lt;/li&gt;
+&lt;li&gt;帮助站点统计用户个人资料&lt;/li&gt;
+&lt;li&gt;在同一站点内可使用户实现自动登录功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;写入Cookie的主要步骤&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建Cookie对象 &lt;code&gt;Cookie cookie = new Cookie();&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设定Cookie的属性 &lt;code&gt;cookie.setMacAge(30);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;调用response.addCookie(Cookie cookie) 方法将Cookie写入到客户端 &lt;code&gt;response.addCookie(cookie)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;session对象和Cookie对象的关系&quot;&gt;&lt;a href=&quot;#session对象和Cookie对象的关系&quot; class=&quot;headerlink&quot; title=&quot;session对象和Cookie对象的关系&quot;&gt;&lt;/a&gt;session对象和Cookie对象的关系&lt;/h3&gt;&lt;p&gt;session对象能和客户建立联系依赖于客户端的浏览器是否支持Cookie,如果不支持，那么客户在不同页面之间的session可能是互不相关的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;二者的不同之处&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存放地点：Cookie存放在客户端的硬盘中，属于离线存放；而session存放在服务器的内存中&lt;/li&gt;
+&lt;li&gt;存货时间：Cookie可以长期存放在客户端，具体的存活时间由setMaxAge()方法做指定的参数决定；而session岁用户访问服务器而产生，服务器超时或下线而消失&lt;/li&gt;
+&lt;li&gt;安全性：Cookie存放在客户端，安全性较差；session存放在服务器端，安全性较高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;二者的联系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不论是Cookie还是session内置对象，都需要浏览器支持Coookie并且没有禁用Cookie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;application对象&quot;&gt;&lt;a href=&quot;#application对象&quot; class=&quot;headerlink&quot; title=&quot;application对象&quot;&gt;&lt;/a&gt;application对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明&lt;br&gt;负责提供某个应用在服务器运行时的一些全局信息，它在服务器启动时创建，直到服务器关闭时消失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;工作原理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;application对象和session对象不同，application对象实在服务器启动后产生的，当用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常用方法(作用和session的相似)&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public void setAttibute(String name,Object value)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public Object getAttribute(String value)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void removeAttribute(String name)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;pageContext对象&quot;&gt;&lt;a href=&quot;#pageContext对象&quot; class=&quot;headerlink&quot; title=&quot;pageContext对象&quot;&gt;&lt;/a&gt;pageContext对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;说明&lt;br&gt;JSP利用上下文对象pageContext可以获取页面的所有相关属性&lt;h3 id=&quot;config对象&quot;&gt;&lt;a href=&quot;#config对象&quot; class=&quot;headerlink&quot; title=&quot;config对象&quot;&gt;&lt;/a&gt;config对象&lt;/h3&gt;-说明&lt;br&gt;主要用于获取服务器的配置信息。&lt;h3 id=&quot;page对象&quot;&gt;&lt;a href=&quot;#page对象&quot; class=&quot;headerlink&quot; title=&quot;page对象&quot;&gt;&lt;/a&gt;page对象&lt;/h3&gt;对应servlet类的实现对象&lt;h3 id=&quot;exception对象&quot;&gt;&lt;a href=&quot;#exception对象&quot; class=&quot;headerlink&quot; title=&quot;exception对象&quot;&gt;&lt;/a&gt;exception对象&lt;/h3&gt;JSP文件运行所产生的错误和异常&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     

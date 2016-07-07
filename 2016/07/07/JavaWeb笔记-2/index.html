@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
-<meta property="og:updated_time" content="2016-07-07T12:36:46.162Z">
+<meta property="og:updated_time" content="2016-07-07T14:50:09.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb笔记-2">
 <meta name="twitter:description">
@@ -393,7 +393,55 @@
 </ul>
 </li>
 <li><p>常用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void setAttibute(String name,Object value),指定名字属性的值，并将它添加到session会话范围内</span><br><span class="line">public Object getAttribute(String value),在会话范围内获取指定名字的属性的值</span><br><span class="line">public void removeAttribute(String name),删除指定名字的session属性</span><br><span class="line">public void invalidate(),使session会话失效</span><br><span class="line">public String getId(),获取当前会话的ID</span><br><span class="line">public void setMaxInactiveInterval(int interval),设置会话的最大持续时间，单位是秒，负数表示会话在当前浏览器永远不会失效，0表示立即删除该Cookie</span><br><span class="line">public void getMaxInactiveInterval(int interval),获取会话的最大持续时间</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h3 id="Cookie对象"><a href="#Cookie对象" class="headerlink" title="Cookie对象"></a>Cookie对象</h3><ul>
+<li><p>说明<br>Cookie对象通常用于在浏览器端保存会话过程中的一些参数，如用户名和ID等。<strong>Cookie对象不属于JSP内置对象</strong></p>
+</li>
+<li><p>作用</p>
+<ul>
+<li>可以让站点跟踪特定访问者访问的次数，最后访问的时间以及访问者进入站点的路径</li>
+<li>帮助站点统计用户个人资料</li>
+<li>在同一站点内可使用户实现自动登录功能</li>
+</ul>
+</li>
+<li><p>写入Cookie的主要步骤</p>
+<ul>
+<li>创建Cookie对象 <code>Cookie cookie = new Cookie();</code></li>
+<li>设定Cookie的属性 <code>cookie.setMacAge(30);</code></li>
+<li>调用response.addCookie(Cookie cookie) 方法将Cookie写入到客户端 <code>response.addCookie(cookie)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="session对象和Cookie对象的关系"><a href="#session对象和Cookie对象的关系" class="headerlink" title="session对象和Cookie对象的关系"></a>session对象和Cookie对象的关系</h3><p>session对象能和客户建立联系依赖于客户端的浏览器是否支持Cookie,如果不支持，那么客户在不同页面之间的session可能是互不相关的</p>
+<ul>
+<li><p>二者的不同之处</p>
+<ul>
+<li>存放地点：Cookie存放在客户端的硬盘中，属于离线存放；而session存放在服务器的内存中</li>
+<li>存货时间：Cookie可以长期存放在客户端，具体的存活时间由setMaxAge()方法做指定的参数决定；而session岁用户访问服务器而产生，服务器超时或下线而消失</li>
+<li>安全性：Cookie存放在客户端，安全性较差；session存放在服务器端，安全性较高。</li>
+</ul>
+</li>
+<li><p>二者的联系</p>
+<ul>
+<li>不论是Cookie还是session内置对象，都需要浏览器支持Coookie并且没有禁用Cookie</li>
+</ul>
+</li>
+</ul>
+<h3 id="application对象"><a href="#application对象" class="headerlink" title="application对象"></a>application对象</h3><ul>
+<li><p>说明<br>负责提供某个应用在服务器运行时的一些全局信息，它在服务器启动时创建，直到服务器关闭时消失</p>
+</li>
+<li><p>工作原理</p>
+<ul>
+<li>application对象和session对象不同，application对象实在服务器启动后产生的，当用户</li>
+</ul>
+</li>
+<li>常用方法(作用和session的相似)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void setAttibute(String name,Object value)</span><br><span class="line">public Object getAttribute(String value)</span><br><span class="line">public void removeAttribute(String name)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="pageContext对象"><a href="#pageContext对象" class="headerlink" title="pageContext对象"></a>pageContext对象</h3><ul>
+<li>说明<br>JSP利用上下文对象pageContext可以获取页面的所有相关属性<h3 id="config对象"><a href="#config对象" class="headerlink" title="config对象"></a>config对象</h3>-说明<br>主要用于获取服务器的配置信息。<h3 id="page对象"><a href="#page对象" class="headerlink" title="page对象"></a>page对象</h3>对应servlet类的实现对象<h3 id="exception对象"><a href="#exception对象" class="headerlink" title="exception对象"></a>exception对象</h3>JSP文件运行所产生的错误和异常</li>
 </ul>
 
       
@@ -604,7 +652,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
