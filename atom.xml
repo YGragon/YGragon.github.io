@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-08T13:29:13.933Z</updated>
+  <updated>2016-07-08T13:58:21.273Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,11 +16,98 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>百万讲师张哥面试技巧</title>
+    <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    <id>http://dongxi520.com/2016/07/08/百万讲师张哥面试技巧/</id>
+    <published>2016-07-08T13:46:13.000Z</published>
+    <updated>2016-07-08T13:58:21.273Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;简历如何写？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不要太花哨，你应聘的是技术，不是设计师&lt;/li&gt;
+&lt;li&gt;把基本信息要说清楚&lt;/li&gt;
+&lt;li&gt;无关的不要写，比如头像之类的(网投不需要？)&lt;/li&gt;
+&lt;li&gt;有个人博客和Github的务必写在简历上，而且Github上有拿得出手的项目&lt;/li&gt;
+&lt;li&gt;任何时候不要欺骗，否则直接被pas&lt;/li&gt;
+&lt;li&gt;应届生将证书挂上，比如四六级，奖学金，计算机相关证书&lt;/li&gt;
+&lt;li&gt;最重要的就是项目经历！！把项目写进去，2，3个为好，时间是倒序的&lt;/li&gt;
+&lt;li&gt;项目经验注意地方，一定要和应聘职位紧密联系的，比如面试Android，项目里有两个PHP项目就不好&lt;/li&gt;
+&lt;li&gt;项目经验写明你在其中的作用，写自己参与度比较高的项目&lt;/li&gt;
+&lt;li&gt;最好的项目是已经上线，而且用户量还不少&lt;/li&gt;
+&lt;li&gt;项目经验是注重考察的环节！！！&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应届生，实习生把平时练习的项目算作项目经验！！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;必须要有一些项目经验，没有完整的做过一个项目经验别去找工作，项目不一定做全，有时间在完善也OK&lt;/li&gt;
+&lt;li&gt;简历最多控制在两页A4纸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;转行经验&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;做项目从模仿开始&lt;/li&gt;
+&lt;li&gt;看懂后自己写&lt;/li&gt;
+&lt;li&gt;面试官问项目的具体实现，能说出来就ＯＫ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;项目如何问？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;项目是什么作用&lt;/li&gt;
+&lt;li&gt;有哪些模块&lt;/li&gt;
+&lt;li&gt;自己手机必装项目演示用，有Bug最好别演示，&lt;em&gt;*演示时最好APP别崩溃&lt;/em&gt;，否则印象不好*&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;团队的话，面试官会问你主要负责哪块功能，如果你只负责20%，建议对整个项目了解，一定要熟悉具体的实现与思路，&lt;strong&gt;尽量捡自己熟悉的模块说*&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;针对性的问模块的具体实现，以及如何实现，如何优化，有网络请求还会问是自己写还是用开源库，自己写需要注意哪些问题！！用了哪些开源库，面试官再针对开源库问相关问题。比如，张哥面试还会问网络编程，post个get方法有何不同？app内缓存如何处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;尽量不提自己不熟悉的领域*&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;项目经历总结&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;自己亲手做的东西一定要明白，&lt;strong&gt;慎重欺骗面试官&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;问的时候会问一些知识点相关的话题，比如你的数据是需要api交互的，那可能会问http相关，json数据解析相关，缓存相关，图片加载相关等，关联到的一些知识点最好提前做好准备&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对用到的知识点虽用不着一定要看源码的地步，但是最好要懂原理，比如图片加载一定要知道二级缓存，一些常见的缓存算法等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;开源框架的原理哪怕自己不是很理解，但是网上查一下，也要把一些主要的知识点说下。自己不理解的知识点最好不要主动提，面试官问到的时候可以提两句如果不接着问就算了。如果接着往深了问，最好诚实点，直接说自己就只是到这个程度，没有仔细研究&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;去面试时候的一些注意事项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;去面试前一定要花点时间了解下你面试的这家公司，如果你面试的不是外包公司，那肯定是有自己的产品的，知道他们的业务范围，下载体验他们的产品，最好能给产品提点意见，到时候面试的时候也许有个环节就是问你，你觉得我们的产品有哪些改进的地方&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;面试的时候态度要谦虚点。哪怕面试官刚好问的是你特别特别熟的领域，也不要很浮夸，觉得自己技术很牛一样，任何时候交流都要冷静，不要太浮夸给人一种对这个技术看不上眼的样子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学习能力很重要。面试的时候一定要让面试官感受到你是一个好学的人。比如问到一些知识点不会的时候，承认自己不会的同时，顺便说一下回头自己就去搜索学习下。这个小细节会给人好印象的。另外，面试官一般还会问你的个人兴趣,尽量不要提什么打游戏，唱歌之类的。&lt;strong&gt;业余时间提下自己经常上一些技术社区，看一些技术博客之类的&lt;/strong&gt;，除非面试官明确说明除了技术之外你的兴趣是什么那就可以提下你喜欢的运动与爱好之类的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;除了基本的知识点。面试官通常都会问一些比较深的领域，这些可能你是没接触过的，但是别气馁，这个时候面试官可能只是考察下你的技术的深度而已，看你接触知识的知识面广不，答上来加分答不上来就直接承认自己没接触过。这些领域一般包括设计模式，虚拟机，插件化，&lt;code&gt;React Native&lt;/code&gt;之类的自己最好这些概念都接触下，被面试官问你&lt;code&gt;React Native&lt;/code&gt;你一脸懵逼说自己没听过，不知道是干嘛的就减分了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;我只给你们说下我之前常问的知识点吧。首先你得明白你的定位。比如初级的，那基本的 &lt;code&gt;Activity/Fragment&lt;/code&gt;的生命周期，四大组件的具体作用以及用法，&lt;code&gt;Activity&lt;/code&gt;四种启动模式的区别，&lt;code&gt;ListView&lt;/code&gt;的优化，一些动画的使用，&lt;code&gt;Java&lt;/code&gt;一些基础知识如最基本的 &lt;code&gt;String、StringBuilder、StringBuffer&lt;/code&gt;的区别、如&lt;code&gt;ArrayList、LinkedList&lt;/code&gt;的区别、&lt;code&gt;Java&lt;/code&gt;线程的几种用法。这些初级的知识总结下来就是基础知识，也是有特定答案的知识点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;如果你是应聘中级的，那会问下一些屏幕适配经验，性能优化的经验等。后面的没来得及总结。都时候到了中级再研究吧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="面试技巧" scheme="http://dongxi520.com/tags/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaWeb笔记-2</title>
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-08T13:29:13.933Z</updated>
+    <updated>2016-07-08T13:31:03.940Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
