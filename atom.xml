@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-07T14:50:09.551Z</updated>
+  <updated>2016-07-08T13:29:13.933Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-07T14:50:09.551Z</updated>
+    <updated>2016-07-08T13:29:13.933Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -107,8 +107,13 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;pageContext对象&quot;&gt;&lt;a href=&quot;#pageContext对象&quot; class=&quot;headerlink&quot; title=&quot;pageContext对象&quot;&gt;&lt;/a&gt;pageContext对象&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;说明&lt;br&gt;JSP利用上下文对象pageContext可以获取页面的所有相关属性&lt;h3 id=&quot;config对象&quot;&gt;&lt;a href=&quot;#config对象&quot; class=&quot;headerlink&quot; title=&quot;config对象&quot;&gt;&lt;/a&gt;config对象&lt;/h3&gt;-说明&lt;br&gt;主要用于获取服务器的配置信息。&lt;h3 id=&quot;page对象&quot;&gt;&lt;a href=&quot;#page对象&quot; class=&quot;headerlink&quot; title=&quot;page对象&quot;&gt;&lt;/a&gt;page对象&lt;/h3&gt;对应servlet类的实现对象&lt;h3 id=&quot;exception对象&quot;&gt;&lt;a href=&quot;#exception对象&quot; class=&quot;headerlink&quot; title=&quot;exception对象&quot;&gt;&lt;/a&gt;exception对象&lt;/h3&gt;JSP文件运行所产生的错误和异常&lt;/li&gt;
+&lt;li&gt;说明&lt;br&gt;JSP利用上下文对象pageContext可以获取页面的所有相关属性&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&quot;config对象&quot;&gt;&lt;a href=&quot;#config对象&quot; class=&quot;headerlink&quot; title=&quot;config对象&quot;&gt;&lt;/a&gt;config对象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;说明&lt;br&gt;主要用于获取服务器的配置信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;page对象&quot;&gt;&lt;a href=&quot;#page对象&quot; class=&quot;headerlink&quot; title=&quot;page对象&quot;&gt;&lt;/a&gt;page对象&lt;/h3&gt;&lt;p&gt;对应servlet类的实现对象&lt;/p&gt;
+&lt;h3 id=&quot;exception对象&quot;&gt;&lt;a href=&quot;#exception对象&quot; class=&quot;headerlink&quot; title=&quot;exception对象&quot;&gt;&lt;/a&gt;exception对象&lt;/h3&gt;&lt;p&gt;JSP文件运行所产生的错误和异常&lt;/p&gt;
 </content>
     
     <summary type="html">
