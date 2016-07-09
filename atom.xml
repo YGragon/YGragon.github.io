@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-09T00:44:19.032Z</updated>
+  <updated>2016-07-09T07:25:51.243Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,12 +20,11 @@
     <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
     <id>http://dongxi520.com/2016/07/08/百万讲师张哥面试技巧/</id>
     <published>2016-07-08T13:46:13.000Z</published>
-    <updated>2016-07-09T00:44:19.032Z</updated>
+    <updated>2016-07-09T07:25:51.243Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;简历如何写？&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;简历如何写？&lt;ul&gt;
 &lt;li&gt;不要太花哨，你应聘的是技术，不是设计师&lt;/li&gt;
 &lt;li&gt;把基本信息要说清楚&lt;/li&gt;
 &lt;li&gt;无关的不要写，比如头像之类的&lt;/li&gt;
@@ -42,25 +41,27 @@
 &lt;li&gt;简历最多控制在两页A4纸&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;转行经验&lt;/p&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
+&lt;li&gt;转行经验&lt;ul&gt;
 &lt;li&gt;做项目从模仿开始&lt;/li&gt;
 &lt;li&gt;看懂后自己写&lt;/li&gt;
 &lt;li&gt;面试官问项目的具体实现，能说出来就ＯＫ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;项目如何问？&lt;/p&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
+&lt;li&gt;项目如何问？&lt;ul&gt;
 &lt;li&gt;项目是什么作用&lt;/li&gt;
 &lt;li&gt;有哪些模块&lt;/li&gt;
 &lt;li&gt;自己手机必装项目演示用，有Bug最好别演示，&lt;strong&gt;演示时最好APP别崩溃，否则印象不好&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;团队的话，面试官会问你主要负责哪块功能，如果你只负责20%，建议对整个项目了解，一定要熟悉具体的实现与思路，&lt;strong&gt;尽量捡自己熟悉的模块说&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;针对性的问模块的具体实现，以及如何实现，如何优化，有网络请求还会问是自己写还是用开源库，自己写需要注意哪些问题！！用了哪些开源库，面试官再针对开源库问相关问题。比如，张哥面试还会问网络编程，post个get方法有何不同？app内缓存如何处理&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;团队的话，面试官会问你主要负责哪块功能，如果你只负责20%，建议对整个项目了解，一定要熟悉具体的实现与思路，&lt;strong&gt;尽量捡自己熟悉的模块说&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;针对性的问模块的具体实现，以及如何实现，如何优化，有网络请求还会问是自己写还是用开源库，自己写需要注意哪些问题！！用了哪些开源库，面试官再针对开源库问相关问题。比如，张哥面试还会问网络编程，post个get方法有何不同？app内缓存如何处理&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;尽量不提自己不熟悉的领域&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;项目经历总结&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;自己亲手做的东西一定要明白，&lt;strong&gt;慎重欺骗面试官&lt;/strong&gt;&lt;/p&gt;
