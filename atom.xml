@@ -108,7 +108,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-09T11:50:33.484Z</updated>
+    <updated>2016-07-09T13:55:21.635Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -275,7 +275,70 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:useBean id=&amp;quot;bean&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             class=&amp;quot;package.class&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             [scope=&amp;quot;page|request|session|application&amp;quot;] /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;id：给bean起名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class：创建bean的类名，特别注意类名的大小写要一致&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scope：bean的有效范围&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;用法二&lt;/p&gt;
-  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:useBean id=&amp;quot;bean&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             class=&amp;quot;package.class&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             [scope=&amp;quot;page|request|session|application&amp;quot;] &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/jsp:useBean&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容：实际上可以看作JavaBean中需要初始化的代码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:useBean id=&amp;quot;bean&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             class=&amp;quot;package.class&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             [scope=&amp;quot;page|request|session|application&amp;quot;] &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/jsp:useBean&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容：实际上可以看作JavaBean中需要初始化的代码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;lt;jsp:setProperty&amp;gt;&lt;/code&gt;标记&lt;br&gt;&lt;code&gt;&amp;lt;jsp:setProperty&amp;gt;&lt;/code&gt;元素使用JavaBean实例给定的setter方法，在实例bean中设置一个或多个属性值。&lt;code&gt;&amp;lt;jsp:setProperty&amp;gt;&lt;/code&gt;中的name值应当和&lt;code&gt;&amp;lt;jsp:userBean&amp;gt;&lt;/code&gt;中的id值相同&lt;code&gt;&amp;lt;jsp:setProperty&amp;gt;&lt;/code&gt; 标记用于设置JavaBean的属性值。其用法如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;第一种用法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:setProperty name = &amp;quot;beanName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;property = &amp;quot;propertyName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;value = &amp;quot;propertyValue&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：name指出是在操作哪个bean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      property指出对该bean的哪个属性赋值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      vlaue用来指定给属性赋的值&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二种用法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &amp;lt;jsp:setProperty name = &amp;quot;beanName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;property = &amp;quot;propertyName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;param = &amp;quot;paramName&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：name指出是在操作哪个bean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      property指出对该bean的哪个属性赋值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      param表示传入参数的名字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第三种用法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &amp;lt;jsp:setProperty name = &amp;quot;beanName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;property = &amp;quot;propertyName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;param = &amp;quot;propertyName&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注意：这里的参数名字与bean中属性名字一致&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：name指出是在操作哪个bean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      property指出对该bean的哪个属性赋值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      param表示传入参数的名字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第四种用法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &amp;lt;jsp:setProperty name = &amp;quot;beanName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;property = &amp;quot;*&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用这种方法可以一次为多个属性赋值&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;lt;jsp:getProperty&amp;gt;&lt;/code&gt;标记&lt;br&gt;&lt;code&gt;&amp;lt;jsp:getProperty&amp;gt;&lt;/code&gt;用于获取JavaBean实例给定属性值，并将这个值转换为字符串形式显示在JSP页面中。&lt;code&gt;&amp;lt;jsp:setProperty&amp;gt;&lt;/code&gt;中的name值应当和&lt;code&gt;&amp;lt;jsp:userBean&amp;gt;&lt;/code&gt;中的id值相同&lt;code&gt;&amp;lt;jsp:getProperty&amp;gt;&lt;/code&gt; 标记用于设置JavaBean的属性值。其用法如下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:getProperty name = &amp;quot;name&amp;quot; property = &amp;quot;propertyName&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释：name属性代表JavaBean对象实例名，该实例必须在前面定义过&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;property属性代表需要获取的那个JavaBean对象对应的属性名字&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Servlet技术&quot;&gt;&lt;a href=&quot;#Servlet技术&quot; class=&quot;headerlink&quot; title=&quot;Servlet技术&quot;&gt;&lt;/a&gt;Servlet技术&lt;/h2&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;Servlet是用Java语言编写的程序，运行于支持Java的Web服务器或应用程序中，Servlet先于JSP出现，提供和和客户端动态交互的功能。Servlet可以处理来自客户端的HTTP 请求，并生成响应返回客户端。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Servlet的优点&lt;ul&gt;
+&lt;li&gt;可移植性&lt;/li&gt;
+&lt;li&gt;安全性&lt;/li&gt;
+&lt;li&gt;高效性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Servlet的生命周期&lt;ul&gt;
+&lt;li&gt;当客户端第一次请求Servlet时，Servlet被加载到内存，容器会创建Servlet实例，并调用init()方法进行初始化工作&lt;/li&gt;
+&lt;li&gt;容器创建请求对象和响应对象。然后调用Servlet的service()方法为客户端提供服务&lt;/li&gt;
+&lt;li&gt;当Servlet不在被需要时，容器调用Servlet的destroy()方法将Servlet实例销毁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Servlet的常用API&lt;ul&gt;
+&lt;li&gt;HttpServlet的常用方法&lt;ul&gt;
+&lt;li&gt;getServletContext(): 获取ServletContext()对象&lt;/li&gt;
+&lt;li&gt;getServletName(): 获取Servlet配置时声明Web应用内部使用的名字&lt;/li&gt;
+&lt;li&gt;getInitParameter(String name): 获取Servlet配置时提供的名为name的参数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HttpServletRequest的常用方法&lt;ul&gt;
+&lt;li&gt;getRequestURL(): 获取请求的URL地址&lt;/li&gt;
+&lt;li&gt;getRequestURI(): 获取请求的服务器地址&lt;/li&gt;
+&lt;li&gt;getContextPath(): 获取Web应用的跟路径&lt;/li&gt;
+&lt;li&gt;getServletPath(): 获取Servlet的访问路径&lt;/li&gt;
+&lt;li&gt;getParameter(String name)：获得名为name的参数的单个值&lt;/li&gt;
+&lt;li&gt;getParameterValues(String name): 获得名为name的参数的多个值&lt;/li&gt;
+&lt;li&gt;getAttribute(String name): 获得名为name的属性值&lt;/li&gt;
+&lt;li&gt;setAttribute(String name, String value): 设置名为name的属性值为value&lt;/li&gt;
+&lt;li&gt;getSession():获取session对象&lt;/li&gt;
+&lt;li&gt;getRequestDispatcher(String path): 获取请求转发对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HttpServletResponse的常用方法&lt;ul&gt;
+&lt;li&gt;setContentType(String type): 设置响应的内容类型为type&lt;/li&gt;
+&lt;li&gt;setCharacterEncoding(String charset): 设置响应的编码字符集为charset&lt;/li&gt;
+&lt;li&gt;getWriter(): 返回一个PrintWriter对象&lt;/li&gt;
+&lt;li&gt;sendRedirect(String location): 向客户端发送一个重定向请求，地址为location&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
