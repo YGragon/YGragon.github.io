@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
-<meta property="og:updated_time" content="2016-07-09T13:55:21.635Z">
+<meta property="og:updated_time" content="2016-07-09T14:10:51.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb笔记-2">
 <meta name="twitter:description">
@@ -559,7 +559,7 @@
 <li>当Servlet不在被需要时，容器调用Servlet的destroy()方法将Servlet实例销毁</li>
 </ul>
 </li>
-<li>Servlet的常用API<ul>
+<li><strong>Servlet的常用API</strong><ul>
 <li>HttpServlet的常用方法<ul>
 <li>getServletContext(): 获取ServletContext()对象</li>
 <li>getServletName(): 获取Servlet配置时声明Web应用内部使用的名字</li>
@@ -583,7 +583,28 @@
 <li>setContentType(String type): 设置响应的内容类型为type</li>
 <li>setCharacterEncoding(String charset): 设置响应的编码字符集为charset</li>
 <li>getWriter(): 返回一个PrintWriter对象</li>
-<li>sendRedirect(String location): 向客户端发送一个重定向请求，地址为location</li>
+<li>sendRedirect(String location): 向客户端发送一个重定向请求，地址为location<h3 id="Servlet过滤器"><a href="#Servlet过滤器" class="headerlink" title="Servlet过滤器"></a>Servlet过滤器</h3>Servlet过滤器是一种Java组件，它位于客户端与处理程序之间，能够对请求和响应进行检查和修改。Servlet过滤器通常用来完成一些通用的操作，例如同意字符编码，字符压缩、加密、实施安全控制等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Servlet过滤器API<ul>
+<li>Filter接口<br>所有的过滤器都必须实现Filter接口<ul>
+<li>init()  Init 方法在 Filter 生命周期中仅执行一次，web 容器在调用 init 方法时</li>
+<li>destory()  在Web容器卸载 Filter 对象之前被调用。该方法在Filter的生命周期中仅执行一次。在这个方法中，可以释放过滤器使用的资源。</li>
+<li>doFilter() Filter 链的执行 </li>
+</ul>
+</li>
+<li>FilterChain接口<ul>
+<li>调用过滤器链中的下一个过滤器</li>
+</ul>
+</li>
+<li>FilterConfig接口<ul>
+<li>该接口用于在过滤器初始化阶段提供过滤器名、初始化参数及Servlet上下文等信息，该接口提供以下4个方法</li>
+<li>getFilteName(): 返回web.xml文件到中定义的该过滤器名称</li>
+<li>getServletContext(): 返回调用者所处的Servlet上下文</li>
+<li>getInitParameter(String name): 返回配置过滤器时名为name的初始化参数值</li>
+<li>getInitParameterNames(): 以Enumeration形式返回配置过滤器时名为name的初始化参数的名称</li>
 </ul>
 </li>
 </ul>
@@ -802,7 +823,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC驱动程序的4种类型如下："><span class="nav-number">2.1.</span> <span class="nav-text">JDBC驱动程序的4种类型如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC访问数据库的基本步骤"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC访问数据库的基本步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaBean组件"><span class="nav-number">3.</span> <span class="nav-text">JavaBean组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用JavaBean"><span class="nav-number">3.2.</span> <span class="nav-text">使用JavaBean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet技术"><span class="nav-number">4.</span> <span class="nav-text">Servlet技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC驱动程序的4种类型如下："><span class="nav-number">2.1.</span> <span class="nav-text">JDBC驱动程序的4种类型如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC访问数据库的基本步骤"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC访问数据库的基本步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaBean组件"><span class="nav-number">3.</span> <span class="nav-text">JavaBean组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用JavaBean"><span class="nav-number">3.2.</span> <span class="nav-text">使用JavaBean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet技术"><span class="nav-number">4.</span> <span class="nav-text">Servlet技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet过滤器"><span class="nav-number">4.2.</span> <span class="nav-text">Servlet过滤器</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

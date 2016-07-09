@@ -108,7 +108,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-09T13:55:21.635Z</updated>
+    <updated>2016-07-09T14:10:51.883Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -313,7 +313,7 @@
 &lt;li&gt;当Servlet不在被需要时，容器调用Servlet的destroy()方法将Servlet实例销毁&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Servlet的常用API&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Servlet的常用API&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;HttpServlet的常用方法&lt;ul&gt;
 &lt;li&gt;getServletContext(): 获取ServletContext()对象&lt;/li&gt;
 &lt;li&gt;getServletName(): 获取Servlet配置时声明Web应用内部使用的名字&lt;/li&gt;
@@ -337,7 +337,28 @@
 &lt;li&gt;setContentType(String type): 设置响应的内容类型为type&lt;/li&gt;
 &lt;li&gt;setCharacterEncoding(String charset): 设置响应的编码字符集为charset&lt;/li&gt;
 &lt;li&gt;getWriter(): 返回一个PrintWriter对象&lt;/li&gt;
-&lt;li&gt;sendRedirect(String location): 向客户端发送一个重定向请求，地址为location&lt;/li&gt;
+&lt;li&gt;sendRedirect(String location): 向客户端发送一个重定向请求，地址为location&lt;h3 id=&quot;Servlet过滤器&quot;&gt;&lt;a href=&quot;#Servlet过滤器&quot; class=&quot;headerlink&quot; title=&quot;Servlet过滤器&quot;&gt;&lt;/a&gt;Servlet过滤器&lt;/h3&gt;Servlet过滤器是一种Java组件，它位于客户端与处理程序之间，能够对请求和响应进行检查和修改。Servlet过滤器通常用来完成一些通用的操作，例如同意字符编码，字符压缩、加密、实施安全控制等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Servlet过滤器API&lt;ul&gt;
+&lt;li&gt;Filter接口&lt;br&gt;所有的过滤器都必须实现Filter接口&lt;ul&gt;
+&lt;li&gt;init()  Init 方法在 Filter 生命周期中仅执行一次，web 容器在调用 init 方法时&lt;/li&gt;
+&lt;li&gt;destory()  在Web容器卸载 Filter 对象之前被调用。该方法在Filter的生命周期中仅执行一次。在这个方法中，可以释放过滤器使用的资源。&lt;/li&gt;
+&lt;li&gt;doFilter() Filter 链的执行 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FilterChain接口&lt;ul&gt;
+&lt;li&gt;调用过滤器链中的下一个过滤器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FilterConfig接口&lt;ul&gt;
+&lt;li&gt;该接口用于在过滤器初始化阶段提供过滤器名、初始化参数及Servlet上下文等信息，该接口提供以下4个方法&lt;/li&gt;
+&lt;li&gt;getFilteName(): 返回web.xml文件到中定义的该过滤器名称&lt;/li&gt;
+&lt;li&gt;getServletContext(): 返回调用者所处的Servlet上下文&lt;/li&gt;
+&lt;li&gt;getInitParameter(String name): 返回配置过滤器时名为name的初始化参数值&lt;/li&gt;
+&lt;li&gt;getInitParameterNames(): 以Enumeration形式返回配置过滤器时名为name的初始化参数的名称&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
