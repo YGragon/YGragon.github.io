@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-08T13:58:21.273Z</updated>
+  <updated>2016-07-09T00:44:19.032Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
     <id>http://dongxi520.com/2016/07/08/百万讲师张哥面试技巧/</id>
     <published>2016-07-08T13:46:13.000Z</published>
-    <updated>2016-07-08T13:58:21.273Z</updated>
+    <updated>2016-07-09T00:44:19.032Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
@@ -28,16 +28,16 @@
 &lt;ul&gt;
 &lt;li&gt;不要太花哨，你应聘的是技术，不是设计师&lt;/li&gt;
 &lt;li&gt;把基本信息要说清楚&lt;/li&gt;
-&lt;li&gt;无关的不要写，比如头像之类的(网投不需要？)&lt;/li&gt;
+&lt;li&gt;无关的不要写，比如头像之类的&lt;/li&gt;
 &lt;li&gt;有个人博客和Github的务必写在简历上，而且Github上有拿得出手的项目&lt;/li&gt;
-&lt;li&gt;任何时候不要欺骗，否则直接被pas&lt;/li&gt;
+&lt;li&gt;任何时候不要欺骗，否则直接被pass&lt;/li&gt;
 &lt;li&gt;应届生将证书挂上，比如四六级，奖学金，计算机相关证书&lt;/li&gt;
 &lt;li&gt;最重要的就是项目经历！！把项目写进去，2，3个为好，时间是倒序的&lt;/li&gt;
 &lt;li&gt;项目经验注意地方，一定要和应聘职位紧密联系的，比如面试Android，项目里有两个PHP项目就不好&lt;/li&gt;
 &lt;li&gt;项目经验写明你在其中的作用，写自己参与度比较高的项目&lt;/li&gt;
 &lt;li&gt;最好的项目是已经上线，而且用户量还不少&lt;/li&gt;
 &lt;li&gt;项目经验是注重考察的环节！！！&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;应届生，实习生把平时练习的项目算作项目经验！！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应届生，实习生把平时练习的项目算作项目经验&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;必须要有一些项目经验，没有完整的做过一个项目经验别去找工作，项目不一定做全，有时间在完善也OK&lt;/li&gt;
 &lt;li&gt;简历最多控制在两页A4纸&lt;/li&gt;
 &lt;/ul&gt;
@@ -53,12 +53,12 @@
 &lt;ul&gt;
 &lt;li&gt;项目是什么作用&lt;/li&gt;
 &lt;li&gt;有哪些模块&lt;/li&gt;
-&lt;li&gt;自己手机必装项目演示用，有Bug最好别演示，&lt;em&gt;*演示时最好APP别崩溃&lt;/em&gt;，否则印象不好*&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;团队的话，面试官会问你主要负责哪块功能，如果你只负责20%，建议对整个项目了解，一定要熟悉具体的实现与思路，&lt;strong&gt;尽量捡自己熟悉的模块说*&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;自己手机必装项目演示用，有Bug最好别演示，&lt;strong&gt;演示时最好APP别崩溃，否则印象不好&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;团队的话，面试官会问你主要负责哪块功能，如果你只负责20%，建议对整个项目了解，一定要熟悉具体的实现与思路，&lt;strong&gt;尽量捡自己熟悉的模块说&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;针对性的问模块的具体实现，以及如何实现，如何优化，有网络请求还会问是自己写还是用开源库，自己写需要注意哪些问题！！用了哪些开源库，面试官再针对开源库问相关问题。比如，张哥面试还会问网络编程，post个get方法有何不同？app内缓存如何处理&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;尽量不提自己不熟悉的领域*&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;尽量不提自己不熟悉的领域&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;项目经历总结&lt;/p&gt;
@@ -107,7 +107,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-08T13:31:03.940Z</updated>
+    <updated>2016-07-09T03:30:06.486Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -187,7 +187,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;工作原理&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;application对象和session对象不同，application对象实在服务器启动后产生的，当用户&lt;/li&gt;
+&lt;li&gt;application对象和session对象不同，application对象实在服务器启动后产生的，当用户浏览所访问的王长的各个页面，这个application都是同一个，直到浏览器关闭，这个application对象才被取消。所有的客户的application对象都是同一个，即左右对象共享这个内置的application，而session对象是因不同的客户对象也不同。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;常用方法(作用和session的相似)&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public void setAttibute(String name,Object value)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public Object getAttribute(String value)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void removeAttribute(String name)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -199,8 +199,84 @@
 &lt;h3 id=&quot;config对象&quot;&gt;&lt;a href=&quot;#config对象&quot; class=&quot;headerlink&quot; title=&quot;config对象&quot;&gt;&lt;/a&gt;config对象&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;说明&lt;br&gt;主要用于获取服务器的配置信息。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;page对象&quot;&gt;&lt;a href=&quot;#page对象&quot; class=&quot;headerlink&quot; title=&quot;page对象&quot;&gt;&lt;/a&gt;page对象&lt;/h3&gt;&lt;p&gt;对应servlet类的实现对象&lt;/p&gt;
-&lt;h3 id=&quot;exception对象&quot;&gt;&lt;a href=&quot;#exception对象&quot; class=&quot;headerlink&quot; title=&quot;exception对象&quot;&gt;&lt;/a&gt;exception对象&lt;/h3&gt;&lt;p&gt;JSP文件运行所产生的错误和异常&lt;/p&gt;
+&lt;h3 id=&quot;page对象&quot;&gt;&lt;a href=&quot;#page对象&quot; class=&quot;headerlink&quot; title=&quot;page对象&quot;&gt;&lt;/a&gt;page对象&lt;/h3&gt;&lt;p&gt;对应servlet类的实现对象，相当于this，实际上指的就是JSP本身。由于page对象占用内存很大，所以不建议使用page对象&lt;/p&gt;
+&lt;h3 id=&quot;exception对象&quot;&gt;&lt;a href=&quot;#exception对象&quot; class=&quot;headerlink&quot; title=&quot;exception对象&quot;&gt;&lt;/a&gt;exception对象&lt;/h3&gt;&lt;p&gt;JSP文件运行所产生的错误和异常，只有在包含&amp;lt;%@ page isErrorPage=”true”%&amp;gt;的页面才可以使用。&lt;/p&gt;
+&lt;h2 id=&quot;数据库&quot;&gt;&lt;a href=&quot;#数据库&quot; class=&quot;headerlink&quot; title=&quot;数据库&quot;&gt;&lt;/a&gt;数据库&lt;/h2&gt;&lt;h3 id=&quot;JDBC驱动程序的4种类型如下：&quot;&gt;&lt;a href=&quot;#JDBC驱动程序的4种类型如下：&quot; class=&quot;headerlink&quot; title=&quot;JDBC驱动程序的4种类型如下：&quot;&gt;&lt;/a&gt;JDBC驱动程序的4种类型如下：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;JDBC-ODBC桥，同通过ODBC数据源与数据库进行连接&lt;br&gt;不过Sun强烈建议JDBC-ODBC桥接器最好用来测试，不建议在Web应用程序中使用&lt;/li&gt;
+&lt;li&gt;通过网络库进行连接的纯Java驱动程序&lt;br&gt;此种类型少了ODBC这一层，应用程序直接与网络库连接，减少了中间驱动程序层。&lt;/li&gt;
+&lt;li&gt;通过中间件服务器与数据库建立链接的驱动程序&lt;br&gt;这种驱动程序不用安装网络库，比且驱动程序安装在中间件服务器上，而不是客户机上。&lt;/li&gt;
+&lt;li&gt;直接与数据库连接的纯Java JDBC驱动程序&lt;br&gt;完全使用Java实现，不需要其他的驱动程序，也不需要安装其他的网络库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;JDBC访问数据库的基本步骤&quot;&gt;&lt;a href=&quot;#JDBC访问数据库的基本步骤&quot; class=&quot;headerlink&quot; title=&quot;JDBC访问数据库的基本步骤&quot;&gt;&lt;/a&gt;JDBC访问数据库的基本步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;装载驱动程序&lt;br&gt;使用MySQL的驱动程序：&lt;code&gt;Class.forName(&amp;quot;com.mysql.jdbc.Dirver&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;定义所要连接的数据库的地址&lt;br&gt;&lt;code&gt;Strng MySQLURL = &amp;quot;jdbc:mysql://host(服务器IP):port(端口号)/dbName(数据库名)&amp;quot;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;与数据库建立连接&lt;br&gt;&lt;code&gt;Connection conn = DirverManager.getConnection(url,LoginName,PassWord);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;例如：连接MySQL的book数据库，用户名为root，密码为root&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Class.forName(&amp;quot;com.myslq.jdbc.Dirver&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String MySQLURL = &amp;quot;jdbc:myslq://localhost:3306/book&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;建立语句对象&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;声明并执行SQL语句&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查询：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String sql = &amp;quot;SELECT * FORM book&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ResultSet rs = stmt.executeQuery(sql);//将结果存储在ResultSet对象的结果集中。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更新：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String sql = &amp;quot;DELETE FORM book WHERE bookid=1234&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int i = stmt.executeUpdate(sql);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对结果集进行处理&lt;br&gt;ResultSet对象称为结果集，是符合条件的所有行的集合&lt;br&gt;主要方法如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean next()&lt;br&gt;用于将结果集定位到下一行，ResultSet最初是定位在第0行上，此时应该调用next()将其定位到第一行，然后再输出。    &lt;/li&gt;
+&lt;li&gt;getXxx()&lt;br&gt;当ResultSet定位到某一行时，可以用getXxx()方法获得这一行单个字段的值&lt;/li&gt;
+&lt;li&gt;显示结果集中所有记录的前两列&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;while(rs.next)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    name = rs.getString(1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    score = rs.getFloat(2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(name + &amp;quot;,&amp;quot; + score);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关闭对象&lt;br&gt;关闭对象使用&lt;code&gt;close()&lt;/code&gt;方法,&lt;strong&gt;关闭对象前需要判断对象是否为空&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;JavaBean组件&quot;&gt;&lt;a href=&quot;#JavaBean组件&quot; class=&quot;headerlink&quot; title=&quot;JavaBean组件&quot;&gt;&lt;/a&gt;JavaBean组件&lt;/h2&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;JavaBean的特点&lt;ul&gt;
+&lt;li&gt;可以实现代码的重复利用&lt;/li&gt;
+&lt;li&gt;易编写，易维护，易使用&lt;/li&gt;
+&lt;li&gt;可以在任何安装了Java运行环境的平台上使用，而不用重新编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用JavaBean的好处&lt;ul&gt;
+&lt;li&gt;可以是JSP页面变得清晰&lt;/li&gt;
+&lt;li&gt;节省软件开发时间&lt;/li&gt;
+&lt;li&gt;减低系统维护难度&lt;/li&gt;
+&lt;li&gt;为JSP应用带来更多的可伸缩性，使系统更加健壮和灵活&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在实际中，一个JavaBean类的编码约定包括以下内容&lt;ul&gt;
+&lt;li&gt;类实现了java.io.Serializable接口&lt;/li&gt;
+&lt;li&gt;必须放在某package(包)中&lt;/li&gt;
+&lt;li&gt;如果类中有构造方法，那么这个构造方法也是公有的，并且是无参的&lt;/li&gt;
+&lt;li&gt;属性：xxx，所有属性都是私有的&lt;/li&gt;
+&lt;li&gt;getXxx():用来获取属性xxx，并且该方法是公有的&lt;/li&gt;
+&lt;li&gt;setXxx(),用来设置属性xxx,并且该方法也是公有的&lt;/li&gt;
+&lt;li&gt;对于boolean类型的成员变量，允许使用“is”代替上面的“get”和“set”&lt;/li&gt;
+&lt;li&gt;类中的普通方法不适用于上面的命名规则，当时方法必须是公有的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;使用JavaBean&quot;&gt;&lt;a href=&quot;#使用JavaBean&quot; class=&quot;headerlink&quot; title=&quot;使用JavaBean&quot;&gt;&lt;/a&gt;使用JavaBean&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;JSP 代码段调用 JavaBean&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;%@ page language = &amp;quot;java&amp;quot; contentType = &amp;quot;text/html;charset = utf-8&amp;quot;%&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;%@ page import=&amp;quot;bean.Person&amp;quot; %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;title&amp;gt;JSP代码段使用JavaBean&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% Person bean = new Person(); %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;初始值为：&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;姓名：&amp;lt;% = bean.getName();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;年龄：&amp;lt;% = bean.getAge();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;性别：&amp;lt;% = bean.getSex();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;职业：&amp;lt;% = bean.getCareer();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bean.setName(&amp;quot;小明&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bean.setAge(18);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bean.setSex(&amp;quot;男&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bean.setCareer(&amp;quot;学生&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;更改后的值为：&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;姓名：&amp;lt;% = bean.getName();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;年龄：&amp;lt;% = bean.getAge();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;性别：&amp;lt;% = bean.getSex();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;职业：&amp;lt;% = bean.getCareer();%&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用&lt;code&gt;&amp;lt;jsp:useBean&amp;gt;&lt;/code&gt;标记&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;用法一&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:useBean id=&amp;quot;bean&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             class=&amp;quot;package.class&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             [scope=&amp;quot;page|request|session|application&amp;quot;] /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;id：给bean起名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class：创建bean的类名，特别注意类名的大小写要一致&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scope：bean的有效范围&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用法二&lt;/p&gt;
+  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;jsp:useBean id=&amp;quot;bean&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             class=&amp;quot;package.class&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             [scope=&amp;quot;page|request|session|application&amp;quot;] &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/jsp:useBean&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本体内容：实际上可以看作JavaBean中需要初始化的代码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">

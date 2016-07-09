@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
-<meta property="og:updated_time" content="2016-07-08T13:31:03.940Z">
+<meta property="og:updated_time" content="2016-07-09T03:30:06.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb笔记-2">
 <meta name="twitter:description">
@@ -434,7 +434,7 @@
 </li>
 <li><p>工作原理</p>
 <ul>
-<li>application对象和session对象不同，application对象实在服务器启动后产生的，当用户</li>
+<li>application对象和session对象不同，application对象实在服务器启动后产生的，当用户浏览所访问的王长的各个页面，这个application都是同一个，直到浏览器关闭，这个application对象才被取消。所有的客户的application对象都是同一个，即左右对象共享这个内置的application，而session对象是因不同的客户对象也不同。</li>
 </ul>
 </li>
 <li>常用方法(作用和session的相似)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void setAttibute(String name,Object value)</span><br><span class="line">public Object getAttribute(String value)</span><br><span class="line">public void removeAttribute(String name)</span><br></pre></td></tr></table></figure>
@@ -446,8 +446,84 @@
 <h3 id="config对象"><a href="#config对象" class="headerlink" title="config对象"></a>config对象</h3><ul>
 <li>说明<br>主要用于获取服务器的配置信息。</li>
 </ul>
-<h3 id="page对象"><a href="#page对象" class="headerlink" title="page对象"></a>page对象</h3><p>对应servlet类的实现对象</p>
-<h3 id="exception对象"><a href="#exception对象" class="headerlink" title="exception对象"></a>exception对象</h3><p>JSP文件运行所产生的错误和异常</p>
+<h3 id="page对象"><a href="#page对象" class="headerlink" title="page对象"></a>page对象</h3><p>对应servlet类的实现对象，相当于this，实际上指的就是JSP本身。由于page对象占用内存很大，所以不建议使用page对象</p>
+<h3 id="exception对象"><a href="#exception对象" class="headerlink" title="exception对象"></a>exception对象</h3><p>JSP文件运行所产生的错误和异常，只有在包含&lt;%@ page isErrorPage=”true”%&gt;的页面才可以使用。</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="JDBC驱动程序的4种类型如下："><a href="#JDBC驱动程序的4种类型如下：" class="headerlink" title="JDBC驱动程序的4种类型如下："></a>JDBC驱动程序的4种类型如下：</h3><ul>
+<li>JDBC-ODBC桥，同通过ODBC数据源与数据库进行连接<br>不过Sun强烈建议JDBC-ODBC桥接器最好用来测试，不建议在Web应用程序中使用</li>
+<li>通过网络库进行连接的纯Java驱动程序<br>此种类型少了ODBC这一层，应用程序直接与网络库连接，减少了中间驱动程序层。</li>
+<li>通过中间件服务器与数据库建立链接的驱动程序<br>这种驱动程序不用安装网络库，比且驱动程序安装在中间件服务器上，而不是客户机上。</li>
+<li>直接与数据库连接的纯Java JDBC驱动程序<br>完全使用Java实现，不需要其他的驱动程序，也不需要安装其他的网络库</li>
+</ul>
+<h3 id="JDBC访问数据库的基本步骤"><a href="#JDBC访问数据库的基本步骤" class="headerlink" title="JDBC访问数据库的基本步骤"></a>JDBC访问数据库的基本步骤</h3><ul>
+<li>装载驱动程序<br>使用MySQL的驱动程序：<code>Class.forName(&quot;com.mysql.jdbc.Dirver&quot;);</code></li>
+<li>定义所要连接的数据库的地址<br><code>Strng MySQLURL = &quot;jdbc:mysql://host(服务器IP):port(端口号)/dbName(数据库名)&quot;;</code></li>
+<li>与数据库建立连接<br><code>Connection conn = DirverManager.getConnection(url,LoginName,PassWord);</code></li>
+<li><p>例如：连接MySQL的book数据库，用户名为root，密码为root</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.myslq.jdbc.Dirver&quot;);</span><br><span class="line">String MySQLURL = &quot;jdbc:myslq://localhost:3306/book&quot;;</span><br><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立语句对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明并执行SQL语句</p>
+</li>
+<li><p>查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;SELECT * FORM book&quot;;</span><br><span class="line">ResultSet rs = stmt.executeQuery(sql);//将结果存储在ResultSet对象的结果集中。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;DELETE FORM book WHERE bookid=1234&quot;;</span><br><span class="line">int i = stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对结果集进行处理<br>ResultSet对象称为结果集，是符合条件的所有行的集合<br>主要方法如下：</p>
+<ul>
+<li>boolean next()<br>用于将结果集定位到下一行，ResultSet最初是定位在第0行上，此时应该调用next()将其定位到第一行，然后再输出。    </li>
+<li>getXxx()<br>当ResultSet定位到某一行时，可以用getXxx()方法获得这一行单个字段的值</li>
+<li>显示结果集中所有记录的前两列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while(rs.next)&#123;</span><br><span class="line">    name = rs.getString(1);</span><br><span class="line">    score = rs.getFloat(2);</span><br><span class="line">    System.out.println(name + &quot;,&quot; + score);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>关闭对象<br>关闭对象使用<code>close()</code>方法,<strong>关闭对象前需要判断对象是否为空</strong></p>
+</li>
+</ul>
+<h2 id="JavaBean组件"><a href="#JavaBean组件" class="headerlink" title="JavaBean组件"></a>JavaBean组件</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li>JavaBean的特点<ul>
+<li>可以实现代码的重复利用</li>
+<li>易编写，易维护，易使用</li>
+<li>可以在任何安装了Java运行环境的平台上使用，而不用重新编译</li>
+</ul>
+</li>
+<li>使用JavaBean的好处<ul>
+<li>可以是JSP页面变得清晰</li>
+<li>节省软件开发时间</li>
+<li>减低系统维护难度</li>
+<li>为JSP应用带来更多的可伸缩性，使系统更加健壮和灵活</li>
+</ul>
+</li>
+<li>在实际中，一个JavaBean类的编码约定包括以下内容<ul>
+<li>类实现了java.io.Serializable接口</li>
+<li>必须放在某package(包)中</li>
+<li>如果类中有构造方法，那么这个构造方法也是公有的，并且是无参的</li>
+<li>属性：xxx，所有属性都是私有的</li>
+<li>getXxx():用来获取属性xxx，并且该方法是公有的</li>
+<li>setXxx(),用来设置属性xxx,并且该方法也是公有的</li>
+<li>对于boolean类型的成员变量，允许使用“is”代替上面的“get”和“set”</li>
+<li>类中的普通方法不适用于上面的命名规则，当时方法必须是公有的</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用JavaBean"><a href="#使用JavaBean" class="headerlink" title="使用JavaBean"></a>使用JavaBean</h3><ul>
+<li><p>JSP 代码段调用 JavaBean</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language = &quot;java&quot; contentType = &quot;text/html;charset = utf-8&quot;%&gt;</span><br><span class="line">&lt;%@ page import=&quot;bean.Person&quot; %&gt;</span><br><span class="line">&lt;&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;JSP代码段使用JavaBean&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;% Person bean = new Person(); %&gt;</span><br><span class="line">初始值为：&lt;br&gt;</span><br><span class="line">姓名：&lt;% = bean.getName();%&gt;&lt;br&gt;</span><br><span class="line">年龄：&lt;% = bean.getAge();%&gt;&lt;br&gt;</span><br><span class="line">性别：&lt;% = bean.getSex();%&gt;&lt;br&gt;</span><br><span class="line">职业：&lt;% = bean.getCareer();%&gt;&lt;br&gt;</span><br><span class="line">&lt;% </span><br><span class="line">bean.setName(&quot;小明&quot;);</span><br><span class="line">bean.setAge(18);</span><br><span class="line">bean.setSex(&quot;男&quot;);</span><br><span class="line">bean.setCareer(&quot;学生&quot;);</span><br><span class="line">%&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">更改后的值为：&lt;br&gt;</span><br><span class="line">姓名：&lt;% = bean.getName();%&gt;&lt;br&gt;</span><br><span class="line">年龄：&lt;% = bean.getAge();%&gt;&lt;br&gt;</span><br><span class="line">性别：&lt;% = bean.getSex();%&gt;&lt;br&gt;</span><br><span class="line">职业：&lt;% = bean.getCareer();%&gt;&lt;br&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>&lt;jsp:useBean&gt;</code>标记</p>
+<ul>
+<li><p>用法一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;bean&quot;,</span><br><span class="line">             class=&quot;package.class&quot;</span><br><span class="line">             [scope=&quot;page|request|session|application&quot;] /&gt;</span><br><span class="line">id：给bean起名</span><br><span class="line">class：创建bean的类名，特别注意类名的大小写要一致</span><br><span class="line">scope：bean的有效范围</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用法二</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;bean&quot;,</span><br><span class="line">             class=&quot;package.class&quot;</span><br><span class="line">             [scope=&quot;page|request|session|application&quot;] &gt;</span><br><span class="line">本体内容</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br><span class="line">本体内容：实际上可以看作JavaBean中需要初始化的代码</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -661,7 +737,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC驱动程序的4种类型如下："><span class="nav-number">2.1.</span> <span class="nav-text">JDBC驱动程序的4种类型如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC访问数据库的基本步骤"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC访问数据库的基本步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaBean组件"><span class="nav-number">3.</span> <span class="nav-text">JavaBean组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用JavaBean"><span class="nav-number">3.2.</span> <span class="nav-text">使用JavaBean</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
