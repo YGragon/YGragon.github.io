@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
-<meta property="og:updated_time" content="2016-07-09T03:30:06.486Z">
+<meta property="og:updated_time" content="2016-07-09T11:50:33.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb笔记-2">
 <meta name="twitter:description">
@@ -465,12 +465,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>声明并执行SQL语句</p>
-</li>
+<ul>
 <li><p>查询：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;SELECT * FORM book&quot;;</span><br><span class="line">ResultSet rs = stmt.executeQuery(sql);//将结果存储在ResultSet对象的结果集中。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更新：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;DELETE FORM book WHERE bookid=1234&quot;;</span><br><span class="line">int i = stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>对结果集进行处理<br>ResultSet对象称为结果集，是符合条件的所有行的集合<br>主要方法如下：</p>
 <ul>

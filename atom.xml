@@ -108,7 +108,7 @@
     <link href="http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/"/>
     <id>http://dongxi520.com/2016/07/07/JavaWeb笔记-2/</id>
     <published>2016-07-07T11:05:10.000Z</published>
-    <updated>2016-07-09T03:30:06.486Z</updated>
+    <updated>2016-07-09T11:50:33.484Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/JavaWeb.png&quot; alt=&quot;JavaWeb基础笔记&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;JSP内置对象&quot;&gt;&lt;a href=&quot;#JSP内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP内置对象&quot;&gt;&lt;/a&gt;JSP内置对象&lt;/h2&gt;&lt;h3 id=&quot;out对象&quot;&gt;&lt;a href=&quot;#out对象&quot; class=&quot;headerlink&quot; title=&quot;out对象&quot;&gt;&lt;/a&gt;out对象&lt;/h3&gt;&lt;ul&gt;
@@ -219,12 +219,14 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;声明并执行SQL语句&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;查询：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String sql = &amp;quot;SELECT * FORM book&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ResultSet rs = stmt.executeQuery(sql);//将结果存储在ResultSet对象的结果集中。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;更新：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Connection conn = DirverManager.getConnection(MySQLURL,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Statement stmt = conn.createStatement();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String sql = &amp;quot;DELETE FORM book WHERE bookid=1234&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int i = stmt.executeUpdate(sql);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;对结果集进行处理&lt;br&gt;ResultSet对象称为结果集，是符合条件的所有行的集合&lt;br&gt;主要方法如下：&lt;/p&gt;
 &lt;ul&gt;
