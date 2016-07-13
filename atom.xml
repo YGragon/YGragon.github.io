@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-09T07:25:51.243Z</updated>
+  <updated>2016-07-13T13:54:05.044Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AS错误总结</title>
+    <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
+    <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
+    <published>2016-07-13T13:46:41.000Z</published>
+    <updated>2016-07-13T13:54:05.044Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;错误原因如下：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Error:Execution failed for task &amp;apos;:app:transformClassesWithDexForDebug&amp;apos;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process &amp;apos;command &amp;apos;D:\JDK\bin\java.exe&amp;apos;&amp;apos; finished with non-zero exit value 1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/images/postImage/ASError.png&quot; alt=&quot;错误原因&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;解决的办法如下：&lt;br&gt;&lt;img src=&quot;/images/postImage/cause.png&quot; alt=&quot;solve&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将buildToolsVersion改为23.0.0,即可完美解决&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="AndroidStudio错误总结" scheme="http://dongxi520.com/tags/AndroidStudio%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>百万讲师张哥面试技巧</title>
     <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
     <id>http://dongxi520.com/2016/07/08/百万讲师张哥面试技巧/</id>
     <published>2016-07-08T13:46:13.000Z</published>
-    <updated>2016-07-09T07:25:51.243Z</updated>
+    <updated>2016-07-09T07:28:52.931Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
