@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-13T13:54:05.044Z</updated>
+  <updated>2016-07-13T13:56:52.957Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
     <published>2016-07-13T13:46:41.000Z</published>
-    <updated>2016-07-13T13:54:05.044Z</updated>
+    <updated>2016-07-13T13:56:52.957Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;AS没有报错但是运行不了&quot;&gt;&lt;a href=&quot;#AS没有报错但是运行不了&quot; class=&quot;headerlink&quot; title=&quot;AS没有报错但是运行不了&quot;&gt;&lt;/a&gt;AS没有报错但是运行不了&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;错误原因如下：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Error:Execution failed for task &amp;apos;:app:transformClassesWithDexForDebug&amp;apos;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process &amp;apos;command &amp;apos;D:\JDK\bin\java.exe&amp;apos;&amp;apos; finished with non-zero exit value 1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
