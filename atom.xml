@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-13T13:56:52.957Z</updated>
+  <updated>2016-07-15T11:44:59.205Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
     <published>2016-07-13T13:46:41.000Z</published>
-    <updated>2016-07-13T13:56:52.957Z</updated>
+    <updated>2016-07-15T11:44:59.205Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;AS没有报错但是运行不了&quot;&gt;&lt;a href=&quot;#AS没有报错但是运行不了&quot; class=&quot;headerlink&quot; title=&quot;AS没有报错但是运行不了&quot;&gt;&lt;/a&gt;AS没有报错但是运行不了&lt;/h2&gt;&lt;ul&gt;
@@ -32,6 +32,12 @@
 &lt;li&gt;&lt;p&gt;解决的办法如下：&lt;br&gt;&lt;img src=&quot;/images/postImage/cause.png&quot; alt=&quot;solve&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;将buildToolsVersion改为23.0.0,即可完美解决&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用&quot;&gt;&lt;a href=&quot;#运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用&quot; class=&quot;headerlink&quot; title=&quot;运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用&quot;&gt;&lt;/a&gt;运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;原因如下&lt;br&gt;在新建Activity是勾选了Launch Activity复选框&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解决的办法就是新建Activity是按默认进行即可，不用勾选复选框&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
