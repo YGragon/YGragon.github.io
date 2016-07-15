@@ -458,7 +458,7 @@
     <link href="http://dongxi520.com/2016/07/04/Android%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
     <id>http://dongxi520.com/2016/07/04/Android基础学习资源/</id>
     <published>2016-07-04T06:21:56.000Z</published>
-    <updated>2016-07-11T10:55:35.707Z</updated>
+    <updated>2016-07-15T11:52:06.758Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Android这么火你还不学？怎么学？从哪里开始学？&lt;/p&gt;
@@ -489,6 +489,11 @@
 &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/1114250779boke/p/3657996.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到Eclipse中&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/915fc414ea858e51394b209d.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到AS中&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/primarykeyone/article/details/51297917&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成到AS中出现的问题汇总&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;AS的完美配置&quot;&gt;&lt;a href=&quot;#AS的完美配置&quot; class=&quot;headerlink&quot; title=&quot;AS的完美配置&quot;&gt;&lt;/a&gt;AS的完美配置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;默认的界面真是太丑了，那么跟着我来搞定它吧！&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/langtianya/p/4409863.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Studio 的安装和配置篇（Windows篇）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kuqin.com/shuoit/20150406/345563.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第一次使用Android Studio时你应该知道的一切配置&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;Android学习资源&quot;&gt;&lt;a href=&quot;#Android学习资源&quot; class=&quot;headerlink&quot; title=&quot;Android学习资源&quot;&gt;&lt;/a&gt;Android学习资源&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;developer.android.com/&quot;&gt;Android官网(需要科学上网)&lt;/a&gt;&lt;/li&gt;
