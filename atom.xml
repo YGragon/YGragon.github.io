@@ -420,7 +420,7 @@
     <link href="http://dongxi520.com/2016/07/05/Android%E5%B8%83%E5%B1%80%E4%BD%A0%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
     <id>http://dongxi520.com/2016/07/05/Android布局你未知的属性/</id>
     <published>2016-07-05T01:49:13.000Z</published>
-    <updated>2016-07-05T01:56:34.825Z</updated>
+    <updated>2016-07-20T01:06:00.507Z</updated>
     
     <content type="html">&lt;p&gt;本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/layout.jpg&quot; alt=&quot;layout&quot;&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -438,6 +438,26 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;selector-的属性&quot;&gt;&lt;a href=&quot;#selector-的属性&quot; class=&quot;headerlink&quot; title=&quot;selector 的属性&quot;&gt;&lt;/a&gt;selector 的属性&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;android:enterFadeDuration/android:exitFadeDuration (Drawables)此属性在Drawable具有多种状态的时候，可以定义它展示前的淡入淡出效果。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;selector xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;  android:enterFadeDuration=&amp;quot;200&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item  android:state_pressed=&amp;quot;true&amp;quot; android:drawable=&amp;quot;@drawable/list_item_bg_pressed&amp;quot;&amp;gt;&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item  android:drawable=&amp;quot;@drawable/list_item_bg_normal&amp;quot;&amp;gt;&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/selector&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ImageView-图片的拉伸处理&quot;&gt;&lt;a href=&quot;#ImageView-图片的拉伸处理&quot; class=&quot;headerlink&quot; title=&quot;ImageView 图片的拉伸处理&quot;&gt;&lt;/a&gt;ImageView 图片的拉伸处理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;通过设置android:scaleType=”fitXY”使得图片拉伸显示。&lt;br&gt;scaleType的属性有matrix（默认）、center、centerCrop、centerInside、fitCenter、fitEnd、fitStart、fitXY。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”center”&lt;br&gt;保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size，超过部分裁剪处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”centerCrop”&lt;br&gt;以填满整个ImageView为目的，将原图的中心对准ImageView的中心，等比例放大原图，直到填满ImageView为止（指的是ImageView的宽和高都要填满），原图超过ImageView的部分作裁剪处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”centerInside”&lt;br&gt;以原图完全显示为目的，将图片的内容完整居中显示，通过按比例缩小原图的size宽(高)等于或小于ImageView的宽(高)。如果原图的size本身就小于ImageView的size，则原图的size不作任何处理，居中显示在ImageView。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”matrix”&lt;br&gt;不改变原图的大小，从ImageView的左上角开始绘制原图，原图超过ImageView的部分作裁剪处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”fitCenter”&lt;br&gt;把原图按比例扩大或缩小到ImageView的ImageView的高度，居中显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”fitEnd”&lt;br&gt;把原图按比例扩大(缩小)到ImageView的高度，显示在ImageView的下部分位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”fitStart”&lt;br&gt;把原图按比例扩大(缩小)到ImageView的高度，显示在ImageView的上部分位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android:scaleType=”fitXY”&lt;br&gt;把原图按照指定的大小在View中显示，拉伸显示图片，不保持原比例，填满ImageView.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>

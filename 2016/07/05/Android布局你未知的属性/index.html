@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description" content="本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/layout.jpg">
-<meta property="og:updated_time" content="2016-07-05T01:56:34.825Z">
+<meta property="og:updated_time" content="2016-07-20T01:06:00.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android布局你未知的属性">
 <meta name="twitter:description" content="本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。">
@@ -374,6 +374,26 @@
 <li>android:enterFadeDuration/android:exitFadeDuration (Drawables)此属性在Drawable具有多种状态的时候，可以定义它展示前的淡入淡出效果。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;  android:enterFadeDuration=&quot;200&quot;&gt;</span><br><span class="line">    &lt;item  android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/list_item_bg_pressed&quot;&gt;&lt;/item&gt;</span><br><span class="line">    &lt;item  android:drawable=&quot;@drawable/list_item_bg_normal&quot;&gt;&lt;/item&gt;</span><br><span class="line">&lt;/selector&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h2 id="ImageView-图片的拉伸处理"><a href="#ImageView-图片的拉伸处理" class="headerlink" title="ImageView 图片的拉伸处理"></a>ImageView 图片的拉伸处理</h2><ul>
+<li><p>通过设置android:scaleType=”fitXY”使得图片拉伸显示。<br>scaleType的属性有matrix（默认）、center、centerCrop、centerInside、fitCenter、fitEnd、fitStart、fitXY。</p>
+</li>
+<li><p>android:scaleType=”center”<br>保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size，超过部分裁剪处理。</p>
+</li>
+<li><p>android:scaleType=”centerCrop”<br>以填满整个ImageView为目的，将原图的中心对准ImageView的中心，等比例放大原图，直到填满ImageView为止（指的是ImageView的宽和高都要填满），原图超过ImageView的部分作裁剪处理。</p>
+</li>
+<li><p>android:scaleType=”centerInside”<br>以原图完全显示为目的，将图片的内容完整居中显示，通过按比例缩小原图的size宽(高)等于或小于ImageView的宽(高)。如果原图的size本身就小于ImageView的size，则原图的size不作任何处理，居中显示在ImageView。</p>
+</li>
+<li><p>android:scaleType=”matrix”<br>不改变原图的大小，从ImageView的左上角开始绘制原图，原图超过ImageView的部分作裁剪处理。</p>
+</li>
+<li><p>android:scaleType=”fitCenter”<br>把原图按比例扩大或缩小到ImageView的ImageView的高度，居中显示</p>
+</li>
+<li><p>android:scaleType=”fitEnd”<br>把原图按比例扩大(缩小)到ImageView的高度，显示在ImageView的下部分位置</p>
+</li>
+<li><p>android:scaleType=”fitStart”<br>把原图按比例扩大(缩小)到ImageView的高度，显示在ImageView的上部分位置</p>
+</li>
+<li><p>android:scaleType=”fitXY”<br>把原图按照指定的大小在View中显示，拉伸显示图片，不保持原比例，填满ImageView.</p>
+</li>
+</ul>
 
       
     </div>
@@ -587,7 +607,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TextView中的ellipsize属性"><span class="nav-number">1.</span> <span class="nav-text">TextView中的ellipsize属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RatingBar的使用"><span class="nav-number">2.</span> <span class="nav-text">RatingBar的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selector-的属性"><span class="nav-number">3.</span> <span class="nav-text">selector 的属性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TextView中的ellipsize属性"><span class="nav-number">1.</span> <span class="nav-text">TextView中的ellipsize属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RatingBar的使用"><span class="nav-number">2.</span> <span class="nav-text">RatingBar的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selector-的属性"><span class="nav-number">3.</span> <span class="nav-text">selector 的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ImageView-图片的拉伸处理"><span class="nav-number">4.</span> <span class="nav-text">ImageView 图片的拉伸处理</span></a></li></ol></div>
             
           </div>
         </section>
