@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-15T11:44:59.205Z</updated>
+  <updated>2016-07-21T15:20:34.361Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,11 +16,105 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>百万良师讲座之网络编程</title>
+    <link href="http://dongxi520.com/2016/07/21/%E7%99%BE%E4%B8%87%E8%89%AF%E5%B8%88%E8%AE%B2%E5%BA%A7%E4%B9%8B%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://dongxi520.com/2016/07/21/百万良师讲座之网络编程/</id>
+    <published>2016-07-21T14:43:09.000Z</published>
+    <updated>2016-07-21T15:20:34.361Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/net.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1、http协议跟socket有什么区别？&quot;&gt;&lt;a href=&quot;#1、http协议跟socket有什么区别？&quot; class=&quot;headerlink&quot; title=&quot;1、http协议跟socket有什么区别？&quot;&gt;&lt;/a&gt;1、http协议跟socket有什么区别？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;http协议是一种无状态的协议：就是每次发出请求第一步都是客户端与服务端建立连接，连接成功之后把数据传过去，服务器收到数据进行响应，然后再回传结果给客户端，这一次请求结束之后连接就断开了，下次再发新的请求就会再重新建立连接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;而 socket 协议则不一样：socket协议意思就是长连接，言外之意就是发数据之后，连接不会断开，会一直保持连接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;http是基于 udp协议的；socket是基于 tcp/IP 协议的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;相应的优缺点就很明显了：因为http每发送请求，就会断开连接，假设有1w个用户，如果用http协议，可能同时连接服务器的只有1000个用户，因为其他用户请求完就断开连接了；如果用socket可能同时会有1w个人连接服务器，这个就比较浪费服务器资源，消耗带宽。但是socket的优势也很明显，因为一直保持连接么，每次用户发送数据都很快，不用重新建立连接的过程，而http则每次都要重新建立连接，导致效率上没有socket高效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;应用：由于http协议每次都要重新建立连接，导致效率上没有socket高效；socket协议大多用IM，IM就是即时聊天应用，类似qq。微信&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2、http协议一般包含两大块&quot;&gt;&lt;a href=&quot;#2、http协议一般包含两大块&quot; class=&quot;headerlink&quot; title=&quot;2、http协议一般包含两大块&quot;&gt;&lt;/a&gt;2、http协议一般包含两大块&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;请求和响应，即request和response&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;request就是你在浏览器里输入一个网址，后者手机端发送一个网络请求都算 request&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;request 一般包含请求的 地址、参数、header、method&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;地址：如www.baidu.com&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;参数：参数包含两块,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一种是 GET 请求&lt;br&gt;&lt;code&gt;http://www.baidu.com/?key1=value&amp;amp;key2=value2&lt;/code&gt;,像上述的 key1, key2 是参数的一种,这种叫做  query params,一般来说一个url 问号后面的都是参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;还有一种就是 POST 请求&lt;br&gt;最初网页上填写表单，比如填用户名、密码然后提交给服务器的;这种参数不会直接显示的,他通过body的方式传递给服务端;这种参数有的叫form即表单，也有的叫 body params,默认情况下都是一种 key 、value 对的形式传递的&lt;/p&gt;
+&lt;p&gt;http的请求方法包含 get、post、delete、put、head、patch、trace、options，只不过我们常见的只有2中，即 get和post，而其他六种都是基于post方法衍生的；除了这两种，你们还需要了解 put delete这两种，总共加起来就是  get post put delete 四种最重要&lt;/p&gt;
+&lt;p&gt;而这也是 restful 最基本的概念&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;举个例子&lt;br&gt;  假设我们有如下需求：查询学生数量，创建新学生，修改学生信息，删除学生；get  /api/student/index  查询接口；post  /api/student/   携带一些 params 是创建接口；post  /api/student/update  携带一些参数   修改接；post  /api/student/update  携带一些参数   修改接口；&lt;/p&gt;
+&lt;p&gt;  可以看到只用了  get 和 post 方法，然后 api 的 url 定义的不太一样，但是如果用了 restful 方法 就会变成如下这样；get  /api/student/index  查询接口   不变；post  /api/student/   携带一些 params 是创建接口  不变；put  /api/student/ 携带一些参数   修改接口；delete  /api/student/携带参数  删除接口；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;以上的区别：&lt;br&gt;  修改跟删除直接用 http 的 method 来指定，url 哪怕一样，就可以轻松知道你的动作；这就是所谓的 restful 概念最重要的一个理念。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;restful&lt;br&gt;  一种软件架构风格，设计风格而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。—- 百度百科&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;header&lt;br&gt;  header 不管是request 还是 response 都有的一个东西；header的作用有很多，比如客户端告诉服务端 我发起的请求是什么语言；我发起的请求带的参数是什么格式的，是json还是哈希；我发起的请求需不需要带缓存；我发起的请求需要压缩等。这些信息都是通过header 传递的；服务端在返回结果的时候也有一些信息告诉客户端的，同样在header里传递，比如我返回的数据是什么格式的；我这次请求是不支持缓存的；我这次返回的数据没有压缩等。header里的信息都是一个个的哈希，即key value对；比如大家常见的一些 header里的信息 Content-Type: application/json，Cache-Control : true 等；header里默认的有很多字段，这是规定，当然你也可以自定义一些字段在里面传递，只要跟你们服务端约定好就行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这里有个字段叫做  Connection: keep-alive，这个字段是什么意思呢？&lt;br&gt;就是像http能不能实现socket一样的，http如果每次都请求断开未免太没效率了，后来有人就发现 ：一般我在发起一个请求之后，可能紧接着就发起第二个请求了。如果频繁的断开重连效率太低了，于是就有了这个字段。这个字段顾名思义，就是声明连接的类型；这个字段有两个值，close 和 keep-live；如果你指定close，那么每次请求就会立马断开连接；如果你指明了 keep-live，就可以在一段时间内保持长连接，这个时间服务端可以自行配置，但是时间也不会太长，不然服务器会很吃紧，比如设置个30s，意味着这30s的时间内不会重新断开重连；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;response，意为服务端返回的值&lt;br&gt;  服务端的返回刚刚说了有 header， response也会有header&lt;br&gt;  对于app中，目前大部分的response都是json格式的数据&lt;br&gt;  Android中有各种各样的json数据解析器，如gson、jackson、FastJson等等&lt;br&gt;  除了 返回的数据之外还有一个比较重要的叫做状态码(叫做 http  status)，一般是 200—500,比如正常的时候返回的 status 就是200，代表成功；大家常见的status code有 404 找不到；500 代表服务器挂了；&lt;/p&gt;
+&lt;p&gt;  常见的几个状态码如 200表示链接成功，304表示缓存内容，404表示找不到 50x服务器挂了，其他很多状态码不常见&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;记法：&lt;br&gt;  一般是  200开头的大多是成功；30x代表重定向，304是服务端告诉你内容没有改变，意为缓存的内容；40x一般是请求找不到，大部分是你url写错了；50x那就是服务器挂了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;整个http 最主要的就是 request 和 reponse。不要只会用一些网络库发送请求，接受结果就行了，却连最基本的http知识都不了解。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3、-http-的缓存&quot;&gt;&lt;a href=&quot;#3、-http-的缓存&quot; class=&quot;headerlink&quot; title=&quot;3、 http 的缓存&quot;&gt;&lt;/a&gt;3、 http 的缓存&lt;/h2&gt;&lt;p&gt;缓存是跟开发中最常见的一环，可以算是性能优化的一个大点了，缓存有两部分，客户端和服务端，做客户端的会以为缓存只有客户端才有，其实服务端更有；因为加上你没查一个数据，服务端都要到数据库重新查询一遍，那服务器压力得有多大，所以服务器会有一个缓存机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;缓存有两种机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;第一种最常见的就是时间缓存&lt;br&gt;  比如我查询中国的城市信息，中国的城市信息可能很久都不会变更，对于这部分假设我就设置7天的缓存时间，意味着客户端每次请求，服务端一次查询数据库，7天之内都不会再查询数据库，直接返回给你上一次的结果，对应的 status code 就是304，这对服务器性能优化是很大的一环&lt;/p&gt;
+&lt;p&gt;  缓存有没有生效一般用 header里的 cache-control 字段控制；如果客户端传递 cache-control 字段为 true 那么服务端有缓存的话就会启动缓存；如果传递 false 那么会强制服务端每次都去数据库里查询，一般不会这么干的；&lt;/p&gt;
+&lt;p&gt;  缓存的时间有一个字段叫做  expired 字段，告诉你缓存过期的时间&lt;/p&gt;
+&lt;p&gt;  一般来说，如果性能优化的话会有这么一个点，客户端发起一个请求，服务端返回数据，并且告诉客户端我这个请求有缓存的，缓存时间是7天，那么客户端就可以把这个请求结果缓存在本地，然后7天之内都不再发起请求，直接读取本地的缓存数据，那么会极大的节省服务器资源&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二种就是Etag 缓存&lt;br&gt;  以时间为缓存的大多为那些请求数据不常变化的，但大多数场景是数据经常变化，比如我刷个微博，微博变化很快。可能1小时不会变化，但也可能1分钟就有更新，这种缓存就没法用固定的时间来进行衡量了，所以第二种缓存叫做 Etag 缓存&lt;/p&gt;
+&lt;p&gt;  Etag 你们可以理解成就是一个唯一的字符串，这个字符串是服务端根据时间、用户标识、内容索引等生成的一个字符串，一旦用户的内容变化，这个Etag就会变化，如果用户内容不变化，那么Etag也不会变化&lt;/p&gt;
+&lt;p&gt;  所以刷微博的话机制就是这样的，客户端发起一个请求，服务端返回了一个数据，告诉客户端，我是有缓存的，缓存的 Etag 值也返回给你了，然后我把返回的数据以及 Etag 缓存到本地，这样下次请求的话如果数据没有变化，那么服务端不会返回给你数据了，而只会返回一个 Etag值，拿到这个Etag值之后到本地去找这个Etag缓存对应的数据&lt;/p&gt;
+&lt;p&gt;  etag的生成与比较都是在服务端做的&lt;/p&gt;
+&lt;p&gt;  etag的缓存其实才是目前使用最多的缓存策略&lt;/p&gt;
+&lt;p&gt;  主流网络库都会默认支持这两种缓存，也就说volley或者okhttp都会支持的，以volley为例，他内部实现了缓存机制，每次请求之后如果服务端支持缓存的话，他自己只直接在本地进行缓存的，也就是说  如果服务端返回了 304 ，并返回了etag，volley会自动去本地寻找上次缓存过的数据进行渲染。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/postImage/net.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>AS错误总结</title>
     <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
     <published>2016-07-13T13:46:41.000Z</published>
-    <updated>2016-07-15T11:44:59.205Z</updated>
+    <updated>2016-07-15T11:51:24.292Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;AS没有报错但是运行不了&quot;&gt;&lt;a href=&quot;#AS没有报错但是运行不了&quot; class=&quot;headerlink&quot; title=&quot;AS没有报错但是运行不了&quot;&gt;&lt;/a&gt;AS没有报错但是运行不了&lt;/h2&gt;&lt;ul&gt;
@@ -54,11 +148,11 @@
   </entry>
   
   <entry>
-    <title>百万讲师张哥面试技巧</title>
-    <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
-    <id>http://dongxi520.com/2016/07/08/百万讲师张哥面试技巧/</id>
+    <title>百万讲师张哥之面试技巧</title>
+    <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E4%B9%8B%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    <id>http://dongxi520.com/2016/07/08/百万讲师张哥之面试技巧/</id>
     <published>2016-07-08T13:46:13.000Z</published>
-    <updated>2016-07-09T07:28:52.931Z</updated>
+    <updated>2016-07-20T13:18:59.816Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
