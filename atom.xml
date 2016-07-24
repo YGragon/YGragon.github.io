@@ -514,7 +514,7 @@
     <link href="http://dongxi520.com/2016/07/05/Android%E5%B8%83%E5%B1%80%E4%BD%A0%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
     <id>http://dongxi520.com/2016/07/05/Android布局你未知的属性/</id>
     <published>2016-07-05T01:49:13.000Z</published>
-    <updated>2016-07-20T01:06:00.507Z</updated>
+    <updated>2016-07-24T13:59:03.335Z</updated>
     
     <content type="html">&lt;p&gt;本文是做项目的时候在搭建布局时遇到还未了解的属性的记录，后期遇到会继续完善。&lt;br&gt;&lt;img src=&quot;/images/postImage/layout.jpg&quot; alt=&quot;layout&quot;&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -552,6 +552,19 @@
 &lt;li&gt;&lt;p&gt;android:scaleType=”fitStart”&lt;br&gt;把原图按比例扩大(缩小)到ImageView的高度，显示在ImageView的上部分位置&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;android:scaleType=”fitXY”&lt;br&gt;把原图按照指定的大小在View中显示，拉伸显示图片，不保持原比例，填满ImageView.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ListView的item点击事件消失&quot;&gt;&lt;a href=&quot;#ListView的item点击事件消失&quot; class=&quot;headerlink&quot; title=&quot;ListView的item点击事件消失&quot;&gt;&lt;/a&gt;ListView的item点击事件消失&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原因可能是：item中包含了CheckBox 或者Button等控件抢占焦点&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解决办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;（1）在ListView 控件下添加如下属性&lt;br&gt;  属性的值有三种：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;beforeDescendants：viewgroup会优先其子类控件而获取到焦点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;afterDescendants：viewgroup只有当其子类控件不需要获取焦点时才获取焦点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;blocksDescendants：viewgroup会覆盖子类控件而直接获得焦点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;通常我们用到的是第三种，即在Item布局的根布局加上android:descendantFocusability=”blocksDescendants”的属性。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(2)在CheckBox 或者Button等能抢占焦点的控件下，添加如下属性&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;android:focusable=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:clickable=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android:focusableInTouchMode=&amp;quot;false&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
