@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-07-21T15:20:34.361Z</updated>
+  <updated>2016-07-25T14:21:56.549Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我们是&quot;EDG&quot;战队</title>
+    <link href="http://dongxi520.com/2016/07/25/about-us/"/>
+    <id>http://dongxi520.com/2016/07/25/about-us/</id>
+    <published>2016-07-25T14:20:39.000Z</published>
+    <updated>2016-07-25T14:21:56.549Z</updated>
+    
+    <content type="html">&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;吃货宝智能点餐系统（以下简称“吃货宝”）是一套功能实用、操作简易、物美价廉的生活小助手。主要针对一些经常加班的上班族和宅在家里不喜欢做饭的年轻人。吃货宝整合了线下餐饮品牌和线上网络资源，用户可以方便地通过手机、电脑搜索周边餐厅，在线订餐、享受美食，提供在线支付完成交易。吃货宝还通过百度开放平台，基于大数据的用户行为分析，为大家挑选出最合口，最实惠，最热门的美食供大家优先选择。与此同时，“吃货宝”向用户传达一种健康、年轻化的饮食习惯和生活方式。&lt;/li&gt;
+&lt;li&gt;我们的目标是实现一个健康、有机的智能手机点餐APP。&lt;br&gt;主要功能有:&lt;br&gt;&lt;strong&gt;外卖&lt;/strong&gt;：GPS定位、列表显示附近餐厅、查看外卖种类、添加购物车、去结算；&lt;br&gt;&lt;strong&gt;发现&lt;/strong&gt;：提供配送范围、美食图片；&lt;br&gt;&lt;strong&gt;我的订单&lt;/strong&gt;：全部订单、未完成订单、未评价订单、已完成订单、结算支付；&lt;br&gt;&lt;strong&gt;我的账户&lt;/strong&gt;：账户信息管理、账户余额、我的收藏、服务中心；&lt;br&gt;&lt;strong&gt;设置&lt;/strong&gt;：定位管理、清楚缓存、版本信息、退出登录。&lt;/li&gt;
+&lt;li&gt;开发团队&lt;br&gt;&lt;strong&gt;项目经理&lt;/strong&gt;：虞洋&lt;br&gt;&lt;strong&gt;开发小组&lt;/strong&gt;：EDG战队&lt;br&gt;&lt;strong&gt;小组负责人&lt;/strong&gt;：董袭&lt;br&gt;&lt;strong&gt;小组成员&lt;/strong&gt;：李晓龙、李元媛、任志成、许昆峰、夏小曼&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;吃货宝智能点餐系统（以下简称“吃货宝”）是一套功能实用、操作简易、物美价廉的生活小助手。主要针对一些经常加班的上班族和宅在家里不喜欢做饭的年轻人。吃货宝整合了线下餐饮品牌和线上网络资源，用户可以方便地通过手机、电脑搜索周边餐厅，在线订餐、享受美食，提供
+    
+    </summary>
+    
+    
+      <category term="吃货宝APP" scheme="http://dongxi520.com/tags/%E5%90%83%E8%B4%A7%E5%AE%9DAPP/"/>
+    
+  </entry>
   
   <entry>
     <title>百万良师讲座之网络编程</title>
