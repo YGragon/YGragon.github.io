@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-08-06T08:55:23.701Z</updated>
+  <updated>2016-08-16T07:13:42.161Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用git的重大错误</title>
+    <link href="http://dongxi520.com/2016/08/16/%E4%BD%BF%E7%94%A8git%E7%9A%84%E9%87%8D%E5%A4%A7%E9%94%99%E8%AF%AF/"/>
+    <id>http://dongxi520.com/2016/08/16/使用git的重大错误/</id>
+    <published>2016-08-16T07:12:59.000Z</published>
+    <updated>2016-08-16T07:13:42.161Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h2&gt;&lt;p&gt;前几天，由于电脑需要外借给老姐，所以我就把原来在电脑上做的Android项目复制到家中的台式机上运行，并且成功 push 到 GitHub 上面，老姐那电脑回来时，我又重新用这个电脑 push 了一遍到 Github 上面，这时候出现了重大的错误（只要是我没解决的都是重大错误）。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;当我执行git add .的时候没报错，接着执行git commit -m “F*cking code”，也没出现问题。接我我高兴的有执行了git push origin 这时候灾难来了。。提示我一些错误，我照着错误网上找了一下结果，没有找到可以解救的办法。于是我仔细一思考：出现这个原因，应该是我之前在笔记本电脑上提交了一次更新，然后我在家里的台式机有提交了一次跟新，导致更新冲突！！，于是我又接着上网找git更新冲突的解决办法。但是老天不帮我，找不到。。&lt;/p&gt;
+&lt;p&gt;最后的最后我想起之前有过一次类似的经历，我先是将项目clone下来，然后将github上的项目仓库也给删除了。然后我重新创建一个一模一样的项目，再将代码添加进去应该就OK了但是啊但是！！不仅那么多天的提交记录没有了，而且项目在AndroidStudio中还是显示不出文件夹结构（在Android下），我崩溃了。。&lt;/p&gt;
+&lt;p&gt;更新一下AndroidStudio希望有用！！&lt;/p&gt;
+&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;androidstudio的android目录下显示不出文件！！&lt;/p&gt;
+&lt;h2 id=&quot;后记&quot;&gt;&lt;a href=&quot;#后记&quot; class=&quot;headerlink&quot; title=&quot;后记&quot;&gt;&lt;/a&gt;后记&lt;/h2&gt;&lt;p&gt;记得备份&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h2&gt;&lt;p&gt;前几天，由于电脑需要外借给老姐，所以我就把原来在电脑上做的Android项目复制到家中的台式机上运行，并且成功 push 到 GitHub 上面，老姐那电脑回来时，我又重新用这个电脑 push 了一遍到 Github 上面，这时候出现了重大的错误（只要是我没解决的都是重大错误）。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://dongxi520.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>大三生产实习总结</title>
