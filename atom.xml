@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-08-16T07:13:42.161Z</updated>
+  <updated>2016-08-28T03:21:01.566Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,135 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>值得一看的GitHub源码</title>
+    <link href="http://dongxi520.com/2016/08/28/%E5%80%BC%E5%BE%97%E4%B8%80%E7%9C%8B%E7%9A%84GitHub%E6%BA%90%E7%A0%81/"/>
+    <id>http://dongxi520.com/2016/08/28/值得一看的GitHub源码/</id>
+    <published>2016-08-28T03:20:09.000Z</published>
+    <updated>2016-08-28T03:21:01.566Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;注册登录&quot;&gt;&lt;a href=&quot;#注册登录&quot; class=&quot;headerlink&quot; title=&quot;注册登录&quot;&gt;&lt;/a&gt;注册登录&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/shem8/MaterialLogin（原生的登录，直接添加依赖就可以用）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/shem8/MaterialLogin（原生的登录，直接添加依赖就可以用）&lt;/a&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;播放音乐&quot;&gt;&lt;a href=&quot;#播放音乐&quot; class=&quot;headerlink&quot; title=&quot;播放音乐&quot;&gt;&lt;/a&gt;播放音乐&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/iammert/MusicPlayerView（音乐播放界面做的很好）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/iammert/MusicPlayerView（音乐播放界面做的很好）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/andremion/Music-Player（完整的音乐播放器）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/andremion/Music-Player（完整的音乐播放器）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tuicool.com/articles/fUbUZz3（音乐API数据）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.tuicool.com/articles/fUbUZz3（音乐API数据）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;夜间模式&quot;&gt;&lt;a href=&quot;#夜间模式&quot; class=&quot;headerlink&quot; title=&quot;夜间模式&quot;&gt;&lt;/a&gt;夜间模式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hehonghui/Colorful&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hehonghui/Colorful&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hongyangAndroid/ChangeSkin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hongyangAndroid/ChangeSkin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;下拉刷新、上拉加载更多&quot;&gt;&lt;a href=&quot;#下拉刷新、上拉加载更多&quot; class=&quot;headerlink&quot; title=&quot;下拉刷新、上拉加载更多&quot;&gt;&lt;/a&gt;下拉刷新、上拉加载更多&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bingoogolapple/BGARefreshLayout-Android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/bingoogolapple/BGARefreshLayout-Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/shichaohui/AnimRefreshRecyclerView&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/shichaohui/AnimRefreshRecyclerView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/LuckyJayce/MVCHelper&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/LuckyJayce/MVCHelper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;介绍下拉刷新、上拉加载更多的一些优秀博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/android-blogs/p/5354284.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/android-blogs/p/5354284.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jb51.net/article/84634.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jb51.net/article/84634.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/jdsjlzx/article/details/51794220&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/jdsjlzx/article/details/51794220&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/blipinsk/RecyclerViewHeader（RecyclerView添加头布局）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/blipinsk/RecyclerViewHeader（RecyclerView添加头布局）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/991062d964cf#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/991062d964cf#&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;（瀑布流）RecyclerView的使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://www.aiuxian.com/article/p-1693380.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实现上拉加载更多的SwipeRefreshLayout&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://www.cnblogs.com/krislight1105/p/5251893.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android卡片式布局（CardView）&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/duanymin/article/details/44979355&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/duanymin/article/details/44979355&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;recyclerview分页加载&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/u014775861/article/details/51031078&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/u014775861/article/details/51031078&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;二维码扫描&quot;&gt;&lt;a href=&quot;#二维码扫描&quot; class=&quot;headerlink&quot; title=&quot;二维码扫描&quot;&gt;&lt;/a&gt;二维码扫描&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/liang530/ScanCode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/liang530/ScanCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;网络数据的加载&quot;&gt;&lt;a href=&quot;#网络数据的加载&quot; class=&quot;headerlink&quot; title=&quot;网络数据的加载&quot;&gt;&lt;/a&gt;网络数据的加载&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/square/okhttp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/square/okhttp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/square/retrofit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/square/retrofit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hongyangAndroid/okhttputils&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hongyangAndroid/okhttputils&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;动图轮播&quot;&gt;&lt;a href=&quot;#动图轮播&quot; class=&quot;headerlink&quot; title=&quot;动图轮播&quot;&gt;&lt;/a&gt;动图轮播&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Jude95/RollViewPager&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Jude95/RollViewPager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;注册登录&quot;&gt;&lt;a href=&quot;#注册登录&quot; class=&quot;headerlink&quot; title=&quot;注册登录&quot;&gt;&lt;/a&gt;注册登录&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&quot;&gt;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/shem8/MaterialLogin（原生的登录，直接添加依赖就可以用）&quot;&gt;https://github.com/shem8/MaterialLogin（原生的登录，直接添加依赖就可以用）&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="GitHub源码" scheme="http://dongxi520.com/tags/GitHub%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android小知识大杂烩</title>
+    <link href="http://dongxi520.com/2016/08/28/Android%E5%B0%8F%E7%9F%A5%E8%AF%86%E5%A4%A7%E6%9D%82%E7%83%A9/"/>
+    <id>http://dongxi520.com/2016/08/28/Android小知识大杂烩/</id>
+    <published>2016-08-28T03:17:56.000Z</published>
+    <updated>2016-08-28T03:19:39.690Z</updated>
+    
+    <content type="html">&lt;p&gt;###Snackbar 与 Toast 小区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Snackbar activity消失后不显示内容&lt;/li&gt;
+&lt;li&gt;Toast activity消失后仍显示内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Androidstudio中的命名&quot;&gt;&lt;a href=&quot;#Androidstudio中的命名&quot; class=&quot;headerlink&quot; title=&quot;Androidstudio中的命名&quot;&gt;&lt;/a&gt;Androidstudio中的命名&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Androidstudio中的布局文件和drawable中不允许出现大写命名的ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Androidstudio下Module的导入步骤&quot;&gt;&lt;a href=&quot;#Androidstudio下Module的导入步骤&quot; class=&quot;headerlink&quot; title=&quot;Androidstudio下Module的导入步骤&quot;&gt;&lt;/a&gt;Androidstudio下Module的导入步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;file—import module —找到路径—导入—在build.gradle(app)下—添加compile project(‘:module名’)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;使用Fragment小心导包出错&quot;&gt;&lt;a href=&quot;#使用Fragment小心导包出错&quot; class=&quot;headerlink&quot; title=&quot;使用Fragment小心导包出错&quot;&gt;&lt;/a&gt;使用Fragment小心导包出错&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;导包一定要一致，例如要导包import android.support.v4.app.Fragment;就全部导这个包，要导import android.app.Fragment;包就全部导这个包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;截取字符串&quot;&gt;&lt;a href=&quot;#截取字符串&quot; class=&quot;headerlink&quot; title=&quot;截取字符串&quot;&gt;&lt;/a&gt;截取字符串&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;substring&lt;ul&gt;
+&lt;li&gt;public String substring(int beginIndex, int endIndex)&lt;br&gt;返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始， endIndex:到指定的 endIndex-1处结束。   &lt;/li&gt;
+&lt;li&gt;示例：&lt;br&gt;“hamburger”.substring(3,8) returns “burge”&lt;br&gt;  “smiles”.substring(0,5) returns “smile”&lt;/li&gt;
+&lt;li&gt;参数：&lt;br&gt;beginIndex - 开始处的索引（包括）。&lt;br&gt;  endindex 结尾处索引（不包括）。&lt;/li&gt;
+&lt;li&gt;返回：&lt;br&gt;指定的子字符串。&lt;/li&gt;
+&lt;li&gt;抛出：&lt;br&gt;IndexOutOfBoundsException - 如果 beginIndex 为负，或length大于字符串长度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;将毫秒转换为年月日的代码段&quot;&gt;&lt;a href=&quot;#将毫秒转换为年月日的代码段&quot; class=&quot;headerlink&quot; title=&quot;将毫秒转换为年月日的代码段&quot;&gt;&lt;/a&gt;将毫秒转换为年月日的代码段&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;long time = questionInfo.getTime() ;//通过实体对象拿到数据&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date date = new Date(time);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&amp;quot;yyyy-MM-dd&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        holder.tv_question_time.setText(simpleDateFormat.format(date));//给TextView设置数据&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;JSON数据中有HTML标签的解析&quot;&gt;&lt;a href=&quot;#JSON数据中有HTML标签的解析&quot; class=&quot;headerlink&quot; title=&quot;JSON数据中有HTML标签的解析&quot;&gt;&lt;/a&gt;JSON数据中有HTML标签的解析&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Spanned news_message_fromHtml = Html.fromHtml(news_message);//参数是接受的JSON数据&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;int数据的传递及获取&quot;&gt;&lt;a href=&quot;#int数据的传递及获取&quot; class=&quot;headerlink&quot; title=&quot;int数据的传递及获取&quot;&gt;&lt;/a&gt;int数据的传递及获取&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;传递&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Intent intent=new Intent(this,MyActivity.class);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//保存为Integer类型的值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;intent.putExtra(&amp;quot;intent_integer&amp;quot;,300);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;startActivity(intent);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;获取&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;int i=getIntent().getExrtras().getInt(&amp;quot;intent_integer&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###Snackbar 与 Toast 小区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Snackbar activity消失后不显示内容&lt;/li&gt;
+&lt;li&gt;Toast activity消失后仍显示内容&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>使用git的重大错误</title>
