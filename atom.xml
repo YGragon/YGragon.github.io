@@ -184,7 +184,7 @@
     <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
     <published>2016-07-13T13:46:41.000Z</published>
-    <updated>2016-07-15T11:51:24.292Z</updated>
+    <updated>2016-08-28T03:14:18.388Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;AS没有报错但是运行不了&quot;&gt;&lt;a href=&quot;#AS没有报错但是运行不了&quot; class=&quot;headerlink&quot; title=&quot;AS没有报错但是运行不了&quot;&gt;&lt;/a&gt;AS没有报错但是运行不了&lt;/h2&gt;&lt;ul&gt;
@@ -203,6 +203,12 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;解决的办法就是新建Activity是按默认进行即可，不用勾选复选框&lt;/p&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;报错Caused-by-java-lang-NoClassDefFoundError-android-support-design-internal-NavigationMenuPresenter&quot;&gt;&lt;a href=&quot;#报错Caused-by-java-lang-NoClassDefFoundError-android-support-design-internal-NavigationMenuPresenter&quot; class=&quot;headerlink&quot; title=&quot;报错Caused by: java.lang.NoClassDefFoundError: android.support.design.internal.NavigationMenuPresenter&quot;&gt;&lt;/a&gt;报错Caused by: java.lang.NoClassDefFoundError: android.support.design.internal.NavigationMenuPresenter&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原因可能是xml出错或者用到了控件没有在gradle中配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation&quot;&gt;&lt;a href=&quot;#问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation&quot; class=&quot;headerlink&quot; title=&quot;问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]&quot;&gt;&lt;/a&gt;问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;解决办法：&lt;br&gt;  在出问题的资源文件的 resources 标签内增加xmlns:tools=”&lt;a href=&quot;http://schemas.android.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://schemas.android.com/tools&lt;/a&gt;“ tools:ignore=”MissingTranslation”两个属性即可&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
@@ -655,7 +661,7 @@
     <link href="http://dongxi520.com/2016/07/04/Android%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
     <id>http://dongxi520.com/2016/07/04/Android基础学习资源/</id>
     <published>2016-07-04T06:21:56.000Z</published>
-    <updated>2016-07-15T11:52:06.758Z</updated>
+    <updated>2016-08-28T03:11:16.831Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Android这么火你还不学？怎么学？从哪里开始学？&lt;/p&gt;
@@ -701,7 +707,6 @@
 &lt;li&gt;&lt;a href=&quot;http://ke.jikexueyuan.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;极客学院&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.dongxi520.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的技术博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;center&gt;&lt;iframe name=&quot;iframe_canvas&quot; src=&quot;http://douban.fm/partner/baidu/doubanradio&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
 </content>
     
     <summary type="html">
@@ -1076,9 +1081,9 @@ return true;
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-06-15T09:09:54.945Z</updated>
+    <updated>2016-08-28T03:09:39.057Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;/images/postImage/hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1089,14 +1094,6 @@ return true;
 
 
 &lt;h2 id=&quot;添加背景音乐&quot;&gt;&lt;a href=&quot;#添加背景音乐&quot; class=&quot;headerlink&quot; title=&quot;添加背景音乐&quot;&gt;&lt;/a&gt;添加背景音乐&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;添加豆瓣音乐&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复制下面代码到你的博文任意位置，然后Hexo s预览。&lt;br&gt;加入豆瓣音乐 歌曲是随机播放，游客可切歌，不能定制播哪首歌，而且不能按钮停止，只能音量调到0，无语，有利有弊的吧。&lt;br&gt;尽量放在最下面，如果你放在最上面，很有可能别人还未点击进入博文，你的博客就有了背景音乐了，要想赶紧播放音乐的另说。&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;center&amp;gt;&amp;lt;iframe name=&amp;quot;iframe_canvas&amp;quot; src=&amp;quot;http://douban.fm/partner/baidu/doubanradio&amp;quot; scrolling=&amp;quot;no&amp;quot; frameborder=&amp;quot;0&amp;quot; width=&amp;quot;400&amp;quot; height=&amp;quot;200&amp;quot;&amp;gt;&amp;lt;/iframe&amp;lt;/center&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;打开网页版网易云音乐。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;如果只是加入单曲，只需要搜索歌曲，点开歌曲名，点击生成外链播放器，复制html代码（可以选择是否自动播放），将html代码无需任何修改放入markdown文章里就OK了。&lt;br&gt;如果想要加入歌单，就需要自己创建歌单，然后分享歌单，找到自己的分享动态，点进去可以看到有“生成外链播放器”这些字眼，其余操作就和上面一样了。不过，你的歌单有变化的话，这个外链的歌曲同样跟着变，这一点挺棒的。&lt;br&gt;例如，播放待你长发及腰这首歌，自动播放只需要嵌入一下代码&lt;blockquote&gt;
@@ -1152,7 +1149,7 @@ return true;
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Hexo博客个性化搭建&quot;&gt;&lt;a href=&quot;#Hexo博客个性化搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客个性化搭建&quot;&gt;&lt;/a&gt;Hexo博客个性化搭建&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;/images/postImage/hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;br&gt;
