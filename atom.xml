@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-08-28T03:21:01.566Z</updated>
+  <updated>2016-09-26T09:06:20.595Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,108 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Activity和Fragment之间的数据通信</title>
+    <link href="http://dongxi520.com/2016/09/26/Activity%E5%92%8CFragment%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/"/>
+    <id>http://dongxi520.com/2016/09/26/Activity和Fragment之间的数据通信/</id>
+    <published>2016-09-26T06:30:23.000Z</published>
+    <updated>2016-09-26T09:06:20.595Z</updated>
+    
+    <content type="html">&lt;p&gt;Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。&lt;/p&gt;
+&lt;p&gt;同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Activity向Fragment中传递数据&quot;&gt;&lt;a href=&quot;#Activity向Fragment中传递数据&quot; class=&quot;headerlink&quot; title=&quot;Activity向Fragment中传递数据&quot;&gt;&lt;/a&gt;Activity向Fragment中传递数据&lt;/h3&gt;&lt;p&gt;项目中遇到的问题：项目采用的是一个MainActivity + 4个Fragment搭建的框架，其余的小功能采用的是Activity去实现；在实现个人中心（Fragment）时需要将登录的用户名返回给个人中心显示在页面上。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我的实现方法：&lt;ul&gt;
+&lt;li&gt;通过用户注册时向数据库中插入用户信息，在用户中心判断用户是否存在，存在则显示用户名。这个方法有点不像Fragment向Activity传递数据的解决办法。但是能实现我所要求的功能。（本人小白，能实现功能已经高兴一天了，哈哈）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网上的数据传递方法 1（&lt;a href=&quot;http://www.cnblogs.com/zyanrong/p/5415626.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;）：&lt;ul&gt;
+&lt;li&gt;给Fragment添加newInstance方法，将需要的参数传入，设置到bundle中，然后setArguments(bundle)，最后在onCreate中进行获取；&lt;/li&gt;
+&lt;li&gt;注意事项：setArguments方法必须在fragment创建以后，添加给Activity前完成。千万不要，首先调用了add，然后设置arguments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网上的数据传递方法 2&lt;ul&gt;
+&lt;li&gt;直接在Fragment中采用getActivity.getIntent()拿到Activity中的参数，故此能拿到Activity中的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网上的数据传递方法 3&lt;ul&gt;
+&lt;li&gt;Activity在切换Fragment的时候，通过setArguments向Fragment传递参数，Fragment通过getArguments();获得从activity中传递过来的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Fragment向Activity传递数据&quot;&gt;&lt;a href=&quot;#Fragment向Activity传递数据&quot; class=&quot;headerlink&quot; title=&quot;Fragment向Activity传递数据&quot;&gt;&lt;/a&gt;Fragment向Activity传递数据&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;网上的数据传递方法 1（&lt;a href=&quot;http://www.2cto.com/kf/201405/301679.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;）：&lt;ul&gt;
+&lt;li&gt;在Fragment中写一个回调接口&lt;/li&gt;
+&lt;li&gt;在Activity中实现这个接口&lt;/li&gt;
+&lt;li&gt;在Fragment中的onAttach方法中得到Activity中实现好的实例化接口对象&lt;/li&gt;
+&lt;li&gt;用接口对象进行传值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Activity向Activity传递数据&quot;&gt;&lt;a href=&quot;#Activity向Activity传递数据&quot; class=&quot;headerlink&quot; title=&quot;Activity向Activity传递数据&quot;&gt;&lt;/a&gt;Activity向Activity传递数据&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;第一行代码中写到：&lt;ul&gt;
+&lt;li&gt;活动之间传递数据可以采用new Intent().putExtra()方法传递，putExtra()方法的第一个参数是键，第二个参数是值；在第二个Activity中getIntent即可拿到第一个Activity传递过来的intent，在通过intent.get…Extra()过来方法拿到第一个Activity传递过来的数据。&lt;/li&gt;
+&lt;li&gt;使用Bundle来传递数据：首先创建一个Bundle对象，采用bundle.putExtra()方法，道理同上，接着intent.putExtra(bundle)传递数据。在第二个Activity中getIntent即可拿到第一个Activity传递过来的bundle，在通过bundle.get…Extra()过来方法拿到第一个Activity传递过来的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Activity返回数据给上一个Activity&quot;&gt;&lt;a href=&quot;#Activity返回数据给上一个Activity&quot; class=&quot;headerlink&quot; title=&quot;Activity返回数据给上一个Activity&quot;&gt;&lt;/a&gt;Activity返回数据给上一个Activity&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;第一行代码中如此写到：&lt;ul&gt;
+&lt;li&gt;在第一个Activity中启动第二个Activity：startActivityForResult(intent,1)//第一个参数是intent，第二个参数是请求码，只要值唯一就ok&lt;/li&gt;
+&lt;li&gt;在第二个Activity中用intent携带数据，然后setResult(RESULR_OK,intent)；将数据返回，最后finish();关闭当前Activity（切记一定要关闭当前Activity）&lt;/li&gt;
+&lt;li&gt;在第一个Activity中重写onActivityResult( int requestCode,int resultCode,Intetnt data)方法,通过判断requestCode来识别是哪个Activity返回的数据，在判断返回数据的处理结果，最后通过data.getStringExtra()方法拿到数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Fragment向Fragment传递数据&quot;&gt;&lt;a href=&quot;#Fragment向Fragment传递数据&quot; class=&quot;headerlink&quot; title=&quot;Fragment向Fragment传递数据&quot;&gt;&lt;/a&gt;Fragment向Fragment传递数据&lt;/h3&gt;&lt;p&gt;回顾项目中采用一个MainActivity + 4个Fragment搭建的框架，那么我想在其中的两个Fragment之间有数据交互怎么解决？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一行代码中如此说道：&lt;ul&gt;
+&lt;li&gt;首先在一个Fragment中拿到与之相关联的Activity，然后通过这个Activity去获取另一个Fragment，这样就实现了Fargment与Fragment之间的通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网上的说法（&lt;a href=&quot;http://blog.csdn.net/harvic880925/article/details/44131865&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;）：&lt;ul&gt;
+&lt;li&gt;在Fragment2中，新建一个函数:newInstance(String  text)来接收传过来的参数&lt;/li&gt;
+&lt;li&gt;然后在Fragment2的OnCreateView的时候再从arguments中获取参数&lt;/li&gt;
+&lt;li&gt;在Fragment1中，在调起Fragmen2t时，通过调用newInstance函数来获取实例并传递参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Fragment2返回数据给ragment1&quot;&gt;&lt;a href=&quot;#Fragment2返回数据给ragment1&quot; class=&quot;headerlink&quot; title=&quot;Fragment2返回数据给ragment1&quot;&gt;&lt;/a&gt;Fragment2返回数据给ragment1&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;采用回调方法实现[直接看第三部分]（&lt;a href=&quot;http://blog.csdn.net/harvic880925/article/details/42712777&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;数据传递出去：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以采用intent，或者bundle传递出去&lt;/li&gt;
+&lt;li&gt;可以采用新建一个setValue方法将数据传递出去&lt;/li&gt;
+&lt;li&gt;采用回调方法实现数据传递&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数据返回回来:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用接口回调方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;因此接口回调方法很重要，一点要掌握！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安利一下我的Github账户还有我的技术博客&quot;&gt;&lt;a href=&quot;#安利一下我的Github账户还有我的技术博客&quot; class=&quot;headerlink&quot; title=&quot;安利一下我的Github账户还有我的技术博客&quot;&gt;&lt;/a&gt;安利一下我的Github账户还有我的技术博客&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dongxi346&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dongxi520.com/&quot;&gt;我的博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。&lt;/p&gt;
+&lt;p&gt;同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="数据传递" scheme="http://dongxi520.com/tags/%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92/"/>
+    
+  </entry>
   
   <entry>
     <title>值得一看的GitHub源码</title>
