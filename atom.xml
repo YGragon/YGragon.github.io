@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-09-26T09:06:20.595Z</updated>
+  <updated>2016-09-26T09:14:21.183Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/09/26/Activity%E5%92%8CFragment%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/"/>
     <id>http://dongxi520.com/2016/09/26/Activity和Fragment之间的数据通信/</id>
     <published>2016-09-26T06:30:23.000Z</published>
-    <updated>2016-09-26T09:06:20.595Z</updated>
+    <updated>2016-09-26T09:14:21.183Z</updated>
     
     <content type="html">&lt;p&gt;Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。&lt;/p&gt;
 &lt;p&gt;同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -92,14 +92,14 @@
 &lt;li&gt;采用回调方法实现数据传递&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数据返回回来:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;数据传递回来:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;采用接口回调方式&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;因此接口回调方法很重要，一点要掌握！！&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;安利一下我的Github账户还有我的技术博客&quot;&gt;&lt;a href=&quot;#安利一下我的Github账户还有我的技术博客&quot; class=&quot;headerlink&quot; title=&quot;安利一下我的Github账户还有我的技术博客&quot;&gt;&lt;/a&gt;安利一下我的Github账户还有我的技术博客&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;安利一下我的Github账户还有我的技GitHub博客&quot;&gt;&lt;a href=&quot;#安利一下我的Github账户还有我的技GitHub博客&quot; class=&quot;headerlink&quot; title=&quot;安利一下我的Github账户还有我的技GitHub博客&quot;&gt;&lt;/a&gt;安利一下我的Github账户还有我的技GitHub博客&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/dongxi346&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://dongxi520.com/&quot;&gt;我的博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
