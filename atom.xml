@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-09-26T09:14:21.183Z</updated>
+  <updated>2016-09-26T09:16:31.469Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dongxi520.com/2016/09/26/Activity%E5%92%8CFragment%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/"/>
     <id>http://dongxi520.com/2016/09/26/Activity和Fragment之间的数据通信/</id>
     <published>2016-09-26T06:30:23.000Z</published>
-    <updated>2016-09-26T09:14:21.183Z</updated>
+    <updated>2016-09-26T09:16:31.469Z</updated>
     
     <content type="html">&lt;p&gt;Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。&lt;/p&gt;
 &lt;p&gt;同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -113,7 +113,7 @@
     </summary>
     
     
-      <category term="数据传递" scheme="http://dongxi520.com/tags/%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92/"/>
+      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
     
   </entry>
   
