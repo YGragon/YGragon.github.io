@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AndroidStudio错误总结," />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -88,16 +88,17 @@
 
 <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AS错误总结">
+<meta property="og:title" content="Android开发遇到的坑">
 <meta property="og:url" content="http://dongxi520.com/2016/07/13/AS错误总结/index.html">
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/ASTop.png">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/ASError.png">
 <meta property="og:image" content="http://dongxi520.com/images/postImage/cause.png">
-<meta property="og:updated_time" content="2016-08-28T03:14:18.388Z">
+<meta property="og:image" content="http://stackoverflow.com/questions/24506800/android-studio-gradle-icon-error-manifest-merger">
+<meta property="og:updated_time" content="2016-10-09T01:59:16.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AS错误总结">
+<meta name="twitter:title" content="Android开发遇到的坑">
 <meta name="twitter:description">
 <meta name="twitter:image" content="http://dongxi520.com/images/postImage/ASTop.png">
 
@@ -122,7 +123,7 @@
 
   <link rel="canonical" href="http://dongxi520.com/2016/07/13/AS错误总结/"/>
 
-  <title> AS错误总结 | dongxi346 </title>
+  <title> Android开发遇到的坑 | dongxi346 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +303,7 @@
             
             
               
-                AS错误总结
+                Android开发遇到的坑
               
             
           </h1>
@@ -336,7 +337,7 @@
 
           
           
-             <span id="/2016/07/13/AS错误总结/" class="leancloud_visitors" data-flag-title="AS错误总结">
+             <span id="/2016/07/13/AS错误总结/" class="leancloud_visitors" data-flag-title="Android开发遇到的坑">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,6 +382,11 @@
 </ul>
 <h2 id="问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation"><a href="#问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation" class="headerlink" title="问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]"></a>问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]</h2><ul>
 <li>解决办法：<br>  在出问题的资源文件的 resources 标签内增加xmlns:tools=”<a href="http://schemas.android.com/tools" target="_blank" rel="external">http://schemas.android.com/tools</a>“ tools:ignore=”MissingTranslation”两个属性即可</li>
+</ul>
+<h2 id="问题：Error-Execution-failed-for-task-‘-app-processDebugManifest’-gt-Manifest-merger-failed-with-multiple"><a href="#问题：Error-Execution-failed-for-task-‘-app-processDebugManifest’-gt-Manifest-merger-failed-with-multiple" class="headerlink" title="问题：Error:Execution failed for task ‘:app:processDebugManifest’. &gt; Manifest merger failed with multiple"></a>问题：Error:Execution failed for task ‘:app:processDebugManifest’. &gt; Manifest merger failed with multiple</h2><ul>
+<li>原因：添加Gradle依赖后出现，目测是版本问题。。。</li>
+<li>解决：在 manifest 中添加 xmlns:tools=”<a href="http://schemas.android.com/tools" target="_blank" rel="external">http://schemas.android.com/tools</a>“ 标签，然后再 application 中添加 tools:replace=”android:icon,android:theme” 标签</li>
+<li><img src="http://stackoverflow.com/questions/24506800/android-studio-gradle-icon-error-manifest-merger" alt="解决问题的原文"></li>
 </ul>
 
       
@@ -429,7 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AndroidStudio错误总结/" rel="tag">#AndroidStudio错误总结</a>
+            <a href="/tags/Android/" rel="tag">#Android</a>
           
         </div>
       
@@ -475,7 +481,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/07/13/AS错误总结/"
-           data-title="AS错误总结" data-url="http://dongxi520.com/2016/07/13/AS错误总结/">
+           data-title="Android开发遇到的坑" data-url="http://dongxi520.com/2016/07/13/AS错误总结/">
       </div>
     
   </div>
@@ -595,7 +601,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AS没有报错但是运行不了"><span class="nav-number">1.</span> <span class="nav-text">AS没有报错但是运行不了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用"><span class="nav-number">2.</span> <span class="nav-text">运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错Caused-by-java-lang-NoClassDefFoundError-android-support-design-internal-NavigationMenuPresenter"><span class="nav-number">3.</span> <span class="nav-text">报错Caused by: java.lang.NoClassDefFoundError: android.support.design.internal.NavigationMenuPresenter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation"><span class="nav-number">4.</span> <span class="nav-text">问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AS没有报错但是运行不了"><span class="nav-number">1.</span> <span class="nav-text">AS没有报错但是运行不了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用"><span class="nav-number">2.</span> <span class="nav-text">运行AndroidStudio项目出现两个图标，但是删除其中一个图标即可删除移除应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错Caused-by-java-lang-NoClassDefFoundError-android-support-design-internal-NavigationMenuPresenter"><span class="nav-number">3.</span> <span class="nav-text">报错Caused by: java.lang.NoClassDefFoundError: android.support.design.internal.NavigationMenuPresenter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation"><span class="nav-number">4.</span> <span class="nav-text">问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：Error-Execution-failed-for-task-‘-app-processDebugManifest’-gt-Manifest-merger-failed-with-multiple"><span class="nav-number">5.</span> <span class="nav-text">问题：Error:Execution failed for task ‘:app:processDebugManifest’. > Manifest merger failed with multiple</span></a></li></ol></div>
             
           </div>
         </section>

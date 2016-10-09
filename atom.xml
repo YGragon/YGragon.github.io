@@ -411,11 +411,11 @@
   </entry>
   
   <entry>
-    <title>AS错误总结</title>
+    <title>Android开发遇到的坑</title>
     <link href="http://dongxi520.com/2016/07/13/AS%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/07/13/AS错误总结/</id>
     <published>2016-07-13T13:46:41.000Z</published>
-    <updated>2016-08-28T03:14:18.388Z</updated>
+    <updated>2016-10-09T01:59:16.204Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/ASTop.png&quot; alt=&quot;top&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;AS没有报错但是运行不了&quot;&gt;&lt;a href=&quot;#AS没有报错但是运行不了&quot; class=&quot;headerlink&quot; title=&quot;AS没有报错但是运行不了&quot;&gt;&lt;/a&gt;AS没有报错但是运行不了&lt;/h2&gt;&lt;ul&gt;
@@ -441,6 +441,11 @@
 &lt;h2 id=&quot;问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation&quot;&gt;&lt;a href=&quot;#问题：androidstudio应用打包Error-4-Error-“XXX”-is-not-translated-in-“en”-English-MissingTranslation&quot; class=&quot;headerlink&quot; title=&quot;问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]&quot;&gt;&lt;/a&gt;问题：androidstudio应用打包Error:(4) Error: “XXX” is not translated in “en” (English) [MissingTranslation]&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;解决办法：&lt;br&gt;  在出问题的资源文件的 resources 标签内增加xmlns:tools=”&lt;a href=&quot;http://schemas.android.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://schemas.android.com/tools&lt;/a&gt;“ tools:ignore=”MissingTranslation”两个属性即可&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&quot;问题：Error-Execution-failed-for-task-‘-app-processDebugManifest’-gt-Manifest-merger-failed-with-multiple&quot;&gt;&lt;a href=&quot;#问题：Error-Execution-failed-for-task-‘-app-processDebugManifest’-gt-Manifest-merger-failed-with-multiple&quot; class=&quot;headerlink&quot; title=&quot;问题：Error:Execution failed for task ‘:app:processDebugManifest’. &amp;gt; Manifest merger failed with multiple&quot;&gt;&lt;/a&gt;问题：Error:Execution failed for task ‘:app:processDebugManifest’. &amp;gt; Manifest merger failed with multiple&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原因：添加Gradle依赖后出现，目测是版本问题。。。&lt;/li&gt;
+&lt;li&gt;解决：在 manifest 中添加 xmlns:tools=”&lt;a href=&quot;http://schemas.android.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://schemas.android.com/tools&lt;/a&gt;“ 标签，然后再 application 中添加 tools:replace=”android:icon,android:theme” 标签&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;http://stackoverflow.com/questions/24506800/android-studio-gradle-icon-error-manifest-merger&quot; alt=&quot;解决问题的原文&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -450,7 +455,7 @@
     </summary>
     
     
-      <category term="AndroidStudio错误总结" scheme="http://dongxi520.com/tags/AndroidStudio%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/"/>
+      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
     
   </entry>
   
