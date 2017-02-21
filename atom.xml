@@ -244,11 +244,11 @@
   </entry>
   
   <entry>
-    <title>值得一看的GitHub源码</title>
+    <title>GitHub上不错的库</title>
     <link href="http://dongxi520.com/2016/08/28/%E5%80%BC%E5%BE%97%E4%B8%80%E7%9C%8B%E7%9A%84GitHub%E6%BA%90%E7%A0%81/"/>
     <id>http://dongxi520.com/2016/08/28/值得一看的GitHub源码/</id>
     <published>2016-08-28T03:20:09.000Z</published>
-    <updated>2016-08-28T03:21:01.566Z</updated>
+    <updated>2017-02-21T13:09:22.741Z</updated>
     
     <content type="html">&lt;h3 id=&quot;注册登录&quot;&gt;&lt;a href=&quot;#注册登录&quot; class=&quot;headerlink&quot; title=&quot;注册登录&quot;&gt;&lt;/a&gt;注册登录&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/fanrunqi/MaterialLogin（源码，可以直接参考）&lt;/a&gt;&lt;/li&gt;
@@ -310,16 +310,16 @@
     </summary>
     
     
-      <category term="GitHub源码" scheme="http://dongxi520.com/tags/GitHub%E6%BA%90%E7%A0%81/"/>
+      <category term="开源库" scheme="http://dongxi520.com/tags/%E5%BC%80%E6%BA%90%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title>Android小知识大杂烩</title>
+    <title>Android小知识~</title>
     <link href="http://dongxi520.com/2016/08/28/Android%E5%B0%8F%E7%9F%A5%E8%AF%86%E5%A4%A7%E6%9D%82%E7%83%A9/"/>
     <id>http://dongxi520.com/2016/08/28/Android小知识大杂烩/</id>
     <published>2016-08-28T03:17:56.000Z</published>
-    <updated>2016-08-28T03:19:39.690Z</updated>
+    <updated>2017-02-21T13:07:55.305Z</updated>
     
     <content type="html">&lt;p&gt;###Snackbar 与 Toast 小区别：&lt;/p&gt;
 &lt;ul&gt;
@@ -373,11 +373,11 @@
   </entry>
   
   <entry>
-    <title>使用git的重大错误</title>
+    <title>使用git的重大错误记录</title>
     <link href="http://dongxi520.com/2016/08/16/%E4%BD%BF%E7%94%A8git%E7%9A%84%E9%87%8D%E5%A4%A7%E9%94%99%E8%AF%AF/"/>
     <id>http://dongxi520.com/2016/08/16/使用git的重大错误/</id>
     <published>2016-08-16T07:12:59.000Z</published>
-    <updated>2016-08-16T07:13:42.161Z</updated>
+    <updated>2017-02-21T13:08:30.423Z</updated>
     
     <content type="html">&lt;h2 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h2&gt;&lt;p&gt;前几天，由于电脑需要外借给老姐，所以我就把原来在电脑上做的Android项目复制到家中的台式机上运行，并且成功 push 到 GitHub 上面，老姐那电脑回来时，我又重新用这个电脑 push 了一遍到 Github 上面，这时候出现了重大的错误（只要是我没解决的都是重大错误）。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -400,13 +400,13 @@
   </entry>
   
   <entry>
-    <title>大三生产实习总结</title>
+    <title>大三生产实习记录</title>
     <link href="http://dongxi520.com/2016/08/06/%E5%A4%A7%E4%B8%89%E7%94%9F%E4%BA%A7%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2016/08/06/大三生产实习总结/</id>
     <published>2016-08-06T08:14:47.000Z</published>
-    <updated>2016-08-06T08:55:23.701Z</updated>
+    <updated>2017-02-21T13:10:41.661Z</updated>
     
-    <content type="html">&lt;p&gt;很激动！为什么这么说呢？因为我学习上就是个渣渣，每次做课上的项目。都是抱别人的大腿，在这里也非常感谢那些让我抱过大腿的大神。&lt;/p&gt;
+    <content type="html">&lt;p&gt;很激动！为什么这么说呢？因为我学习上就是个渣渣，每次做课上的项目。都是抱别人的大腿，而这次第一次做项目组长！在这里也非常感谢那些让我抱过大腿的大神。&lt;/p&gt;
 &lt;p&gt;首先说一下为什么这次组长是我吧。我们组六个人，这次搞的是一个Android小软件（吃货宝）。组内六个人只有我和另一个小伙伴自学过一点Android基础，还有一个是在做Web项目，没时间学Android还有三个小伙伴是都没学过Java更何况有学习过Android。那个和我一起自学过Android的小伙伴，由于他学习学的有点累了，所以这个艰巨的任务就由我来承担了。&lt;/p&gt;
 &lt;p&gt;当时想想自己还是挺高兴的，毕竟能够带领一个团队从无到有的开发一款软件。但是我想的太天真了！&lt;/p&gt;
 &lt;p&gt;第一次从无到有开发一款软件，第一次做Android开发组长。好多东西都需要学。之前自己学习Android直接上来就编码，然后编到哪里不会再去查哪里，这样非常浪费时间！而这一次，我们从项目立项，需求文档，概要设计，编码，测试。这几个阶段来完成。&lt;/p&gt;
@@ -432,8 +432,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;很激动！为什么这么说呢？因为我学习上就是个渣渣，每次做课上的项目。都是抱别人的大腿，在这里也非常感谢那些让我抱过大腿的大神。&lt;/p&gt;
-&lt;p&gt;首先说一下为什么这次组长是我吧。我们组六个人，这次搞的是一个Android小软件（吃货宝）。组内六个人只有我和另一个小伙伴自学过一点A
+      &lt;p&gt;很激动！为什么这么说呢？因为我学习上就是个渣渣，每次做课上的项目。都是抱别人的大腿，而这次第一次做项目组长！在这里也非常感谢那些让我抱过大腿的大神。&lt;/p&gt;
+&lt;p&gt;首先说一下为什么这次组长是我吧。我们组六个人，这次搞的是一个Android小软件（吃货宝）。组内六个人只有我和
     
     </summary>
     
@@ -586,11 +586,11 @@
   </entry>
   
   <entry>
-    <title>百万讲师张哥之面试技巧</title>
+    <title>百万讲师之张哥面试技巧</title>
     <link href="http://dongxi520.com/2016/07/08/%E7%99%BE%E4%B8%87%E8%AE%B2%E5%B8%88%E5%BC%A0%E5%93%A5%E4%B9%8B%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
     <id>http://dongxi520.com/2016/07/08/百万讲师张哥之面试技巧/</id>
     <published>2016-07-08T13:46:13.000Z</published>
-    <updated>2016-07-20T13:18:59.816Z</updated>
+    <updated>2017-02-21T13:11:03.123Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/postImage/interview.png&quot; alt=&quot;interview&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;a href=&quot;#百万讲师张哥教你写简历&quot; class=&quot;headerlink&quot; title=&quot;百万讲师张哥教你写简历&quot;&gt;&lt;/a&gt;百万讲师张哥教你写简历&lt;/h2&gt;&lt;ul&gt;
@@ -1443,7 +1443,7 @@ return true;
     <link href="http://dongxi520.com/2016/06/12/Bolg-With-Hexo/"/>
     <id>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</id>
     <published>2016-06-12T01:45:02.000Z</published>
-    <updated>2016-08-28T03:09:39.057Z</updated>
+    <updated>2017-02-21T13:15:56.905Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;原先的博客使用的是Jekyll搭建，但是发现Hexo更炫酷一些，故现在改为Hexo,目前还未完善，待有时间会完善。&lt;/p&gt;
@@ -1452,15 +1452,10 @@ return true;
 &lt;h2 id=&quot;感谢以下作者&quot;&gt;&lt;a href=&quot;#感谢以下作者&quot; class=&quot;headerlink&quot; title=&quot;感谢以下作者&quot;&gt;&lt;/a&gt;感谢以下作者&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/poem_of_sunshine/article/details/29369785/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何搭建博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://lijianchang.xyz/2016/03/16/%E5%B0%8F%E7%99%BD%E7%8B%AC%E7%AB%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-Github-Pages%E5%92%8CHexo%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小白手把手搭建博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.arao.me/2015/hexo-next-theme-optimize-base/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;动动手指，NexT主题与Hexo更搭哦（基础篇） &lt;/a&gt;&lt;/p&gt;
-&lt;iframe name=&quot;iframe_canvas&quot; src=&quot;http://douban.fm/partner/baidu/doubanradio&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;
-
-
 &lt;h2 id=&quot;添加背景音乐&quot;&gt;&lt;a href=&quot;#添加背景音乐&quot; class=&quot;headerlink&quot; title=&quot;添加背景音乐&quot;&gt;&lt;/a&gt;添加背景音乐&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;打开网页版网易云音乐。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;如果只是加入单曲，只需要搜索歌曲，点开歌曲名，点击生成外链播放器，复制html代码（可以选择是否自动播放），将html代码无需任何修改放入markdown文章里就OK了。&lt;br&gt;如果想要加入歌单，就需要自己创建歌单，然后分享歌单，找到自己的分享动态，点进去可以看到有“生成外链播放器”这些字眼，其余操作就和上面一样了。不过，你的歌单有变化的话，这个外链的歌曲同样跟着变，这一点挺棒的。&lt;br&gt;例如，播放待你长发及腰这首歌，自动播放只需要嵌入一下代码&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;iframe frameborder=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; marginwidth=&amp;quot;0&amp;quot; marginheight=&amp;quot;0&amp;quot; width=330 height=86 src=&amp;quot;http://music.163.com/outchain/player?type=2&amp;amp;id=28947001&amp;amp;auto=1&amp;amp;height=66&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;li&gt;如果只是加入单曲，只需要搜索歌曲，点开歌曲名，点击生成外链播放器，复制html代码（可以选择是否自动播放），将html代码无需任何修改放入markdown文章里就OK了。&lt;br&gt;如果想要加入歌单，就需要自己创建歌单，然后分享歌单，找到自己的分享动态，点进去可以看到有“生成外链播放器”这些字眼，其余操作就和上面一样了。不过，你的歌单有变化的话，这个外链的歌曲同样跟着变，这一点挺棒的。&lt;br&gt;例如，播放待你长发及腰这首歌，自动播放只需要嵌入一下代码(现在好像不支持了)&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;iframe frameborder=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; marginwidth=&amp;quot;0&amp;quot; marginheight=&amp;quot;0&amp;quot; width=330 height=86 src=&amp;quot;http://music.163.com/outchain/player?type=2&amp;amp;id=28947001&amp;amp;auto=1&amp;amp;height=66&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1468,7 +1463,7 @@ return true;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;添加视频&quot;&gt;&lt;a href=&quot;#添加视频&quot; class=&quot;headerlink&quot; title=&quot;添加视频&quot;&gt;&lt;/a&gt;添加视频&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;另外，markdown完全兼容html，你可以用html插入这些东西，例如：&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;另外，markdown完全兼容html，你可以用html插入这些东西，例如：(现在好像不支持了)&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;iframe height=498 width=510 src=&amp;quot;http://player.youku.com/embed/XMjI2MjU3MDMy&amp;quot; frameborder=0 allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;参数解释&lt;/p&gt;
