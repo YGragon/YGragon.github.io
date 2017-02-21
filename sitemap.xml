@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dongxi520.com/guestbook/index.html</loc>
+    
+    <lastmod>2017-02-21T13:21:47.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dongxi520.com/about/index.html</loc>
+    
+    <lastmod>2017-02-21T13:21:03.354Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</loc>
     
     <lastmod>2017-02-21T13:15:56.905Z</lastmod>
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://dongxi520.com/about/index.html</loc>
-    
-    <lastmod>2016-08-28T03:05:11.071Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dongxi520.com/2016/07/05/Android%E5%B8%83%E5%B1%80%E4%BD%A0%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%B1%9E%E6%80%A7/</loc>
     
     <lastmod>2016-07-24T13:59:03.335Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://dongxi520.com/2016/06/13/GooglePlay-1/</loc>
     
     <lastmod>2016-06-15T04:29:45.273Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dongxi520.com/guestbook/index.html</loc>
-    
-    <lastmod>2016-06-14T09:29:33.170Z</lastmod>
     
   </url>
   
