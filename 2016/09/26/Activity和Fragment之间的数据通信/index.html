@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="dongxi346">
 <meta property="og:description" content="Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。
 同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！">
-<meta property="og:updated_time" content="2016-09-26T09:16:31.469Z">
+<meta property="og:updated_time" content="2017-02-21T13:02:30.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activity和Fragment之间的数据通信">
 <meta name="twitter:description" content="Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。
@@ -434,7 +434,7 @@
 </li>
 <li><strong>因此接口回调方法很重要，一点要掌握！！</strong></li>
 </ul>
-<h3 id="安利一下我的Github账户还有我的技GitHub博客"><a href="#安利一下我的Github账户还有我的技GitHub博客" class="headerlink" title="安利一下我的Github账户还有我的技GitHub博客"></a>安利一下我的Github账户还有我的技GitHub博客</h3><ul>
+<h3 id="安利一下我的Github账户还有我的博客地址"><a href="#安利一下我的Github账户还有我的博客地址" class="headerlink" title="安利一下我的Github账户还有我的博客地址"></a>安利一下我的Github账户还有我的博客地址</h3><ul>
 <li><a href="https://github.com/dongxi346" target="_blank" rel="external">GitHub</a></li>
 <li><a href="http://dongxi520.com/">我的博客</a></li>
 </ul>
@@ -501,6 +501,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/21/不必纠结MVC还是MVP，听我说两句/" rel="prev" title="不必纠结MVC还是MVP，听我说两句~">
+                不必纠结MVC还是MVP，听我说两句~ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,7 +576,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -582,7 +586,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -647,7 +651,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity向Fragment中传递数据"><span class="nav-number">1.</span> <span class="nav-text">Activity向Fragment中传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment向Activity传递数据"><span class="nav-number">2.</span> <span class="nav-text">Fragment向Activity传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity向Activity传递数据"><span class="nav-number">3.</span> <span class="nav-text">Activity向Activity传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity返回数据给上一个Activity"><span class="nav-number">4.</span> <span class="nav-text">Activity返回数据给上一个Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment向Fragment传递数据"><span class="nav-number">5.</span> <span class="nav-text">Fragment向Fragment传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment2返回数据给ragment1"><span class="nav-number">6.</span> <span class="nav-text">Fragment2返回数据给ragment1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安利一下我的Github账户还有我的技GitHub博客"><span class="nav-number">8.</span> <span class="nav-text">安利一下我的Github账户还有我的技GitHub博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity向Fragment中传递数据"><span class="nav-number">1.</span> <span class="nav-text">Activity向Fragment中传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment向Activity传递数据"><span class="nav-number">2.</span> <span class="nav-text">Fragment向Activity传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity向Activity传递数据"><span class="nav-number">3.</span> <span class="nav-text">Activity向Activity传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity返回数据给上一个Activity"><span class="nav-number">4.</span> <span class="nav-text">Activity返回数据给上一个Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment向Fragment传递数据"><span class="nav-number">5.</span> <span class="nav-text">Fragment向Fragment传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment2返回数据给ragment1"><span class="nav-number">6.</span> <span class="nav-text">Fragment2返回数据给ragment1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安利一下我的Github账户还有我的博客地址"><span class="nav-number">8.</span> <span class="nav-text">安利一下我的Github账户还有我的博客地址</span></a></li></ol></div>
             
           </div>
         </section>
@@ -666,7 +670,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

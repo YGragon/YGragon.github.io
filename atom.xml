@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2016-09-26T09:16:31.469Z</updated>
+  <updated>2017-02-21T13:03:45.953Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,11 +16,137 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不必纠结MVC还是MVP，听我说两句~</title>
+    <link href="http://dongxi520.com/2017/02/21/%E4%B8%8D%E5%BF%85%E7%BA%A0%E7%BB%93MVC%E8%BF%98%E6%98%AFMVP%EF%BC%8C%E5%90%AC%E6%88%91%E8%AF%B4%E4%B8%A4%E5%8F%A5/"/>
+    <id>http://dongxi520.com/2017/02/21/不必纠结MVC还是MVP，听我说两句/</id>
+    <published>2017-02-21T12:57:15.000Z</published>
+    <updated>2017-02-21T13:03:45.953Z</updated>
+    
+    <content type="html">&lt;h4 id=&quot;故事开始&quot;&gt;&lt;a href=&quot;#故事开始&quot; class=&quot;headerlink&quot; title=&quot;故事开始&quot;&gt;&lt;/a&gt;故事开始&lt;/h4&gt;&lt;p&gt;MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SmallTalk在百度百科的解释是这样: &lt;/strong&gt;&lt;br&gt;Smalltalk被公认为历史上第二个&lt;a href=&quot;http://baike.baidu.com/view/324458.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;面向对象的程序设计&lt;/a&gt;语言和第一个真正的&lt;a href=&quot;http://baike.baidu.com/view/14867.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;集成开发环境&lt;/a&gt; (IDE)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;来张图说明一下MVC的工作模式吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-2f233e873f398278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;图中红色小框框就是MVC的工作模式&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从图中可以看出用户向View发送指令，再有View&lt;strong&gt;直接要求&lt;/strong&gt;Modle改变状态&lt;/li&gt;
+&lt;li&gt;用户也可以直接向Controller发送指令，再由Controller发送给Model，在通过Model去改变View的状态&lt;/li&gt;
+&lt;li&gt;所以MVC框架模式View和Model之间的联系还是相当紧密的，耦合度还是很高，后期维护改动View需要将Model中的内容也要改动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;MVC是一种框架模式而非设计模式&lt;/strong&gt;&lt;br&gt;其优点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;理解起来比较容易，技术含量并不高，对开发和维护来说易于维护和修改&lt;/li&gt;
+&lt;li&gt;耦合度不高，表现层与业务层分离，各司其职。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其缺点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它定义不是很明确，完全理解MVC模式并不容易。&lt;/li&gt;
+&lt;li&gt;使用MVC需要精心策划，因为你它的内部原理比较复杂&lt;/li&gt;
+&lt;li&gt;一些小的项目采用MVC框架反而会更加复杂&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;MVC的Android伪代码实现&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;以下图片中代码与数据不匹配，只是为了方便理解MVC在代码中如何写，需要看实例的可以去网上了解，我在这里就偷懒了：）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;首先你需要一个View视图，也就是XML布局。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-4b1a692399a76050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;View&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后你还需要一个Model&lt;br&gt;也就是数据，可以是数据库中的内容，也可以是在代码中写的List集合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-aea77c3945b45284.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;data&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后需要一个Controller，也就是Activity或者Fragment&lt;br&gt;通过在Controller中对用户在View中传递过来的操作，进行访问model中的数据，然后改变View中的状态。&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-f24cb4a01302a4c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MVP是MVC的一个演化版本，全称是Model-View-Presenter。&lt;br&gt;MVP的出现主要就是解决MVC中的View和Model的耦合性高的的问题，同时又带来了很好的扩展性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MVP模式的三个角色的作用：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Presenter-中介&lt;/strong&gt;&lt;br&gt;主演沟通View和Model的桥梁，他从Model获取数据后返回给View层，是的View层和Model层之间没有耦合，从而奖业务逻辑从View层抽离。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model-房主&lt;/strong&gt;&lt;br&gt;Model主要提供数据的存取功能，Presenter需要通过Model层存储、获取数据，Model层就想是一个仓库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View-用户&lt;/strong&gt;&lt;br&gt;View通常是指Activity、Fragment或者某个View控件。它含有一个Presenter成员变量，同时它需要实现一个逻辑接口，奖View上的操作转交割Presenter进行实现，最后Presenter调用View逻辑接口将结果返回给View元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;来张图说明一下MVP的工作模式吧&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-4606cbec38bcd94c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从图中我们可以看出MVP和MVC之间的额最大区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VIew和Model之间彻底的解耦&lt;/li&gt;
+&lt;li&gt;MVP是面向接口编程，也就是说用户不必知道我是具体如何实现额，用户只要知道有这个功能，直接调用即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;MVP的Android伪代码实现&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;以下图片中代码与数据不匹配，只是为了方便理解MVC在代码中如何写，需要看实例的可以去网上了解，我在这里就偷懒了：）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;首先需要一个Presenter，作为View和Model的中间人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-83e58e6d99a792ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后你还需要一个View以及ViewImpl接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-816502b5d8e9ba84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-029b606901214221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后你还需要Model一个ModelImpl接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-438fa75459744107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;为什么说不必纠结是MVC还是MVP呢？&quot;&gt;&lt;a href=&quot;#为什么说不必纠结是MVC还是MVP呢？&quot; class=&quot;headerlink&quot; title=&quot;为什么说不必纠结是MVC还是MVP呢？&quot;&gt;&lt;/a&gt;为什么说不必纠结是MVC还是MVP呢？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;MVC和MVP的最终目的就是要数据和UI分离，互相不影响。那么如何能不必纠结而做到呢？？你听说过面向对象吗？听过再听听我的理解~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面向对象&lt;/strong&gt;&lt;br&gt;封装、多态，继承。老师好像也都是这么教的，那么到底说明是多态封装继承呢？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;封装&lt;/strong&gt;&lt;br&gt;封装就是将用户不想看到的东西封装起来，可以用到面向对象中的 Private&lt;br&gt;属性，将用户不想看到的内容写在这里面。比如收音机上的播放功能，用户不用知道收益及如何播放，它只需要知道摁下这个键能播放即可。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多态&lt;/strong&gt;&lt;br&gt;多态就是一个对象的多种表现形态，主要表现为：行为多态和状态多态。&lt;br&gt;行为多态就好比一个父亲有多个孩子，每个孩子都不一样，但是都是同一个父亲；状态多态就好比每个孩子在一天中有好多个状态变现，有吃饭，学习，睡觉。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;继承？不！我想说的是对象！&lt;/strong&gt;&lt;br&gt;我的一个朋友告诉我继承其实是对面向对象的最大误解。继承我们可以理解成一个对象他有多个小对象组成；比如人这个对象是由手脚，脑袋…等其它小对象组成。因此继承我们可以不去记住，我们只要对每个对象有深刻的认识即可把对象描述清楚！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那么MVC、MVP与面向对象有什么关系呢？？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先MVC和MVP都是要求数据和UI之间互不影响，那么面向对象不就是吗！？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;面向对象View?&lt;/strong&gt;&lt;br&gt;对象也就是我们说的用户也就是MC或者MVP中View，用户需要什么我们就展示给其什么，不需要的我们将其封装起来提供一个方法给你调用即可，这是不是和MVC或者MVP中很像！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;面向对象Model?&lt;/strong&gt;&lt;br&gt;同时面向对象也是需要将对象的行为细分，比如人可以跑，可以游泳…这是不是和MVC中的Model一样，需要处理用户不同的操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面向对象Controller?&lt;/strong&gt;&lt;br&gt;最后面向对象也是需要一个状态去控制的，比如人的大脑。通过大脑去协调手和脚的平衡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;学点英文&quot;&gt;&lt;a href=&quot;#学点英文&quot; class=&quot;headerlink&quot; title=&quot;学点英文&quot;&gt;&lt;/a&gt;学点英文&lt;/h4&gt;&lt;p&gt;It is not easy to meet each other in such a big world.&lt;br&gt;世界这么大，能遇见，不容易。—- 2月18号倩儿&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;故事开始&quot;&gt;&lt;a href=&quot;#故事开始&quot; class=&quot;headerlink&quot; title=&quot;故事开始&quot;&gt;&lt;/a&gt;故事开始&lt;/h4&gt;&lt;p&gt;MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SmallTalk在百度百科的解释是这样: &lt;/strong&gt;&lt;br&gt;Smalltalk被公认为历史上第二个&lt;a href=&quot;http://baike.baidu.com/view/324458.htm&quot;&gt;面向对象的程序设计&lt;/a&gt;语言和第一个真正的&lt;a href=&quot;http://baike.baidu.com/view/14867.htm&quot;&gt;集成开发环境&lt;/a&gt; (IDE)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;来张图说明一下MVC的工作模式吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-2f233e873f398278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="MVC" scheme="http://dongxi520.com/tags/MVC/"/>
+    
+      <category term="MVP" scheme="http://dongxi520.com/tags/MVP/"/>
+    
+      <category term="面向对象" scheme="http://dongxi520.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Activity和Fragment之间的数据通信</title>
     <link href="http://dongxi520.com/2016/09/26/Activity%E5%92%8CFragment%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/"/>
     <id>http://dongxi520.com/2016/09/26/Activity和Fragment之间的数据通信/</id>
     <published>2016-09-26T06:30:23.000Z</published>
-    <updated>2016-09-26T09:16:31.469Z</updated>
+    <updated>2017-02-21T13:02:30.849Z</updated>
     
     <content type="html">&lt;p&gt;Activity和Fragment之间的数据通信有两种：Activity向Fragment中传递数据、Fragment向Activity传递数据。&lt;/p&gt;
 &lt;p&gt;同时Activity之间也能传递数据，Fragment之间又能传递数据。本文主要是总结自己在项目中遇到的问题以及解决办法！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -99,7 +225,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;因此接口回调方法很重要，一点要掌握！！&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;安利一下我的Github账户还有我的技GitHub博客&quot;&gt;&lt;a href=&quot;#安利一下我的Github账户还有我的技GitHub博客&quot; class=&quot;headerlink&quot; title=&quot;安利一下我的Github账户还有我的技GitHub博客&quot;&gt;&lt;/a&gt;安利一下我的Github账户还有我的技GitHub博客&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;安利一下我的Github账户还有我的博客地址&quot;&gt;&lt;a href=&quot;#安利一下我的Github账户还有我的博客地址&quot; class=&quot;headerlink&quot; title=&quot;安利一下我的Github账户还有我的博客地址&quot;&gt;&lt;/a&gt;安利一下我的Github账户还有我的博客地址&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/dongxi346&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://dongxi520.com/&quot;&gt;我的博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
