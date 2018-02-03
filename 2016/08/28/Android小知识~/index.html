@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="记录平时开发中遇到的小问题，以便下次查找。目前有以下小知识点：
+
+毫秒转换为年月日的代码段
+Snackbar 与 Toast 小区别
+TextView 设置不同的文本颜色
+fragment再一次点击后刷新页面的方法
+启动百度地图导航页面
+软键盘和搜索框冲突的解决办法
+……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android笔记-小知识点">
+<meta property="og:url" content="http://dongxi520.com/2016/08/28/Android小知识~/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description" content="记录平时开发中遇到的小问题，以便下次查找。目前有以下小知识点：
+
+毫秒转换为年月日的代码段
+Snackbar 与 Toast 小区别
+TextView 设置不同的文本颜色
+fragment再一次点击后刷新页面的方法
+启动百度地图导航页面
+软键盘和搜索框冲突的解决办法
+……">
+<meta property="og:updated_time" content="2018-01-01T00:59:55.275Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android笔记-小知识点">
+<meta name="twitter:description" content="记录平时开发中遇到的小问题，以便下次查找。目前有以下小知识点：
+
+毫秒转换为年月日的代码段
+Snackbar 与 Toast 小区别
+TextView 设置不同的文本颜色
+fragment再一次点击后刷新页面的方法
+启动百度地图导航页面
+软键盘和搜索框冲突的解决办法
+……">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2016/08/28/Android小知识~/"/>
+
+
+
+
+
+  <title>Android笔记-小知识点 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2016/08/28/Android小知识~/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android笔记-小知识点</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-28T11:17:56+08:00">
+                2016-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/28/Android小知识~/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/28/Android小知识~/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/08/28/Android小知识~/" class="leancloud_visitors" data-flag-title="Android笔记-小知识点">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,735
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>记录平时开发中遇到的小问题，以便下次查找。目前有以下小知识点：</p>
+<ul>
+<li>毫秒转换为年月日的代码段</li>
+<li>Snackbar 与 Toast 小区别</li>
+<li>TextView 设置不同的文本颜色</li>
+<li>fragment再一次点击后刷新页面的方法</li>
+<li>启动百度地图导航页面</li>
+<li>软键盘和搜索框冲突的解决办法</li>
+<li>……</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h4 id="Snackbar-与-Toast-小区别："><a href="#Snackbar-与-Toast-小区别：" class="headerlink" title="Snackbar 与 Toast 小区别："></a>Snackbar 与 Toast 小区别：</h4><ul>
+<li>Snackbar activity消失后不显示内容</li>
+<li>Toast activity消失后仍显示内容</li>
+</ul>
+<h4 id="Androidstudio下Module的导入步骤"><a href="#Androidstudio下Module的导入步骤" class="headerlink" title="Androidstudio下Module的导入步骤"></a>Androidstudio下Module的导入步骤</h4><ul>
+<li><code>file---import module ---找到路径---导入---在build.gradle(app)下---添加compile project(&#39;:module名&#39;)</code></li>
+</ul>
+<h4 id="使用-Fragment-小心导包出错"><a href="#使用-Fragment-小心导包出错" class="headerlink" title="使用 Fragment 小心导包出错"></a>使用 Fragment 小心导包出错</h4><ul>
+<li>导包一定要一致，例如要导包<code>import android.support.v4.app.Fragment;</code>就全部导这个包，要导<code>import android.app.Fragment;</code>包就全部导这个包</li>
+</ul>
+<h4 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h4><ul>
+<li><code>substring()</code><ul>
+<li><code>public String substring(int beginIndex, int endIndex)</code><br> 返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始， endIndex:到指定的 endIndex-1处结束。   </li>
+<li>示例：<br> “hamburger”.substring(3,8) returns “burge”<br>  “smiles”.substring(0,5) returns “smile”</li>
+<li>参数：<br>beginIndex - 开始处的索引（包括）。<br>  endindex 结尾处索引（不包括）。</li>
+<li>返回：<br>指定的子字符串。</li>
+<li>抛出：<br>IndexOutOfBoundsException - 如果 beginIndex 为负，或length大于字符串长度。</li>
+</ul>
+</li>
+</ul>
+<h4 id="将毫秒转换为年月日的代码段"><a href="#将毫秒转换为年月日的代码段" class="headerlink" title="将毫秒转换为年月日的代码段"></a>将毫秒转换为年月日的代码段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">long time = questionInfo.getTime() ;//通过实体对象拿到数据</span><br><span class="line">Date date = new Date(time);</span><br><span class="line">SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">        holder.tv_question_time.setText(simpleDateFormat.format(date));//给TextView设置数据</span><br></pre></td></tr></table></figure>
+<h4 id="listview-刷新时图片闪烁"><a href="#listview-刷新时图片闪烁" class="headerlink" title="listview 刷新时图片闪烁"></a>listview 刷新时图片闪烁</h4><ul>
+<li>给控件设置 <code>setTag</code>和<code>getTag</code>解决</li>
+</ul>
+<h3 id="2017年7月3号更新"><a href="#2017年7月3号更新" class="headerlink" title="2017年7月3号更新"></a>2017年7月3号更新</h3><h4 id="TextView-设置不同的文本颜色"><a href="#TextView-设置不同的文本颜色" class="headerlink" title="TextView 设置不同的文本颜色"></a>TextView 设置不同的文本颜色</h4><ul>
+<li><p>方案一</p>
+<p>  TextView textView = (TextView)findViewById() ;<br>  String str=”默认颜色<font color="#FF0000">红颜色</font>“;<br>  // String str=”默认颜色<font color="#FF0000"><small>红颜色</small></font>“;<br>  textView.setTextSize() ; //<br>  textView.setText(Html.fromHtml(str)) ;</p>
+</li>
+<li><p>方案二</p>
+<p><code>SpannableString spanStr = new SpannableString(&quot;默认颜色红颜色&quot;) ;</code></p>
+<p>  spanStr.setSpan(new ForegroundColorSpan(Color.parseColor(“#FF0000”)), 4,spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);<br>  tv.setText(spannableString);<br>  /**</p>
+<ul>
+<li>其中，”默认颜色红颜色” 为你要改变的文本。setSpan方法有四个参数，ForegroundColorSpan是为文本设置前景色，也就是文字颜色。如果要为文字添加背景颜色，可替换为BackgroundColorSpan。4为文本颜色改变的起始位置，spannableString.length()为文本颜色改变的结束位置。最后一个参数为布尔型，可以传入以下四种。</li>
+<li>Spanned.SPAN_INCLUSIVE_EXCLUSIVE 从起始下标到终了下标，不包括起始下标，包括终了坐标</li>
+<li>Spanned.SPAN_INCLUSIVE_INCLUSIVE 从起始下标到终了下标，同时包括起始下标和终了下标</li>
+<li>Spanned.SPAN_EXCLUSIVE_EXCLUSIVE 从起始下标到终了下标，都不包括起始下标和终了下标</li>
+<li>Spanned.SPAN_EXCLUSIVE_INCLUSIVE 从起始下标到终了下标，包括起始坐标，不包括终了下标<br>*/</li>
+</ul>
+</li>
+<li><code>Html.fromHtml(string)</code><ul>
+<li>直接修改字符串的资源</li>
+<li>也可以直接引用xml的设置的字符串资源</li>
+<li>修改字体颜色、加粗、</li>
+</ul>
+</li>
+<li><code>SpannableStringBuilder :</code><ul>
+<li>修改字体颜色</li>
+<li>设置字体背景颜色设置字体大小</li>
+<li>设置粗体斜体</li>
+<li>设置删除线</li>
+<li>设置下划线</li>
+<li>设置图片—-将位置为多少多少的地方设置为图片</li>
+<li>设置点击事件   </li>
+</ul>
+</li>
+</ul>
+<h4 id="fragment再一次点击后刷新页面的方法"><a href="#fragment再一次点击后刷新页面的方法" class="headerlink" title="fragment再一次点击后刷新页面的方法"></a>fragment再一次点击后刷新页面的方法</h4><ol>
+<li>给每个Fragment设置一个Tag，通过判断Tag来刷新数据</li>
+<li>重写这个方法 onHiddenChanged 里面做刷新操作</li>
+</ol>
+<h4 id="启动百度地图导航页面"><a href="#启动百度地图导航页面" class="headerlink" title="启动百度地图导航页面"></a>启动百度地图导航页面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String url = &quot;http://api.map.baidu.com/direction?</span><br><span class="line">origin=33.988177,118.786991&amp;destination=32.047616,118.790609&amp;mode=driving&amp;output</span><br><span class="line">=&quot;</span><br><span class="line">Uri uri = Uri.parse(url);</span><br><span class="line">intent = new Intent(Intent.ACTION_VIEW);</span><br><span class="line">intent.setData(uri);</span><br><span class="line">intent.setPackage(com.baidu.BaiduMap);</span><br><span class="line">mContext.startActivity(intent);</span><br></pre></td></tr></table></figure>
+<h4 id="SimpleDraweeView第三方插件不支持wrap-content"><a href="#SimpleDraweeView第三方插件不支持wrap-content" class="headerlink" title="SimpleDraweeView第三方插件不支持wrap_content"></a>SimpleDraweeView第三方插件不支持wrap_content</h4><ul>
+<li>glide 可以加载图片获取图片的真实宽高</li>
+</ul>
+<h3 id="软键盘和搜索框冲突的解决办法"><a href="#软键盘和搜索框冲突的解决办法" class="headerlink" title="软键盘和搜索框冲突的解决办法"></a>软键盘和搜索框冲突的解决办法</h3><p>参考：<a href="http://www.a-site.cn/article/1219953.Html" target="_blank" rel="external">http://www.a-site.cn/article/1219953.Html</a><br><a href="http://blog.csdn.net/zhangzhikaixinya/article/details/7802059" target="_blank" rel="external">http://blog.csdn.net/zhangzhikaixinya/article/details/7802059</a></p>
+<ul>
+<li>xml 中添加—部分机型可用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> &lt;activity android:name=&quot;.MainActivity&quot;</span><br><span class="line">                  android:windowSoftInputMode=&quot;adjustPan|stateHidden&quot;</span><br><span class="line">            &gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;/&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>listView.setTranscriptMode(ListView.TRANSCRIPT_MODE_NORMAL)—测试不可用</li>
+<li>根布局设置为ScrollView——可行</li>
+<li>计算高度去实现—-可行</li>
+</ul>
+<h3 id="AndroidStudio新建module的问题"><a href="#AndroidStudio新建module的问题" class="headerlink" title="AndroidStudio新建module的问题"></a>AndroidStudio新建module的问题</h3><p>当module中导入aar不行时，可以将aar添加到主项目中的libs目录下，然后在主builde.gradle文件里添加对应的compile name:’SMSSDK-3.0.0’,ext:’aar’</p>
+<h3 id="2017年12月27日更新"><a href="#2017年12月27日更新" class="headerlink" title="2017年12月27日更新"></a>2017年12月27日更新</h3><h4 id="TextView-动态设置-drawableLeft-TextView-设置行间距"><a href="#TextView-动态设置-drawableLeft-TextView-设置行间距" class="headerlink" title="TextView 动态设置 drawableLeft, TextView 设置行间距"></a>TextView 动态设置 drawableLeft, TextView 设置行间距</h4><pre><code>TextView 动态设置 drawableLeft，其他方向同理
+    Drawable drawable= getResources().getDrawable(R.drawable.topic_detail_no_collect);
+    // 这一步必须要做,否则不会显示.
+    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+    collection.setCompoundDrawables(drawable,null,null,null);
+
+TextView 设置行间距
+    1、android:lineSpacingExtra
+        设置行间距，如”3dp”。
+    2、android:lineSpacingMultiplier
+        设置行间距的倍数，如”1.2″。
+</code></pre><h4 id="微信朋友圈的点赞弹出框"><a href="#微信朋友圈的点赞弹出框" class="headerlink" title="微信朋友圈的点赞弹出框"></a>微信朋友圈的点赞弹出框</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">private void showCollectionSharePopupWindow() &#123;</span><br><span class="line">        // 弹出收藏和分享</span><br><span class="line">            LayoutInflater inflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);</span><br><span class="line">            View content = inflater.inflate(R.layout.popup_collection_share, null, false);</span><br><span class="line"></span><br><span class="line">            mPopupWindow = new PopupWindow(content, ViewGroup.LayoutParams.WRAP_CONTENT, DensityUtils.dp2px(this, 34f));//固定34dp的高度</span><br><span class="line">            mPopupWindow.setBackgroundDrawable(new BitmapDrawable());</span><br><span class="line">            mPopupWindow.setOutsideTouchable(true);</span><br><span class="line">            mPopupWindow.setTouchable(true);</span><br><span class="line"></span><br><span class="line">            content.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);</span><br><span class="line">            mMeasuredWidth = content.getMeasuredWidth();</span><br><span class="line">            mMeasuredHeight = content.getMeasuredHeight();</span><br><span class="line">            View parent = mPopupWindow.getContentView();</span><br><span class="line">			// TODO 设置不同的状态显示不同的图标</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        if (mPopupWindow.isShowing()) &#123;</span><br><span class="line">            mPopupWindow.dismiss();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            float scale = getResources().getDisplayMetrics().density;</span><br><span class="line">            int heightMoreBtnView = headViewViewColletionAndShareImg.getHeight();</span><br><span class="line">            mPopupWindow.showAsDropDown(view, (int)(-160*scale), (int)(-20*scale));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="微信右上角的弹窗实现"><a href="#微信右上角的弹窗实现" class="headerlink" title="微信右上角的弹窗实现"></a>微信右上角的弹窗实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 设置SelectPicPopupWindow弹出窗体的宽</span><br><span class="line">    popupWindow.setWidth(LayoutParams.WRAP_CONTENT);</span><br><span class="line">    // 设置SelectPicPopupWindow弹出窗体的高</span><br><span class="line">    popupWindow.setHeight(LayoutParams.WRAP_CONTENT);</span><br><span class="line">    // 设置SelectPicPopupWindow弹出窗体可点击</span><br><span class="line">    popupWindow.setFocusable(true);</span><br><span class="line">    popupWindow.setOutsideTouchable(true);</span><br><span class="line">    View view = LayoutInflater.from(this).inflate(R.layout.popupview_right_top_image, null);</span><br><span class="line">    // TODO 初始化布局</span><br><span class="line"></span><br><span class="line">    // TODO 具体的点击和设置数据</span><br><span class="line">    </span><br><span class="line">    popupWindow.setContentView(view);</span><br><span class="line">    popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));</span><br><span class="line">    popupWindow.setOutsideTouchable(false);</span><br><span class="line">    popupWindow.setFocusable(true);</span><br><span class="line">    int[] popWindowPos = PopupWindowUtils.calculatePopWindowPos(mToolbar, view);</span><br><span class="line">    int xOff = popWindowPos[0]-20 ; // 右边的偏移量</span><br><span class="line">    popWindowPos[0] -= xOff ;</span><br><span class="line">    popupWindow.showAtLocation(view, Gravity.TOP|Gravity.END, popWindowPos[0],popWindowPos[1]);</span><br></pre></td></tr></table></figure>
+<h4 id="使用-Toolbar-内容不-macth-parent"><a href="#使用-Toolbar-内容不-macth-parent" class="headerlink" title="使用 Toolbar 内容不 macth_parent"></a>使用 Toolbar 内容不 macth_parent</h4><pre><code>参考：http://blog.csdn.net/yypccc/article/details/53694570
+在ToolBar中添加RelativeLayout match_parent 时左边出现5dp的空白（查看源码278行可知）
+ 解决办法：
+      在 Toolbar 布局中添加如下内容
+ app:contentInsetStart=&quot;0dp&quot;
+</code></pre><h4 id="阴影的实现"><a href="#阴影的实现" class="headerlink" title="阴影的实现"></a>阴影的实现</h4><ul>
+<li>layer-list</li>
+<li>TextView 文本加阴影，有API</li>
+<li>android:translationZ</li>
+<li>android:elevation</li>
+<li>ViewCompat 是对 Elevation 的兼容</li>
+</ul>
+<h4 id="NestedScorllView-recyclerview-展示布局，recyclerview-抢占焦点解决"><a href="#NestedScorllView-recyclerview-展示布局，recyclerview-抢占焦点解决" class="headerlink" title="NestedScorllView + recyclerview 展示布局，recyclerview 抢占焦点解决"></a>NestedScorllView + recyclerview 展示布局，recyclerview 抢占焦点解决</h4><ul>
+<li><p>在整体页面布局的跟布局设置</p>
+<pre><code>android:focusableInTouchMode=&quot;true&quot;
+android:focusable=&quot;true&quot;
+android:descendantFocusability=&quot;beforeDescendants&quot;
+</code></pre></li>
+<li><p>或者是：</p>
+<p>设置recyclerView.setFocusable(false) 即可</p>
+</li>
+</ul>
+<h4 id="AppBarLayout-去掉-toolbar-下方的阴影"><a href="#AppBarLayout-去掉-toolbar-下方的阴影" class="headerlink" title="AppBarLayout 去掉 toolbar 下方的阴影"></a>AppBarLayout 去掉 toolbar 下方的阴影</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app:elevation=&quot;0dp&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="CountDownTimer-在-dialog-中使用要在-onTick-方法中判断activity是否为空"><a href="#CountDownTimer-在-dialog-中使用要在-onTick-方法中判断activity是否为空" class="headerlink" title="CountDownTimer 在 dialog 中使用要在 onTick 方法中判断activity是否为空"></a>CountDownTimer 在 dialog 中使用要在 onTick 方法中判断activity是否为空</h4><pre><code>不为空则开始倒计时
+</code></pre><h4 id="实现悬浮头"><a href="#实现悬浮头" class="headerlink" title="实现悬浮头"></a>实现悬浮头</h4><ul>
+<li>Recycler View - 继承 RecyclerView.ItemDecoration 实现</li>
+<li>PinnedListView</li>
+</ul>
+<h4 id="高斯模糊"><a href="#高斯模糊" class="headerlink" title="高斯模糊"></a>高斯模糊</h4><ul>
+<li>Glide 实现添加第三方库</li>
+<li>系统自带的 RenderScript</li>
+</ul>
+<h4 id="二阶贝塞尔曲线"><a href="#二阶贝塞尔曲线" class="headerlink" title="二阶贝塞尔曲线"></a>二阶贝塞尔曲线</h4><ul>
+<li>有计算公式，需要知道起始点，终点，还有中间受力的点</li>
+</ul>
+<h4 id="git-本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可"><a href="#git-本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可" class="headerlink" title="git 本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可"></a>git 本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可</h4><pre><code>(1) 到当前目录下 git config user.email
+(2) 邮箱不一致则 git config --global user.email &quot;youemail@xxx.xxx&quot;
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/16/使用git记录/" rel="next" title="git 命令记录">
+                <i class="fa fa-chevron-left"></i> git 命令记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/28/值得一看的GitHub源码/" rel="prev" title="GitHub上不错的库">
+                GitHub上不错的库 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2016/08/28/Android小知识~/"
+           data-title="Android笔记-小知识点" data-url="http://dongxi520.com/2016/08/28/Android小知识~/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Snackbar-与-Toast-小区别："><span class="nav-number">1.</span> <span class="nav-text">Snackbar 与 Toast 小区别：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Androidstudio下Module的导入步骤"><span class="nav-number">2.</span> <span class="nav-text">Androidstudio下Module的导入步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-Fragment-小心导包出错"><span class="nav-number">3.</span> <span class="nav-text">使用 Fragment 小心导包出错</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#截取字符串"><span class="nav-number">4.</span> <span class="nav-text">截取字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将毫秒转换为年月日的代码段"><span class="nav-number">5.</span> <span class="nav-text">将毫秒转换为年月日的代码段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#listview-刷新时图片闪烁"><span class="nav-number">6.</span> <span class="nav-text">listview 刷新时图片闪烁</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017年7月3号更新"><span class="nav-number"></span> <span class="nav-text">2017年7月3号更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TextView-设置不同的文本颜色"><span class="nav-number">1.</span> <span class="nav-text">TextView 设置不同的文本颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fragment再一次点击后刷新页面的方法"><span class="nav-number">2.</span> <span class="nav-text">fragment再一次点击后刷新页面的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动百度地图导航页面"><span class="nav-number">3.</span> <span class="nav-text">启动百度地图导航页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SimpleDraweeView第三方插件不支持wrap-content"><span class="nav-number">4.</span> <span class="nav-text">SimpleDraweeView第三方插件不支持wrap_content</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软键盘和搜索框冲突的解决办法"><span class="nav-number"></span> <span class="nav-text">软键盘和搜索框冲突的解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AndroidStudio新建module的问题"><span class="nav-number"></span> <span class="nav-text">AndroidStudio新建module的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017年12月27日更新"><span class="nav-number"></span> <span class="nav-text">2017年12月27日更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TextView-动态设置-drawableLeft-TextView-设置行间距"><span class="nav-number">1.</span> <span class="nav-text">TextView 动态设置 drawableLeft, TextView 设置行间距</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微信朋友圈的点赞弹出框"><span class="nav-number">2.</span> <span class="nav-text">微信朋友圈的点赞弹出框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微信右上角的弹窗实现"><span class="nav-number">3.</span> <span class="nav-text">微信右上角的弹窗实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-Toolbar-内容不-macth-parent"><span class="nav-number">4.</span> <span class="nav-text">使用 Toolbar 内容不 macth_parent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阴影的实现"><span class="nav-number">5.</span> <span class="nav-text">阴影的实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NestedScorllView-recyclerview-展示布局，recyclerview-抢占焦点解决"><span class="nav-number">6.</span> <span class="nav-text">NestedScorllView + recyclerview 展示布局，recyclerview 抢占焦点解决</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppBarLayout-去掉-toolbar-下方的阴影"><span class="nav-number">7.</span> <span class="nav-text">AppBarLayout 去掉 toolbar 下方的阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CountDownTimer-在-dialog-中使用要在-onTick-方法中判断activity是否为空"><span class="nav-number">8.</span> <span class="nav-text">CountDownTimer 在 dialog 中使用要在 onTick 方法中判断activity是否为空</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现悬浮头"><span class="nav-number">9.</span> <span class="nav-text">实现悬浮头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高斯模糊"><span class="nav-number">10.</span> <span class="nav-text">高斯模糊</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二阶贝塞尔曲线"><span class="nav-number">11.</span> <span class="nav-text">二阶贝塞尔曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可"><span class="nav-number">12.</span> <span class="nav-text">git 本地提交成功了，但是远端没看到，可能时本地的邮箱和远端的邮箱不一致，修改邮箱即可</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

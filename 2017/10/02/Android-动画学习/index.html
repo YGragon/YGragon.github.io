@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Android,Animation," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习来源：Android应用开发之所有动画使用详解，KEEGAN小钢，Android 开发艺术探索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 动画学习">
+<meta property="og:url" content="http://dongxi520.com/2017/10/02/Android-动画学习/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description" content="学习来源：Android应用开发之所有动画使用详解，KEEGAN小钢，Android 开发艺术探索">
+<meta property="og:image" content="http://image.nationalgeographic.com.cn/2015/0122/20150122063211273.jpg">
+<meta property="og:image" content="https://github.com/iwgang/ParallaxGuideDemo/raw/master/screenshot/g1.gif">
+<meta property="og:updated_time" content="2018-02-02T15:26:45.659Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android 动画学习">
+<meta name="twitter:description" content="学习来源：Android应用开发之所有动画使用详解，KEEGAN小钢，Android 开发艺术探索">
+<meta name="twitter:image" content="http://image.nationalgeographic.com.cn/2015/0122/20150122063211273.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2017/10/02/Android-动画学习/"/>
+
+
+
+
+
+  <title>Android 动画学习 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2017/10/02/Android-动画学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android 动画学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-02T09:36:22+08:00">
+                2017-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/02/Android-动画学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/02/Android-动画学习/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/10/02/Android-动画学习/" class="leancloud_visitors" data-flag-title="Android 动画学习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,811
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>学习来源：<a href="http://blog.csdn.net/yanbober/article/details/46481171" target="_blank" rel="external">Android应用开发之所有动画使用详解</a>，<a href="http://keeganlee.me/post/android/20151003" target="_blank" rel="external">KEEGAN小钢</a>，Android 开发艺术探索</p>
+</blockquote>
+<p><img src="http://image.nationalgeographic.com.cn/2015/0122/20150122063211273.jpg" alt="冲浪马卡哈"></p>
+<a id="more"></a>
+<h4 id="Android-中动画的介绍"><a href="#Android-中动画的介绍" class="headerlink" title="Android 中动画的介绍"></a>Android 中动画的介绍</h4><ul>
+<li>作用</li>
+</ul>
+<p>能够让静态的内容变得更加唯美，适当的动画能够给予用户更好的体验。</p>
+<ul>
+<li>使用情景</li>
+</ul>
+<p>引导页的渐变动画</p>
+<p>图片的点击效果，缩放效果</p>
+<p>…</p>
+<h4 id="Android-中动画的分类和使用"><a href="#Android-中动画的分类和使用" class="headerlink" title="Android 中动画的分类和使用"></a>Android 中动画的分类和使用</h4><h5 id="视图动画"><a href="#视图动画" class="headerlink" title="视图动画"></a>视图动画</h5><p><strong>View Animation：</strong> 视图动画在古老的<code>Android</code>版本系统中就已经提供了，只能被用来设置<code>View</code>的动画</p>
+<ul>
+<li><code>alpha</code>：<strong>渐变透明度动画</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;alpha&gt;</span><br><span class="line">      android:fromAlpha=&quot;float&quot; //动画开始时的透明度（0.0--1.0，0.0是全透明，1.0是不透明）</span><br><span class="line">      android:toAlpha=&quot;float&quot; //动画结束时的透明度</span><br><span class="line">  &lt;/alpha&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>alpha</code> 实现淡入的效果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;alpha xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:duration=&quot;1000&quot;</span><br><span class="line">    android:fromAlpha=&quot;0.0&quot;</span><br><span class="line">    android:toAlpha=&quot;1.0&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">将这动画效果添加到View上也只需要一行代码：</span><br><span class="line">view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>rotate</code>：<strong>画面转移旋转动画</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;rotate&gt;</span><br><span class="line">      android:fromDegrees=&quot;int&quot; //旋转开始角度，正数代表顺时针度数，负数代表逆时针度数</span><br><span class="line">      android:toDegrees=&quot;int&quot; //旋转结束角度</span><br><span class="line">      android:pivotX=&quot;float&quot; //缩放起点 X 坐标（数值，百分数，百分数p，例如 50表示以当前view左上角加 50px）</span><br><span class="line">      android:pivotY=&quot;float&quot; //缩放起点 Y 坐标（50% 表示以当前 View 的左上角加上当前 view 宽高的 50% 作为起始点）</span><br><span class="line">              （50%p 表示以当前 View 的左上角加上父控件宽高的 50% 作为起始点）</span><br><span class="line">  &lt;/rotate&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>rotate</code>：以下示例代码旋转角度从0到360，即旋转了一圈，旋转的中心点都设为了50%，即是View本身中点的位置。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;rotate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:duration=&quot;2000&quot;</span><br><span class="line">    android:fromDegrees=&quot;0&quot;</span><br><span class="line">    android:toDegrees=&quot;360&quot;</span><br><span class="line">    android:pivotX=&quot;50%&quot;</span><br><span class="line">    android:pivotY=&quot;50%&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">在 Java 代码中使用</span><br><span class="line">RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(this, R.anim.rotate_one);</span><br><span class="line">view.startAnimation(rotateAnimation);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>scale</code>：<strong>渐变尺寸伸缩动画</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;scale&gt;</span><br><span class="line">     android:fromXScale=&quot;float&quot; //初始 X 轴缩放比例，1.0表示无变化</span><br><span class="line">     android:toXScale=&quot;float&quot; //结束 X 轴缩放比例</span><br><span class="line">     android:fromYScale=&quot;float&quot; //初始 Y 轴缩放比例</span><br><span class="line">     android:toYScale=&quot;float&quot; //结束 Y 轴缩放比例</span><br><span class="line">     android:pivotX=&quot;float&quot; //缩放起点 X 轴坐标（参数含义同 rotate ）</span><br><span class="line">     android:pivotY=&quot;float&quot; //缩放结束 Y 轴坐标</span><br><span class="line">&lt;/scale&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>PS</strong>：<em>以上四个属性，0.0表示缩放到没有，1.0表示正常无缩放，小于1.0表示收缩，大于1.0表示放大</em></p>
+<ul>
+<li><strong>android:pivotX</strong> 缩放时的固定不变的X坐标，一般用百分比表示，0%表示左边缘，100%表示右边缘</li>
+<li><strong>android:pivotY</strong> 缩放时的固定不变的Y坐标，一般用百分比表示，0%表示顶部边缘，100%表示底部边缘</li>
+<li><code>scale</code> 实现时长为一秒钟的<code>view</code>从原有样子放大到<code>1.5</code>倍的效果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;scale xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:duration=&quot;1000&quot;</span><br><span class="line">    android:fromXScale=&quot;1.0&quot;</span><br><span class="line">    android:fromYScale=&quot;1.0&quot;</span><br><span class="line">    android:pivotX=&quot;0%&quot;</span><br><span class="line">    android:pivotY=&quot;100%&quot;</span><br><span class="line">    android:toXScale=&quot;1.5&quot;</span><br><span class="line">    android:toYScale=&quot;1.5&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">在 Java 代码中使用</span><br><span class="line">ScaleAnimation zoomOutAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(this, R.anim.zoom_out);</span><br><span class="line">view.startAnimation(zoomOutAnimation);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>translate</code>：<strong>画面转移位置移动动画效果</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;translate&gt;</span><br><span class="line">     android:fromXDelta=&quot;float&quot; //起始点 X 轴坐标（参数含义同 rotate ）</span><br><span class="line">     android:fromYDelta=&quot;float&quot; //起始点 Y 轴坐标</span><br><span class="line">     android:toXDelta=&quot;float&quot; //结束点 X 轴坐标</span><br><span class="line">     android:toYDelta=&quot;float&quot; //结束点 Y 轴坐标</span><br><span class="line">&lt;/translate&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>translate</code>使用例子，以下代码实现的是从左到右的移动效果，起始位置为相对于控件本身-100%的位置，即在控件左边，与控件本身宽度一致的位置；结束位置为相对于父控件100%的位置，即会移出父控件右边缘的位置。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;translate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:duration=&quot;2000&quot;</span><br><span class="line">    android:fromXDelta=&quot;-100%&quot;</span><br><span class="line">    android:fromYDelta=&quot;0&quot;</span><br><span class="line">    android:toXDelta=&quot;100%p&quot;</span><br><span class="line">    android:toYDelta=&quot;0&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">在 Java 代码中使用</span><br><span class="line">TranslateAnimation moveAnimation = (TranslateAnimation) AnimationUtils.loadAnimation(this, R.anim.move_left_to_right);</span><br><span class="line">view.startAnimation(moveAnimation);</span><br></pre></td></tr></table></figure>
+<h5 id="帧动画"><a href="#帧动画" class="headerlink" title="帧动画"></a>帧动画</h5><p><strong>Drawable Animation：</strong> 这种动画（也叫<code>Frame</code>动画、帧动画）其实可以划分到视图动画的类别，专门用来一个一个的显示<code>Drawable</code>的<code>resources</code>，就像放幻灯片一样。存放在 <code>res/drawable</code>目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;animation-list</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:oneshor=&quot;true&quot;  : true 表示只执行一次，false 表示循环执行</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;item&gt;</span><br><span class="line">      每一帧的动画资源</span><br><span class="line">      android:drawable=&quot;drawable name &quot; : 资源文件</span><br><span class="line">      android:duration=&quot;1000&quot;           : 一帧显示多长时间</span><br><span class="line">    &lt;/item&gt;</span><br><span class="line">  &lt;/animation-list&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>使用方式</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ImageView img = (ImageView)findViewById(R.id.img) ;</span><br><span class="line">img.setBackgroundResource(R.drawable.***) ;</span><br><span class="line"></span><br><span class="line">Animation imgAnimation = (AnimationDrawable)img.getBackground() ;</span><br><span class="line">imgAnimation.start() ;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>使用注意</strong></p>
+<p>  <code>AnimationDrawable</code> 的<code>start()</code> 方法不能在<code>activity</code>的 <code>onCreat()</code> 中调用， 因为<code>AnimationDrawable</code>还未完全附着到<code>window</code>上， 所以最好的调用时机时在<code>onWindowFocusChange()</code>方法中。<code>onWindowFocusChange()</code>方法在<code>Activity</code>生命周期中表示<code>view</code>的可视，<code>onStart, onResume, onCreate</code>都不是真正<code>view visible</code>的时间点，真正的<code>view visible</code>时间点是<code>onWindowFocusChanged()</code>函数被执行时。通过下面的执行流程可以清楚了解到<code>AnimationDrawable</code> 的使用时机。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 启动: onStart----&gt;onResume----&gt;onAttachedToWindow-----------&gt;onWindowVisibilityChanged--visibility=0----------&gt;onWindowFocusChanged(true)-------&gt;</span><br><span class="line"></span><br><span class="line">2. 锁屏:  onPause----&gt;onStop----&gt;onWindowFocusChanged(false)  -----------(lockscreen)</span><br><span class="line"></span><br><span class="line">3. 进入下一个页面 : onPause-----&gt;onWindowFocusChanged(false)------&gt;onWindowVisibilityChanged----visibility=8------------&gt;onStop(to another activity)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h5><p><strong>Property Animation：</strong> 属性动画只对<code>Android 3.0（API 11）</code>以上版本的<code>Android</code>系统才有效，对于低版本的可以使用开源动画库<a href="http://nineoldandroids.com/" target="_blank" rel="external">nineoldandroids</a>去实现兼容，它在低版本的实现也是通过<code>View</code>动画实现，只是使用方式像属性动画。属性动画可以设置给任何<code>Object</code>，包括那些还没有渲染到屏幕上的对象。并且属性动画是可扩展的，可以让你自定义任何类型和属性的动画。</p>
+<ul>
+<li>属性动画提供的属性有：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Duration : 动画的持续时间</span><br><span class="line">TimeInterpolation: 定义动画变化速率的接口，所有插值器都必须实现此接口，如线性、非线性插值器</span><br><span class="line">TypeEvaluator: 用于定义属性值计算方式的接口，有int,float,color 类型</span><br><span class="line">Animation sets: 动画集合，即可以对一个对象应用多个动画</span><br><span class="line">Frame refresh delay: 多少时间刷新一次，默认为10ms,最终的刷新时间还受系统进程调度和硬件影响</span><br><span class="line">Repeat Country and behavior: 重复次数与方式</span><br></pre></td></tr></table></figure>
+<ul>
+<li>属性动画的可以使用在xml中和Java代码中，下面是属性动画在xml中的使用姿势</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;set</span><br><span class="line">    android:ordering=&quot;together|sequentially&quot;  // 控制动画的启动方式，together（默认）表示同时执行，sequentially表示按照顺序先后执行</span><br><span class="line">    &gt;</span><br><span class="line">    ...</span><br><span class="line">      &lt;objectAnimator&gt;</span><br><span class="line">          android:propertyName=&quot;string&quot;       // 必须要设置的节点属性，代表执行动画的属性（通过改名字去引用）</span><br><span class="line">          android:duration=&quot;int&quot;              // 动画时常，默认是300 ms</span><br><span class="line">          android:valueFrom=&quot;folat|int|color&quot; // 动画的起始点</span><br><span class="line">          android:valueTo=&quot;folat|int|color&quot;   // 必须要设置的节点属性，表明动画结束的点</span><br><span class="line">          android:startOffset=&quot;int&quot;           // 动画延迟的时间，毫秒为单位</span><br><span class="line">          android:repeatCount=&quot;int&quot;           // 动画的重复次数，0表示不重复（默认），-1表示无线重复，1表示执行完动画后再重复一次，也就是动画执行两次</span><br><span class="line">          android:repeatMode=&quot;repeat|reverse&quot; //重复的模式</span><br><span class="line">          android:valueType=&quot;intType|floatType&quot; //关键参数，如果该value是一个颜色，那么不需要指定该值。</span><br><span class="line">      &lt;/objectAnimator&gt;</span><br><span class="line"></span><br><span class="line">      &lt;animation&gt;</span><br><span class="line">          android:duration=&quot;int&quot;</span><br><span class="line">          android:valueFrom=&quot;folat|int|color&quot;</span><br><span class="line">          android:valueTo=&quot;folat|int|color&quot;</span><br><span class="line">          android:startOffset=&quot;int&quot;</span><br><span class="line">          android:repeatCount=&quot;int&quot;</span><br><span class="line">          android:repeatMode=&quot;repeat|reverse&quot;</span><br><span class="line">          android:valueType=&quot;intType|floatType&quot;</span><br><span class="line">      &lt;/animation&gt;</span><br><span class="line">      ...</span><br><span class="line">  &lt;/set&gt;</span><br><span class="line"></span><br><span class="line">在 Java 代码中调用的方式：</span><br><span class="line">AnimatorSet set = AnimatorInflater.loadAnimation(context,R.animator,****);  // 获取动画资源</span><br><span class="line">set.setTarget(object) ; // 给目标对象设置动画</span><br><span class="line">set.start() ;       // 启动动画</span><br></pre></td></tr></table></figure>
+<ul>
+<li>大多数的情况使用 ObjectAnimator 就足够了，因为它是的目标对象动画值的处理过程变得足够简单，不用像ValueAnimator那样自己写动画更新的逻辑，但是使用 ObjectAnimator 也有一些限制，比如它需要目标对象的属性提供指定的处理方法（譬如：getXXX,setXXX方法）注意: ObjectAnimator 的动画原理是不停的调用<code>setXXX</code>方法更新属性值，所有使用 ObjectAnimator更新属性时的前提时 Object 必须声明有<code>getXXX</code>方法</li>
+<li>属性代码在Java中的使用姿势，习惯上使用Java代码去实现，容易理解一些。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3D 旋转动画实例：</span><br><span class="line">ObjectAnimator.ofFloat(view,&quot;rotationY&quot;,0.0f,360.0f).setDuration(1000).start() ;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ViewPropertyAnimator</li>
+</ul>
+<blockquote>
+<p><code>ViewPropertyAnimator</code> 提供了一种可以使多个属性同时做动画的简单方法，而且它在内部只使用一个 <code>Animator</code>。当它计算完这些属性的值之后，它直接把那些值赋给目标 <code>View</code> 并 <code>invalidate</code> 那个对象（<strong>自动执行动画，不用 start() </strong>），而它完成这些的方式<strong>比普通的 <code>ObjectAnimator</code> 更加高效</strong>。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用方式：View.animate() 后跟 translationX() 等方法，动画会自动执行 </span><br><span class="line">例如：</span><br><span class="line">	myView.animate().alpha(0);</span><br><span class="line">	myView.animate().x(50f).y(100f);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>AnimatorSet </li>
+</ul>
+<p>AnimatorSet 顾名思义就是动画集合，例如下面的代码实现了<code>view</code>对象从不透明到透明的动画后，接着在Y轴上移动了<code>viewWidth</code>的宽度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ObjectAnimator a1 = ObjectAnimator.ofFloat(view,&quot;alpha&quot;,1.0f,0f) ;  // 从不透明到透明</span><br><span class="line">ObjectAnimator a2 = ObjectAnimator.ofFloat(view,&quot;translationY&quot;,0.0f,viewWidth) ;  // 从 0 到view的宽度移动</span><br><span class="line">...</span><br><span class="line">AnimatorSet set = new AnimatorSet() ;</span><br><span class="line">set.setDuration(2000) ;</span><br><span class="line">set.setInterpolator(new LinearInterpolater()) ; // 设置线性匀速插值器</span><br><span class="line">set.play(a1).after(a2) ;</span><br><span class="line">...   // 其他组合方式</span><br><span class="line">set.start() ;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>set.play(a1).after(a2):</code>表示先执行动画 a1 后再执行动画 a2，也可以这么写<code>set.playSequentially(a1, a2);</code>效果是一样的。<code>set.play(a1).with(a2):</code> 表示a2和a1一块执行，<code>set.play(a1).before(a2);</code>表示先执行动画a2 然后再执行动画 a1，<code>set.playTogether(a1, a2)：</code>表示两个动画通知执行。</li>
+</ul>
+<ul>
+<li><code>setInterpolator:</code>其实就是速度设置器，大致有以下速度设置效果<ul>
+<li>AccelerateDecelerateInterpolator：先加速再减速，默认效果</li>
+<li>LinearInterpolator：一直匀速</li>
+<li>AccelerateInterpolator：一直加速</li>
+<li>DecelerateInterpolator：一直减速</li>
+<li>AnticipateInterpolator：先回拉一下再进行正常动画轨迹</li>
+<li>OvershootInterpolator：动画会超过目标值一些，然后再弹回来</li>
+<li>AnticipateOvershootInterpolator：开始前回拉，最后超过一些然后回弹</li>
+<li>BounceInterpolator：在目标值处弹跳一会后停止</li>
+<li>CycleInterpolator：这个也是一个正弦 / 余弦曲线，它和 AccelerateDecelerateInterpolator 的区别是，它可以自定义曲线的周期，所以动画可以不到终点就结束，也可以到达终点后回弹，回弹的次数由曲线的周期决定，曲线的周期由 CycleInterpolator() 构造方法的参数决定</li>
+<li>PathInterpolator：自定义动画完成度 / 时间完成度曲线，用这个 Interpolator 你可以定制出任何你想要的速度模型。定制的方式是使用一个 Path 对象来绘制出你要的动画完成度 / 时间完成度曲线</li>
+<li>FastOutLinearInInterpolator：加速运动，FastOutLinearInInterpolator 的曲线公式是用的贝塞尔曲线，而 AccelerateInterpolator 用的是指数曲线。具体来说，它俩最主要的区别是 FastOutLinearInInterpolator 的初始阶段加速度比  AccelerateInterpolator 要快一些。</li>
+</ul>
+</li>
+<li>给动画设置监听</li>
+</ul>
+<p><code>ViewPropertyAnimator</code> 和 <code>ObjectAnimator</code> 略微不一样： <code>ViewPropertyAnimator</code> 用的是 <code>setListener()</code> 和 <code>setUpdateListener()</code> 方法，可以设置一个监听器，要移除监听器时通过 <code>set[Update]Listener(null)</code> 填 null 值来移除；而 <code>ObjectAnimator</code> 则是用 <code>addListener()</code> 和 <code>addUpdateListener()</code> 来添加一个或多个监听器，移除监听器则是通过 <code>remove[Update]Listener()</code> 来指定移除对象。</p>
+<p>另外，由于 <code>ObjectAnimator</code> 支持使用 <code>pause()</code> 方法暂停，所以它还多了一个 <code>addPauseListener()</code> / <code>removePauseListener()</code> 的支持；而 <code>ViewPropertyAnimator</code> 则独有 <code>withStartAction()</code> 和 <code>withEndAction()</code> 方法，可以设置一次性的动画开始或结束的监听</p>
+<h4 id="硬件加速"><a href="#硬件加速" class="headerlink" title="硬件加速"></a>硬件加速</h4><blockquote>
+<p>对于 Android 来说，硬件加速有它专属的意思：在 Android 里，硬件加速专指把 View 中绘制的计算工作交给 GPU 来处理</p>
+</blockquote>
+<h5 id="四个层次级别的硬件加速"><a href="#四个层次级别的硬件加速" class="headerlink" title="四个层次级别的硬件加速"></a>四个层次级别的硬件加速</h5><p>1、整个应用 Application 层，设置为 true 则开启，false 则关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;application android:hardwareAccelerated=&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>2、Activity 层，设置为 true 则开启，false 则关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:hardwareAccelerated=&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>3、Window 层，只能打开(必须在 setContentView 之前调用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);</span><br></pre></td></tr></table></figure>
+<p>4、View 层，只能关闭。也可在 XML 使用<code>android:layerType=&quot;software&quot;</code> 来关闭硬件加速</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);</span><br></pre></td></tr></table></figure>
+<h5 id="获取是否支持硬件加速方法"><a href="#获取是否支持硬件加速方法" class="headerlink" title="获取是否支持硬件加速方法"></a>获取是否支持硬件加速方法</h5><p>有两种方式：</p>
+<ul>
+<li><p>使用 View 的 <code>isHardwareAccelerated()</code></p>
+</li>
+<li><ul>
+<li>如果返回 true 则说明它在绘制的时候使用了硬件加速。</li>
+</ul>
+</li>
+<li><p>使用 Canvas 的 isHardwareAccelerated()</p>
+</li>
+<li><ul>
+<li>如果 canvas 在绘制的时候启用了硬件加速，返回 true。</li>
+</ul>
+</li>
+</ul>
+<h5 id="硬件加速谨慎使用"><a href="#硬件加速谨慎使用" class="headerlink" title="硬件加速谨慎使用"></a>硬件加速谨慎使用</h5><ol>
+<li>它可以加速无 <code>invalidate()</code> 时的刷新效率，但对于需要调用 <code>invalidate()</code> 的刷新无法加速。</li>
+<li>使用硬件加速绘制所消耗的实际时间是比不使用硬件加速时要高的，所以要慎重使用</li>
+</ol>
+<h4 id="引导页动画例子"><a href="#引导页动画例子" class="headerlink" title="引导页动画例子"></a>引导页动画例子</h4><ul>
+<li>实现的效果如下，<strong>代码来自这位仁兄</strong><a href="https://github.com/iwgang" target="_blank" rel="external">iwgang</a></li>
+</ul>
+<p><img src="https://github.com/iwgang/ParallaxGuideDemo/raw/master/screenshot/g1.gif" alt="视差引导页"></p>
+<ul>
+<li>分析效果图</li>
+</ul>
+<p>三张图片，每张图片顶部有标题的描述。图片的边角是会露出。当用户左划或者右滑到一定的距离，之前或者之后的图片需要缩小和放大、文字需要淡入或者淡出。例如：第一次启动App显示第一张图篇和文字，当用户左划到第二章图片全部显示的这个过程，这个过程的动画是第一张图片往左缩小、文字往左淡出，第二张的图片逐渐放大、文字淡入直至全部显示。最后的那个立即体验按钮是通过判断是否是最后一张图片而去动态显示的。</p>
+<p>这里源码作者的实现是采用<code>VIewPager</code>去实现翻页效果。</p>
+<p><strong>第一个问题：图片的边角露出如何实现？</strong></p>
+<p>利用ViewPager的一个方法去实现，源码中是这么用的：<code>mViewPager.setPageMargin(-dip2px(135));</code>dip2px是作者封装的屏幕分辨率工具。</p>
+<p><strong>第二个问题：滑动视差效果如何实现？</strong></p>
+<p>也是利用ViewPager的一个方法是实现，<code>mViewPager.setPageTransformer(false, new ViewPager.PageTransformer() {}</code>这个方法是ViewPager提供的页面切换时的动画效果。</p>
+<p>在重写的<code>transformPage(View view, float position)</code>中去实现滑动的视差动画。通过判断当前的position从第一页到第二页position的变化是第一页的变化是[0，-1]，第二页的变化是[1,0]。如果是第一页则图片不缩放，文字标题和描述不缩放、透明度为不透明；如果是第二页则图片XY方向缩放为原来图片的0.85f倍，文字变为透明。以此类推。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> if (position &lt; -1) &#123;	//[-无穷，-1]的情况</span><br><span class="line">     mTitle.setAlpha(0);</span><br><span class="line">     mDesc.setAlpha(0);</span><br><span class="line">&#125; else if (position &lt;= 1) &#123;	//[-1，1]的情况</span><br><span class="line">     float scaleFactor = Math.max(0.85f, 1 - Math.abs(position));</span><br><span class="line">     float scaleTxtFactor = Math.max(0.0f, 1 - Math.abs(position));</span><br><span class="line"></span><br><span class="line">    mGuideImage.setScaleX(scaleFactor);</span><br><span class="line">    mGuideImage.setScaleY(scaleFactor);</span><br><span class="line"></span><br><span class="line">    mTitle.setScaleX(scaleTxtFactor);</span><br><span class="line">    mTitle.setScaleY(scaleTxtFactor);</span><br><span class="line">    mTitle.setAlpha(0.0f + (scaleTxtFactor - 0.0f) / (1 - 0.0f) * (1 - 0.0f));</span><br><span class="line"></span><br><span class="line">    mDesc.setAlpha(mTitle.getAlpha());</span><br><span class="line">    mDesc.setScaleX(scaleTxtFactor);</span><br><span class="line">    mDesc.setScaleY(scaleTxtFactor);</span><br><span class="line">&#125; else &#123;		// [1，正无穷]的情况</span><br><span class="line">    mTitle.setAlpha(0);</span><br><span class="line">    mDesc.setAlpha(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>源码实现<a href="https://github.com/iwgang/ParallaxGuideDemo" target="_blank" rel="external">视差引导页</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+            <a href="/tags/Animation/" rel="tag"><i class="fa fa-tag"></i> Animation</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/30/Android Shape笔记/" rel="next" title="Android Shape 笔记">
+                <i class="fa fa-chevron-left"></i> Android Shape 笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/21/Android自定义View常见API/" rel="prev" title="Android自定义View绘制基础">
+                Android自定义View绘制基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2017/10/02/Android-动画学习/"
+           data-title="Android 动画学习" data-url="http://dongxi520.com/2017/10/02/Android-动画学习/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Android-中动画的介绍"><span class="nav-number">1.</span> <span class="nav-text">Android 中动画的介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Android-中动画的分类和使用"><span class="nav-number">2.</span> <span class="nav-text">Android 中动画的分类和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#视图动画"><span class="nav-number">2.1.</span> <span class="nav-text">视图动画</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#帧动画"><span class="nav-number">2.2.</span> <span class="nav-text">帧动画</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#属性动画"><span class="nav-number">2.3.</span> <span class="nav-text">属性动画</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#硬件加速"><span class="nav-number">3.</span> <span class="nav-text">硬件加速</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#四个层次级别的硬件加速"><span class="nav-number">3.1.</span> <span class="nav-text">四个层次级别的硬件加速</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#获取是否支持硬件加速方法"><span class="nav-number">3.2.</span> <span class="nav-text">获取是否支持硬件加速方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#硬件加速谨慎使用"><span class="nav-number">3.3.</span> <span class="nav-text">硬件加速谨慎使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引导页动画例子"><span class="nav-number">4.</span> <span class="nav-text">引导页动画例子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

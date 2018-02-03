@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Android,Toolbar," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="听说菜鸟都是这么过来的，没事多写总结。希望能记录自己的实践过程，同时能帮助到又需要的朋友。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Toolbar 使用姿势">
+<meta property="og:url" content="http://dongxi520.com/2017/08/19/Toolbar-使用姿势/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description" content="听说菜鸟都是这么过来的，没事多写总结。希望能记录自己的实践过程，同时能帮助到又需要的朋友。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-a62846f0ac4abfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-a62846f0ac4abfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-a3830425ce5e8b29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-9ae061ebda26fcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-08-19T15:01:48.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Toolbar 使用姿势">
+<meta name="twitter:description" content="听说菜鸟都是这么过来的，没事多写总结。希望能记录自己的实践过程，同时能帮助到又需要的朋友。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1942372-a62846f0ac4abfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2017/08/19/Toolbar-使用姿势/"/>
+
+
+
+
+
+  <title>Toolbar 使用姿势 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2017/08/19/Toolbar-使用姿势/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Toolbar 使用姿势</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-19T22:43:40+08:00">
+                2017-08-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/19/Toolbar-使用姿势/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/19/Toolbar-使用姿势/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/08/19/Toolbar-使用姿势/" class="leancloud_visitors" data-flag-title="Toolbar 使用姿势">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,861
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/1942372-a62846f0ac4abfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>听说菜鸟都是这么过来的，没事多写总结。希望能记录自己的实践过程，同时能帮助到又需要的朋友。</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h4><blockquote>
+<p>直接使用ToolBar 布局，在ToolBar布局里添加子布局</p>
+</blockquote>
+<ul>
+<li><p>使用前的准备</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1. 添加依赖</span><br><span class="line">compile &apos;com.android.support:appcompat-v7:25.3.1&apos;  </span><br><span class="line"></span><br><span class="line">2. 隐藏原有的ActionBar，两步，有可能会出现 Theme.AppCompat 北京找不到，说明你的support库版本太低了，需要去SDK manager 去升级那个库。</span><br><span class="line"></span><br><span class="line">① 在 res/values/styles.xml中</span><br><span class="line">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line">        &lt;!-- Customize your theme here. --&gt;</span><br><span class="line">        &lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;</span><br><span class="line">        &lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;</span><br><span class="line">        &lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">② 在 /res/values-v21/styles.xml中</span><br><span class="line">&lt;resources&gt;</span><br><span class="line">    &lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line">        &lt;item name=&quot;android:navigationBarColor&quot;&gt;@android:color/white&lt;/item&gt;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/resources&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ToolBar布局直接使用</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;android.support.v7.widget.Toolbar</span><br><span class="line">        android:id=&quot;@+id/toolbar&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;?attr/actionBarSize&quot;</span><br><span class="line">        android:background=&quot;@color/colorPrimary&quot;</span><br><span class="line">        android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;</span><br><span class="line">        app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Light&quot;</span><br><span class="line">        /&gt;</span><br><span class="line"></span><br><span class="line">android:layout_height=&quot;?attr/actionBarSize&quot; 设置高度</span><br><span class="line">android:background=&quot;@color/colorPrimary&quot; 设置背景色</span><br><span class="line"> android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot; 设置顶部的淡色主题</span><br><span class="line">app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Light&quot; 设置弹出框的主题为淡色主题</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Java 代码中使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mToolbar = (Toolbar) findViewById(R.id.toolbar);</span><br><span class="line"></span><br><span class="line">        mToolbar.setTitle(&quot;DemoToolbar&quot;);</span><br><span class="line">        setSupportActionBar(mToolbar);</span><br><span class="line">        //设置字的颜色</span><br><span class="line">        mToolbar.setTitleTextColor(Color.WHITE);</span><br><span class="line">        //显示NavigationIcon</span><br><span class="line"></span><br><span class="line">        mToolbar.setOnMenuItemClickListener(this);</span><br><span class="line"></span><br><span class="line">        //设置返回的图标</span><br><span class="line">        mToolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.slide));</span><br><span class="line">        //设置监听</span><br><span class="line">        mToolbar.setNavigationOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View v) &#123;</span><br><span class="line">                finish();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>menu 创建和点击</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">① 在activity下重写 onCreateOptionsMenu 方法，获取到 menu 布局</span><br><span class="line">    @Override</span><br><span class="line">    public boolean onCreateOptionsMenu(Menu menu) &#123;</span><br><span class="line">        //写一个menu的资源文件.然后创建就行了.</span><br><span class="line">        getMenuInflater().inflate(R.menu.menu,menu);</span><br><span class="line">        return super.onCreateOptionsMenu(menu);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">在res目录先新建一个menu目录，创建一个menu文件</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">      xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&gt;</span><br><span class="line">    &lt;item android:id=&quot;@+id/action_edit&quot;</span><br><span class="line">          android:title=&quot;@string/action_edit&quot;</span><br><span class="line">          android:orderInCategory=&quot;80&quot;</span><br><span class="line">          android:icon=&quot;@mipmap/message&quot;</span><br><span class="line">          app:showAsAction=&quot;ifRoom&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;item android:id=&quot;@+id/action_share&quot;</span><br><span class="line">          android:title=&quot;@string/action_share&quot;</span><br><span class="line">          android:orderInCategory=&quot;90&quot;</span><br><span class="line">          android:icon=&quot;@mipmap/add&quot;</span><br><span class="line">          app:showAsAction=&quot;ifRoom&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;item android:id=&quot;@+id/action_settings&quot;</span><br><span class="line">          android:title=&quot;@string/action_settings&quot;</span><br><span class="line">          android:orderInCategory=&quot;10&quot;</span><br><span class="line">          app:showAsAction=&quot;never&quot;/&gt;</span><br><span class="line">&lt;/menu&gt;</span><br><span class="line"></span><br><span class="line">//1、always：使菜单项一直显示在ToolBar上。 </span><br><span class="line">//2、ifRoom：如果有足够的空间，这个值会使菜单项显示在ToolBar上。 </span><br><span class="line">//3、never：使菜单项永远都不出现在ToolBar上,在…的子项中显示。 </span><br><span class="line">//4、 xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; 记得导入</span><br><span class="line"></span><br><span class="line">② menu 点击事件</span><br><span class="line">1、implement Toolbar.OnMenuItemClickListener</span><br><span class="line">2、设置监听  mToolbar.setOnMenuItemClickListener(this);</span><br><span class="line">3、实现接口 onMenuItemClick</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean onMenuItemClick(MenuItem item) &#123;</span><br><span class="line">        switch (item.getItemId()) &#123;</span><br><span class="line">            case R.id.menu1:</span><br><span class="line">                Toast.makeText(this, &quot;menu1&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">                break;</span><br><span class="line">            case R.id.menu2:</span><br><span class="line">                Toast.makeText(this, &quot;menu2&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">                break;</span><br><span class="line">            case R.id.menu3:</span><br><span class="line">                Toast.makeText(this, &quot;menu3&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>听说没图都不敢出来发文</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-a62846f0ac4abfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="ToolBar的封装"><a href="#ToolBar的封装" class="headerlink" title="ToolBar的封装"></a>ToolBar的封装</h4><blockquote>
+<p>为什么要封装？<br>产品想要这种效果（等我拿起桌上的大刀，奈何他手里拿着手枪）。</p>
+</blockquote>
+<p>实现的效果是左边一个图标，右边一个图标，中间显示文字或者搜索框。</p>
+<ul>
+<li><p>写一个自定义的Toolbar，就叫 CustomToolbar 吧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line">public class CustomToolbar extends Toolbar &#123;</span><br><span class="line"></span><br><span class="line">    private LayoutInflater mInflater;</span><br><span class="line">    private View mView;</span><br><span class="line"></span><br><span class="line">    private TextView mLeftButtonText;</span><br><span class="line">    private TextView mTitleText;</span><br><span class="line">    private TextView mRightButtonText;</span><br><span class="line">    private EditText mSearchView;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public CustomToolbar(Context context) &#123;</span><br><span class="line">        this(context,null) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public CustomToolbar(Context context, @Nullable AttributeSet attrs) &#123;</span><br><span class="line">        this(context,attrs,0) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public CustomToolbar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) &#123;</span><br><span class="line">        super(context, attrs, defStyleAttr);</span><br><span class="line">        initView() ;</span><br><span class="line"></span><br><span class="line">        if (attrs != null)&#123;</span><br><span class="line">            final TintTypedArray tintTypedArray = TintTypedArray.obtainStyledAttributes(getContext(), attrs,</span><br><span class="line">                    R.styleable.CustomToolbar, defStyleAttr, 0);</span><br><span class="line"></span><br><span class="line">            CharSequence leftText = tintTypedArray.getText(R.styleable.CustomToolbar_leftButtonText);</span><br><span class="line">            if (leftText != null)&#123;</span><br><span class="line">                setLeftButtonText(leftText) ;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            final Drawable leftIcon = tintTypedArray.getDrawable(R.styleable.CustomToolbar_leftIcon);</span><br><span class="line">            if (leftIcon != null) &#123;</span><br><span class="line">                //setNavigationIcon(navIcon);</span><br><span class="line">                setLeftIcon(leftIcon);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            final Drawable rightIcon = tintTypedArray.getDrawable(R.styleable.CustomToolbar_rightButtonIcon);</span><br><span class="line">            if (rightIcon != null) &#123;</span><br><span class="line">                //setNavigationIcon(navIcon);</span><br><span class="line">                setRightButtonIcon(rightIcon);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            boolean isShowSearchView = tintTypedArray.getBoolean(R.styleable.CustomToolbar_isShowSearchView,false);</span><br><span class="line"></span><br><span class="line">            if(isShowSearchView)&#123;</span><br><span class="line"></span><br><span class="line">                showSearchView();</span><br><span class="line">                hideTitleView();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            CharSequence rightButtonText = tintTypedArray.getText(R.styleable.CustomToolbar_rightButtonText);</span><br><span class="line">            if(rightButtonText !=null)&#123;</span><br><span class="line">                setRightButtonText(rightButtonText);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            tintTypedArray.recycle();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setLeftIcon(Drawable leftIcon) &#123;</span><br><span class="line">        // 默认显示返回箭头，文字先不需要</span><br><span class="line">        mLeftButtonText.setVisibility(VISIBLE);</span><br><span class="line">        mLeftButtonText.setCompoundDrawablesWithIntrinsicBounds(leftIcon, null, null, null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setLeftButtonText(CharSequence leftButtonText) &#123;</span><br><span class="line">        mLeftButtonText.setVisibility(VISIBLE);</span><br><span class="line">        mLeftButtonText.setText(leftButtonText);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public  void setRightTextOnClickListener(OnClickListener li)&#123;</span><br><span class="line"></span><br><span class="line">        mRightButtonText.setOnClickListener(li);</span><br><span class="line">    &#125;</span><br><span class="line">    public  void setLeftTextOnClickListener(OnClickListener li)&#123;</span><br><span class="line"></span><br><span class="line">        mLeftButtonText.setOnClickListener(li);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setRightButtonText(CharSequence text)&#123;</span><br><span class="line">        mRightButtonText.setVisibility(VISIBLE);</span><br><span class="line">        mRightButtonText.setText(text);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setRightButtonText(int id)&#123;</span><br><span class="line">        setRightButtonText(getResources().getString(id));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public TextView getRightButtonText()&#123;</span><br><span class="line"></span><br><span class="line">        return this.mRightButtonText;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public TextView getLeftButton()&#123;</span><br><span class="line"></span><br><span class="line">        return this.mLeftButtonText;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setTitle(int resId) &#123;</span><br><span class="line"></span><br><span class="line">        setTitle(getContext().getText(resId));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setTitle(CharSequence title) &#123;</span><br><span class="line"></span><br><span class="line">        initView();</span><br><span class="line">        if(mTitleText !=null) &#123;</span><br><span class="line">            showTitleView();</span><br><span class="line">            mTitleText.setText(title);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void showTitleView()&#123;</span><br><span class="line">        if(mTitleText !=null)</span><br><span class="line">            mTitleText.setVisibility(VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void hideTitleView() &#123;</span><br><span class="line">        if (mTitleText != null)</span><br><span class="line">            mTitleText.setVisibility(GONE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void showSearchView() &#123;</span><br><span class="line">        if(mSearchView !=null)</span><br><span class="line">            mSearchView.setVisibility(VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void hideSearchView()&#123;</span><br><span class="line">        if(mSearchView !=null)</span><br><span class="line">            mSearchView.setVisibility(GONE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setRightButtonIcon(Drawable rightIcon) &#123;</span><br><span class="line">        if(mRightButtonText !=null)&#123;</span><br><span class="line"></span><br><span class="line">            mRightButtonText.setVisibility(VISIBLE);</span><br><span class="line">            mRightButtonText.setCompoundDrawablesWithIntrinsicBounds(null, null, rightIcon, null);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void  setRightButtonIcon(int icon)&#123;</span><br><span class="line"></span><br><span class="line">        setRightButtonIcon(getResources().getDrawable(icon));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void initView() &#123;</span><br><span class="line">        if(mView == null) &#123;</span><br><span class="line"></span><br><span class="line">            mInflater = LayoutInflater.from(getContext());</span><br><span class="line"></span><br><span class="line">            mView = mInflater.inflate(R.layout.custom_toolbar, null);</span><br><span class="line"></span><br><span class="line">            mSearchView = (EditText) mView.findViewById(R.id.toolbar_searchview);</span><br><span class="line">            mLeftButtonText = (TextView) mView.findViewById(R.id.lt_main_title_left);</span><br><span class="line">            mTitleText = (TextView) mView.findViewById(R.id.lt_main_title);</span><br><span class="line">            mRightButtonText = (TextView) mView.findViewById(R.id.lt_main_title_right);</span><br><span class="line"></span><br><span class="line">            LayoutParams lp = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, Gravity.CENTER_HORIZONTAL);</span><br><span class="line"></span><br><span class="line">            addView(mView, lp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">代码很简单，就是自定义一个继承自 Toolbar 的自定义View</span><br><span class="line">创建一个布局文件，然后读取布局文件中的内容</span><br><span class="line">设置对应的方法，用于在Java代码使用中添加内容和隐藏内容</span><br><span class="line">布局中利用 TextView 去显示图片，利用到了  mRightButtonText.setCompoundDrawablesWithIntrinsicBounds(null, null, rightIcon, null); 这是对应的TextView中设置的drawableRight，如果不想显示图片，则参数全部设置为null即可。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>布局文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:orientation=&quot;vertical&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    android:minHeight=&quot;?attr/actionBarSize&quot;</span><br><span class="line">    &gt;</span><br><span class="line">        &lt;EditText</span><br><span class="line">            android:id=&quot;@+id/toolbar_searchview&quot;</span><br><span class="line">            android:layout_width=&quot;match_parent&quot;</span><br><span class="line">            android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_gravity=&quot;center&quot;</span><br><span class="line">            android:layout_centerVertical=&quot;true&quot;</span><br><span class="line">            android:gravity=&quot;center&quot;</span><br><span class="line">            android:drawableLeft=&quot;@mipmap/icon_search&quot;</span><br><span class="line">            style=&quot;@style/search_view&quot;</span><br><span class="line">            android:hint=&quot;请输入搜索内容&quot;</span><br><span class="line">            android:visibility=&quot;gone&quot;</span><br><span class="line">            /&gt;</span><br><span class="line">        &lt;TextView</span><br><span class="line">            android:id=&quot;@+id/lt_main_title_left&quot;</span><br><span class="line">            android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">            android:singleLine=&quot;true&quot;</span><br><span class="line">            android:layout_centerInParent=&quot;true&quot;</span><br><span class="line">            android:layout_alignParentLeft=&quot;true&quot;</span><br><span class="line">            android:layout_marginLeft=&quot;20dp&quot;</span><br><span class="line">            android:gravity=&quot;center_vertical&quot;</span><br><span class="line">            android:textColor=&quot;@color/white&quot;</span><br><span class="line">            android:textSize=&quot;16dp&quot;</span><br><span class="line">            /&gt;</span><br><span class="line">        &lt;TextView</span><br><span class="line">            android:id=&quot;@+id/lt_main_title&quot;</span><br><span class="line">            android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">            android:gravity=&quot;center&quot;</span><br><span class="line">            android:layout_centerInParent=&quot;true&quot;</span><br><span class="line">            android:singleLine=&quot;true&quot;</span><br><span class="line">            android:ellipsize=&quot;end&quot;</span><br><span class="line">            android:textColor=&quot;@android:color/white&quot;</span><br><span class="line">            android:textSize=&quot;20dp&quot;</span><br><span class="line">             /&gt;</span><br><span class="line">        &lt;TextView</span><br><span class="line">            android:id=&quot;@+id/lt_main_title_right&quot;</span><br><span class="line">            android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_centerInParent=&quot;true&quot;</span><br><span class="line">            android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">            android:layout_marginRight=&quot;20dp&quot;</span><br><span class="line">            android:textSize=&quot;16dp&quot;</span><br><span class="line">            /&gt;</span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示左边文字，右边图片，中间居中的文字</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-a3830425ce5e8b29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">CustomToolbar customToolbar = (CustomToolbar) findViewById(R.id.custom_toolbar);</span><br><span class="line">       customToolbar.setLeftButtonText(&quot;返回&quot;);</span><br><span class="line">       customToolbar.setTitle(&quot;我是居中标题&quot;);</span><br><span class="line">       customToolbar.setRightButtonIcon(R.drawable.add);</span><br><span class="line">       customToolbar.setRightTextOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">           @Override</span><br><span class="line">           public void onClick(View v) &#123;</span><br><span class="line">               startActivity(new Intent(RxJavaTestActivity.this, MActivity.class));</span><br><span class="line">               Toast.makeText(RxJavaTestActivity.this, &quot;hello&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">       customToolbar.setLeftTextOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">           @Override</span><br><span class="line">           public void onClick(View v) &#123;</span><br><span class="line">               finish();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>显示搜索框</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-9ae061ebda26fcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">直接在布局文件中设置</span><br><span class="line">&lt;com.xxxx.demo.CustomToolbar</span><br><span class="line">        android:id=&quot;@+id/m_custom_toolbar&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;?attr/actionBarSize&quot;</span><br><span class="line">        android:background=&quot;@color/colorAccent&quot;</span><br><span class="line">        app:isShowSearchView=&quot;true&quot;</span><br><span class="line">        &gt;</span><br><span class="line">    &lt;/com.xxxx.demo.CustomToolbar&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+            <a href="/tags/Toolbar/" rel="tag"><i class="fa fa-tag"></i> Toolbar</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/03/知乎开源的图片选择器Matisse在6-0以上手机使用相机功能/" rel="next" title="知乎开源的图片选择器 Matisse 在 6.0 以上手机使用相机功能">
+                <i class="fa fa-chevron-left"></i> 知乎开源的图片选择器 Matisse 在 6.0 以上手机使用相机功能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/25/Android ConstraintLayout 学习/" rel="prev" title="Android ConstraintLayout 学习">
+                Android ConstraintLayout 学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2017/08/19/Toolbar-使用姿势/"
+           data-title="Toolbar 使用姿势" data-url="http://dongxi520.com/2017/08/19/Toolbar-使用姿势/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单使用"><span class="nav-number">1.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ToolBar的封装"><span class="nav-number">2.</span> <span class="nav-text">ToolBar的封装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

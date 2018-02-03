@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaWeb基础笔记," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaWeb笔记-2">
+<meta property="og:url" content="http://dongxi520.com/2016/07/07/JavaWeb笔记-2/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description">
+<meta property="og:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
+<meta property="og:updated_time" content="2016-07-09T14:10:51.884Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaWeb笔记-2">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://dongxi520.com/images/postImage/JavaWeb.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2016/07/07/JavaWeb笔记-2/"/>
+
+
+
+
+
+  <title>JavaWeb笔记-2 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2016/07/07/JavaWeb笔记-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaWeb笔记-2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-07T19:05:10+08:00">
+                2016-07-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/07/JavaWeb笔记-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/07/JavaWeb笔记-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/07/JavaWeb笔记-2/" class="leancloud_visitors" data-flag-title="JavaWeb笔记-2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,100
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/postImage/JavaWeb.png" alt="JavaWeb基础笔记"><br><a id="more"></a></p>
+<h2 id="JSP内置对象"><a href="#JSP内置对象" class="headerlink" title="JSP内置对象"></a>JSP内置对象</h2><h3 id="out对象"><a href="#out对象" class="headerlink" title="out对象"></a>out对象</h3><ul>
+<li><p>说明<br>out对象主要是向浏览器输出数据，也可以通过out对象对缓冲区操作</p>
+</li>
+<li><p>常用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public abstract void print(),显示各种类型的数据，该方法需要一个参数。</span><br><span class="line">public abstract void println(),分行显示各种类型的数据</span><br><span class="line">public abstract void close(),关闭输出流</span><br><span class="line">public abstract void clear(),清空缓冲区的内容,不将数据发送至客户端</span><br><span class="line">public abstract void clearBuffer(),清空缓冲区的内容,并将缓冲区中的数据发送至客户端</span><br><span class="line">public int getBufferSize(),获取缓冲区的大小</span><br><span class="line">public int getRemaining(),返回缓冲区剩余空间的大小</span><br><span class="line">public abstract void flush(),输出缓冲区的数据</span><br><span class="line">public boolean isAutoFlush(),获取AutoFlush布尔类型的值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="request对象"><a href="#request对象" class="headerlink" title="request对象"></a>request对象</h3><ul>
+<li><p>说明<br>request对象是从客户端向服务器端发出请求，包括用户提交的信息以及客户端的一些信息</p>
+</li>
+<li><p>常用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String getParameter(String name),获取客户端的参数值，并以字符串形式返回指定参数值，如果参数不存在则返回空值</span><br><span class="line">String[] getParameterValues(String name),获取单个参数的所有值，主要用于获取复选框的值</span><br><span class="line">void setCharacterEncoding(String encoding),设置字符串编码格式，用来解决中文乱码问题</span><br><span class="line"></span><br><span class="line">String getHeader(String name),获取name的头</span><br><span class="line">long getDateHeader(String name),获取日期类型的name标头</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="response对象"><a href="#response对象" class="headerlink" title="response对象"></a>response对象</h3><ul>
+<li><p>说明<br>response对象与request对象相对应，用于服务器端封装JSP处理请求后产生的结果，并将其结果响应给客户端</p>
+</li>
+<li><p>主要方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void addDateHeader(String name,long date),新增long类型，名称为name的标头</span><br><span class="line">void addHeader(String name,String value),新增String类型，名称为name的标头</span><br><span class="line">void setIntHeader(String name,String value),常用于设置页面的自动刷新时间间隔</span><br><span class="line">void setHeader(String name,String value),常用于设置页面的自动刷新时间间隔与设置浏览器有无缓冲</span><br><span class="line">void addCookie(Cookie cookie),在响应中增加一个指定的cookie。可通过多次调用该方法来定义多个cookie</span><br><span class="line">String encodeURL(String url),当需要在会话中存数数据而浏览器不支持cookie时，使用该方法会将回话ID附加到URL后</span><br><span class="line"></span><br><span class="line">void sendRedirect(String url),将页面重定向到指定的URL地址上</span><br><span class="line">void sendRedirectURL(String url),对指定的页面地址进行编码</span><br><span class="line"></span><br><span class="line">void setContentType(String contentType),动态指定数据内容的类型及字符编码方式</span><br><span class="line">void setContentTypeLength(int contentLength),设置数据内容的长度</span><br><span class="line"></span><br><span class="line">void sendError(int sc),传送状态码</span><br><span class="line">void setStatus(int sc),设置状态码，408/409表示网站忙，200表示响应成功，404找不到页面，500内部服务器错误</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意<br>使用response对象的sendRedict(url)方法实现浏览器重定向功能与行为元素<code>&lt;jsp:forward&gt;</code>直接在服务端重定向不同，该方法需要先返回浏览器，然后由浏览器发送重定向的URL请求</p>
+</li>
+</ul>
+<h3 id="session对象"><a href="#session对象" class="headerlink" title="session对象"></a>session对象</h3><ul>
+<li>说明<br>session 用于在回话范围内，记录每个客户端的访问状态，在会话中存储的信息，在浏览器发出后续请求时可以获取这些回话的有效数据</li>
+</ul>
+<p>session对象可以保存用户的登录信息，实现购物车功能等。</p>
+<ul>
+<li><p>session工作原理</p>
+<ul>
+<li>客户端首次访问服务器的一个页面时，服务器就会为该客户分配一个session对象<br>并为session对象指定唯一ID，将该ID发送到客户端写入到Cookie中，让客户端与服务器端的session建议一一对应关系</li>
+<li>当客户继续访问服务器上的其他资源时，服务器不再为该客户分配新的session对象，直到浏览器关闭、链接超时等</li>
+<li>当用户重打开浏览器访问服务器网站时，服务器会重新为客户分一个session对象，并重新分配sessionID</li>
+</ul>
+</li>
+<li><p>常用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void setAttibute(String name,Object value),指定名字属性的值，并将它添加到session会话范围内</span><br><span class="line">public Object getAttribute(String value),在会话范围内获取指定名字的属性的值</span><br><span class="line">public void removeAttribute(String name),删除指定名字的session属性</span><br><span class="line">public void invalidate(),使session会话失效</span><br><span class="line">public String getId(),获取当前会话的ID</span><br><span class="line">public void setMaxInactiveInterval(int interval),设置会话的最大持续时间，单位是秒，负数表示会话在当前浏览器永远不会失效，0表示立即删除该Cookie</span><br><span class="line">public void getMaxInactiveInterval(int interval),获取会话的最大持续时间</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Cookie对象"><a href="#Cookie对象" class="headerlink" title="Cookie对象"></a>Cookie对象</h3><ul>
+<li><p>说明<br>Cookie对象通常用于在浏览器端保存会话过程中的一些参数，如用户名和ID等。<strong>Cookie对象不属于JSP内置对象</strong></p>
+</li>
+<li><p>作用</p>
+<ul>
+<li>可以让站点跟踪特定访问者访问的次数，最后访问的时间以及访问者进入站点的路径</li>
+<li>帮助站点统计用户个人资料</li>
+<li>在同一站点内可使用户实现自动登录功能</li>
+</ul>
+</li>
+<li><p>写入Cookie的主要步骤</p>
+<ul>
+<li>创建Cookie对象 <code>Cookie cookie = new Cookie();</code></li>
+<li>设定Cookie的属性 <code>cookie.setMacAge(30);</code></li>
+<li>调用response.addCookie(Cookie cookie) 方法将Cookie写入到客户端 <code>response.addCookie(cookie)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="session对象和Cookie对象的关系"><a href="#session对象和Cookie对象的关系" class="headerlink" title="session对象和Cookie对象的关系"></a>session对象和Cookie对象的关系</h3><p>session对象能和客户建立联系依赖于客户端的浏览器是否支持Cookie,如果不支持，那么客户在不同页面之间的session可能是互不相关的</p>
+<ul>
+<li><p>二者的不同之处</p>
+<ul>
+<li>存放地点：Cookie存放在客户端的硬盘中，属于离线存放；而session存放在服务器的内存中</li>
+<li>存货时间：Cookie可以长期存放在客户端，具体的存活时间由setMaxAge()方法做指定的参数决定；而session岁用户访问服务器而产生，服务器超时或下线而消失</li>
+<li>安全性：Cookie存放在客户端，安全性较差；session存放在服务器端，安全性较高。</li>
+</ul>
+</li>
+<li><p>二者的联系</p>
+<ul>
+<li>不论是Cookie还是session内置对象，都需要浏览器支持Coookie并且没有禁用Cookie</li>
+</ul>
+</li>
+</ul>
+<h3 id="application对象"><a href="#application对象" class="headerlink" title="application对象"></a>application对象</h3><ul>
+<li><p>说明<br>负责提供某个应用在服务器运行时的一些全局信息，它在服务器启动时创建，直到服务器关闭时消失</p>
+</li>
+<li><p>工作原理</p>
+<ul>
+<li>application对象和session对象不同，application对象实在服务器启动后产生的，当用户浏览所访问的王长的各个页面，这个application都是同一个，直到浏览器关闭，这个application对象才被取消。所有的客户的application对象都是同一个，即左右对象共享这个内置的application，而session对象是因不同的客户对象也不同。</li>
+</ul>
+</li>
+<li>常用方法(作用和session的相似)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void setAttibute(String name,Object value)</span><br><span class="line">public Object getAttribute(String value)</span><br><span class="line">public void removeAttribute(String name)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="pageContext对象"><a href="#pageContext对象" class="headerlink" title="pageContext对象"></a>pageContext对象</h3><ul>
+<li>说明<br>JSP利用上下文对象pageContext可以获取页面的所有相关属性</li>
+</ul>
+<h3 id="config对象"><a href="#config对象" class="headerlink" title="config对象"></a>config对象</h3><ul>
+<li>说明<br>主要用于获取服务器的配置信息。</li>
+</ul>
+<h3 id="page对象"><a href="#page对象" class="headerlink" title="page对象"></a>page对象</h3><p>对应servlet类的实现对象，相当于this，实际上指的就是JSP本身。由于page对象占用内存很大，所以不建议使用page对象</p>
+<h3 id="exception对象"><a href="#exception对象" class="headerlink" title="exception对象"></a>exception对象</h3><p>JSP文件运行所产生的错误和异常，只有在包含&lt;%@ page isErrorPage=”true”%&gt;的页面才可以使用。</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="JDBC驱动程序的4种类型如下："><a href="#JDBC驱动程序的4种类型如下：" class="headerlink" title="JDBC驱动程序的4种类型如下："></a>JDBC驱动程序的4种类型如下：</h3><ul>
+<li>JDBC-ODBC桥，同通过ODBC数据源与数据库进行连接<br>不过Sun强烈建议JDBC-ODBC桥接器最好用来测试，不建议在Web应用程序中使用</li>
+<li>通过网络库进行连接的纯Java驱动程序<br>此种类型少了ODBC这一层，应用程序直接与网络库连接，减少了中间驱动程序层。</li>
+<li>通过中间件服务器与数据库建立链接的驱动程序<br>这种驱动程序不用安装网络库，比且驱动程序安装在中间件服务器上，而不是客户机上。</li>
+<li>直接与数据库连接的纯Java JDBC驱动程序<br>完全使用Java实现，不需要其他的驱动程序，也不需要安装其他的网络库</li>
+</ul>
+<h3 id="JDBC访问数据库的基本步骤"><a href="#JDBC访问数据库的基本步骤" class="headerlink" title="JDBC访问数据库的基本步骤"></a>JDBC访问数据库的基本步骤</h3><ul>
+<li>装载驱动程序<br>使用MySQL的驱动程序：<code>Class.forName(&quot;com.mysql.jdbc.Dirver&quot;);</code></li>
+<li>定义所要连接的数据库的地址<br><code>Strng MySQLURL = &quot;jdbc:mysql://host(服务器IP):port(端口号)/dbName(数据库名)&quot;;</code></li>
+<li>与数据库建立连接<br><code>Connection conn = DirverManager.getConnection(url,LoginName,PassWord);</code></li>
+<li><p>例如：连接MySQL的book数据库，用户名为root，密码为root</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.myslq.jdbc.Dirver&quot;);</span><br><span class="line">String MySQLURL = &quot;jdbc:myslq://localhost:3306/book&quot;;</span><br><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立语句对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明并执行SQL语句</p>
+<ul>
+<li><p>查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;SELECT * FORM book&quot;;</span><br><span class="line">ResultSet rs = stmt.executeQuery(sql);//将结果存储在ResultSet对象的结果集中。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DirverManager.getConnection(MySQLURL,&quot;root&quot;,&quot;root&quot;);</span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line">String sql = &quot;DELETE FORM book WHERE bookid=1234&quot;;</span><br><span class="line">int i = stmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>对结果集进行处理<br>ResultSet对象称为结果集，是符合条件的所有行的集合<br>主要方法如下：</p>
+<ul>
+<li>boolean next()<br>用于将结果集定位到下一行，ResultSet最初是定位在第0行上，此时应该调用next()将其定位到第一行，然后再输出。    </li>
+<li>getXxx()<br>当ResultSet定位到某一行时，可以用getXxx()方法获得这一行单个字段的值</li>
+<li>显示结果集中所有记录的前两列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while(rs.next)&#123;</span><br><span class="line">    name = rs.getString(1);</span><br><span class="line">    score = rs.getFloat(2);</span><br><span class="line">    System.out.println(name + &quot;,&quot; + score);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>关闭对象<br>关闭对象使用<code>close()</code>方法,<strong>关闭对象前需要判断对象是否为空</strong></p>
+</li>
+</ul>
+<h2 id="JavaBean组件"><a href="#JavaBean组件" class="headerlink" title="JavaBean组件"></a>JavaBean组件</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li>JavaBean的特点<ul>
+<li>可以实现代码的重复利用</li>
+<li>易编写，易维护，易使用</li>
+<li>可以在任何安装了Java运行环境的平台上使用，而不用重新编译</li>
+</ul>
+</li>
+<li>使用JavaBean的好处<ul>
+<li>可以是JSP页面变得清晰</li>
+<li>节省软件开发时间</li>
+<li>减低系统维护难度</li>
+<li>为JSP应用带来更多的可伸缩性，使系统更加健壮和灵活</li>
+</ul>
+</li>
+<li>在实际中，一个JavaBean类的编码约定包括以下内容<ul>
+<li>类实现了java.io.Serializable接口</li>
+<li>必须放在某package(包)中</li>
+<li>如果类中有构造方法，那么这个构造方法也是公有的，并且是无参的</li>
+<li>属性：xxx，所有属性都是私有的</li>
+<li>getXxx():用来获取属性xxx，并且该方法是公有的</li>
+<li>setXxx(),用来设置属性xxx,并且该方法也是公有的</li>
+<li>对于boolean类型的成员变量，允许使用“is”代替上面的“get”和“set”</li>
+<li>类中的普通方法不适用于上面的命名规则，当时方法必须是公有的</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用JavaBean"><a href="#使用JavaBean" class="headerlink" title="使用JavaBean"></a>使用JavaBean</h3><ul>
+<li><p>JSP 代码段调用 JavaBean</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language = &quot;java&quot; contentType = &quot;text/html;charset = utf-8&quot;%&gt;</span><br><span class="line">&lt;%@ page import=&quot;bean.Person&quot; %&gt;</span><br><span class="line">&lt;&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;JSP代码段使用JavaBean&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;% Person bean = new Person(); %&gt;</span><br><span class="line">初始值为：&lt;br&gt;</span><br><span class="line">姓名：&lt;% = bean.getName();%&gt;&lt;br&gt;</span><br><span class="line">年龄：&lt;% = bean.getAge();%&gt;&lt;br&gt;</span><br><span class="line">性别：&lt;% = bean.getSex();%&gt;&lt;br&gt;</span><br><span class="line">职业：&lt;% = bean.getCareer();%&gt;&lt;br&gt;</span><br><span class="line">&lt;% </span><br><span class="line">bean.setName(&quot;小明&quot;);</span><br><span class="line">bean.setAge(18);</span><br><span class="line">bean.setSex(&quot;男&quot;);</span><br><span class="line">bean.setCareer(&quot;学生&quot;);</span><br><span class="line">%&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">更改后的值为：&lt;br&gt;</span><br><span class="line">姓名：&lt;% = bean.getName();%&gt;&lt;br&gt;</span><br><span class="line">年龄：&lt;% = bean.getAge();%&gt;&lt;br&gt;</span><br><span class="line">性别：&lt;% = bean.getSex();%&gt;&lt;br&gt;</span><br><span class="line">职业：&lt;% = bean.getCareer();%&gt;&lt;br&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>&lt;jsp:useBean&gt;</code>标记</p>
+<ul>
+<li><p>用法一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;bean&quot;,</span><br><span class="line">             class=&quot;package.class&quot;</span><br><span class="line">             [scope=&quot;page|request|session|application&quot;] /&gt;</span><br><span class="line">id：给bean起名</span><br><span class="line">class：创建bean的类名，特别注意类名的大小写要一致</span><br><span class="line">scope：bean的有效范围</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用法二</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;bean&quot;,</span><br><span class="line">             class=&quot;package.class&quot;</span><br><span class="line">             [scope=&quot;page|request|session|application&quot;] &gt;</span><br><span class="line">本体内容</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br><span class="line">本体内容：实际上可以看作JavaBean中需要初始化的代码</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;jsp:setProperty&gt;</code>标记<br><code>&lt;jsp:setProperty&gt;</code>元素使用JavaBean实例给定的setter方法，在实例bean中设置一个或多个属性值。<code>&lt;jsp:setProperty&gt;</code>中的name值应当和<code>&lt;jsp:userBean&gt;</code>中的id值相同<code>&lt;jsp:setProperty&gt;</code> 标记用于设置JavaBean的属性值。其用法如下</p>
+<ul>
+<li><p>第一种用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:setProperty name = &quot;beanName&quot;</span><br><span class="line">property = &quot;propertyName&quot;</span><br><span class="line">value = &quot;propertyValue&quot; /&gt;</span><br><span class="line"></span><br><span class="line">解释：name指出是在操作哪个bean</span><br><span class="line">      property指出对该bean的哪个属性赋值</span><br><span class="line">      vlaue用来指定给属性赋的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二种用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &lt;jsp:setProperty name = &quot;beanName&quot;</span><br><span class="line">property = &quot;propertyName&quot;</span><br><span class="line">param = &quot;paramName&quot; /&gt;</span><br><span class="line"></span><br><span class="line">解释：name指出是在操作哪个bean</span><br><span class="line">      property指出对该bean的哪个属性赋值</span><br><span class="line">      param表示传入参数的名字</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三种用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> &lt;jsp:setProperty name = &quot;beanName&quot;</span><br><span class="line">property = &quot;propertyName&quot;</span><br><span class="line">param = &quot;propertyName&quot; /&gt;</span><br><span class="line">注意：这里的参数名字与bean中属性名字一致</span><br><span class="line"></span><br><span class="line">解释：name指出是在操作哪个bean</span><br><span class="line">      property指出对该bean的哪个属性赋值</span><br><span class="line">      param表示传入参数的名字</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第四种用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;jsp:setProperty name = &quot;beanName&quot;</span><br><span class="line">property = &quot;*&quot; /&gt;</span><br><span class="line"></span><br><span class="line">使用这种方法可以一次为多个属性赋值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;jsp:getProperty&gt;</code>标记<br><code>&lt;jsp:getProperty&gt;</code>用于获取JavaBean实例给定属性值，并将这个值转换为字符串形式显示在JSP页面中。<code>&lt;jsp:setProperty&gt;</code>中的name值应当和<code>&lt;jsp:userBean&gt;</code>中的id值相同<code>&lt;jsp:getProperty&gt;</code> 标记用于设置JavaBean的属性值。其用法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:getProperty name = &quot;name&quot; property = &quot;propertyName&quot;&gt;</span><br><span class="line"></span><br><span class="line">解释：name属性代表JavaBean对象实例名，该实例必须在前面定义过</span><br><span class="line">property属性代表需要获取的那个JavaBean对象对应的属性名字</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Servlet技术"><a href="#Servlet技术" class="headerlink" title="Servlet技术"></a>Servlet技术</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Servlet是用Java语言编写的程序，运行于支持Java的Web服务器或应用程序中，Servlet先于JSP出现，提供和和客户端动态交互的功能。Servlet可以处理来自客户端的HTTP 请求，并生成响应返回客户端。</p>
+<ul>
+<li>Servlet的优点<ul>
+<li>可移植性</li>
+<li>安全性</li>
+<li>高效性</li>
+</ul>
+</li>
+<li>Servlet的生命周期<ul>
+<li>当客户端第一次请求Servlet时，Servlet被加载到内存，容器会创建Servlet实例，并调用init()方法进行初始化工作</li>
+<li>容器创建请求对象和响应对象。然后调用Servlet的service()方法为客户端提供服务</li>
+<li>当Servlet不在被需要时，容器调用Servlet的destroy()方法将Servlet实例销毁</li>
+</ul>
+</li>
+<li><strong>Servlet的常用API</strong><ul>
+<li>HttpServlet的常用方法<ul>
+<li>getServletContext(): 获取ServletContext()对象</li>
+<li>getServletName(): 获取Servlet配置时声明Web应用内部使用的名字</li>
+<li>getInitParameter(String name): 获取Servlet配置时提供的名为name的参数值</li>
+</ul>
+</li>
+<li>HttpServletRequest的常用方法<ul>
+<li>getRequestURL(): 获取请求的URL地址</li>
+<li>getRequestURI(): 获取请求的服务器地址</li>
+<li>getContextPath(): 获取Web应用的跟路径</li>
+<li>getServletPath(): 获取Servlet的访问路径</li>
+<li>getParameter(String name)：获得名为name的参数的单个值</li>
+<li>getParameterValues(String name): 获得名为name的参数的多个值</li>
+<li>getAttribute(String name): 获得名为name的属性值</li>
+<li>setAttribute(String name, String value): 设置名为name的属性值为value</li>
+<li>getSession():获取session对象</li>
+<li>getRequestDispatcher(String path): 获取请求转发对象</li>
+</ul>
+</li>
+<li>HttpServletResponse的常用方法<ul>
+<li>setContentType(String type): 设置响应的内容类型为type</li>
+<li>setCharacterEncoding(String charset): 设置响应的编码字符集为charset</li>
+<li>getWriter(): 返回一个PrintWriter对象</li>
+<li>sendRedirect(String location): 向客户端发送一个重定向请求，地址为location<h3 id="Servlet过滤器"><a href="#Servlet过滤器" class="headerlink" title="Servlet过滤器"></a>Servlet过滤器</h3>Servlet过滤器是一种Java组件，它位于客户端与处理程序之间，能够对请求和响应进行检查和修改。Servlet过滤器通常用来完成一些通用的操作，例如同意字符编码，字符压缩、加密、实施安全控制等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Servlet过滤器API<ul>
+<li>Filter接口<br>所有的过滤器都必须实现Filter接口<ul>
+<li>init()  Init 方法在 Filter 生命周期中仅执行一次，web 容器在调用 init 方法时</li>
+<li>destory()  在Web容器卸载 Filter 对象之前被调用。该方法在Filter的生命周期中仅执行一次。在这个方法中，可以释放过滤器使用的资源。</li>
+<li>doFilter() Filter 链的执行 </li>
+</ul>
+</li>
+<li>FilterChain接口<ul>
+<li>调用过滤器链中的下一个过滤器</li>
+</ul>
+</li>
+<li>FilterConfig接口<ul>
+<li>该接口用于在过滤器初始化阶段提供过滤器名、初始化参数及Servlet上下文等信息，该接口提供以下4个方法</li>
+<li>getFilteName(): 返回web.xml文件到中定义的该过滤器名称</li>
+<li>getServletContext(): 返回调用者所处的Servlet上下文</li>
+<li>getInitParameter(String name): 返回配置过滤器时名为name的初始化参数值</li>
+<li>getInitParameterNames(): 以Enumeration形式返回配置过滤器时名为name的初始化参数的名称</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaWeb基础笔记/" rel="tag"><i class="fa fa-tag"></i> JavaWeb基础笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/05/Android布局你未知的属性/" rel="next" title="Android布局你未知的属性">
+                <i class="fa fa-chevron-left"></i> Android布局你未知的属性
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/08/面试技巧/" rel="prev" title="面试技巧">
+                面试技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2016/07/07/JavaWeb笔记-2/"
+           data-title="JavaWeb笔记-2" data-url="http://dongxi520.com/2016/07/07/JavaWeb笔记-2/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP内置对象"><span class="nav-number">1.</span> <span class="nav-text">JSP内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#out对象"><span class="nav-number">1.1.</span> <span class="nav-text">out对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request对象"><span class="nav-number">1.2.</span> <span class="nav-text">request对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象"><span class="nav-number">1.3.</span> <span class="nav-text">response对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象"><span class="nav-number">1.4.</span> <span class="nav-text">session对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie对象"><span class="nav-number">1.5.</span> <span class="nav-text">Cookie对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session对象和Cookie对象的关系"><span class="nav-number">1.6.</span> <span class="nav-text">session对象和Cookie对象的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application对象"><span class="nav-number">1.7.</span> <span class="nav-text">application对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">pageContext对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config对象"><span class="nav-number">1.9.</span> <span class="nav-text">config对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#page对象"><span class="nav-number">1.10.</span> <span class="nav-text">page对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception对象"><span class="nav-number">1.11.</span> <span class="nav-text">exception对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC驱动程序的4种类型如下："><span class="nav-number">2.1.</span> <span class="nav-text">JDBC驱动程序的4种类型如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC访问数据库的基本步骤"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC访问数据库的基本步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaBean组件"><span class="nav-number">3.</span> <span class="nav-text">JavaBean组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用JavaBean"><span class="nav-number">3.2.</span> <span class="nav-text">使用JavaBean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet技术"><span class="nav-number">4.</span> <span class="nav-text">Servlet技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet过滤器"><span class="nav-number">4.2.</span> <span class="nav-text">Servlet过滤器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

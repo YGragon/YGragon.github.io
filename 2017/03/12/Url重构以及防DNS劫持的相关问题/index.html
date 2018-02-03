@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="URL重构,防DNS劫持," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="为什么做Url配置？
+Url 格式不统一。
+
+由于公司的 Url 设计的不合理同时没有统一的规范。每个功能对应着 2 条 Url ，一条正式，一条测试。而且正式接口和测试接口是的域名是有很大差别的（Url 保密 ，有些内容用数字和*代替，文中皆是）。
+
+例如：搜索的接口正式：http://***.****.net/json.php?do=Search搜索的接口测试：http://***.test.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Url 统一域名及 DNS 劫持的相关问题">
+<meta property="og:url" content="http://dongxi520.com/2017/03/12/Url重构以及防DNS劫持的相关问题/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description" content="为什么做Url配置？
+Url 格式不统一。
+
+由于公司的 Url 设计的不合理同时没有统一的规范。每个功能对应着 2 条 Url ，一条正式，一条测试。而且正式接口和测试接口是的域名是有很大差别的（Url 保密 ，有些内容用数字和*代替，文中皆是）。
+
+例如：搜索的接口正式：http://***.****.net/json.php?do=Search搜索的接口测试：http://***.test.">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-4b6e9f2258ca88d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-caf71981bb17abc0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-6303ad4654d2e199.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-17b9a6bbc09d1ee9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-fe16497f85d537cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-5c2b29f5af9b1d9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-220757802d32cb2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-14T00:00:55.223Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Url 统一域名及 DNS 劫持的相关问题">
+<meta name="twitter:description" content="为什么做Url配置？
+Url 格式不统一。
+
+由于公司的 Url 设计的不合理同时没有统一的规范。每个功能对应着 2 条 Url ，一条正式，一条测试。而且正式接口和测试接口是的域名是有很大差别的（Url 保密 ，有些内容用数字和*代替，文中皆是）。
+
+例如：搜索的接口正式：http://***.****.net/json.php?do=Search搜索的接口测试：http://***.test.">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1942372-4b6e9f2258ca88d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2017/03/12/Url重构以及防DNS劫持的相关问题/"/>
+
+
+
+
+
+  <title>Url 统一域名及 DNS 劫持的相关问题 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2017/03/12/Url重构以及防DNS劫持的相关问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Url 统一域名及 DNS 劫持的相关问题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T09:31:19+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/Url重构以及防DNS劫持的相关问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/Url重构以及防DNS劫持的相关问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/12/Url重构以及防DNS劫持的相关问题/" class="leancloud_visitors" data-flag-title="Url 统一域名及 DNS 劫持的相关问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,260
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="为什么做Url配置？"><a href="#为什么做Url配置？" class="headerlink" title="为什么做Url配置？"></a>为什么做Url配置？</h3><ul>
+<li><strong>Url 格式不统一。</strong></li>
+</ul>
+<p>由于公司的 Url 设计的不合理同时没有统一的规范。每个功能对应着 2 条 Url ，一条正式，一条测试。而且正式接口和测试接口是的域名是有很大差别的（Url 保密 ，有些内容用数字和*代替，文中皆是）。</p>
+<blockquote>
+<p>例如：<br>搜索的接口正式：<a href="http://***.****.net/json.php?do=Search" target="_blank" rel="external">http://***.****.net/json.php?do=Search</a><br>搜索的接口测试：<a href="http://***.test.****.cn/json.php?do=Search" target="_blank" rel="external">http://***.test.****.cn/json.php?do=Search</a></p>
+</blockquote>
+<a id="more"></a>
+<p>有的接口是可以划分为同一模块，但是并没有。</p>
+<blockquote>
+<p>如下：<br>搜索的接口：<a href="http://123.****.net/json.php?do=Search.Bar" target="_blank" rel="external">http://123.****.net/json.php?do=Search.Bar</a><br>搜索首页信息的接口：<a href="http://234.****.com/json.php?do=Main" target="_blank" rel="external">http://234.****.com/json.php?do=Main</a></p>
+</blockquote>
+<p>二者都属于搜索，但是接口差别却很大。域名没有统一。</p>
+<blockquote>
+<p>而且公司中有些不同的功能用的还是同一接口，这样会导致一个接口出问题了等于两个功能同时不能使用，影响很大。</p>
+</blockquote>
+<ul>
+<li><strong>不方便客户端实现代码。</strong><br>查看关于 url 的配置这块代码，发现新添加一个功能，需要在很多地方修改代码，根据开闭原则，对于程序应该是<strong>对扩展开放，对修改封闭</strong>。很明显是违背了这一原则，像我这种菜鸡第一次配置肯定会由于配置混乱而导致Bug出现。</li>
+</ul>
+<h3 id="怎么去做？"><a href="#怎么去做？" class="headerlink" title="怎么去做？"></a>怎么去做？</h3><ul>
+<li><strong>分析现有 Url 的结构，对所有Url进行模块划分</strong><br>上述问题主要是 Url 的域名以及域名之后的参数不够明确对应的功能和域名不够统一，由于 Url 的不规则，导致客户端的实现容易出 Bug，因此我们要做的就是将 Url 进行模块化划分，就是将属于同一个模块的Url进行统一设计和分类。</li>
+</ul>
+<blockquote>
+<p><strong>例如搜索模块</strong><br>之前的域名由于历史原因不方便修改，所以就不对之前的域名进行修改，以后新添加的功能对应的域名就应该按模块化划分。可以是域名一致，当功能点不同时可以在域名之后添加不同的参数。例如：<br>搜索功能一的 Url 如下表示：<a href="http://search.****.com/function1/...，" target="_blank" rel="external">http://search.****.com/function1/...，</a><br>搜索模块二的 Url 如下表示：<a href="http://search.****.com/function2/...，" target="_blank" rel="external">http://search.****.com/function2/...，</a></p>
+</blockquote>
+<ul>
+<li><strong>对代码进行优化。</strong><br>通过分析原有代码发现，添加一个新功能比较繁琐。代码冗余，每添加一个新功能都要添加一个<strong>静态方法</strong>，静态方法过多会导致不容易做<strong>单元测试</strong>，而且每产生一个静态方法就会占用一点内存，当静态方法过多时会占用更多内存，<strong>严重时会导致内存溢出。</strong><blockquote>
+<p>经上分析，我们目前的优化方式是：<br>控制开关( 判断是采用正式接口还是测试接口 )和 Url 接口分别写在 XML 文件中，在 Java 类中只写一个方法去调用开关和 Url 接口然后判断是使用正式接口还是测试接口。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Retrofit-简介"><a href="#Retrofit-简介" class="headerlink" title="Retrofit 简介"></a>Retrofit 简介</h3><ul>
+<li><strong>一个类型安全的Android和Java的HTTP客户端</strong><br>Retrofit是基于异步线程的网络请求框架，支持线程安全，开发者无需关心线程问题。</li>
+<li><strong>使用注解去声明HTTP请求</strong><br>例如：<br>  @GET(“group/{id}/users”)<br>  Call<list<user>&gt; groupList(@Path(“id”) int groupId);<br>可以通过注解实现Url的拼接，更好管理Url。</list<user></li>
+<li><strong>由于 Retrofit 是目前（2017.3）地表最强的网络请求框架</strong>，对 Restful API 格式的数据具有很好的使用效果。而且 Retrofit  又是采用注解形式发起 HTTP 请求，它的这一特点可以很好的解决一条域名多个参数形式的 Url 。目前存在的 Url 就可以利用 Retrofit 的以上特点去配置 Url 。</li>
+</ul>
+<h4 id="DNS劫持和Url配置的关系"><a href="#DNS劫持和Url配置的关系" class="headerlink" title="DNS劫持和Url配置的关系"></a>DNS劫持和Url配置的关系</h4><ul>
+<li><strong>起因</strong><br>App 中曾经出现过一个地区的用户大面积访问不了页面的后果，经过调查发现是 App 中发起请求的 Url 被劫持了。也就是说用户点击一个功能模块或者进入一个模块查看内容，但是看不到。</li>
+</ul>
+<p>造成这种现象可能是本地运营商将我们的 Url 重定向到其他假的ip地址又或者黑客将我们的数据屏蔽掉了，这我们不得而知。但是给我们用户造成的后果就是用户访问不了数据，用户不开心了，体验超级不好！所以为了给用户更好地饿体验，同时提高我们App的容错性，出现DNS防劫持的问题。</p>
+<ul>
+<li><strong>DNS 劫持解析</strong><ul>
+<li><strong>DNS：Domain Name System 域名系统</strong><br>用于将客户端请求的域名解析为对应的 ip 返回给客户端，客户端用返回的 ip 去请求真实的服务器数据。</li>
+<li><strong>原理</strong><br>本地运营商（移动，联通，电信）将我们请求的 Url 替换为其他的 Url 返回给客户端，从而使客户端访问了虚假的网站，导致用户访问不到真实的服务器数据。</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-4b6e9f2258ca88d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="劫持原理"></p>
+<ul>
+<li><p><strong>如何去模拟Url被劫持？</strong></p>
+<ul>
+<li><p>利用抓包工具 Fiddler 提供的修改 host 方式模拟被劫持<br><img src="http://upload-images.jianshu.io/upload_images/1942372-caf71981bb17abc0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="设置HOST"></p>
+<ul>
+<li>可以配置多条被劫持的域名，另起一行添加跳转ip和被劫持的域名即可。</li>
+</ul>
+</li>
+<li>通过将手机和Fiddler连接，然后操作手机App上的功能，在Fiddler的界面中就可以查看到对应的Url，在连接好手机和Fiddler后进入App主页，在Fiddler中可以观察到如下：</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-6303ad4654d2e199.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="由于域名不方便贴出，不理解的回复我"></p>
+<p>被劫持后的数据是红色的数据，红色代表访问网络失败。当被劫持后主题管家会切换备用域名进行防劫持，之后请求数据会一直使用备用域名进行访问数据。</p>
+<ul>
+<li>在Fiddler中分析可以看出劫持后和未被劫持的返回内容是不一样的<br>第一张是劫持后的截图，第二张是未被劫持的正常返回内容</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-17b9a6bbc09d1ee9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第一张"><br><img src="http://upload-images.jianshu.io/upload_images/1942372-fe16497f85d537cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第二张"></p>
+<h4 id="DNS劫持和Http劫持的区别"><a href="#DNS劫持和Http劫持的区别" class="headerlink" title="DNS劫持和Http劫持的区别"></a>DNS劫持和Http劫持的区别</h4><ul>
+<li>Http劫持原理<br>Http 劫持后返回的内容还是原来的内容，但是运营商会在返回的数据中添加一些广告或者其他内容，以达到盈利的目的。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-5c2b29f5af9b1d9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原理"></p>
+<ul>
+<li>效果如下：<br>在浏览器中点击博客链接浏览博客内容时，会在博客页面的右下角显示广告</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1942372-220757802d32cb2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="网页中的逛广告"></p>
+<ul>
+<li><strong>DNS劫持和Http劫持的形象描述</strong><blockquote>
+<p><strong>DNS劫持的现象：</strong><br>你输入的网址是 <a href="http://www.google.com，出来的是百度的页面。" target="_blank" rel="external">http://www.google.com，出来的是百度的页面。</a><br><strong>HTTP劫持的现象：</strong><br>你打开的是百度的页面，右下角弹出一款游戏广告。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="如何防范DNS劫持"><a href="#如何防范DNS劫持" class="headerlink" title="如何防范DNS劫持"></a>如何防范DNS劫持</h4><ul>
+<li><p><strong>其他厂家如何防范？</strong></p>
+<ul>
+<li>目前主流的形式是利用第三方提供的HttpDNS服务，该服务的作用是将客户端发起请求的域名解析成ip返回给客户端，客户端拿返回的ip重新发起请求。这种方式绕过了local DNS 服务可以有效避免被劫持。</li>
+<li>自己实现 HttpDns 服务，新浪开源了他们自己实现的HttpDNS 服务（ <a href="https://github.com/CNSRE/HTTPDNSLib" target="_blank" rel="external">https://github.com/CNSRE/HTTPDNSLib</a> ）。这种方式是小公司实现起来是比较困难的，因为这需要实现一些算法，还有关于线程安全也会涉及到，还有很多问题处理起来比较麻烦。因此大部分公司还是采用第三方完善的服务。</li>
+<li>快手防劫持的做法未知，但是它的域名一旦被劫持就会自动切换新的域名或者ip，立刻请求数据。它的这种做法能让用户在没察觉到数据被劫持时切换新的域名去访问数据，能给用户更好的体验。</li>
+</ul>
+</li>
+<li><p><strong>目前打算如何去做？</strong></p>
+<ul>
+<li>采用Retrofit + OkHttp 请求网络，利用第三方提供的HttpDNS服务绕过localDNS 服务，获取域名对应的ip，返回给客户端然后客户端利用OkHttp提供的Interceptor（劫持器）利用拿到ip去重新发起网络请求，实现防劫持。</li>
+<li>利用OkHttp 提供的 Dns接口去创建一个类，在类中利用Java提供的InetAddress类获取ip，该操作是直接获取ip后利用ip立刻发起网络请求，实现防劫持</li>
+</ul>
+</li>
+</ul>
+<h4 id="两种方案的具体实现"><a href="#两种方案的具体实现" class="headerlink" title="两种方案的具体实现"></a>两种方案的具体实现</h4><ul>
+<li><p>采用第三方提供的HttpDNS服务</p>
+<ul>
+<li>利用DNSPod D+ 提供的域名解析服务获取到请求的域名对应的ip。<br><code>http://119.29.29.29/d?dn=www.baidu.com，</code>前面是DNSPod D+提供的固定格式dn=”这里是要解析的域名 ”，通过如下形式即可返回域名对应的ip，有可能是一个域名对应多个ip，因此这里是在写代码实现的时候是需要考虑多个ip的情况。</li>
+<li><p>创建一个 类去实现Interceptor 通过chain.request()方法拿到请求的信息，在信息对象中拿到Url，通过Url拿到对应的域名，通过一个方法将域名转为ip，利用 String 的 replace 方法将获取到的 ip 将域名替换掉，并设置到原来的请求头中，通过chain.proceed(request)方法重新发起请求</p>
+</li>
+<li><p>将实现了Interceptor的类通过addInterceptor方法设置到 OkHttp 的请求中去，在用户被劫持后可以通过该劫持器去替换ip重新发起请求。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>采用OkHttp 提供的Dns接口</strong></p>
+<ul>
+<li>创建实现一个类实现 OkHttp 的 Dns 接口</li>
+<li><p>在第一步创建的类中利用 Java 提供的 InetAddress.getAllByName( hostname ) ,拿到 ip 地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InetAddress&gt; inetAddresses = Arrays.asList(InetAddress.getAllByName(hostname));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在初始化 OkHttp 的时候将 Dns 替换为 HttpDns 对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">OkHttpClient builder = new OkHttpClient.Builder()</span><br><span class="line">                .dns(new HttpDns())</span><br><span class="line">                .build();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>两种方案的对比</strong></p>
+<ul>
+<li><p>采用HttpDNS服务</p>
+<ul>
+<li><strong>优点</strong><br>方便做容灾（容错性比较好），比如ip请求失败时使用域名进行重试</li>
+<li><strong>缺点</strong><br><strong>a)    https场景下ip直连出现的证书校验问题</strong><br>https是在一种安全的在应用层的传输协议，它的访问是需要校验证书的合法性，同时根据中国的法律是不允许采用ip直连的。<br><strong>b)    第三方代理场景下的HttpDNS问题</strong><br>由于采用的是第三方提供的服务，控制权不在我们手上，当第三方提供的服务出现问题，我们没法控制。同时当我们的需求很大时，免费的第三方服务是有可能会进行收费服务的。<br><strong>c)    ip访问的时候Cookie（缓存在本地的数据）的问题</strong><br>由于采用第三方的服务，咱们的域名转换的ip可能会存在第三方的数据库中，那么咱们的ip第三方就会轻易知道，不利于我们的保密工作开展。</li>
+</ul>
+</li>
+<li><p>采用OkHttp 提供的Dns接口</p>
+<ul>
+<li><strong>优点</strong><br><strong>a)    在https下不会存在任何问题</strong><br>证书校验依然使用域名进行校验；<br>ip 直接采用的是底层的 udp 传输协议证书校验是在应用层校验，而 udp 协议是在传输层，因此不会出现检验证书问题。<br><strong>b)    Cookie的问题也自然不存在。</strong><br>由于采用的是 Java 自带的类，是在自己的系统中实现，不会将 ip 泄露出去。</li>
+<li><strong>缺点</strong><br><strong>a)    过于底层，容灾不好做，除非强制关闭HttpDNS。</strong><br>不能通过劫持器去切换域名，或者ip再次发起请求。它只能根据返回的ip进行轮询，如果返回的ip都不对，那肯定是不能请求到数据。<br><strong>b)    服务器返回的ip如果不正确，这次请求就挂了，甚至下次也可能挂了。</strong><br>由于它只能根据返回的ip进行轮询，不能将域名和ip都进行轮询，因此ip不正确就访问全部挂了。<br><strong>c)    OkHttp默认对解析结果有一定时间的缓存，万一ttl（数据包在网络中存放的时间）过期了，OkHttp可能依然会去使用，这时候也是有风险的。</strong><br>TTL是数据包在网路中存放的时间，如果这个时间过期了，但是OkHttp不能去判断它已经过期，那么OkHttp就会去使用这个TTL提供的数据包去访问数据，得到的数据也不是最新数据，所以还是有问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>首先是将<strong>所有Url进行模块化划分</strong>，然后项目老旧的 Url 可能不好修改，所以<strong>利用 Retrofit 提供注解请求 HTTP 的特性进行优化</strong>，后期添加的功能就<strong>按照新制定的规则去设计Url</strong>。在防DNS劫持这里，通过比较发现还是<strong>使用比较成熟的HttpDNS 方案</strong>去实现，然后利用OkHttp 提供的Interceptor 劫持器去实现域名向ip的切换，同时可以在Interceptor中可以利用<strong>加权轮询算法实现服务器的负载均衡以及ip的正确分配。</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/URL重构/" rel="tag"><i class="fa fa-tag"></i> URL重构</a>
+          
+            <a href="/tags/防DNS劫持/" rel="tag"><i class="fa fa-tag"></i> 防DNS劫持</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/21/不必纠结MVC还是MVP，听我说两句/" rel="next" title="不必纠结MVC还是MVP，听我说两句~">
+                <i class="fa fa-chevron-left"></i> 不必纠结MVC还是MVP，听我说两句~
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/09/圈复杂度详解/" rel="prev" title="圈复杂度详解">
+                圈复杂度详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2017/03/12/Url重构以及防DNS劫持的相关问题/"
+           data-title="Url 统一域名及 DNS 劫持的相关问题" data-url="http://dongxi520.com/2017/03/12/Url重构以及防DNS劫持的相关问题/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么做Url配置？"><span class="nav-number">1.</span> <span class="nav-text">为什么做Url配置？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么去做？"><span class="nav-number">2.</span> <span class="nav-text">怎么去做？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Retrofit-简介"><span class="nav-number">3.</span> <span class="nav-text">Retrofit 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS劫持和Url配置的关系"><span class="nav-number">3.1.</span> <span class="nav-text">DNS劫持和Url配置的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS劫持和Http劫持的区别"><span class="nav-number">3.2.</span> <span class="nav-text">DNS劫持和Http劫持的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防范DNS劫持"><span class="nav-number">3.3.</span> <span class="nav-text">如何防范DNS劫持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两种方案的具体实现"><span class="nav-number">3.4.</span> <span class="nav-text">两种方案的具体实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">3.5.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

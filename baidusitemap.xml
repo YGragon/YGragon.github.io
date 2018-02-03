@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/10/02/Android-%E5%8A%A8%E7%94%BB%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-02-02T15:26:45.659Z</lastmod>
+    <data>
+        <display>
+        <title>Android 动画学习</title>
+        <pubTime>2017-10-02T01:36:22.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Animation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/29/Android-%E8%87%AA%E5%AE%9A%E4%B9%89-View-%E7%9A%84%E7%BB%98%E5%88%B6%E9%A1%BA%E5%BA%8F/</loc>
+    <lastmod>2018-02-02T13:57:16.454Z</lastmod>
+    <data>
+        <display>
+        <title>Android 自定义 View 的绘制顺序</title>
+        <pubTime>2018-01-29T13:35:28.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/19/CoordinatorLayout%E7%BB%93%E5%90%88AppBarLayout%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-01-27T02:17:12.063Z</lastmod>
+    <data>
+        <display>
+        <title>CoordinatorLayout结合AppBarLayout使用</title>
+        <pubTime>2017-11-19T11:04:26.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/14/CoordinatorLayout-%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-01-27T02:17:07.792Z</lastmod>
+    <data>
+        <display>
+        <title>CoordinatorLayout 初步使用</title>
+        <pubTime>2017-11-14T13:14:30.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/26/Android-%E8%87%AA%E5%AE%9A%E4%B9%89-View-clipXXX-%E5%92%8C-Matrix-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-01-26T14:52:43.847Z</lastmod>
+    <data>
+        <display>
+        <title>Android 自定义 View clipXXX() 和 Matrix 入门</title>
+        <pubTime>2018-01-26T14:52:43.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/25/Android-%E8%87%AA%E5%AE%9A%E4%B9%89-View-drawText-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-01-26T13:32:05.672Z</lastmod>
+    <data>
+        <display>
+        <title>Android 自定义 View drawText() 入门</title>
+        <pubTime>2018-01-25T13:02:43.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/22/Android-%E8%87%AA%E5%AE%9A%E4%B9%89-View-Paint-%E4%BA%86%E8%A7%A3/</loc>
+    <lastmod>2018-01-26T13:32:04.488Z</lastmod>
+    <data>
+        <display>
+        <title>Android 自定义 View Paint 了解</title>
+        <pubTime>2018-01-22T13:25:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/10/21/Android%E8%87%AA%E5%AE%9A%E4%B9%89View%E5%B8%B8%E8%A7%81API/</loc>
+    <lastmod>2018-01-23T11:35:52.847Z</lastmod>
+    <data>
+        <display>
+        <title>Android自定义View绘制基础</title>
+        <pubTime>2017-10-21T03:06:45.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/03/Android-View-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2018-01-10T15:10:54.404Z</lastmod>
+    <data>
+        <display>
+        <title>Android View 的工作原理</title>
+        <pubTime>2018-01-03T14:08:26.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/08/16/%E4%BD%BF%E7%94%A8git%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2018-01-02T14:49:39.945Z</lastmod>
+    <data>
+        <display>
+        <title>git 命令记录</title>
+        <pubTime>2016-08-16T07:12:59.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/06/17/git%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2018-01-02T14:44:44.251Z</lastmod>
+    <data>
+        <display>
+        <title>git命令记录</title>
+        <pubTime>2016-06-17T13:37:36.000Z</pubTime>
+        
+        <tag>Git命令</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2018/01/01/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-01-01T04:25:24.508Z</lastmod>
+    <data>
+        <display>
+        <title>Python-学习笔记博客系统总结</title>
+        <pubTime>2018-01-01T00:49:12.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/08/28/Android%E5%B0%8F%E7%9F%A5%E8%AF%86~/</loc>
+    <lastmod>2018-01-01T00:59:55.275Z</lastmod>
+    <data>
+        <display>
+        <title>Android笔记-小知识点</title>
+        <pubTime>2016-08-28T03:17:56.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/19/%E5%86%99%E5%9C%A8%E5%8C%97%E4%BA%AC%E4%B8%80%E5%91%A8%E5%B9%B4/</loc>
+    <lastmod>2017-12-19T13:58:56.683Z</lastmod>
+    <data>
+        <display>
+        <title>写在北京一周年</title>
+        <pubTime>2017-12-19T13:55:33.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/12/Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
+    <lastmod>2017-12-15T14:22:48.286Z</lastmod>
+    <data>
+        <display>
+        <title>Python数据可视化</title>
+        <pubTime>2017-12-12T13:45:43.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/10/Python%E5%B0%8F%E6%B8%B8%E6%88%8F-%E3%80%8A%E5%A4%96%E6%98%9F%E4%BA%BA%E5%85%A5%E4%BE%B5%E3%80%8B/</loc>
+    <lastmod>2017-12-10T03:59:29.146Z</lastmod>
+    <data>
+        <display>
+        <title>Python小游戏-《外星人入侵》</title>
+        <pubTime>2017-12-10T03:58:04.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/19/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2017-12-09T15:04:08.800Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（一）-数据类型</title>
+        <pubTime>2017-11-19T05:06:44.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/22/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%88%97%E8%A1%A8/</loc>
+    <lastmod>2017-12-09T15:03:56.058Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（二）-列表</title>
+        <pubTime>2017-11-22T05:28:21.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/08/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%AB%EF%BC%89-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/</loc>
+    <lastmod>2017-12-08T15:42:30.991Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（八）-文件和异常</title>
+        <pubTime>2017-12-08T15:35:54.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/08/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%83%EF%BC%89-%E7%B1%BB/</loc>
+    <lastmod>2017-12-08T14:19:46.593Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（七）-类</title>
+        <pubTime>2017-12-08T14:15:35.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/07/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%AD%EF%BC%89-%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2017-12-07T15:39:13.110Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（六）-函数</title>
+        <pubTime>2017-12-07T15:33:40.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/07/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%94%EF%BC%89-%E5%AD%97%E5%85%B8/</loc>
+    <lastmod>2017-12-07T13:31:10.754Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（五）-字典</title>
+        <pubTime>2017-12-07T13:28:34.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/12/06/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%9B%EF%BC%89-if%E8%AF%AD%E5%8F%A5/</loc>
+    <lastmod>2017-12-06T14:31:43.837Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（四）-if语句</title>
+        <pubTime>2017-12-06T14:25:03.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/26/Python%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/</loc>
+    <lastmod>2017-11-26T11:56:29.245Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础（三）- 操作列表</title>
+        <pubTime>2017-11-26T01:47:06.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/09/30/Android%20Shape%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-11-25T01:07:09.703Z</lastmod>
+    <data>
+        <display>
+        <title>Android Shape 笔记</title>
+        <pubTime>2017-09-30T15:51:18.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/04/09/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2017-11-25T01:06:55.374Z</lastmod>
+    <data>
+        <display>
+        <title>圈复杂度详解</title>
+        <pubTime>2017-04-09T15:17:16.000Z</pubTime>
+        
+        <tag>圈复杂度</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/02/21/%E4%B8%8D%E5%BF%85%E7%BA%A0%E7%BB%93MVC%E8%BF%98%E6%98%AFMVP%EF%BC%8C%E5%90%AC%E6%88%91%E8%AF%B4%E4%B8%A4%E5%8F%A5/</loc>
+    <lastmod>2017-11-25T01:04:34.405Z</lastmod>
+    <data>
+        <display>
+        <title>不必纠结MVC还是MVP，听我说两句~</title>
+        <pubTime>2017-02-21T12:57:15.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/24/Kotlin%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8EventBus3-x/</loc>
+    <lastmod>2017-11-24T14:38:39.895Z</lastmod>
+    <data>
+        <display>
+        <title>Kotlin简单使用EventBus3.x</title>
+        <pubTime>2017-11-24T13:52:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Kotlin</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/05/11/Jsoup%E7%88%AC%E8%99%AB%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2017-11-19T11:50:19.017Z</lastmod>
+    <data>
+        <display>
+        <title>Jsoup爬虫使用记录</title>
+        <pubTime>2017-05-11T08:01:32.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Jsoup爬虫</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/11/12/ViewPager-GridView%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E6%BB%91%E5%8A%A8%E5%92%8C%E7%82%B9%E5%87%BB%E8%83%8C%E6%99%AF%E8%89%B2%E5%88%87%E6%8D%A2/</loc>
+    <lastmod>2017-11-14T13:39:51.488Z</lastmod>
+    <data>
+        <display>
+        <title>ViewPager+GridView实现水平滑动和点击背景色切换</title>
+        <pubTime>2017-11-12T14:39:25.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/21/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2017-11-12T14:47:47.557Z</lastmod>
+    <data>
+        <display>
+        <title>网络编程</title>
+        <pubTime>2016-07-21T14:43:09.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/08/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2017-11-12T14:45:43.042Z</lastmod>
+    <data>
+        <display>
+        <title>面试技巧</title>
+        <pubTime>2016-07-08T13:46:13.000Z</pubTime>
+        
+        <tag>面试技巧</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/10/28/Android-%E5%8A%A8%E6%80%81%E5%A4%84%E7%90%86%E6%96%87%E6%9C%AC%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2017-11-05T12:06:20.486Z</lastmod>
+    <data>
+        <display>
+        <title>Android 动态处理文本的两种半~方式</title>
+        <pubTime>2017-10-28T14:44:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://dongxi520.com/2017/09/25/Android%20ConstraintLayout%20%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2017-10-02T11:20:10.382Z</lastmod>
+    <data>
+        <display>
+        <title>Android ConstraintLayout 学习</title>
+        <pubTime>2017-09-25T13:18:23.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/08/19/Toolbar-%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</loc>
+    <lastmod>2017-08-19T15:01:48.514Z</lastmod>
+    <data>
+        <display>
+        <title>Toolbar 使用姿势</title>
+        <pubTime>2017-08-19T14:43:40.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Toolbar</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/08/03/%E7%9F%A5%E4%B9%8E%E5%BC%80%E6%BA%90%E7%9A%84%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9%E5%99%A8Matisse%E5%9C%A86-0%E4%BB%A5%E4%B8%8A%E6%89%8B%E6%9C%BA%E4%BD%BF%E7%94%A8%E7%9B%B8%E6%9C%BA%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2017-08-04T00:56:47.235Z</lastmod>
+    <data>
+        <display>
+        <title>知乎开源的图片选择器 Matisse 在 6.0 以上手机使用相机功能</title>
+        <pubTime>2017-08-03T00:56:51.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>图片选择器</tag>
+         
+        <tag>动态权限</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/08/01/RecyclerView-%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%9B%BE%E7%89%87-ViewPager-PhotoView-%E5%AE%9E%E7%8E%B0%E5%88%97%E8%A1%A8%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%B9%B6%E8%83%BD%E7%BC%A9%E6%94%BE%E6%80%9D%E8%B7%AF/</loc>
+    <lastmod>2017-08-04T00:56:43.791Z</lastmod>
+    <data>
+        <display>
+        <title>RecyclerView + 九宫格图片 + ViewPager + PhotoView 实现列表图片点击放大并能缩放思路</title>
+        <pubTime>2017-08-01T15:27:34.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/13/Android%E5%BC%80%E5%8F%91%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-07-24T02:08:13.248Z</lastmod>
+    <data>
+        <display>
+        <title>Android开发遇到的坑</title>
+        <pubTime>2016-07-13T13:46:41.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/07/06/Android-%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/</loc>
+    <lastmod>2017-07-06T15:13:31.526Z</lastmod>
+    <data>
+        <display>
+        <title>Android 消息通信原理浅析</title>
+        <pubTime>2017-07-06T14:08:51.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>消息通信</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/06/15/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2017-07-06T15:13:07.060Z</lastmod>
+    <data>
+        <display>
+        <title>Android内存优化</title>
+        <pubTime>2017-06-15T15:02:50.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>内存优化</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/04/16/2017Q1%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-04-16T00:11:35.289Z</lastmod>
+    <data>
+        <display>
+        <title>2017Q1总结</title>
+        <pubTime>2017-04-16T00:04:54.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2017/03/12/Url%E9%87%8D%E6%9E%84%E4%BB%A5%E5%8F%8A%E9%98%B2DNS%E5%8A%AB%E6%8C%81%E7%9A%84%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-04-14T00:00:55.223Z</lastmod>
+    <data>
+        <display>
+        <title>Url 统一域名及 DNS 劫持的相关问题</title>
+        <pubTime>2017-03-12T01:31:19.000Z</pubTime>
+        
+        <tag>URL重构</tag>
+         
+        <tag>防DNS劫持</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/08/06/%E5%A4%A7%E4%B8%89%E7%94%9F%E4%BA%A7%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-04-13T23:59:15.342Z</lastmod>
+    <data>
+        <display>
+        <title>大三生产实习记录</title>
+        <pubTime>2016-08-06T08:14:47.000Z</pubTime>
+        
+        <tag>生产实习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://dongxi520.com/2016/06/12/Bolg-With-Hexo/</loc>
+    <lastmod>2017-02-21T13:15:56.905Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客个性化搭建</title>
+        <pubTime>2016-06-12T01:45:02.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/08/28/%E5%80%BC%E5%BE%97%E4%B8%80%E7%9C%8B%E7%9A%84GitHub%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2017-02-21T13:09:22.742Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub上不错的库</title>
+        <pubTime>2016-08-28T03:20:09.000Z</pubTime>
+        
+        <tag>开源库</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/09/26/Activity%E5%92%8CFragment%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/</loc>
+    <lastmod>2017-02-21T13:02:30.849Z</lastmod>
+    <data>
+        <display>
+        <title>Activity和Fragment之间的数据通信</title>
+        <pubTime>2016-09-26T06:30:23.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/04/Android%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2016-08-28T03:11:16.832Z</lastmod>
+    <data>
+        <display>
+        <title>Android基础学习资源</title>
+        <pubTime>2016-07-04T06:21:56.000Z</pubTime>
+        
+        <tag>Android资源</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/05/Android%E5%B8%83%E5%B1%80%E4%BD%A0%E6%9C%AA%E7%9F%A5%E7%9A%84%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2016-07-24T13:59:03.335Z</lastmod>
+    <data>
+        <display>
+        <title>Android布局你未知的属性</title>
+        <pubTime>2016-07-05T01:49:13.000Z</pubTime>
+        
+        <tag>AndroidLayout</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/07/07/JavaWeb%E7%AC%94%E8%AE%B0-2/</loc>
+    <lastmod>2016-07-09T14:10:51.884Z</lastmod>
+    <data>
+        <display>
+        <title>JavaWeb笔记-2</title>
+        <pubTime>2016-07-07T11:05:10.000Z</pubTime>
+        
+        <tag>JavaWeb基础笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/06/21/JavaWeb%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-06-21T11:21:13.175Z</lastmod>
+    <data>
+        <display>
+        <title>JavaWeb笔记</title>
+        <pubTime>2016-06-21T11:15:47.000Z</pubTime>
+        
+        <tag>JavaWeb基础笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://dongxi520.com/2016/06/13/GooglePlay-1/</loc>
+    <lastmod>2016-06-15T04:29:45.273Z</lastmod>
+    <data>
+        <display>
+        <title>GooglePlay项目第一天笔记</title>
+        <pubTime>2016-06-13T12:59:17.000Z</pubTime>
+        
+        <tag>GooglePlay项目笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dongxi520.com/2016/06/11/hello-world/</loc>
+    <lastmod>2016-06-11T15:17:21.782Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-06-11T07:22:27.933Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>

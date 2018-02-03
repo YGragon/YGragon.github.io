@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习笔记是《Python从入门到实践》书中的一个项目。书中会有一些错误，这里我已经修改过了，在Github上的项目是可以运行的。
+项目需求
+编写一个名为“学习笔记”Web应用程序，让用户能后记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。“学习笔记”的主页对这个网站进行扫面，并邀请用户注册或登录。用户登录后，就可以创建主题，添加条目以及阅读既有条目。
+
+开发环境
+Django 2.0
+Py">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-学习笔记博客系统总结">
+<meta property="og:url" content="http://dongxi520.com/2018/01/01/Python-学习笔记博客系统总结/index.html">
+<meta property="og:site_name" content="Aller_Dong">
+<meta property="og:description" content="学习笔记是《Python从入门到实践》书中的一个项目。书中会有一些错误，这里我已经修改过了，在Github上的项目是可以运行的。
+项目需求
+编写一个名为“学习笔记”Web应用程序，让用户能后记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。“学习笔记”的主页对这个网站进行扫面，并邀请用户注册或登录。用户登录后，就可以创建主题，添加条目以及阅读既有条目。
+
+开发环境
+Django 2.0
+Py">
+<meta property="og:updated_time" content="2018-01-01T04:25:24.508Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python-学习笔记博客系统总结">
+<meta name="twitter:description" content="学习笔记是《Python从入门到实践》书中的一个项目。书中会有一些错误，这里我已经修改过了，在Github上的项目是可以运行的。
+项目需求
+编写一个名为“学习笔记”Web应用程序，让用户能后记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。“学习笔记”的主页对这个网站进行扫面，并邀请用户注册或登录。用户登录后，就可以创建主题，添加条目以及阅读既有条目。
+
+开发环境
+Django 2.0
+Py">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dongxi520.com/2018/01/01/Python-学习笔记博客系统总结/"/>
+
+
+
+
+
+  <title>Python-学习笔记博客系统总结 | Aller_Dong</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?621ac8f1d105914cad0f9c767c774158";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aller_Dong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">DO or DIE</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8eAozZxvAmkiA2NE1_kB','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2018/01/01/Python-学习笔记博客系统总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aller_Dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/answer.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aller_Dong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python-学习笔记博客系统总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T08:49:12+08:00">
+                2018-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/01/Python-学习笔记博客系统总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/01/Python-学习笔记博客系统总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/01/Python-学习笔记博客系统总结/" class="leancloud_visitors" data-flag-title="Python-学习笔记博客系统总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,000
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  13
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>学习笔记是《Python从入门到实践》书中的一个项目。书中会有一些错误，这里我已经修改过了，在<a href="https://github.com/dongxi346/DjangoLearningLogs" target="_blank" rel="external">Github上的项目</a>是可以运行的。</p>
+<h3 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h3><blockquote>
+<p>编写一个名为“学习笔记”Web应用程序，让用户能后记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。“学习笔记”的主页对这个网站进行扫面，并邀请用户注册或登录。用户登录后，就可以创建主题，添加条目以及阅读既有条目。</p>
+</blockquote>
+<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><ul>
+<li>Django 2.0</li>
+<li>Python 3.5.2</li>
+<li>window 10 64位</li>
+<li>调试浏览器-Chrome  62.0.3202.89版本</li>
+<li>开发工具 Sublime Text 3</li>
+</ul>
+<blockquote>
+<p><code>Tip:</code> 我这里是在虚拟环境下开发，所以要查看 Django 的版本需要先激活虚拟环境 , 然后输入<code>python -m django --version</code>; 查看Python 版本只需在命令行窗口下输入<code>python</code>即可查看。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="项目的开发前准备"><a href="#项目的开发前准备" class="headerlink" title="项目的开发前准备"></a>项目的开发前准备</h3><h4 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h4><p>新建一个目录用于存放当前“学习笔记”项目的所有文件，在终端下切换到当前目录来创建虚拟环境，创建命令如下：</p>
+<p><code>python -m venv ll_env</code>: 先是运行了<code>venv</code>模块，应使用它来创建了一个名为<code>ll_env</code>的虚拟环境。如果不能使用 venv 模块，那么可以尝试先安装 <code>virtualenv</code>。如果能使用 venv 模块，可以不安装 virtualenv.</p>
+<h4 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装<code>virtualenv</code></h4><p><code>pip install --user virtualenv</code></p>
+<h4 id="激活虚拟环境"><a href="#激活虚拟环境" class="headerlink" title="激活虚拟环境"></a>激活虚拟环境</h4><p>建立了虚拟环境需要激活才能使用，所以使用下面的命令来激活它：各个平台可能会不一样，我这里是 window 平台</p>
+<p><code>ll_env\Scriptes\activate</code>, 停止虚拟环境可输入：<code>deactivate</code>命令</p>
+<h4 id="安装-Django"><a href="#安装-Django" class="headerlink" title="安装 Django"></a>安装 Django</h4><p>因为我们是在虚拟环境中开发，所以 Django 也是在虚拟环境中安装，输入如下命令：</p>
+<p><code>pip install Django</code></p>
+<blockquote>
+<p><code>Tip:</code>Django 仅在虚拟环境被激活的时候才可用</p>
+</blockquote>
+<h4 id="在-Django-中创建项目"><a href="#在-Django-中创建项目" class="headerlink" title="在 Django 中创建项目"></a>在 Django 中创建项目</h4><p><code>django-admin startproject leaning_log .</code>: 注意别漏了末尾的<code>.</code></p>
+<h4 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h4><p>Django 将大部分的项目相关的信息都存储在数据库中，因此我们需要创建一个共Django使用的数据库。</p>
+<p><code>python manage.py migrate</code></p>
+<h4 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h4><p>在做完以上内容后就可以运行项目了，但是此时运行项目得到的是 Django 主页</p>
+<p><code>python manage.py sunserver</code>，启动了服务器后，在浏览器中输入<code>localhost:8000</code>，<code>8000</code>表示端口号。如果没出现错误，应该能看到 Django 的主页。关闭服务器在命令行界面按住<code>ctrl+c</code>即可</p>
+<blockquote>
+<p>有可能会出现端口号被占用，提示“That port is already use ”，可以重新执行命令<code>pythonmanage.py runserver 8001</code>,如果还提示端口被占用，可接着换端口去多次尝试。</p>
+</blockquote>
+<h3 id="创建应用程序"><a href="#创建应用程序" class="headerlink" title="创建应用程序"></a>创建应用程序</h3><p>Django 项目是由一系列的应用程序组成，他们协同工作，让项目成为一个整体。当前命令行窗口应该还是运行着服务器的。所以要重新打开一个命令行窗口，并切换到<code>manage.py</code>目录下，激活该虚拟环境，再执行命令 startapp ,命令如下</p>
+<ul>
+<li>激活虚拟环境<code>ll_env\Scripts\activate</code></li>
+<li>运行应用程序<code>python manage.py startapp leaning_logs</code></li>
+</ul>
+<h4 id="定义模型-leaning-logs-models-py"><a href="#定义模型-leaning-logs-models-py" class="headerlink" title="定义模型 leaning_logs/models.py"></a>定义模型 leaning_logs/models.py</h4><p>模型就是一个类，包含属性和方法。模型中会定义外键，用于关联对应的对象，在这里的外键是用户，用于确定主题属于哪个用户，需要这么去定义外键 <code>owner = models.ForeignKey(User, &quot;on_delete=models.CASCADE&quot;)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">from django.db import models</span><br><span class="line">from django.contrib.auth.models import User</span><br><span class="line"></span><br><span class="line">class Topic(models.Model):</span><br><span class="line">    &quot;&quot;&quot;用户要学习的主题.&quot;&quot;&quot;</span><br><span class="line">    text = models.CharField(max_length=200)</span><br><span class="line">    date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line">    # 外键是用户，可以通过这个外键确定这个主题属于哪个用户</span><br><span class="line">    owner = models.ForeignKey(User, &quot;on_delete=models.CASCADE&quot;)</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        &quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line">        return self.text</span><br><span class="line"></span><br><span class="line">class Entry(models.Model):</span><br><span class="line">    &quot;&quot;&quot;用户发表的文章&quot;&quot;&quot;</span><br><span class="line">    # 外键是主题，可以通过这个外键去确定这个文章属于哪个主题</span><br><span class="line">    topic = models.ForeignKey(Topic, &quot;on_delete=models.CASCADE&quot;)</span><br><span class="line">    text = models.TextField()</span><br><span class="line">    date_added = models.DateTimeField(auto_now_add = True)</span><br><span class="line"></span><br><span class="line">    class Meta:</span><br><span class="line">        verbose_name_plural = &apos;entries&apos;</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        &quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line">        return self.text[:50] + &quot;...&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="激活模型-leaning-log-settings-py"><a href="#激活模型-leaning-log-settings-py" class="headerlink" title="激活模型 leaning_log/settings.py"></a>激活模型 leaning_log/settings.py</h4><p>创建了模型（应用程序）需要激活，让 Django 将应用程序包含到项目中.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Application definition</span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    &apos;django.contrib.admin&apos;,</span><br><span class="line">    &apos;django.contrib.auth&apos;,</span><br><span class="line">    &apos;django.contrib.contenttypes&apos;,</span><br><span class="line">    &apos;django.contrib.sessions&apos;,</span><br><span class="line">    &apos;django.contrib.messages&apos;,</span><br><span class="line">    &apos;django.contrib.staticfiles&apos;,</span><br><span class="line"></span><br><span class="line">    # 第三方应用程序</span><br><span class="line">    &apos;bootstrap3&apos;,</span><br><span class="line"></span><br><span class="line">    # 我的应用程序</span><br><span class="line">    &apos;leaning_logs&apos;,</span><br><span class="line">    &apos;users&apos;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>创建了模型之后需要让 Django 修改数据库，使其能够存储与模型相关的信息，因此需要再终端窗口中执行下面的命令：</p>
+<ul>
+<li><code>python manage.py makemigrations leaning_logs</code></li>
+<li><code>python manage.py migrate</code></li>
+</ul>
+<p>当每次需要修改“学习笔记”管理的数据时，都才去如下三个步骤：</p>
+<ul>
+<li>修改<code>models.py</code></li>
+<li>对<code>leaning_logs</code>调用<code>makemigrations</code></li>
+<li>让 Django 迁移项目</li>
+</ul>
+<h3 id="Django-管理网站"><a href="#Django-管理网站" class="headerlink" title="Django 管理网站"></a>Django 管理网站</h3><h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><p>Django 允许创建具备所有权限的用户—超级用户。</p>
+<p><code>python manage.py createsuperuser</code>, 根据提示输入用户名，邮箱地址，密码，确认密码</p>
+<blockquote>
+<p><code>Tip:</code>Django 并不存储你输入的密码，存储的是你输入密码的派生出来的一个字符串，所以不用担心你的密码会泄露</p>
+</blockquote>
+<h4 id="向管理网站注册模型-leaning-logs-admin-py"><a href="#向管理网站注册模型-leaning-logs-admin-py" class="headerlink" title="向管理网站注册模型 leaning_logs/admin.py"></a>向管理网站注册模型 leaning_logs/admin.py</h4><p>Django 自动再管理网站中添加了一些模型，如 User 和 Group，但对于我们创建的模型，必须手动进行注册。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib import admin</span><br><span class="line"></span><br><span class="line">from leaning_logs.models import Topic, Entry</span><br><span class="line"># 注册表单</span><br><span class="line">admin.site.register(Topic)</span><br><span class="line">admin.site.register(Entry)</span><br></pre></td></tr></table></figure>
+<p>在浏览器中输入<code>localhost:8000/admin/</code>，可以看到我们注册的模型了 Django 自动添加的模型。</p>
+<h3 id="Django-shell"><a href="#Django-shell" class="headerlink" title="Django shell"></a>Django shell</h3><p>输入一些数据后，就可以通过交互式终端去查看这些数据了，这里的中观交互环境称为 Django shell ，Django shell 是测试项目和排除故障的理想的方式。</p>
+<ul>
+<li>进入终端<code>python manage.py shell</code></li>
+<li>通过 python 语法可以查看项目中的数据，例如想查看所有文章，可以这么写：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">topics = Topic.objects.all()</span><br><span class="line">for topic int topics:</span><br><span class="line">	print(topic.id, topic)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>每次修改模型后，需要重启 shell  才能看到修改的效果。<code>window</code>下退出 shell 的方法是<code>按下 ctrl+z 再按下回车键</code></li>
+</ul>
+<h3 id="创建网页：主页"><a href="#创建网页：主页" class="headerlink" title="创建网页：主页"></a>创建网页：主页</h3><p>使用Django 创建网页的过程通常分为三个阶段：</p>
+<ul>
+<li><strong>定义 URL</strong></li>
+<li><strong>编写视图</strong></li>
+<li><strong>编写模板</strong></li>
+</ul>
+<h4 id="映射-URL，leaning-log-urls-py"><a href="#映射-URL，leaning-log-urls-py" class="headerlink" title="映射 URL，leaning_log/urls.py"></a>映射 URL，leaning_log/urls.py</h4><blockquote>
+<p> django 2. 0 版本可以使用 path 模块替代了 url 模块</p>
+<p>先导入相应的模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib import admin</span><br><span class="line">from django.urls import include, path</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(&apos;admin/&apos;, admin.site.urls),</span><br><span class="line">    path(&apos;users/&apos;, include(&apos;users.urls&apos;,namespace=&apos;users&apos;)),</span><br><span class="line">    path(r&apos;&apos;, include(&apos;leaning_logs.urls&apos;,namespace=&apos;leaning_logs&apos;)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h4 id="在-leaning-logs-和-user-下创建-urls-py-文件"><a href="#在-leaning-logs-和-user-下创建-urls-py-文件" class="headerlink" title="在 leaning_logs 和 user 下创建 urls.py 文件"></a>在 leaning_logs 和 user 下创建 urls.py 文件</h4><p>因为在leaning_log/urls.py 中定义了路径, 所以需要在对应的应用程序下也要创建对一ing的文件，否则会报错，提示找不不到该文件。</p>
+<blockquote>
+<p>分析每一条 url ，如<code>url(r&#39;^topics/(?P&lt;topic_id&gt;\d+)/$&#39;, views.topic, name=&#39;topic&#39;),</code></p>
+<ul>
+<li>开头的<code>r</code>可以让python将接下来的字符串视为原始字符串，不会转义</li>
+<li><code>^</code>表示字符串的开头，末尾的<code>$</code>表示字符串的结束。主要匹配的就是这二者之间的内容</li>
+<li><code>?P&lt;topic_id&gt;</code>将匹配的值存储到 topic_id 中。</li>
+<li><code>\d+</code>表示包含在两个斜杠内的任意数字都匹配</li>
+<li>第二个参数是 url 对应的视图</li>
+<li>第三个参数是 给 url 指定的名称</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">--------------------------leaning_logs/urls.py 的内容如下----------------------------</span><br><span class="line">&quot;&quot;&quot;定义leaning_logs的URL模式&quot;&quot;&quot;</span><br><span class="line">from django.conf.urls import url</span><br><span class="line">from . import views</span><br><span class="line"></span><br><span class="line">app_name=&apos;leaning_log&apos;</span><br><span class="line">urlpatterns = [</span><br><span class="line">    # 主页 , ^开始匹配之后的内容, $结束匹配之前的内容</span><br><span class="line">    url(r&apos;^$&apos;, views.index, name=&apos;index&apos;),</span><br><span class="line">    # 显示所有的主题</span><br><span class="line">    url(r&apos;^topics/$&apos;, views.topics, name=&apos;topics&apos;),</span><br><span class="line">    # 特定主题的详细页面, ?P&lt;topic_id&gt;：将匹配的值存储在topic_id中，\d+：匹配任意数字</span><br><span class="line">    url(r&apos;^topics/(?P&lt;topic_id&gt;\d+)/$&apos;, views.topic, name=&apos;topic&apos;),</span><br><span class="line">    # 用于添加新主题的网页</span><br><span class="line">    url(r&apos;^new_topic/$&apos;, views.new_topic, name=&apos;new_topic&apos;),</span><br><span class="line">    # 用于添加新条目的页面</span><br><span class="line">    url(r&apos;^new_entry/(?P&lt;topic_id&gt;\d+)/$&apos;, views.new_entry, name=&apos;new_entry&apos;),</span><br><span class="line">    # 用于编辑条目的页面</span><br><span class="line">    url(r&apos;^edit_entry/(?P&lt;entry_id&gt;\d+)/$&apos;, views.edit_entry, name=&apos;edit_entry&apos;),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">-------------------------- user/urls.py 的内容如下-------------------</span><br><span class="line"></span><br><span class="line">from django.conf.urls import url</span><br><span class="line">from django.contrib.auth.views import login</span><br><span class="line">from . import views</span><br><span class="line"></span><br><span class="line">app_name=&apos;leaning_log&apos;</span><br><span class="line">urlpatterns = [</span><br><span class="line">    # 登录页面. template_name表示使用的是模板中的登录页面，</span><br><span class="line">    url(r&apos;^login/$&apos;, login, &#123;&apos;template_name&apos;: &apos;users/login.html&apos;&#125;, name=&apos;login&apos;),</span><br><span class="line"></span><br><span class="line">    # 退出登录.</span><br><span class="line">    url(r&apos;^logout/$&apos;, views.logout_view, name=&apos;logout&apos;),</span><br><span class="line"></span><br><span class="line">    # 注册页面.</span><br><span class="line">    url(r&apos;^register/$&apos;, views.register, name=&apos;register&apos;),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h4 id="编写视图"><a href="#编写视图" class="headerlink" title="编写视图"></a>编写视图</h4><p>仅展示 leaning_logs/views.py，更多的内容可以查看源码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">from django.shortcuts import render</span><br><span class="line">from django.http import HttpResponseRedirect, Http404</span><br><span class="line">from django.urls import reverse</span><br><span class="line">from django.contrib.auth.decorators import login_required</span><br><span class="line">from .models import Topic, Entry</span><br><span class="line">from .forms import TopicForm, EntryForm</span><br><span class="line"></span><br><span class="line">def index(request):</span><br><span class="line">    &quot;&quot;&quot;学习笔记的主页&quot;&quot;&quot;</span><br><span class="line">    return render(request, &apos;leaning_logs/index.html&apos;)</span><br><span class="line"></span><br><span class="line">@login_required</span><br><span class="line">def topics(request):</span><br><span class="line">    &quot;&quot;&quot;显示所有的主题，login_required：加入登录验证，owner=request.user才能查看主题列表&quot;&quot;&quot;</span><br><span class="line">    topics = Topic.objects.filter(owner=request.user).order_by(&apos;date_added&apos;)</span><br><span class="line">    # 将结果存在context字典中</span><br><span class="line">    context = &#123;&apos;topics&apos;:topics&#125;</span><br><span class="line">    return render(request, &apos;leaning_logs/topics.html&apos;, context)</span><br><span class="line"></span><br><span class="line">@login_required</span><br><span class="line">def topic(request, topic_id):</span><br><span class="line">    &quot;&quot;&quot;显示单个主题及其所有的条目&quot;&quot;&quot;</span><br><span class="line">    topic = Topic.objects.get(id=topic_id)</span><br><span class="line">    # 确认请求的主题属于当前用户</span><br><span class="line">    if topic.owner != request.user:</span><br><span class="line">        raise Http404</span><br><span class="line"></span><br><span class="line">    # -date_added -表示按时间降序显示</span><br><span class="line">    entries = topic.entry_set.order_by(&apos;-date_added&apos;)</span><br><span class="line">    context = &#123;&apos;topic&apos;:topic, &apos;entries&apos;:entries&#125;</span><br><span class="line">    return render(request, &apos;leaning_logs/topic.html&apos;, context)</span><br><span class="line"></span><br><span class="line">@login_required</span><br><span class="line">def new_topic(request):</span><br><span class="line">    &quot;&quot;&quot;添加新主题&quot;&quot;&quot;</span><br><span class="line">    if request.method != &apos;POST&apos;:</span><br><span class="line">        # 未提交数据：创建一个新表单</span><br><span class="line">        form = TopicForm()</span><br><span class="line">    else:</span><br><span class="line">        # POST 提交的数据，对数据进行处理</span><br><span class="line">        form =TopicForm(request.POST)</span><br><span class="line">        if form.is_valid():</span><br><span class="line">            # 先修改主题，再保存到数据库中</span><br><span class="line">            new_topic = form.save(commit=False)</span><br><span class="line">            # 将当前修改主题的人变为新的话题所有者</span><br><span class="line">            new_topic.owner = request.user</span><br><span class="line">            # 保存到数据库</span><br><span class="line">            new_topic.save()</span><br><span class="line">            # 返回主页</span><br><span class="line">            return HttpResponseRedirect(reverse(&apos;leaning_logs:topics&apos;))</span><br><span class="line"></span><br><span class="line">    context = &#123;&apos;form&apos;:form&#125;</span><br><span class="line">    return render(request, &apos;leaning_logs/new_topic.html&apos;, context)</span><br><span class="line"></span><br><span class="line">@login_required</span><br><span class="line">def new_entry(request, topic_id):</span><br><span class="line">    &quot;&quot;&quot;在特定的主题重添加条目&quot;&quot;&quot;</span><br><span class="line">    topic = Topic.objects.get(id=topic_id)</span><br><span class="line"></span><br><span class="line">    if request.method != &apos;POST&apos;:</span><br><span class="line">        # 未提交数据，创建一个空表单</span><br><span class="line">        form = EntryForm()</span><br><span class="line">    else:</span><br><span class="line">        # POST 提交的数据，对数据进行处理</span><br><span class="line">        form = EntryForm(data = request.POST)</span><br><span class="line">        if form.is_valid():</span><br><span class="line">            new_entry = form.save(commit=False)</span><br><span class="line">            new_entry.topic = topic</span><br><span class="line">            new_entry.save()</span><br><span class="line">            return HttpResponseRedirect(reverse(&apos;leaning_logs:topic&apos;, args=[topic_id]))</span><br><span class="line">    context = &#123;&apos;topic&apos;:topic, &apos;form&apos;:form&#125;</span><br><span class="line">    return render(request, &apos;leaning_logs/new_entry.html&apos;, context)</span><br><span class="line"></span><br><span class="line">@login_required</span><br><span class="line">def edit_entry(request, entry_id):</span><br><span class="line">    &quot;&quot;&quot;编辑既有的条目&quot;&quot;&quot;</span><br><span class="line">    entry = Entry.objects.get(id=entry_id)</span><br><span class="line">    topic = entry.topic</span><br><span class="line">    if topic.owner != request.user:</span><br><span class="line">        raise Http404</span><br><span class="line"></span><br><span class="line">    if request.method != &apos;POST&apos;:</span><br><span class="line">        # 初次请求，使用当前条目填充表单</span><br><span class="line">        form = EntryForm(instance=entry)</span><br><span class="line">    else:</span><br><span class="line">        # POST提交的数据，对数据进行处理</span><br><span class="line">        form = EntryForm(instance=entry, data=request.POST)</span><br><span class="line">        if form.is_valid():</span><br><span class="line">            form.save()</span><br><span class="line">            return HttpResponseRedirect(reverse(&apos;leaning_logs:topic&apos;,args=[topic.id]))</span><br><span class="line"></span><br><span class="line">    context = &#123;&apos;entry&apos;:entry, &apos;topic&apos;:topic, &apos;form&apos;:form&#125;</span><br><span class="line">    return render(request, &apos;leaning_logs/edit_entry.html&apos;,context)</span><br></pre></td></tr></table></figure>
+<h4 id="编写模板"><a href="#编写模板" class="headerlink" title="编写模板"></a>编写模板</h4><p>仅写其中的一个模板—<code>leaning_logs/templates/leaning_logs/topic.html</code>，更多内容查看项目。这块主要是 html 的相关知识</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &apos;leaning_logs/base.html&apos; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block header %&#125;</span><br><span class="line">  &lt;h3&gt;&#123;&#123; topic&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&#123;% endblock header %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line"></span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    &lt;a href=&quot;&#123;% url &apos;leaning_logs:new_entry&apos; topic.id %&#125;&quot;&gt;添加新的笔记 &lt;/a&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">  &#123;% for entry in entries %&#125;</span><br><span class="line">    &lt;div class=&quot;panel panel-default&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;panel-heading&quot;&gt;</span><br><span class="line">        &lt;h4&gt;</span><br><span class="line">          &#123;&#123; entry.date_added|date:&apos;M d, Y H:i&apos; &#125;&#125;</span><br><span class="line">          &lt;small&gt;</span><br><span class="line">            &lt;a href=&quot;&#123;% url &apos;leaning_logs:edit_entry&apos; entry.id %&#125;&quot;&gt;编辑&lt;/a&gt;</span><br><span class="line">          &lt;/small&gt;</span><br><span class="line">        &lt;/h4&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">      &lt;div class=&quot;panel-body&quot;&gt;</span><br><span class="line">        &#123;&#123; entry.text|linebreaks &#125;&#125;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;!-- panel --&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &#123;% empty %&#125;</span><br><span class="line">    当前主题下还没有笔记哦~，快去记录你的人生吧！</span><br><span class="line">  &#123;% endfor %&#125;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endblock content %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="用户系统也可以看作一个应用程序，所以和上面的-leaning-logs-是一样的。"><a href="#用户系统也可以看作一个应用程序，所以和上面的-leaning-logs-是一样的。" class="headerlink" title="用户系统也可以看作一个应用程序，所以和上面的 leaning_logs 是一样的。"></a>用户系统也可以看作一个应用程序，所以和上面的 leaning_logs 是一样的。</h3><blockquote>
+<p>实现思路是一样的，项目地址是<a href="https://github.com/dongxi346/DjangoLearningLogs" target="_blank" rel="external">Leaning_log</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>小额支持我写出更好的文章~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Aller_Dong 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/19/写在北京一周年/" rel="next" title="写在北京一周年">
+                <i class="fa fa-chevron-left"></i> 写在北京一周年
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/03/Android-View-的工作原理/" rel="prev" title="Android View 的工作原理">
+                Android View 的工作原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2018/01/01/Python-学习笔记博客系统总结/"
+           data-title="Python-学习笔记博客系统总结" data-url="http://dongxi520.com/2018/01/01/Python-学习笔记博客系统总结/">
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/answer.png"
+                alt="Aller_Dong" />
+            
+              <p class="site-author-name" itemprop="name">Aller_Dong</p>
+              <p class="site-description motion-element" itemprop="description">瀝人青，我欠你一个余生。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/dongxi346" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/itxiaodong" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/d74f37143a31" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5149367598/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://shop145746579.taobao.com/?spm=a230r.7195193.1997079397.20.VHk3Xa" target="_blank" title="黎家小屋店">
+                    
+                      <i class="fa fa-fw fa-globe"></i>黎家小屋店</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dongxi520.com/" title="Aller_Dong" target="_blank">Aller_Dong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目需求"><span class="nav-number">1.</span> <span class="nav-text">项目需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发环境"><span class="nav-number">2.</span> <span class="nav-text">开发环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目的开发前准备"><span class="nav-number">3.</span> <span class="nav-text">项目的开发前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建虚拟环境"><span class="nav-number">3.1.</span> <span class="nav-text">创建虚拟环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装virtualenv"><span class="nav-number">3.2.</span> <span class="nav-text">安装virtualenv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激活虚拟环境"><span class="nav-number">3.3.</span> <span class="nav-text">激活虚拟环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Django"><span class="nav-number">3.4.</span> <span class="nav-text">安装 Django</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-Django-中创建项目"><span class="nav-number">3.5.</span> <span class="nav-text">在 Django 中创建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数据库"><span class="nav-number">3.6.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行项目"><span class="nav-number">3.7.</span> <span class="nav-text">运行项目</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建应用程序"><span class="nav-number">4.</span> <span class="nav-text">创建应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义模型-leaning-logs-models-py"><span class="nav-number">4.1.</span> <span class="nav-text">定义模型 leaning_logs/models.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激活模型-leaning-log-settings-py"><span class="nav-number">4.2.</span> <span class="nav-text">激活模型 leaning_log/settings.py</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Django-管理网站"><span class="nav-number">5.</span> <span class="nav-text">Django 管理网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建超级用户"><span class="nav-number">5.1.</span> <span class="nav-text">创建超级用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向管理网站注册模型-leaning-logs-admin-py"><span class="nav-number">5.2.</span> <span class="nav-text">向管理网站注册模型 leaning_logs/admin.py</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Django-shell"><span class="nav-number">6.</span> <span class="nav-text">Django shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建网页：主页"><span class="nav-number">7.</span> <span class="nav-text">创建网页：主页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#映射-URL，leaning-log-urls-py"><span class="nav-number">7.1.</span> <span class="nav-text">映射 URL，leaning_log/urls.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-leaning-logs-和-user-下创建-urls-py-文件"><span class="nav-number">7.2.</span> <span class="nav-text">在 leaning_logs 和 user 下创建 urls.py 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编写视图"><span class="nav-number">7.3.</span> <span class="nav-text">编写视图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编写模板"><span class="nav-number">7.4.</span> <span class="nav-text">编写模板</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户系统也可以看作一个应用程序，所以和上面的-leaning-logs-是一样的。"><span class="nav-number">8.</span> <span class="nav-text">用户系统也可以看作一个应用程序，所以和上面的 leaning_logs 是一样的。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aller_Dong</span>
+
+  
+</div>
+
+
+  <span id="busuanzi_container_site_uv">
+    总访问人数<span id="busuanzi_value_site_uv"></span>次
+  </span>
+  <span id="busuanzi_container_site_pv">
+      总访问数<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共75.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GithubHexo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("WT7yLRpUkYF15OHhUyvSW0Yo-gzGzoHsz", "S9eRyxJ20TAkJwGac6ujQDjk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
