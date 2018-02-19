@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2018-02-02T13:57:16.454Z</updated>
+  <updated>2018-02-19T14:51:46.860Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用 python 分析干货集中营的数据中提交干货内容最多的人</title>
+    <link href="http://dongxi520.com/2018/02/19/%E5%88%A9%E7%94%A8-python-%E5%88%86%E6%9E%90%E5%B9%B2%E8%B4%A7%E9%9B%86%E4%B8%AD%E8%90%A5%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%8F%90%E4%BA%A4%E5%B9%B2%E8%B4%A7%E5%86%85%E5%AE%B9%E6%9C%80%E5%A4%9A%E7%9A%84%E4%BA%BA/"/>
+    <id>http://dongxi520.com/2018/02/19/利用-python-分析干货集中营的数据中提交干货内容最多的人/</id>
+    <published>2018-02-19T14:51:46.000Z</published>
+    <updated>2018-02-19T14:51:46.860Z</updated>
+    
+    <content type="html">&lt;h4 id=&quot;分析的链接是：http-gank-io-api-data-all-1000-1&quot;&gt;&lt;a href=&quot;#分析的链接是：http-gank-io-api-data-all-1000-1&quot; class=&quot;headerlink&quot; title=&quot;分析的链接是：http://gank.io/api/data/all/1000/1&quot;&gt;&lt;/a&gt;分析的链接是：&lt;code&gt;http://gank.io/api/data/all/1000/1&lt;/code&gt;&lt;/h4&gt;&lt;p&gt;1000 表示返回的数据个数，1 表示页数，具体参数可在干货集中营的 API 文档中查看。&lt;a href=&quot;http://gank.io/api&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;干货集中营API文档&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;定义一个方法，进行计算返回的json数据中提交干货数据最多的人&quot;&gt;&lt;a href=&quot;#定义一个方法，进行计算返回的json数据中提交干货数据最多的人&quot; class=&quot;headerlink&quot; title=&quot;定义一个方法，进行计算返回的json数据中提交干货数据最多的人&quot;&gt;&lt;/a&gt;定义一个方法，进行计算返回的&lt;code&gt;json&lt;/code&gt;数据中提交干货数据最多的人&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;def get_gank_info(ipaddress):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    获取干货集中营的数据&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    r = requests.get(ipaddress)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    r = r.json()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    results = r[&amp;apos;results&amp;apos;]	# 解析这个字段&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    authors, names, counts = [], [], []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 得到所有作者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    for result in results:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        name = result[&amp;apos;who&amp;apos;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if name != &amp;apos;None&amp;apos; and name != &amp;apos;null&amp;apos;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            names.append(name)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    count = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    for i in names:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        # 和 get() 方法类似, 如果键不存在于字典中，将会添加键并将值设为默认值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        # key -- 查找的键值。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        # default -- 键不存在时，设置的默认键值。关键步骤&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        count[i] = count.setdefault(i,0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        count[i] += 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        # print(count[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    for k, v in count.items():&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	# 提交的干货大于5篇才保存&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if v &amp;gt;= 5:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            authors.append(str(k))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            counts.append(v)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            print(str(k) + &amp;apos; : &amp;apos; + str(v))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	# 可视化柱状图显示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    my_style = LS(&amp;apos;#333366&amp;apos;, base_style=LCS)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    chart = pygal.Bar(style=my_style, x_label_rotation=45, show_lengend=False)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    chart.title = &amp;quot;1000条干货数据中谁提供的最多&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    chart.x_labels = authors&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    chart.add(&amp;apos;&amp;apos;,counts)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    chart.render_to_file(&amp;apos;gank_most_post_type.svg&amp;apos;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;调用该方法即可&quot;&gt;&lt;a href=&quot;#调用该方法即可&quot; class=&quot;headerlink&quot; title=&quot;调用该方法即可&quot;&gt;&lt;/a&gt;调用该方法即可&lt;/h4&gt;&lt;p&gt;&lt;code&gt;get_gank_info(&amp;quot;http://gank.io/api/data/all/1000/1&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;分析的链接是：http-gank-io-api-data-all-1000-1&quot;&gt;&lt;a href=&quot;#分析的链接是：http-gank-io-api-data-all-1000-1&quot; class=&quot;headerlink&quot; title=&quot;分析的链接是：http://
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://dongxi520.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Android 自定义 View 的绘制顺序</title>
@@ -120,7 +143,7 @@
     <link href="http://dongxi520.com/2018/01/26/Android-%E8%87%AA%E5%AE%9A%E4%B9%89-View-clipXXX-%E5%92%8C-Matrix-%E5%85%A5%E9%97%A8/"/>
     <id>http://dongxi520.com/2018/01/26/Android-自定义-View-clipXXX-和-Matrix-入门/</id>
     <published>2018-01-26T14:52:43.000Z</published>
-    <updated>2018-01-26T14:52:43.847Z</updated>
+    <updated>2018-02-04T02:09:15.503Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;学习来源&lt;a href=&quot;http://hencoder.com/ui-1-4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;扔物线大神&lt;/a&gt;&lt;/p&gt;
@@ -1475,51 +1498,6 @@
     
     
       <category term="Python" scheme="http://dongxi520.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoordinatorLayout 初步使用</title>
-    <link href="http://dongxi520.com/2017/11/14/CoordinatorLayout-%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/"/>
-    <id>http://dongxi520.com/2017/11/14/CoordinatorLayout-初步使用/</id>
-    <published>2017-11-14T13:14:30.000Z</published>
-    <updated>2018-01-27T02:17:07.792Z</updated>
-    
-    <content type="html">&lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;CoordinatorLayout&lt;/code&gt;是一个加强版的&lt;code&gt;FrameLayout&lt;/code&gt;,这个布局是&lt;code&gt;Design Support&lt;/code&gt;库提供，通常情况下和&lt;code&gt;FrameLayout&lt;/code&gt;的使用是一样的。&lt;/p&gt;
-&lt;p&gt;区别是：&lt;code&gt;CoordinatorLayout&lt;/code&gt; 可以监听其所有子控件的各种事件，然后自动帮助我们做出最为合理的响应。举个常见的例子，&lt;code&gt;Snackbar&lt;/code&gt; 和悬浮按钮&lt;code&gt;FloatingActionButton&lt;/code&gt;的自动同步，效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-a713defdc3c131da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h4 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h4&gt;&lt;p&gt;只需要两步即可实现！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第一步：在布局中添加&lt;code&gt;FloatingActionButton&lt;/code&gt;控件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;android.support.design.widget.CoordinatorLayout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        android:layout_height=&amp;quot;match_parent&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		...//省略其他控件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;android.support.design.widget.FloatingActionButton&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:id=&amp;quot;@+id/fab&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:layout_width=&amp;quot;wrap_content&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:layout_height=&amp;quot;wrap_content&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:layout_gravity=&amp;quot;bottom|end&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:layout_margin=&amp;quot;16dp&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:src=&amp;quot;@mipmap/ic_launcher&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            android:elevation=&amp;quot;10dp&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/android.support.design.widget.CoordinatorLayo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;第二步：在调用&lt;code&gt;Snackbar&lt;/code&gt;的处添加如下内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Snackbar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	.make(view, &amp;quot;hehe&amp;quot;, Snackbar.LENGTH_SHORT)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	.setAction(&amp;quot;heheda&amp;quot;, new View.OnClickListener() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        public void onClick(View v) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Intent intent = new Intent(CardRecycleViewActivity.this,CollapsingToolbarActivity.class) ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        intent.putExtra(&amp;quot;name&amp;quot;,mStringList.get(position)) ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        startActivity(intent);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .show();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;解析&quot;&gt;&lt;a href=&quot;#解析&quot; class=&quot;headerlink&quot; title=&quot;解析&quot;&gt;&lt;/a&gt;解析&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;第一步就是添加控件，没什么说的&lt;/li&gt;
-&lt;li&gt;可以看到第二步中的&lt;code&gt;Snackbar.make()&lt;/code&gt;方法中传入了一个view，这个view只要是&lt;code&gt;CoordinateLayout的直接子view&lt;/code&gt;就行。可以在&lt;code&gt;setAction()&lt;/code&gt;方法中处理点击事件（这里是跳转了下一个activity）&lt;/li&gt;
-&lt;li&gt;第三步…简单使用就是这么简单，没有第三步了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;代码地址&quot;&gt;&lt;a href=&quot;#代码地址&quot; class=&quot;headerlink&quot; title=&quot;代码地址&quot;&gt;&lt;/a&gt;代码地址&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/dongxi346/AndroidLeaningDemo/blob/master/app/src/main/java/com/dongxi/rxdemo/CardRecycleViewActivity.java&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;CoordinatorLayout&lt;/code&gt;是一个加强版的&lt;code&gt;FrameLayout&lt;/code&gt;,这个布局是&lt;code&gt;Design Support&lt;/code&gt;库提供，通常情况下和&lt;code&gt;FrameLayout&lt;/code&gt;的使用是一样的。&lt;/p&gt;
-&lt;p&gt;区别是：&lt;code&gt;CoordinatorLayout&lt;/code&gt; 可以监听其所有子控件的各种事件，然后自动帮助我们做出最为合理的响应。举个常见的例子，&lt;code&gt;Snackbar&lt;/code&gt; 和悬浮按钮&lt;code&gt;FloatingActionButton&lt;/code&gt;的自动同步，效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1942372-a713defdc3c131da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
     
   </entry>
   
