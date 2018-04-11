@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dongxi520.com/"/>
-  <updated>2018-03-05T15:18:26.790Z</updated>
+  <updated>2018-04-11T14:34:21.381Z</updated>
   <id>http://dongxi520.com/</id>
   
   <author>
@@ -16,11 +16,119 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Activity 的生命周期和启动模式</title>
+    <link href="http://dongxi520.com/2018/04/11/Activity-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://dongxi520.com/2018/04/11/Activity-的生命周期和启动模式/</id>
+    <published>2018-04-11T14:34:21.000Z</published>
+    <updated>2018-04-11T14:34:21.381Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;Activity-的生命周期&quot;&gt;&lt;a href=&quot;#Activity-的生命周期&quot; class=&quot;headerlink&quot; title=&quot;Activity 的生命周期&quot;&gt;&lt;/a&gt;Activity 的生命周期&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;正常的生命周期&quot;&gt;&lt;a href=&quot;#正常的生命周期&quot; class=&quot;headerlink&quot; title=&quot;正常的生命周期&quot;&gt;&lt;/a&gt;正常的生命周期&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在正常情况下，Activity 会经历如下生命周期；&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/1467278-3a28d45b96ce5745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/664&quot; alt=&quot;Activity的生命周期图&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;onCreate()&lt;br&gt;表示 Activity 正在创建，这时 Activity 生命周期的第一个方法，可以在这里做一些初始化操作，比如 setContentView 去加载布局资源，以及初始化 Activity 页面显示所需的其他数据。&lt;/li&gt;
+&lt;li&gt;onRestart()&lt;br&gt;表示 Activity 正在重新启动，调用时机是：当用户按下 Home 键切换到桌面或者用户打开了一个新的 Activity 接着用户又回到这个 Activity 。&lt;/li&gt;
+&lt;li&gt;onStart()&lt;br&gt;表示 Activity 正在被启动，这时候 Activity 已经可见（相对系统是可见）但是还没显示在前台，还无法和用户进行交互。&lt;/li&gt;
+&lt;li&gt;onResume()&lt;br&gt;表示 Activity 已经可见了，并且可以和用户交互。&lt;/li&gt;
+&lt;li&gt;onPause()&lt;br&gt;表示 Activity 正在定制，正常情况下，紧接着 onStop 就会被调用。此时可以做一些存储数据、停止动画等工作，但是注意不能太耗时，因为这会影响到新 Activity 的显示。&lt;/li&gt;
+&lt;li&gt;onStop()&lt;br&gt;表示 Activity 即将停止，可以做一些稍微重量级的回首工作，同样不能太耗时。&lt;/li&gt;
+&lt;li&gt;onDestroy()&lt;br&gt;表示 Activity 即将被销毁，这时 Activity 生命周期中的最后一个回调，在这里我么可以做一些回首工作和最终的资源释放。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;特殊情况：&lt;br&gt;当用户打开新的 Activity 或者切换到桌面的时候，如果新的 Activity 采用了透明主题，那么当前 Activity 不会回掉 onStop .&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题1：onStart 和onresume、onPause和 onStop 从描述上看差不多，对我们有什么实质的不同呢？&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;答：onStart 和 onStop 是从 Activity 的可见这个角度来回调的，onStart 是相对于系统可见但是对于用户还是不可见且不可交互的，onStop 对于用户和系统都是不可见的并且不可和用户交互。而 onResume 和 onPause 是从 Activity是 是否位于前台这个角度来回调的，在 onResume 时 Activity 可见位于前台且可以和用户交互，onPause 时 Activity 位于后台，不可和用户交互。 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题2：假设当前 Activity 为 A ，如果这时用户打开了一个新 Activity B 那么 B 的 onResume 和 A 的 onPause 哪个先执行？&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;答：查看源码可知，Activity 的启动过程的源码相当复杂，涉及到 Instrumentation、ActivityThread 和 ActivityManagerService( 简称 AMS )从源码中可以看出新的 Activity 启动前，站定的 Activity 需要先 onPause 后，新的 Activity 才能启动。验证方法是写一个 Demo 通过在各个生命周期打印 Log 查看执行顺序。 &lt;/p&gt;
+&lt;h4 id=&quot;非正常的生命周期&quot;&gt;&lt;a href=&quot;#非正常的生命周期&quot; class=&quot;headerlink&quot; title=&quot;非正常的生命周期&quot;&gt;&lt;/a&gt;非正常的生命周期&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;比如当资源相关的系统配置发生改变以及系统内存不足时， Activity 就可能被杀死。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;资源相关的系统配置发生改变导致 Activity 被杀死并重建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当系统配置发生改变后，Activity 会被销毁，其 onPause、onStop、 onDestroy 均会被调用，同时由于 Activity 是在异常情况下终止的，系统会调用 onSaveInstanceState 来保存当前 Activity 的状态。&lt;/p&gt;
+&lt;p&gt;onSaveInstanceState 的调用时机是在 onStop 之前，但是不一定在 onPause 之后。&lt;/p&gt;
+&lt;p&gt;当 Activity 被异常终止且重建后，系统会调用 onRestoreInstanceState, 并把 Activity 销毁时 onSaveInstanceState 保存的 Bundle 数据传递给 onRestoreInstanceState 和 onCreate 方法。&lt;/p&gt;
+&lt;p&gt;因此可以通过 onRestoreInstanceState 和 onCreate 方法来判断 Activity 是否被重建；而且从时序上来说，onRestoreInstanceState 的调用时机在 onStart 之后。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资源内存不足导致低优先级的 Activity 被杀死&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Activity 的优先级情况，从高到低可以分为以下三种：&lt;/p&gt;
+&lt;p&gt;(1) 前台 Activity ：正在和用户交互的 Activity ，优先级最高&lt;/p&gt;
+&lt;p&gt;(2) 可见但非前台 Activity ：比如 Activity中弹出了一个对话框，导致 Activity可见但是位于后台无法和用户直接交互&lt;/p&gt;
+&lt;p&gt;(3) 后台 Activity ：已经被暂停的 Activity，比如执行了 onStop , 优先级最低&lt;/p&gt;
+&lt;h3 id=&quot;Activity-的启动模式&quot;&gt;&lt;a href=&quot;#Activity-的启动模式&quot; class=&quot;headerlink&quot; title=&quot;Activity 的启动模式&quot;&gt;&lt;/a&gt;Activity 的启动模式&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;有时候为了满足项目的特殊需求，就必须使用 Activity 的启动模式，所以我们必须要搞清楚它的启动模式和标志位&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;Activity-为什么需要启动模式？&quot;&gt;&lt;a href=&quot;#Activity-为什么需要启动模式？&quot; class=&quot;headerlink&quot; title=&quot;Activity 为什么需要启动模式？&quot;&gt;&lt;/a&gt;Activity 为什么需要启动模式？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在默认情况下，当我们多次启动同一个 Activity 的时候，系统会创建多个实例并把它们一一放入任务栈中，当我们按下返回键，会发酵这些 Activity 会一一回退。这个任务栈时一种“后进先出”的栈结构，也就是最后进来的 Activity 最先出去。但是当我们多次启动同一个 Activity 系统会重复创建多个实例，Android 在设计idea时候为了解决这个问题，它提供了启动模式来修改系统的默认行为。目前又四种启动模式：standard、singleTop、singleTask、singleInstance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;standard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这时系统的默认模式，每次启动一个 Activity 都会重新创建一个新的实例，不管这个实例是否已经存在。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;singleTop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;栈顶复用模式。在该模式下，如果新的 Activity 已经位于任务栈的栈顶，那么此 Activity 不会被重新创建，同时它的 onNewIntent 方法会被回掉，通过重写此方法我们可以取出当前请求的信息。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;protected void onNewIntent(Intent intent) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  super.onNewIntent(intent);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  setIntent(intent);//must store the new intent unless getIntent() will return the old one&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;singleTask&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;栈内复用模式。这是一种单实例模式，在该模式下，只有 ACtivity 在一个栈中存在，那么多次启动此 Activity 都不会重新创建实例，和 singleTop 一样，体统也会回调其 onNewInstent。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;singleInstance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;单实例模式。这话i是一种加强的 singleTask 模式，它除了具备 singleTask 的所有特性外，还加强了一点，那就是具有此种模式的 Activity 只能单独的位于任务栈中。&lt;/p&gt;
+&lt;h4 id=&quot;如何给-Activity-设置启动模式呢？&quot;&gt;&lt;a href=&quot;#如何给-Activity-设置启动模式呢？&quot; class=&quot;headerlink&quot; title=&quot;如何给 Activity 设置启动模式呢？&quot;&gt;&lt;/a&gt;如何给 Activity 设置启动模式呢？&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;有两种方式，(1)是通过 AndroidMenifest 中为 Activity 指定启动模式 (2) 在 Intent 中设置标志位来为 Activity 指定启动模式。两种方式的优先级是(2)优先于(1)，当两种方式存在时，以第二种方式为准。当然这两种方式还是有差异的，比如(1)无法啊直接为 Activity 设置 FLAG_ACTIVITY_CLEAR_TOP标志，而 (2) 无法为 Activity 指定 singleInstance 模式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;通过 AndroidMenifest 中为 Activity 指定启动模式&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;activity &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:name=&amp;quot;..activity.MultiportActivity&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:launchMode=&amp;quot;singleTask&amp;quot;/&amp;gt;&amp;lt;!--指定标志位--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在 Intent 中设置标志位来为 Activity 指定启动模式&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Intent intent = new Intent();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;intent.setClass(context, MainActivity.class);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//指定标志位&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;context.startActivity(intent);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;查看任务栈的命令&quot;&gt;&lt;a href=&quot;#查看任务栈的命令&quot; class=&quot;headerlink&quot; title=&quot;查看任务栈的命令&quot;&gt;&lt;/a&gt;查看任务栈的命令&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;adb shell dumpsys activity&lt;/code&gt;在导出的信息中重点查看&lt;code&gt;Running activitys&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;Activity-的-Flags&quot;&gt;&lt;a href=&quot;#Activity-的-Flags&quot; class=&quot;headerlink&quot; title=&quot;Activity 的 Flags&quot;&gt;&lt;/a&gt;Activity 的 Flags&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在 Intent 中设置 Activity 的启动模式时可以通过 Flags 设置，这里的 Flags 不仅仅是可以设置启动模式，还可以影响 Activity 的运行状态。比如设置了 FLAG_ACTIVITY_CLEAR_TOP 的Activity 表示在同一个任务栈中所有位于它上面的 Activity 都要出栈，这个标志位一般会和 singleTask 启动模式一起出现，而且 singleTask 模式是默认具有此标志位的效果。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Activity-的生命周期&quot;&gt;&lt;a href=&quot;#Activity-的生命周期&quot; class=&quot;headerlink&quot; title=&quot;Activity 的生命周期&quot;&gt;&lt;/a&gt;Activity 的生命周期&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;正常的生命周期&quot;&gt;&lt;a href=&quot;#正常的生命周期&quot; class=&quot;headerlink&quot; title=&quot;正常的生命周期&quot;&gt;&lt;/a&gt;正常的生命周期&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在正常情况下，Activity 会经历如下生命周期；&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/1467278-3a28d45b96ce5745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/664&quot; alt=&quot;Activity的生命周期图&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>讲话技巧学习笔记</title>
     <link href="http://dongxi520.com/2018/02/25/%E8%AE%B2%E8%AF%9D%E6%8A%80%E5%B7%A7%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://dongxi520.com/2018/02/25/讲话技巧（一）/</id>
     <published>2018-02-25T03:20:50.000Z</published>
-    <updated>2018-03-05T15:18:26.790Z</updated>
+    <updated>2018-03-09T13:12:52.366Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本篇介绍了多种方式让你在人际交往中能够提升幽默感以及在临场时如何去说话能够不怯场！&lt;/p&gt;
@@ -753,7 +861,7 @@
     <link href="http://dongxi520.com/2018/01/01/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93/"/>
     <id>http://dongxi520.com/2018/01/01/Python-学习笔记博客系统总结/</id>
     <published>2018-01-01T00:49:12.000Z</published>
-    <updated>2018-03-09T13:12:54.152Z</updated>
+    <updated>2018-03-10T01:03:18.317Z</updated>
     
     <content type="html">&lt;p&gt;学习笔记是《Python从入门到实践》书中的一个项目。书中会有一些错误，这里我已经修改过了，在&lt;a href=&quot;https://github.com/dongxi346/DjangoLearningLogs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github上的项目&lt;/a&gt;是可以运行的。&lt;/p&gt;
 &lt;h3 id=&quot;项目需求&quot;&gt;&lt;a href=&quot;#项目需求&quot; class=&quot;headerlink&quot; title=&quot;项目需求&quot;&gt;&lt;/a&gt;项目需求&lt;/h3&gt;&lt;blockquote&gt;
@@ -1714,50 +1822,6 @@
     
     
       <category term="Python" scheme="http://dongxi520.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoordinatorLayout结合AppBarLayout使用</title>
-    <link href="http://dongxi520.com/2017/11/19/CoordinatorLayout%E7%BB%93%E5%90%88AppBarLayout%E4%BD%BF%E7%94%A8/"/>
-    <id>http://dongxi520.com/2017/11/19/CoordinatorLayout结合AppBarLayout使用/</id>
-    <published>2017-11-19T11:04:26.000Z</published>
-    <updated>2018-01-27T02:17:12.063Z</updated>
-    
-    <content type="html">&lt;h4 id=&quot;实现的效果&quot;&gt;&lt;a href=&quot;#实现的效果&quot; class=&quot;headerlink&quot; title=&quot;实现的效果&quot;&gt;&lt;/a&gt;实现的效果&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20171119194759700?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSVR4aWFvZG9uZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h4 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Toolbar 随着列表的滑动而动态显示&lt;/li&gt;
-&lt;li&gt;FloatingActionButton 在列表上划时隐藏，下拉时显示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Toolbar 随着列表的滑动而动态显示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这里是将&lt;code&gt;Toolbar&lt;/code&gt;嵌套到了&lt;code&gt;AppbarLayout&lt;/code&gt;这个控件中，并设置这个属性&lt;code&gt;app:layout_scrollFlags=&amp;quot;scroll|enterAlways&amp;quot;&lt;/code&gt;，然后在可滑动的控件中添加上一个布局行为&lt;code&gt;app:layout_behavior=&amp;quot;@string/appbar_scrolling_view_behavior&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;app:layout_scrollFlags:&lt;/code&gt;这是滑动标志，设置&lt;code&gt;scroll&lt;/code&gt;表示在可滑动列表上滑时&lt;code&gt;Toolbar&lt;/code&gt;会一起向上滑动并隐藏，它还有其他值可以设置（如果使用了其他值，必定要再添加上这个值才能起作用），&lt;code&gt;enterAlways&lt;/code&gt;表示可滑动列表向下滑动时&lt;code&gt;Toolbar&lt;/code&gt;会跟着一起向下滑动显示；&lt;code&gt;snap:&lt;/code&gt;表示子View 随着可滑动列表的滑动而直接隐藏或者显示，没有中间子 View 显示的过程；&lt;code&gt;enterAlwaysCollapsed:&lt;/code&gt;是&lt;code&gt;enterAlways&lt;/code&gt;的增强版，它表示可滑动列表下滑 Toolbar 也跟着下滑，当超过&lt;code&gt;Toolbar&lt;/code&gt;的高度后才开始显示&lt;code&gt;子 View&lt;/code&gt;，这个子View一般是&lt;code&gt;AppBarLayout&lt;/code&gt;布局里面的 view；&lt;code&gt;exitUntilCollapsed：&lt;/code&gt;当可滑动列表上划时&lt;code&gt;Toolbar&lt;/code&gt;直接显示在顶部，子 View 滑出屏幕。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;AppbarLayout&lt;/code&gt; 内部继承了一个垂直的LinearLayout，并在内部做了很多滚动的操作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;布局代码如下：&quot;&gt;&lt;a href=&quot;#布局代码如下：&quot; class=&quot;headerlink&quot; title=&quot;布局代码如下：&quot;&gt;&lt;/a&gt;布局代码如下：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;android.support.design.widget.CoordinatorLayout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    xmlns:app=&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    tools:context=&amp;quot;com.xxxx.xxx.xxActivity&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;android.support.design.widget.AppBarLayout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_height=&amp;quot;wrap_content&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;!--封装的一个toolbar--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;com.dongxi.rxdemo.widget.CustomToolbar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:id=&amp;quot;@+id/custom_toolbar&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_height=&amp;quot;?attr/actionBarSize&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:background=&amp;quot;@color/colorPrimary&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      app:layout_scrollFlags=&amp;quot;scroll|enterAlways&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/com.dongxi.rxdemo.widget.CustomToolbar&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/android.support.design.widget.AppBarLayout&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;android.support.v4.widget.SwipeRefreshLayout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:id=&amp;quot;@+id/swipe_refresh&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app:layout_behavior=&amp;quot;@string/appbar_scrolling_view_behavior&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;com.dongxi.rxdemo.widget.EmptyRecyclerView&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:id=&amp;quot;@+id/recycler_view&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_width=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      android:layout_height=&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/com.dongxi.rxdemo.widget.EmptyRecyclerView&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;!--空视图--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;include android:id=&amp;quot;@+id/empty_view&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      layout=&amp;quot;@layout/recyclerview_empty_layout&amp;quot;/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/android.support.v4.widget.SwipeRefreshLayout&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;!--悬浮按钮--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;android.support.design.widget.FloatingActionButton&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:id=&amp;quot;@+id/fab&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_width=&amp;quot;wrap_content&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_height=&amp;quot;wrap_content&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_gravity=&amp;quot;bottom|end&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:layout_margin=&amp;quot;16dp&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:src=&amp;quot;@mipmap/ic_launcher&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/android.support.design.widget.CoordinatorLayout&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;FloatingActionButton 在列表上划时隐藏，下拉时显示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这个可以有很多方式实现，推荐一篇写的不错的文章&lt;a href=&quot;http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0407/4126.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;FloatingActionButton滚动时的显示与隐藏小结&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我这里实现的就比较简单了，思路是在&lt;code&gt;RecyclerView&lt;/code&gt; 滑动的时候，去监听滑动状态，如果滑动的距离大于0则上划，需要隐藏悬浮按钮，如果滑动的距离小于0则是下滑，需要展示悬浮按钮，代码如下：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mRecyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            public void onScrollStateChanged(RecyclerView recyclerView, int newState) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                super.onScrollStateChanged(recyclerView, newState);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            public void onScrolled(RecyclerView recyclerView, int dx, int dy) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                super.onScrolled(recyclerView, dx, dy);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (dy &amp;gt; 0)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    mFab.setVisibility(View.GONE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    mFab.setVisibility(View.VISIBLE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;源码地址&quot;&gt;&lt;a href=&quot;#源码地址&quot; class=&quot;headerlink&quot; title=&quot;源码地址&quot;&gt;&lt;/a&gt;源码地址&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/dongxi346/AndroidLeaningDemo/blob/master/app/src/main/java/com/dongxi/rxdemo/coordinatorlayout/CollapsingToolbarActivity.java&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;实现的效果&quot;&gt;&lt;a href=&quot;#实现的效果&quot; class=&quot;headerlink&quot; title=&quot;实现的效果&quot;&gt;&lt;/a&gt;实现的效果&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20171119194759700?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSVR4aWFvZG9uZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="http://dongxi520.com/tags/Android/"/>
     
   </entry>
   

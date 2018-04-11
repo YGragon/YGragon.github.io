@@ -132,41 +132,30 @@
 
 
 
-<meta name="description" content="故事开始MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。
+<meta name="description" content="Activity 的生命周期
+了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。
 
-SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境 (IDE)。
-
-
-来张图说明一下MVC的工作模式吧">
+正常的生命周期
+在正常情况下，Activity 会经历如下生命周期；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不必纠结MVC还是MVP，听我说两句~">
-<meta property="og:url" content="http://dongxi520.com/2017/02/21/不必纠结MVC还是MVP，听我说两句/index.html">
+<meta property="og:title" content="Activity 的生命周期和启动模式">
+<meta property="og:url" content="http://dongxi520.com/2018/04/11/Activity-的生命周期和启动模式/index.html">
 <meta property="og:site_name" content="Aller_Dong">
-<meta property="og:description" content="故事开始MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。
+<meta property="og:description" content="Activity 的生命周期
+了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。
 
-SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境 (IDE)。
-
-
-来张图说明一下MVC的工作模式吧">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-2f233e873f398278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-4b1a692399a76050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-aea77c3945b45284.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-f24cb4a01302a4c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-4606cbec38bcd94c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-83e58e6d99a792ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-816502b5d8e9ba84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-029b606901214221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1942372-438fa75459744107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-25T01:04:34.405Z">
+正常的生命周期
+在正常情况下，Activity 会经历如下生命周期；">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1467278-3a28d45b96ce5745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/664">
+<meta property="og:updated_time" content="2018-04-11T14:34:21.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不必纠结MVC还是MVP，听我说两句~">
-<meta name="twitter:description" content="故事开始MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。
+<meta name="twitter:title" content="Activity 的生命周期和启动模式">
+<meta name="twitter:description" content="Activity 的生命周期
+了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。
 
-SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境 (IDE)。
-
-
-来张图说明一下MVC的工作模式吧">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1942372-2f233e873f398278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+正常的生命周期
+在正常情况下，Activity 会经历如下生命周期；">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1467278-3a28d45b96ce5745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/664">
 
 
 
@@ -196,13 +185,13 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
 
 
 
-  <link rel="canonical" href="http://dongxi520.com/2017/02/21/不必纠结MVC还是MVP，听我说两句/"/>
+  <link rel="canonical" href="http://dongxi520.com/2018/04/11/Activity-的生命周期和启动模式/"/>
 
 
 
 
 
-  <title>不必纠结MVC还是MVP，听我说两句~ | Aller_Dong</title>
+  <title>Activity 的生命周期和启动模式 | Aller_Dong</title>
   
 
 
@@ -369,7 +358,7 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2017/02/21/不必纠结MVC还是MVP，听我说两句/">
+    <link itemprop="mainEntityOfPage" href="http://dongxi520.com/2018/04/11/Activity-的生命周期和启动模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aller_Dong">
@@ -386,7 +375,7 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
 
         
         
-          <h1 class="post-title" itemprop="name headline">不必纠结MVC还是MVP，听我说两句~</h1>
+          <h1 class="post-title" itemprop="name headline">Activity 的生命周期和启动模式</h1>
         
 
         <div class="post-meta">
@@ -398,8 +387,8 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-21T20:57:15+08:00">
-                2017-02-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T22:34:21+08:00">
+                2018-04-11
               </time>
             
 
@@ -417,8 +406,8 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/21/不必纠结MVC还是MVP，听我说两句/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/21/不必纠结MVC还是MVP，听我说两句/" itemprop="commentCount"></span>
+                <a href="/2018/04/11/Activity-的生命周期和启动模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/11/Activity-的生命周期和启动模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -426,7 +415,7 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
 
           
           
-             <span id="/2017/02/21/不必纠结MVC还是MVP，听我说两句/" class="leancloud_visitors" data-flag-title="不必纠结MVC还是MVP，听我说两句~">
+             <span id="/2018/04/11/Activity-的生命周期和启动模式/" class="leancloud_visitors" data-flag-title="Activity 的生命周期和启动模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +441,7 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,545
+                  1,861
                 </span>
               
 
@@ -468,7 +457,7 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  7
                 </span>
               
             </div>
@@ -489,101 +478,89 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
       
 
       
-        <h4 id="故事开始"><a href="#故事开始" class="headerlink" title="故事开始"></a>故事开始</h4><p>MVC全称是Model-View-Controller 也就是模型–视图–控制器。是在1970年的时候提出由TrygveReenskaug在Smalltalk-80系统上首次提出的。</p>
-<blockquote>
-<p><strong>SmallTalk在百度百科的解释是这样: </strong><br>Smalltalk被公认为历史上第二个<a href="http://baike.baidu.com/view/324458.htm" target="_blank" rel="external">面向对象的程序设计</a>语言和第一个真正的<a href="http://baike.baidu.com/view/14867.htm" target="_blank" rel="external">集成开发环境</a> (IDE)。</p>
+        <h3 id="Activity-的生命周期"><a href="#Activity-的生命周期" class="headerlink" title="Activity 的生命周期"></a>Activity 的生命周期</h3><blockquote>
+<p>了解 Activity 的生命周期可以更好的了解每个页面不同时刻的状态，根据不同的状态我们可以进行相应的操作。比如在 Activity 启动时对数据的初始化，在 Activity 关闭时对不需要的数据进行释放。</p>
 </blockquote>
-<ul>
-<li>来张图说明一下MVC的工作模式吧</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-2f233e873f398278.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h4 id="正常的生命周期"><a href="#正常的生命周期" class="headerlink" title="正常的生命周期"></a>正常的生命周期</h4><blockquote>
+<p>在正常情况下，Activity 会经历如下生命周期；<br><img src="https://upload-images.jianshu.io/upload_images/1467278-3a28d45b96ce5745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/664" alt="Activity的生命周期图"></p>
+</blockquote>
 <a id="more"></a>
-<p><strong>图中红色小框框就是MVC的工作模式</strong></p>
 <ul>
-<li>从图中可以看出用户向View发送指令，再有View<strong>直接要求</strong>Modle改变状态</li>
-<li>用户也可以直接向Controller发送指令，再由Controller发送给Model，再通过Model去改变View的状态</li>
-<li>所以MVC框架模式View和Model之间的联系还是相当紧密，耦合度还是很高，后期维护改动View需要将Model中的内容也要改动。</li>
-</ul>
-<p><strong>MVC是一种框架模式而非设计模式</strong><br>其优点是：</p>
-<ul>
-<li>理解起来比较容易，技术含量并不高，对开发和维护来说易于维护和修改</li>
-<li>耦合度不高，表现层与业务层分离，各司其职。</li>
-</ul>
-<p>其缺点是：</p>
-<ul>
-<li>它定义不是很明确，完全理解MVC模式并不容易。</li>
-<li>使用MVC需要精心策划，因为它的内部原理比较复杂</li>
-<li>一些小的项目采用MVC框架反而会更加复杂</li>
-</ul>
-<p><strong>MVC的Android伪代码实现</strong></p>
-<blockquote>
-<p><strong>以下图片中代码与数据不匹配，只是为了方便理解MVC在代码中如何写，需要看实例的可以去网上了解，我在这里就偷懒了：）</strong></p>
-</blockquote>
-<ul>
-<li>首先你需要一个View视图，也就是XML布局。</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-4b1a692399a76050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="View"></p>
-<ul>
-<li>然后你还需要一个Model<br>也就是数据，可以是数据库中的内容，也可以是在代码中写的List集合。</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-aea77c3945b45284.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="data"></p>
-<ul>
-<li>最后需要一个Controller，也就是Activity或者Fragment<br>通过在Controller中对用户在View中传递过来的操作，进行访问model中的数据，然后改变View中的状态。<br><img src="http://upload-images.jianshu.io/upload_images/1942372-f24cb4a01302a4c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></li>
+<li>onCreate()<br>表示 Activity 正在创建，这时 Activity 生命周期的第一个方法，可以在这里做一些初始化操作，比如 setContentView 去加载布局资源，以及初始化 Activity 页面显示所需的其他数据。</li>
+<li>onRestart()<br>表示 Activity 正在重新启动，调用时机是：当用户按下 Home 键切换到桌面或者用户打开了一个新的 Activity 接着用户又回到这个 Activity 。</li>
+<li>onStart()<br>表示 Activity 正在被启动，这时候 Activity 已经可见（相对系统是可见）但是还没显示在前台，还无法和用户进行交互。</li>
+<li>onResume()<br>表示 Activity 已经可见了，并且可以和用户交互。</li>
+<li>onPause()<br>表示 Activity 正在定制，正常情况下，紧接着 onStop 就会被调用。此时可以做一些存储数据、停止动画等工作，但是注意不能太耗时，因为这会影响到新 Activity 的显示。</li>
+<li>onStop()<br>表示 Activity 即将停止，可以做一些稍微重量级的回首工作，同样不能太耗时。</li>
+<li>onDestroy()<br>表示 Activity 即将被销毁，这时 Activity 生命周期中的最后一个回调，在这里我么可以做一些回首工作和最终的资源释放。</li>
 </ul>
 <blockquote>
-<p>MVP是MVC的一个演化版本，全称是Model-View-Presenter。<br>MVP的出现主要就是解决MVC中的View和Model的耦合性高的的问题，同时又带来了很好的扩展性。</p>
-</blockquote>
-<p><strong>MVP模式的三个角色的作用：</strong></p>
-<ul>
-<li><strong>Presenter-中介</strong><br>主演沟通View和Model的桥梁，它从Model获取数据后返回给View层，使得View层和Model层之间没有耦合，从而将业务逻辑从View层抽离。</li>
-<li><strong>Model-房主</strong><br>Model主要提供数据的存取功能，Presenter需要通过Model层存储、获取数据，Model层就像是一个仓库。</li>
-<li><strong>View-用户</strong><br>View通常是指Activity、Fragment或者某个View控件。它持有一个Presenter成员变量，同时它需要实现一个逻辑接口，将View上的操作转交给Presenter层进行实现，最后Presenter层调用View层逻辑接口将结果返回给View元素。</li>
-</ul>
-<p><strong>来张图说明一下MVP的工作模式吧</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-4606cbec38bcd94c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p><strong>从图中我们可以看出MVP和MVC之间的额最大区别：</strong></p>
-<ul>
-<li>View和Model之间彻底的解耦</li>
-<li>MVP是面向接口编程，也就是说用户不必知道我是具体如何实现的，用户只要知道有这个功能接口，直接调用即可。</li>
-</ul>
-<p><strong>MVP的Android伪代码实现</strong></p>
-<blockquote>
-<p><strong>以下图片中代码与数据不匹配，只是为了方便理解MVC在代码中如何写，需要看实例的可以去网上了解，我在这里就偷懒了：）</strong></p>
+<p>特殊情况：<br>当用户打开新的 Activity 或者切换到桌面的时候，如果新的 Activity 采用了透明主题，那么当前 Activity 不会回掉 onStop .</p>
 </blockquote>
 <ul>
-<li>首先需要一个Presenter，作为View和Model的中间人</li>
+<li><strong>问题1：onStart 和onresume、onPause和 onStop 从描述上看差不多，对我们有什么实质的不同呢？</strong></li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-83e58e6d99a792ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>答：onStart 和 onStop 是从 Activity 的可见这个角度来回调的，onStart 是相对于系统可见但是对于用户还是不可见且不可交互的，onStop 对于用户和系统都是不可见的并且不可和用户交互。而 onResume 和 onPause 是从 Activity是 是否位于前台这个角度来回调的，在 onResume 时 Activity 可见位于前台且可以和用户交互，onPause 时 Activity 位于后台，不可和用户交互。 </p>
 <ul>
-<li>然后你还需要一个View以及ViewImpl接口</li>
+<li><strong>问题2：假设当前 Activity 为 A ，如果这时用户打开了一个新 Activity B 那么 B 的 onResume 和 A 的 onPause 哪个先执行？</strong></li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-816502b5d8e9ba84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-029b606901214221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<ul>
-<li>最后你还需要Model一个ModelImpl接口</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1942372-438fa75459744107.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<h2 id="为什么说不必纠结是MVC还是MVP呢？"><a href="#为什么说不必纠结是MVC还是MVP呢？" class="headerlink" title="为什么说不必纠结是MVC还是MVP呢？"></a>为什么说不必纠结是MVC还是MVP呢？</h2><blockquote>
-<p>MVC和MVP的最终目的就是要数据和UI分离，互相不影响。那么如何能不必纠结而做到呢？？你听说过面向对象吗？听过再听听我的理解~</p>
+<p>答：查看源码可知，Activity 的启动过程的源码相当复杂，涉及到 Instrumentation、ActivityThread 和 ActivityManagerService( 简称 AMS )从源码中可以看出新的 Activity 启动前，站定的 Activity 需要先 onPause 后，新的 Activity 才能启动。验证方法是写一个 Demo 通过在各个生命周期打印 Log 查看执行顺序。 </p>
+<h4 id="非正常的生命周期"><a href="#非正常的生命周期" class="headerlink" title="非正常的生命周期"></a>非正常的生命周期</h4><blockquote>
+<p>比如当资源相关的系统配置发生改变以及系统内存不足时， Activity 就可能被杀死。</p>
 </blockquote>
 <ul>
-<li><strong>面向对象</strong><br>封装、多态，继承。老师好像也都是这么教的，那么到底什么才是多态封装继承呢？</li>
-<li><strong>封装</strong><br>封装就是将用户不想看到的东西封装起来，可以用到面向对象中的 Private<br>属性，将用户不想看到的内容写在这里面。比如收音机上的播放功能，用户不用知道收音机如何播放，它只需要知道摁下这个键能播放即可。</li>
-<li><strong>多态</strong><br>多态就是一个对象的多种表现形态，主要表现为：行为多态和状态多态。<br>行为多态就好比一个父亲有多个孩子，每个孩子都不一样，但是都是同一个父亲；状态多态就好比每个孩子在一天中有好多个状态变现，有吃饭，学习，睡觉。</li>
-<li><strong>继承？不！我想说的是对象！</strong><br>我的一个朋友告诉我继承其实是对面向对象的最大误解。继承我们可以理解成一个对象他有多个小对象组成；比如人这个对象是由手脚，脑袋…等其它小对象组成。因此继承我们可以不去记住，我们只要对每个对象有深刻的认识即可把对象用代码描述清楚！</li>
+<li>资源相关的系统配置发生改变导致 Activity 被杀死并重建</li>
 </ul>
-<blockquote>
-<p>那么MVC、MVP与面向对象有什么关系呢？？</p>
-</blockquote>
-<p>首先MVC和MVP都是要求数据和UI之间互不影响，那么面向对象不就是吗！？</p>
+<p>当系统配置发生改变后，Activity 会被销毁，其 onPause、onStop、 onDestroy 均会被调用，同时由于 Activity 是在异常情况下终止的，系统会调用 onSaveInstanceState 来保存当前 Activity 的状态。</p>
+<p>onSaveInstanceState 的调用时机是在 onStop 之前，但是不一定在 onPause 之后。</p>
+<p>当 Activity 被异常终止且重建后，系统会调用 onRestoreInstanceState, 并把 Activity 销毁时 onSaveInstanceState 保存的 Bundle 数据传递给 onRestoreInstanceState 和 onCreate 方法。</p>
+<p>因此可以通过 onRestoreInstanceState 和 onCreate 方法来判断 Activity 是否被重建；而且从时序上来说，onRestoreInstanceState 的调用时机在 onStart 之后。</p>
 <ul>
-<li><p><strong>面向对象View?</strong><br>对象可以看作是我们说的用户也就是MCV或者MVP中View，用户需要什么我们就展示给其什么，不需要的我们将其封装起来提供一个方法给你调用即可，这是不是和MVC或者MVP中很像！</p>
+<li>资源内存不足导致低优先级的 Activity 被杀死</li>
+</ul>
+<p>Activity 的优先级情况，从高到低可以分为以下三种：</p>
+<p>(1) 前台 Activity ：正在和用户交互的 Activity ，优先级最高</p>
+<p>(2) 可见但非前台 Activity ：比如 Activity中弹出了一个对话框，导致 Activity可见但是位于后台无法和用户直接交互</p>
+<p>(3) 后台 Activity ：已经被暂停的 Activity，比如执行了 onStop , 优先级最低</p>
+<h3 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h3><blockquote>
+<p>有时候为了满足项目的特殊需求，就必须使用 Activity 的启动模式，所以我们必须要搞清楚它的启动模式和标志位</p>
+</blockquote>
+<h4 id="Activity-为什么需要启动模式？"><a href="#Activity-为什么需要启动模式？" class="headerlink" title="Activity 为什么需要启动模式？"></a>Activity 为什么需要启动模式？</h4><blockquote>
+<p>在默认情况下，当我们多次启动同一个 Activity 的时候，系统会创建多个实例并把它们一一放入任务栈中，当我们按下返回键，会发酵这些 Activity 会一一回退。这个任务栈时一种“后进先出”的栈结构，也就是最后进来的 Activity 最先出去。但是当我们多次启动同一个 Activity 系统会重复创建多个实例，Android 在设计idea时候为了解决这个问题，它提供了启动模式来修改系统的默认行为。目前又四种启动模式：standard、singleTop、singleTask、singleInstance.</p>
+</blockquote>
+<ul>
+<li>standard</li>
+</ul>
+<p>这时系统的默认模式，每次启动一个 Activity 都会重新创建一个新的实例，不管这个实例是否已经存在。</p>
+<ul>
+<li>singleTop</li>
+</ul>
+<p>栈顶复用模式。在该模式下，如果新的 Activity 已经位于任务栈的栈顶，那么此 Activity 不会被重新创建，同时它的 onNewIntent 方法会被回掉，通过重写此方法我们可以取出当前请求的信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">protected void onNewIntent(Intent intent) &#123;</span><br><span class="line"></span><br><span class="line">  super.onNewIntent(intent);</span><br><span class="line"></span><br><span class="line">  setIntent(intent);//must store the new intent unless getIntent() will return the old one</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>singleTask</li>
+</ul>
+<p>栈内复用模式。这是一种单实例模式，在该模式下，只有 ACtivity 在一个栈中存在，那么多次启动此 Activity 都不会重新创建实例，和 singleTop 一样，体统也会回调其 onNewInstent。</p>
+<ul>
+<li>singleInstance</li>
+</ul>
+<p>单实例模式。这话i是一种加强的 singleTask 模式，它除了具备 singleTask 的所有特性外，还加强了一点，那就是具有此种模式的 Activity 只能单独的位于任务栈中。</p>
+<h4 id="如何给-Activity-设置启动模式呢？"><a href="#如何给-Activity-设置启动模式呢？" class="headerlink" title="如何给 Activity 设置启动模式呢？"></a>如何给 Activity 设置启动模式呢？</h4><blockquote>
+<p>有两种方式，(1)是通过 AndroidMenifest 中为 Activity 指定启动模式 (2) 在 Intent 中设置标志位来为 Activity 指定启动模式。两种方式的优先级是(2)优先于(1)，当两种方式存在时，以第二种方式为准。当然这两种方式还是有差异的，比如(1)无法啊直接为 Activity 设置 FLAG_ACTIVITY_CLEAR_TOP标志，而 (2) 无法为 Activity 指定 singleInstance 模式。</p>
+</blockquote>
+<ul>
+<li><p>通过 AndroidMenifest 中为 Activity 指定启动模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity </span><br><span class="line">    android:name=&quot;..activity.MultiportActivity&quot;</span><br><span class="line">    android:launchMode=&quot;singleTask&quot;/&gt;&lt;!--指定标志位--&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>面向对象Model?</strong><br>同时面向对象也是需要将对象的行为细分，比如人可以跑，可以游泳…这是不是和MVC中的Model一样，需要处理用户不同的操作。</p>
+<li><p>在 Intent 中设置标志位来为 Activity 指定启动模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent();</span><br><span class="line">intent.setClass(context, MainActivity.class);</span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//指定标志位</span><br><span class="line">context.startActivity(intent);</span><br></pre></td></tr></table></figure>
 </li>
-<li><strong>面向对象Controller?</strong><br>最后面向对象也是需要一个状态去控制的，比如人的大脑。通过大脑去协调手和脚的平衡。</li>
 </ul>
-<h4 id="学点英文"><a href="#学点英文" class="headerlink" title="学点英文"></a>学点英文</h4><p>It is not easy to meet each other in such a big world.<br>世界这么大，能遇见，不容易。—- 2月18号倩儿</p>
+<h4 id="查看任务栈的命令"><a href="#查看任务栈的命令" class="headerlink" title="查看任务栈的命令"></a>查看任务栈的命令</h4><blockquote>
+<p><code>adb shell dumpsys activity</code>在导出的信息中重点查看<code>Running activitys</code></p>
+</blockquote>
+<h4 id="Activity-的-Flags"><a href="#Activity-的-Flags" class="headerlink" title="Activity 的 Flags"></a>Activity 的 Flags</h4><blockquote>
+<p>在 Intent 中设置 Activity 的启动模式时可以通过 Flags 设置，这里的 Flags 不仅仅是可以设置启动模式，还可以影响 Activity 的运行状态。比如设置了 FLAG_ACTIVITY_CLEAR_TOP 的Activity 表示在同一个任务栈中所有位于它上面的 Activity 都要出栈，这个标志位一般会和 singleTask 启动模式一起出现，而且 singleTask 模式是默认具有此标志位的效果。</p>
+</blockquote>
 
       
     </div>
@@ -638,8 +615,8 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/26/Activity和Fragment之间的数据通信/" rel="next" title="Activity和Fragment之间的数据通信">
-                <i class="fa fa-chevron-left"></i> Activity和Fragment之间的数据通信
+              <a href="/2018/02/25/讲话技巧（一）/" rel="next" title="讲话技巧学习笔记">
+                <i class="fa fa-chevron-left"></i> 讲话技巧学习笔记
               </a>
             
           </div>
@@ -647,10 +624,6 @@ SmallTalk在百度百科的解释是这样: Smalltalk被公认为历史上第二
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/12/Url重构以及防DNS劫持的相关问题/" rel="prev" title="Url 统一域名及 DNS 劫持的相关问题">
-                Url 统一域名及 DNS 劫持的相关问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -706,8 +679,8 @@ var jiathis_config={
           
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2017/02/21/不必纠结MVC还是MVP，听我说两句/"
-           data-title="不必纠结MVC还是MVP，听我说两句~" data-url="http://dongxi520.com/2017/02/21/不必纠结MVC还是MVP，听我说两句/">
+      <div class="ds-thread" data-thread-key="2018/04/11/Activity-的生命周期和启动模式/"
+           data-title="Activity 的生命周期和启动模式" data-url="http://dongxi520.com/2018/04/11/Activity-的生命周期和启动模式/">
       </div>
     </div>
   
@@ -855,7 +828,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#故事开始"><span class="nav-number">1.</span> <span class="nav-text">故事开始</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么说不必纠结是MVC还是MVP呢？"><span class="nav-number"></span> <span class="nav-text">为什么说不必纠结是MVC还是MVP呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学点英文"><span class="nav-number">1.</span> <span class="nav-text">学点英文</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-的生命周期"><span class="nav-number">1.</span> <span class="nav-text">Activity 的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正常的生命周期"><span class="nav-number">1.1.</span> <span class="nav-text">正常的生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非正常的生命周期"><span class="nav-number">1.2.</span> <span class="nav-text">非正常的生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-的启动模式"><span class="nav-number">2.</span> <span class="nav-text">Activity 的启动模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Activity-为什么需要启动模式？"><span class="nav-number">2.1.</span> <span class="nav-text">Activity 为什么需要启动模式？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何给-Activity-设置启动模式呢？"><span class="nav-number">2.2.</span> <span class="nav-text">如何给 Activity 设置启动模式呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看任务栈的命令"><span class="nav-number">2.3.</span> <span class="nav-text">查看任务栈的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Activity-的-Flags"><span class="nav-number">2.4.</span> <span class="nav-text">Activity 的 Flags</span></a></li></ol></li></ol></div>
             
 
           </div>
