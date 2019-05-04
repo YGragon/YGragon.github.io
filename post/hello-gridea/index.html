@@ -9,9 +9,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://dongxi520.com//favicon.ico?v=1556547724794">
+<link rel="shortcut icon" href="http://dongxi520.com//favicon.ico?v=1556983746561">
 <link rel="stylesheet" href="http://dongxi520.com//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://dongxi520.com/">
-        <img src="http://dongxi520.com//images/avatar.png?v=1556547724794" class="site-logo">
+        <img src="http://dongxi520.com//images/avatar.png?v=1556983746561" class="site-logo">
         <h1 class="site-title">龙衣小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -133,6 +139,12 @@
             
 
             
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
 
           </div>
 
@@ -156,6 +168,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0f63434c08272bb7121e',
+        clientSecret: 'c886ebfc3922718db106e574b7055451da23cc5c',
+        repo: 'https://dongxi346.github.io',
+        owner: 'dongxi346',
+        admin: ['dongxi346'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
