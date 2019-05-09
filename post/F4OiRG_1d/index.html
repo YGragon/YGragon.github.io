@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | 龙衣</title>
+<title>说着别人的伤心事，开心着、伤心着 | 龙衣</title>
 <meta name="description" content="Do Or Die">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,6 +12,12 @@
 <link rel="shortcut icon" href="http://dongxi520.com//favicon.ico?v=1557413697224">
 <link rel="stylesheet" href="http://dongxi520.com//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -90,18 +96,49 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">说着别人的伤心事，开心着、伤心着</h2>
+            <div class="post-date">2019-05-09</div>
             
-              <a class="tag" href="http://dongxi520.com//tag/JZkHebPpA">随笔</a>
+              <div class="feature-container" style="background-image: url('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2189817651,3258014441&amp;fm=26&amp;gp=0.jpg')">
+              </div>
             
-              <a class="tag" href="http://dongxi520.com//tag/EAI4_ZNmt">爱情</a>
+            <div class="post-content">
+              <p>现在的成年人，多少人是外表坚强，内心一碰就碎。</p>
+<p>成年人的生活没有谁会很容易，有的话，也许是有人为你负重前行了吧。</p>
+<p><img src="http://img5.imgtn.bdimg.com/it/u=3187681719,3038911374&amp;fm=11&amp;gp=0.jpg" alt="他的私生活"></p>
+
+            </div>
             
-              <a class="tag" href="http://dongxi520.com//tag/3WllEwmjA">电影</a>
+              <div class="tag-container">
+                
+                  <a href="http://dongxi520.com//tag/JZkHebPpA" class="tag">
+                    随笔
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="http://dongxi520.com//tag/P1Uk7QzwF">读书</a>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://dongxi520.com//post/nnhnvkqEP">
+                  <h3 class="post-title">
+                    五月-所有的跪舔最终都会沦为配角
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
           </div>
+
         </div>
       </div>
     </div>
@@ -122,6 +159,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0f63434c08272bb7121e',
+        clientSecret: 'c886ebfc3922718db106e574b7055451da23cc5c',
+        repo: 'dongxi346.github.io',
+        owner: 'dongxi346',
+        admin: ['dongxi346'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
