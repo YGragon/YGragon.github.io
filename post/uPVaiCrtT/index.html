@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>读书 | 龙衣</title>
+<title>三瓶喜力，歌好听 | 龙衣</title>
 <meta name="description" content="Do Or Die">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,6 +12,12 @@
 <link rel="shortcut icon" href="http://dongxi520.com//favicon.ico?v=1558712432036">
 <link rel="stylesheet" href="http://dongxi520.com//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -90,57 +96,51 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 读书</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://dongxi520.com//post/Ku9Cak1EO">
-                  <h2 class="post-title">读书-《影响力》前篇总结</h2>
-                </a>
-                <div class="post-date">
-                  2018-06-10
-                </div>
-                <div class="post-abstract">
-                  <p>影响力的武器
-凡事都应该尽可能地简单，而不是较为简单。</p>
-<p>​ ——阿尔伯特-爱因斯坦</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">三瓶喜力，歌好听</h2>
+            <div class="post-date">2019-05-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500')">
               </div>
-              
-                <a class="right" href="http://dongxi520.com//post/Ku9Cak1EO">
-                  <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/2238463/pexels-photo-2238463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://dongxi520.com//post/dppbdAzvP">
-                  <h2 class="post-title">讲话技巧</h2>
-                </a>
-                <div class="post-date">
-                  2018-02-25
-                </div>
-                <div class="post-abstract">
-                  <p>本篇介绍了多种方式让你在人际交往中能够提升幽默感以及在临场时如何去说话能够不怯场！</p>
+            
+            <div class="post-content">
+              <p>今天在宇宙中心-五道口小酌三杯</p>
+<p>清吧外国小哥吉他弹的很好听，外国小妹唱的英文歌也很好</p>
+<!-- more -->
+<p>一句 when i see you face 收下了我的心</p>
+<p>一切都好</p>
+<p>晚安</p>
 
-                </div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://dongxi520.com//tag/JZkHebPpA" class="tag">
+                    随笔
+                  </a>
+                
               </div>
-              
-                <a class="right" href="http://dongxi520.com//post/dppbdAzvP">
-                  <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/2292833/pexels-photo-2292833.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500')">
-                  </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://dongxi520.com//post/OLWpoReKS">
+                  <h3 class="post-title">
+                    鸡王
+                  </h3>
                 </a>
-              
-            </article>
-          
+              </div>
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -162,6 +162,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0f63434c08272bb7121e',
+        clientSecret: 'c886ebfc3922718db106e574b7055451da23cc5c',
+        repo: 'dongxi346.github.io',
+        owner: 'dongxi346',
+        admin: ['dongxi346'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
