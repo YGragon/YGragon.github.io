@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-07-25T12:34:40.795Z</updated>
+    <updated>2019-08-07T13:07:14.106Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[努力 奋斗]]></title>
+        <id>http://dongxi520.com//post/doFWtEC67</id>
+        <link href="http://dongxi520.com//post/doFWtEC67">
+        </link>
+        <updated>2019-08-07T13:05:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>《喜剧之王》</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>《喜剧之王》</p>
+<!-- more -->
+<p>“努力奋斗”<br>
+“我养你啊”</p>
+<p>by-周星驰</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[长安十二时辰-语句摘抄]]></title>
         <id>http://dongxi520.com//post/Q7Q_Sdpbu</id>
@@ -177,25 +192,6 @@
 <p>枪枪爆脑</p>
 <p>你是鸡王</p>
 <!--more-->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[穷逼]]></title>
-        <id>http://dongxi520.com//post/m9SXc7JiY</id>
-        <link href="http://dongxi520.com//post/m9SXc7JiY">
-        </link>
-        <updated>2019-05-22T13:41:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>当你很难受</p>
-<p>却没人可以诉说</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>当你很难受</p>
-<p>却没人可以诉说</p>
-<!-- more -->
-<p>那么</p>
-<p>早点休息吧</p>
-<p>明天还要早起赚钱</p>
-<p>晚安</p>
-<p>写于北京</p>
 ]]></content>
     </entry>
 </feed>
