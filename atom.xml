@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-08-07T13:07:14.106Z</updated>
+    <updated>2019-08-07T13:09:48.678Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -16,9 +16,11 @@
         <link href="http://dongxi520.com//post/doFWtEC67">
         </link>
         <updated>2019-08-07T13:05:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>《喜剧之王》</p>
+        <summary type="html"><![CDATA[<p>《喜剧之王》<br>
+每次看都有不一样的体会</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>《喜剧之王》</p>
+        <content type="html"><![CDATA[<p>《喜剧之王》<br>
+每次看都有不一样的体会</p>
 <!-- more -->
 <p>“努力奋斗”<br>
 “我养你啊”</p>
