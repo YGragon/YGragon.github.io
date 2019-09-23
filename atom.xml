@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-08-07T13:09:48.678Z</updated>
+    <updated>2019-09-23T14:09:23.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[操蛋的生活]]></title>
+        <id>http://dongxi520.com//post/JUovn-YiM</id>
+        <link href="http://dongxi520.com//post/JUovn-YiM">
+        </link>
+        <updated>2019-09-23T14:02:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>如果可以我不会选择当程序员</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>如果可以我不会选择当程序员</p>
+<!-- more -->
+<p>头发一直再掉<br>
+改不完的Bug<br>
+还有睡不够的觉<br>
+没钱的没时间，去他大爷的</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[努力 奋斗]]></title>
         <id>http://dongxi520.com//post/doFWtEC67</id>
@@ -178,22 +194,6 @@
 <p>一句 when i see you face 收下了我的心</p>
 <p>一切都好</p>
 <p>晚安</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[鸡王]]></title>
-        <id>http://dongxi520.com//post/OLWpoReKS</id>
-        <link href="http://dongxi520.com//post/OLWpoReKS">
-        </link>
-        <updated>2019-05-23T14:57:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>你吃的鸡多</p>
-<p>枪枪爆脑</p>
-<p>你是鸡王</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>你吃的鸡多</p>
-<p>枪枪爆脑</p>
-<p>你是鸡王</p>
-<!--more-->
 ]]></content>
     </entry>
 </feed>
