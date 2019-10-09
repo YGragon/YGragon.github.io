@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-10-09T11:06:13.075Z</updated>
+    <updated>2019-10-09T11:18:32.224Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[渣]]></title>
+        <id>http://dongxi520.com//post/m7wPHsfWH</id>
+        <link href="http://dongxi520.com//post/m7wPHsfWH">
+        </link>
+        <updated>2019-10-09T11:12:12.000Z</updated>
+        <content type="html"><![CDATA[<p>“我跟一个男孩子一起一个月<br>
+我对他满眼温柔<br>
+他以为我死心塌地<br>
+实际上我从未动心”</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[撩]]></title>
         <id>http://dongxi520.com//post/vTvpqXh3F</id>
@@ -177,19 +189,6 @@ A: 吾思汝，思的一批</p>
 <p>没事，</p>
 <p>我脸皮厚，</p>
 <p>我不喜欢海了，我喜欢你。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我对你不好么]]></title>
-        <id>http://dongxi520.com//post/vUr6u9Hlx</id>
-        <link href="http://dongxi520.com//post/vUr6u9Hlx">
-        </link>
-        <updated>2019-05-28T13:20:23.000Z</updated>
-        <summary type="html"><![CDATA[<p>得不到的永远在骚动，被偏爱的都有恃无恐</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>得不到的永远在骚动，被偏爱的都有恃无恐</p>
-<!-- more -->
-<p>任何瞬间的心动都不容易，不要怠慢了它。</p>
 ]]></content>
     </entry>
 </feed>
