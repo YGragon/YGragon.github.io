@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-09-23T14:09:23.910Z</updated>
+    <updated>2019-10-09T11:06:13.075Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[撩]]></title>
+        <id>http://dongxi520.com//post/vTvpqXh3F</id>
+        <link href="http://dongxi520.com//post/vTvpqXh3F">
+        </link>
+        <updated>2019-10-09T11:02:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>Q: 如何委婉形容思念一个人<br>
+A: 吾思汝，思的一批</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Q: 如何委婉形容思念一个人<br>
+A: 吾思汝，思的一批</p>
+<!-- more -->
+<p>Q: 市场上像你这么优秀的女孩子找不到了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[操蛋的生活]]></title>
         <id>http://dongxi520.com//post/JUovn-YiM</id>
@@ -175,25 +190,6 @@
         <content type="html"><![CDATA[<p>得不到的永远在骚动，被偏爱的都有恃无恐</p>
 <!-- more -->
 <p>任何瞬间的心动都不容易，不要怠慢了它。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[三瓶喜力]]></title>
-        <id>http://dongxi520.com//post/uPVaiCrtT</id>
-        <link href="http://dongxi520.com//post/uPVaiCrtT">
-        </link>
-        <updated>2019-05-24T15:33:38.000Z</updated>
-        <summary type="html"><![CDATA[<p>今天在宇宙中心</p>
-<p>五道口，小酌三杯</p>
-<p>清吧外国小哥吉他弹的很好听，外国小妹唱的英文歌也很好</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>今天在宇宙中心</p>
-<p>五道口，小酌三杯</p>
-<p>清吧外国小哥吉他弹的很好听，外国小妹唱的英文歌也很好</p>
-<!-- more -->
-<p>一句 when i see you face 收下了我的心</p>
-<p>一切都好</p>
-<p>晚安</p>
 ]]></content>
     </entry>
 </feed>
