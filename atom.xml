@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-10-27T08:06:31.096Z</updated>
+    <updated>2019-10-29T12:13:17.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[孤独]]></title>
+        <id>http://dongxi520.com//post/0cKtPVd54</id>
+        <link href="http://dongxi520.com//post/0cKtPVd54">
+        </link>
+        <updated>2019-10-29T12:08:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>热闹是他们的，我什么也没有。——朱自清</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>热闹是他们的，我什么也没有。——朱自清</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[一个小游戏]]></title>
         <id>http://dongxi520.com//post/0JXy5e7QN</id>
@@ -166,22 +178,6 @@ A: 吾思汝，思的一批</p>
         <content type="html"><![CDATA[<p>00后眼中，40几岁的人（90后）是不应该过儿童节的</p>
 <!--more-->
 <p>打球喝酒看欧冠，才是正经事，O(∩_∩)O哈哈~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[熟人]]></title>
-        <id>http://dongxi520.com//post/Dqn3lZY2i</id>
-        <link href="http://dongxi520.com//post/Dqn3lZY2i">
-        </link>
-        <updated>2019-05-31T14:06:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>舔着屏幕说了一车的话</p>
-<p>尽管她只回一句“嗯。”</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>舔着屏幕说了一车的话</p>
-<p>尽管她只回一句“嗯。”</p>
-<!--more-->
-<p>多了一个句号</p>
-<p>我们更熟悉了</p>
 ]]></content>
     </entry>
 </feed>
