@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-10-29T12:28:21.207Z</updated>
+    <updated>2019-12-02T15:34:54.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2019, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[舔狗]]></title>
+        <id>http://dongxi520.com//post/0f0izbwGx</id>
+        <link href="http://dongxi520.com//post/0f0izbwGx">
+        </link>
+        <updated>2019-12-02T15:30:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>很可笑的是<br>
+以前极力想要让朋友知道你的存在<br>
+现在却要一个个的告诉他们你已经不属于我了</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>很可笑的是<br>
+以前极力想要让朋友知道你的存在<br>
+现在却要一个个的告诉他们你已经不属于我了</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[孤独]]></title>
         <id>http://dongxi520.com//post/0cKtPVd54</id>
@@ -173,19 +189,6 @@ A: 吾思汝，思的一批</p>
 <p>也就缺钱的时候会想的这么狠</p>
 <p>你就不一样了</p>
 <p>一直想你但是你一直缺</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[儿童节]]></title>
-        <id>http://dongxi520.com//post/a0CbZP1Y8</id>
-        <link href="http://dongxi520.com//post/a0CbZP1Y8">
-        </link>
-        <updated>2019-06-01T05:47:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>00后眼中，40几岁的人（90后）是不应该过儿童节的</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>00后眼中，40几岁的人（90后）是不应该过儿童节的</p>
-<!--more-->
-<p>打球喝酒看欧冠，才是正经事，O(∩_∩)O哈哈~</p>
 ]]></content>
     </entry>
 </feed>
