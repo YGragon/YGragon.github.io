@@ -2,14 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2019-12-02T15:34:54.044Z</updated>
+    <updated>2020-01-30T04:16:34.748Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
     <subtitle>Do Or Die</subtitle>
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
-    <rights>All rights reserved 2019, 龙衣</rights>
+    <rights>All rights reserved 2020, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[怕是遇到了骗子吧]]></title>
+        <id>http://dongxi520.com//post/NFDFhX5n8</id>
+        <link href="http://dongxi520.com//post/NFDFhX5n8">
+        </link>
+        <updated>2020-01-30T04:08:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>两人几乎很少同时在线，<br>
+她的微信还是工作微信，<br>
+手机号也是空号，<br>
+他很爱她。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>两人几乎很少同时在线，<br>
+她的微信还是工作微信，<br>
+手机号也是空号，<br>
+他很爱她。</p>
+<!-- more -->
+<p>我一个朋友的故事。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[舔狗]]></title>
         <id>http://dongxi520.com//post/0f0izbwGx</id>
@@ -172,23 +191,6 @@ A: 吾思汝，思的一批</p>
 <p>你是否能挣到钱，最关键的并不是你有没有好点子，也不是你有多聪明，而是你的自信程度</p>
 </blockquote>
 <p>TO 每个不自信的人</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[想钱了]]></title>
-        <id>http://dongxi520.com//post/ydjg2jai-</id>
-        <link href="http://dongxi520.com//post/ydjg2jai-">
-        </link>
-        <updated>2019-06-04T13:10:28.000Z</updated>
-        <summary type="html"><![CDATA[<p>就问谁不爱钱</p>
-<p>我 TM 每天爱它三千遍都不止</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>就问谁不爱钱</p>
-<p>我 TM 每天爱它三千遍都不止</p>
-<!--more-->
-<p>也就缺钱的时候会想的这么狠</p>
-<p>你就不一样了</p>
-<p>一直想你但是你一直缺</p>
 ]]></content>
     </entry>
 </feed>
