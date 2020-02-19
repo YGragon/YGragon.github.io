@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>电影 | 龙衣</title>
+<title>屏保语录 | 龙衣</title>
 <meta name="description" content="Do Or Die">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,6 +12,12 @@
 <link rel="shortcut icon" href="http://dongxi520.com//favicon.ico?v=1582080914480">
 <link rel="stylesheet" href="http://dongxi520.com//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -90,57 +96,47 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 电影</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://dongxi520.com//post/Q7Q_Sdpbu">
-                  <h2 class="post-title">长安十二时辰-语句摘抄</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-20
-                </div>
-                <div class="post-abstract">
-                  <blockquote>
-<p>年轻人总是不懂得一个道理，话不是说出来就有用的，要看听话的人愿不愿意听。</p>
-</blockquote>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">屏保语录</h2>
+            <div class="post-date">2020-02-19</div>
+            
+              <div class="feature-container" style="background-image: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/b4f4739a3bf842dbbdcf1c1807f42078.jpg!sswm')">
               </div>
-              
-                <a class="right" href="http://dongxi520.com//post/Q7Q_Sdpbu">
-                  <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/2387634/pexels-photo-2387634.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://dongxi520.com//post/qi-yue-dian-ying-wu-wen-xi-dong">
-                  <h2 class="post-title">七月-电影《无问西东》</h2>
-                </a>
-                <div class="post-date">
-                  2018-07-28
-                </div>
-                <div class="post-abstract">
-                  <p>七月看了一部电影，有些句子说的不错，需要细细品味思考一番~</p>
-
-                </div>
+            
+            <div class="post-content">
+              <p>When you look long into an abyss, the abyss looks into you<br>
+当你凝视深渊时，深渊也在凝视你</p>
+<!-- more -->
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://dongxi520.com//tag/JZkHebPpA" class="tag">
+                    随笔
+                  </a>
+                
               </div>
-              
-                <a class="right" href="http://dongxi520.com//post/qi-yue-dian-ying-wu-wen-xi-dong">
-                  <div class="feature-container" style="background-image: url('http://dongxi520.com//post-images/qi-yue-dian-ying-wu-wen-xi-dong.jpg')">
-                  </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://dongxi520.com//post/NFDFhX5n8">
+                  <h3 class="post-title">
+                    怕是遇到了骗子吧
+                  </h3>
                 </a>
-              
-            </article>
-          
+              </div>
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -162,6 +158,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0f63434c08272bb7121e',
+        clientSecret: 'c886ebfc3922718db106e574b7055451da23cc5c',
+        repo: 'dongxi346.github.io',
+        owner: 'dongxi346',
+        admin: ['dongxi346'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

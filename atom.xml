@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://dongxi520.com/</id>
     <title>龙衣</title>
-    <updated>2020-01-30T04:16:34.748Z</updated>
+    <updated>2020-02-19T02:55:25.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://dongxi520.com/"/>
     <link rel="self" href="http://dongxi520.com//atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>http://dongxi520.com//images/avatar.png</logo>
     <icon>http://dongxi520.com//favicon.ico</icon>
     <rights>All rights reserved 2020, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[屏保语录]]></title>
+        <id>http://dongxi520.com//post/FytTX0ZP_</id>
+        <link href="http://dongxi520.com//post/FytTX0ZP_">
+        </link>
+        <updated>2020-02-19T02:51:09.000Z</updated>
+        <content type="html"><![CDATA[<p>When you look long into an abyss, the abyss looks into you<br>
+当你凝视深渊时，深渊也在凝视你</p>
+<!-- more -->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[怕是遇到了骗子吧]]></title>
         <id>http://dongxi520.com//post/NFDFhX5n8</id>
@@ -170,27 +180,6 @@ A: 吾思汝，思的一批</p>
 <p>多少男人所做的和所说的都不一样<br>
 你说我的眼睛格外亮，那是因为遇见了你</p>
 </blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[自信]]></title>
-        <id>http://dongxi520.com//post/sCGr_r5cJ</id>
-        <link href="http://dongxi520.com//post/sCGr_r5cJ">
-        </link>
-        <updated>2019-06-05T12:02:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>今天看了一篇新闻，主要内容是孙宇晨（下文用“孙”指代）拍下了和巴菲特共进午餐的机会。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>今天看了一篇新闻，主要内容是孙宇晨（下文用“孙”指代）拍下了和巴菲特共进午餐的机会。</p>
-<!--more-->
-<p>且不论币圈现在如何以及孙的为人如何</p>
-<p>我看到了文中的孙很自信</p>
-<p>就算吹牛逼都很自信</p>
-<p>我想就算他不在币圈割韭菜，凭他的自信心在哪都能赚到钱</p>
-<p>就像《小狗钱钱》这本书里面讲的</p>
-<blockquote>
-<p>你是否能挣到钱，最关键的并不是你有没有好点子，也不是你有多聪明，而是你的自信程度</p>
-</blockquote>
-<p>TO 每个不自信的人</p>
 ]]></content>
     </entry>
 </feed>
