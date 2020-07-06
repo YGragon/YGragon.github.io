@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-06T16:02:57.320Z</updated>
+    <updated>2020-07-06T16:07:20.227Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -11,14 +11,14 @@
     <icon>https://ygragon.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 龙衣</rights>
     <entry>
-        <title type="html"><![CDATA[屏保语录]]></title>
+        <title type="html"><![CDATA[maybe]]></title>
         <id>https://ygragon.github.io/post/FytTX0ZP_</id>
         <link href="https://ygragon.github.io/post/FytTX0ZP_">
         </link>
         <updated>2020-02-19T02:51:09.000Z</updated>
-        <content type="html"><![CDATA[<p>When you look long into an abyss, the abyss looks into you<br>
+        <content type="html"><![CDATA[<p>When you look long into an abyss,the abyss looks into you<br>
 当你凝视深渊时，深渊也在凝视你</p>
-<!-- more -->]]></content>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[怕是遇到了骗子吧]]></title>
