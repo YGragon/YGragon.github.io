@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-06T16:15:35.818Z</updated>
+    <updated>2020-07-07T02:28:49.020Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -16,8 +16,12 @@
         <link href="https://ygragon.github.io/post/FytTX0ZP_">
         </link>
         <updated>2020-02-19T02:51:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>When you look long into an abyss,the abyss looks into you<br>
+=&gt; 当你凝视深渊时，深渊也在凝视你</p>
+]]></summary>
         <content type="html"><![CDATA[<p>When you look long into an abyss,the abyss looks into you<br>
 =&gt; 当你凝视深渊时，深渊也在凝视你</p>
+<!-- more -->
 <p>It's okay, I understand.</p>
 <p>=&gt; 没关系，我明白了。</p>
 <p>Are you trying to bribe me, sir? Yes, of course.</p>
