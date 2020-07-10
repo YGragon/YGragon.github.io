@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-07T02:28:49.020Z</updated>
+    <updated>2020-07-10T14:26:44.087Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -10,6 +10,40 @@
     <logo>https://ygragon.github.io/images/avatar.png</logo>
     <icon>https://ygragon.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[Lucifer-Lines-001-Hey, cut the music]]></title>
+        <id>https://ygragon.github.io/post/lEKN3M5hv</id>
+        <link href="https://ygragon.github.io/post/lEKN3M5hv">
+        </link>
+        <updated>2020-07-10T14:12:48.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law"><br>
+<img src="http://www.zsulu.com/news/pics/20170220/201702201487560057649.jpg" alt="bribe me"></p>
+<p>Hey, cut the music<br>
+嘿，把音乐关小</p>
+<p>I'm sorry<br>
+抱歉</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law"><br>
+<img src="http://www.zsulu.com/news/pics/20170220/201702201487560057649.jpg" alt="bribe me"></p>
+<p>Hey, cut the music<br>
+嘿，把音乐关小</p>
+<p>I'm sorry<br>
+抱歉</p>
+<!-- more -->
+<p>You know why I pulled you over?<br>
+你知道我为什么让你停车吗？</p>
+<p>Well, obviously, you felt the need to exercise<br>
+You limited powers and punish me<br>
+for ignoring the speed limit.</p>
+<p>显然，你觉得有必要行使你仅有的权利来惩罚我,因为我超速行驶了</p>
+<p>It's ok, I understand.<br>
+没关系，我可以理解</p>
+<p>I like to punish people too.<br>
+我也喜欢惩罚别人</p>
+<p>Or at least I use to.<br>
+至少曾经喜欢</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Devil has come to Los Angeles…]]></title>
         <id>https://ygragon.github.io/post/FytTX0ZP_</id>
@@ -155,43 +189,6 @@ A: 吾思汝，思的一批</p>
 <p>“努力奋斗”<br>
 “我养你啊”</p>
 <p>by-周星驰</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[长安十二时辰-语句摘抄]]></title>
-        <id>https://ygragon.github.io/post/Q7Q_Sdpbu</id>
-        <link href="https://ygragon.github.io/post/Q7Q_Sdpbu">
-        </link>
-        <updated>2019-07-20T01:31:34.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>年轻人总是不懂得一个道理，话不是说出来就有用的，要看听话的人愿不愿意听。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>年轻人总是不懂得一个道理，话不是说出来就有用的，要看听话的人愿不愿意听。</p>
-</blockquote>
-<!-- more -->
-<blockquote>
-<p>他就这么走入人群，如同一粒沙子落入沙漠。<br>
-写曹破延入长安</p>
-</blockquote>
-<blockquote>
-<p>人是你选的，路是我挑的，咱们都得对自己的选择负责。<br>
-李泌 选用张小敬之后，李泌忽然问到，如果张小敬跑了如何，张小敬的回答</p>
-</blockquote>
-<blockquote>
-<p>小孩子才撒谎，大人嘛都是真话假话一起说，是真是假只有说的人心里清楚</p>
-</blockquote>
-<blockquote>
-<p>不要相信男人说了什么，要看他做了什么</p>
-</blockquote>
-<blockquote>
-<p>多数男人所说的，和所做的都不一样，但愿你不是。——檀棋</p>
-</blockquote>
-<blockquote>
-<p>多少男人所做的和所说的都不一样<br>
-你说我的眼睛格外亮，那是因为遇见了你</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
