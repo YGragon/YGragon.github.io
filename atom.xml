@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-12T02:21:37.881Z</updated>
+    <updated>2020-07-12T02:22:54.174Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -26,8 +26,7 @@
 <p>I'm sorry<br>
 抱歉</p>
 <!-- more -->
-<p><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law"><br>
-<img src="http://www.zsulu.com/news/pics/20170220/201702201487560057649.jpg" alt="bribe me"></p>
+<figure data-type="image" tabindex="1"><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law"></figure>
 <p>You know why I pulled you over?<br>
 你知道我为什么让你停车吗？</p>
 <p>Well, obviously, you felt the need to exercise<br>
