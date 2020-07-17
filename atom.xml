@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-17T15:22:49.935Z</updated>
+    <updated>2020-07-17T15:35:10.178Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 龙衣</rights>
     <entry>
         <title type="html"><![CDATA[参观]]></title>
-        <id>https://ygragon.github.io/post/sBQRK978F</id>
-        <link href="https://ygragon.github.io/post/sBQRK978F">
+        <id>https://ygragon.github.io/post/sBQRK978F/</id>
+        <link href="https://ygragon.github.io/post/sBQRK978F/">
         </link>
         <updated>2020-07-17T15:16:46.000Z</updated>
         <summary type="html"><![CDATA[<p>其实你只是短暂离开了自己的工作岗位<br>
@@ -26,8 +26,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[何为成长，何为成熟]]></title>
-        <id>https://ygragon.github.io/post/Yleht16cJ</id>
-        <link href="https://ygragon.github.io/post/Yleht16cJ">
+        <id>https://ygragon.github.io/post/Yleht16cJ/</id>
+        <link href="https://ygragon.github.io/post/Yleht16cJ/">
         </link>
         <updated>2020-07-17T15:10:23.000Z</updated>
         <summary type="html"><![CDATA[<p>记得一个朋友说过<br>
@@ -42,8 +42,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Lucifer-Lines-001-Hey, cut the music]]></title>
-        <id>https://ygragon.github.io/post/lEKN3M5hv</id>
-        <link href="https://ygragon.github.io/post/lEKN3M5hv">
+        <id>https://ygragon.github.io/post/lEKN3M5hv/</id>
+        <link href="https://ygragon.github.io/post/lEKN3M5hv/">
         </link>
         <updated>2020-07-10T14:12:48.000Z</updated>
         <summary type="html"><![CDATA[<p>Hey, cut the music<br>
@@ -56,7 +56,7 @@
 <p>I'm sorry<br>
 抱歉</p>
 <!-- more -->
-<figure data-type="image" tabindex="1"><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law"></figure>
+<figure data-type="image" tabindex="1"><img src="http://www.zsulu.com/news/pics/20170220/201702201487560013080.jpg" alt="break the law" loading="lazy"></figure>
 <p>You know why I pulled you over?<br>
 你知道我为什么让你停车吗？</p>
 <p>Well, obviously, you felt the need to exercise<br>
@@ -73,8 +73,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[The Devil has come to Los Angeles…]]></title>
-        <id>https://ygragon.github.io/post/FytTX0ZP_</id>
-        <link href="https://ygragon.github.io/post/FytTX0ZP_">
+        <id>https://ygragon.github.io/post/FytTX0ZP_/</id>
+        <link href="https://ygragon.github.io/post/FytTX0ZP_/">
         </link>
         <updated>2020-02-19T02:51:09.000Z</updated>
         <summary type="html"><![CDATA[<p>When you look long into an abyss,the abyss looks into you<br>
@@ -95,8 +95,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[怕是遇到了骗子吧]]></title>
-        <id>https://ygragon.github.io/post/NFDFhX5n8</id>
-        <link href="https://ygragon.github.io/post/NFDFhX5n8">
+        <id>https://ygragon.github.io/post/NFDFhX5n8/</id>
+        <link href="https://ygragon.github.io/post/NFDFhX5n8/">
         </link>
         <updated>2020-01-30T04:08:49.000Z</updated>
         <summary type="html"><![CDATA[<p>两人几乎很少同时在线，<br>
@@ -114,8 +114,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[舔狗]]></title>
-        <id>https://ygragon.github.io/post/0f0izbwGx</id>
-        <link href="https://ygragon.github.io/post/0f0izbwGx">
+        <id>https://ygragon.github.io/post/0f0izbwGx/</id>
+        <link href="https://ygragon.github.io/post/0f0izbwGx/">
         </link>
         <updated>2019-12-02T15:30:59.000Z</updated>
         <summary type="html"><![CDATA[<p>很可笑的是<br>
@@ -130,8 +130,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[孤独]]></title>
-        <id>https://ygragon.github.io/post/0cKtPVd54</id>
-        <link href="https://ygragon.github.io/post/0cKtPVd54">
+        <id>https://ygragon.github.io/post/0cKtPVd54/</id>
+        <link href="https://ygragon.github.io/post/0cKtPVd54/">
         </link>
         <updated>2019-10-29T12:08:46.000Z</updated>
         <summary type="html"><![CDATA[<p>热闹是他们的，我什么也没有。——朱自清</p>
@@ -142,8 +142,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[一个小游戏]]></title>
-        <id>https://ygragon.github.io/post/0JXy5e7QN</id>
-        <link href="https://ygragon.github.io/post/0JXy5e7QN">
+        <id>https://ygragon.github.io/post/0JXy5e7QN/</id>
+        <link href="https://ygragon.github.io/post/0JXy5e7QN/">
         </link>
         <updated>2019-10-11T12:03:12.000Z</updated>
         <summary type="html"><![CDATA[<p>酒桌上<br>
@@ -156,8 +156,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[渣]]></title>
-        <id>https://ygragon.github.io/post/m7wPHsfWH</id>
-        <link href="https://ygragon.github.io/post/m7wPHsfWH">
+        <id>https://ygragon.github.io/post/m7wPHsfWH/</id>
+        <link href="https://ygragon.github.io/post/m7wPHsfWH/">
         </link>
         <updated>2019-10-09T11:12:12.000Z</updated>
         <summary type="html"><![CDATA[<p>“我跟一个男孩子一起一个月<br>
@@ -172,8 +172,8 @@ for ignoring the speed limit.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[撩]]></title>
-        <id>https://ygragon.github.io/post/vTvpqXh3F</id>
-        <link href="https://ygragon.github.io/post/vTvpqXh3F">
+        <id>https://ygragon.github.io/post/vTvpqXh3F/</id>
+        <link href="https://ygragon.github.io/post/vTvpqXh3F/">
         </link>
         <updated>2019-10-09T11:02:31.000Z</updated>
         <summary type="html"><![CDATA[<p>Q: 如何委婉形容思念一个人<br>
