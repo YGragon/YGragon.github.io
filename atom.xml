@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-12T02:22:54.174Z</updated>
+    <updated>2020-07-17T15:19:37.697Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://ygragon.github.io/images/avatar.png</logo>
     <icon>https://ygragon.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[参观]]></title>
+        <id>https://ygragon.github.io/post/sBQRK978F</id>
+        <link href="https://ygragon.github.io/post/sBQRK978F">
+        </link>
+        <updated>2020-07-17T15:16:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>其实你只是短暂离开了自己的工作岗位<br>
+来观看别人的日常工作</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>其实你只是短暂离开了自己的工作岗位<br>
+来观看别人的日常工作</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[何为成长，何为成熟]]></title>
+        <id>https://ygragon.github.io/post/Yleht16cJ</id>
+        <link href="https://ygragon.github.io/post/Yleht16cJ">
+        </link>
+        <updated>2020-07-17T15:10:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>记得一个朋友说过<br>
+成长就是知道自己想要什么<br>
+成熟就是知道自己不想要什么</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记得一个朋友说过<br>
+成长就是知道自己想要什么<br>
+成熟就是知道自己不想要什么</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Lucifer-Lines-001-Hey, cut the music]]></title>
         <id>https://ygragon.github.io/post/lEKN3M5hv</id>
@@ -153,39 +183,6 @@ A: 吾思汝，思的一批</p>
 A: 吾思汝，思的一批</p>
 <!-- more -->
 <p>Q: 市场上像你这么优秀的女孩子找不到了</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[操蛋的生活]]></title>
-        <id>https://ygragon.github.io/post/JUovn-YiM</id>
-        <link href="https://ygragon.github.io/post/JUovn-YiM">
-        </link>
-        <updated>2019-09-23T14:02:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>如果可以我不会选择当程序员</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>如果可以我不会选择当程序员</p>
-<!-- more -->
-<p>头发一直再掉<br>
-改不完的Bug<br>
-还有睡不够的觉<br>
-没钱的没时间，去他大爷的</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[努力 奋斗]]></title>
-        <id>https://ygragon.github.io/post/doFWtEC67</id>
-        <link href="https://ygragon.github.io/post/doFWtEC67">
-        </link>
-        <updated>2019-08-07T13:05:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>《喜剧之王》<br>
-每次看都有不一样的体会</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>《喜剧之王》<br>
-每次看都有不一样的体会</p>
-<!-- more -->
-<p>“努力奋斗”<br>
-“我养你啊”</p>
-<p>by-周星驰</p>
 ]]></content>
     </entry>
 </feed>
