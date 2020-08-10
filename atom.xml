@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ygragon.github.io</id>
     <title>龙衣</title>
-    <updated>2020-07-17T16:07:43.969Z</updated>
+    <updated>2020-08-10T13:39:28.489Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ygragon.github.io"/>
     <link rel="self" href="https://ygragon.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://ygragon.github.io/images/avatar.png</logo>
     <icon>https://ygragon.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 龙衣</rights>
+    <entry>
+        <title type="html"><![CDATA[一个不说一个不问]]></title>
+        <id>https://ygragon.github.io/post/TUMSUKTYQ/</id>
+        <link href="https://ygragon.github.io/post/TUMSUKTYQ/">
+        </link>
+        <updated>2020-08-09T02:45:06.000Z</updated>
+        <content type="html"><![CDATA[<p>三十而已剧中<br>
+陈鱼和钟小心<br>
+一个不说一个不问<br>
+经历过离婚后<br>
+反而懂的他人更需要的是什么</p>
+<p>是不是都需要经历一些很难的事过后<br>
+才会醒来</p>
+<p>早</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[参观]]></title>
         <id>https://ygragon.github.io/post/sBQRK978F/</id>
@@ -168,21 +184,6 @@ for ignoring the speed limit.</p>
 <!-- more -->
 <p>他以为我死心塌地<br>
 实际上我从未动心”</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[撩]]></title>
-        <id>https://ygragon.github.io/post/vTvpqXh3F/</id>
-        <link href="https://ygragon.github.io/post/vTvpqXh3F/">
-        </link>
-        <updated>2019-10-09T11:02:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>Q: 如何委婉形容思念一个人<br>
-A: 吾思汝，思的一批</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Q: 如何委婉形容思念一个人<br>
-A: 吾思汝，思的一批</p>
-<!-- more -->
-<p>Q: 市场上像你这么优秀的女孩子找不到了</p>
 ]]></content>
     </entry>
 </feed>
